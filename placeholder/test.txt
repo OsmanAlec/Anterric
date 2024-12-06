@@ -1,5 +1,10 @@
 1234
 HELLOOOO
 yes hi itworks - oskar
+<<<<<<< HEAD
 howy
 oskar edited from godot ANd pushed to git
+=======
+howya
+grand
+>>>>>>> a44300dfc94380e3f41bd0c726001fb8c09d1255
