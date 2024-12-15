@@ -1,0 +1,1 @@
+We need to make a sprite sheet for the animations to work. 
