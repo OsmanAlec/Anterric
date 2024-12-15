@@ -2,28 +2,24 @@ extends CharacterBody2D
 
 
 const SPEED = 200
+const ACCELERATION	 = 400
+const FRICTION = 500
 
-func _physics_process(delta: float) -> void:
-	player_movement(delta)
+func player_movement(input, delta):
 
-func player_movement(delta):
-	
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = SPEED
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_left"):
-		velocity.x = -SPEED
-		velocity.y = 0
-	elif Input.is_action_pressed("ui_down"):
-		velocity.x = 0
-		velocity.y = SPEED
-	elif Input.is_action_pressed("ui_up"):
-		velocity.x = 0
-		velocity.y = -SPEED
-	else:
-		velocity.x = 0
-		velocity.y = 0
-		
+	if input: 
+		velocity = velocity.move_toward(input * SPEED , delta * ACCELERATION)
+
+	else: 
+		velocity = velocity.move_toward(Vector2(0,0), delta * FRICTION)
+
+
+func _physics_process(delta):
+
+	var input = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
+
+	player_movement(input, delta)
+
 	move_and_slide()
 		
 		
