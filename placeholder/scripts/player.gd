@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-const SPEED = 200
-const ACCELERATION	 = 400
-const FRICTION = 500
+const SPEED = 400
+const ACCELERATION	 = 1000
+const FRICTION = 1000
 
 func player_movement(input, delta):
 

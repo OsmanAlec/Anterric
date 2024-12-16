@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734268638
+::res://::1734363742
 communication.txt::TextFile::-1::1734268008::0::1::::<><>::
 ::res://art/::1734267719
 icon.svg::CompressedTexture2D::7209331696306619313::1733500899::1734267674::1::::<><>::
@@ -8,8 +8,8 @@ ant.png::CompressedTexture2D::9057577502567016141::1734267950::1734267950::1::::
 ::res://art/objects/::1734267705
 ::res://art/particles/::1734267713
 ::res://art/tilesets/::1734267722
-::res://scenes/::1734268209
-player.tscn::PackedScene::4213710653736826845::1734268209::0::1::::<><>::res://scripts/player.gd<>uid://d2bs8iy05a77n::::res://art/characters/ant.png
-world.tscn::PackedScene::3299845911646580096::1734268188::0::1::::<><>::
-::res://scripts/::1734268209
-player.gd::GDScript::-1::1734268209::0::1::::<>CharacterBody2D<>::
+::res://scenes/::1734363325
+player.tscn::PackedScene::4213710653736826845::1734363325::0::1::::<><>::res://scripts/player.gd<>uid://d2bs8iy05a77n::::res://art/characters/ant.png
+world.tscn::PackedScene::3299845911646580096::1734363325::0::1::::<><>::
+::res://scripts/::1734363325
+player.gd::GDScript::-1::1734363325::0::1::::<>CharacterBody2D<>::
