@@ -1,9 +1,8 @@
 extends CharacterBody2D
 
-
-const SPEED = 400
-const ACCELERATION	 = 1000
-const FRICTION = 1000
+const RATE = 100
+const SPEED = 4 * RATE
+const ACCELERATION	 = 25 * RATE
 
 func player_movement(input, delta):
 
@@ -11,7 +10,7 @@ func player_movement(input, delta):
 		velocity = velocity.move_toward(input * SPEED , delta * ACCELERATION)
 
 	else: 
-		velocity = velocity.move_toward(Vector2(0,0), delta * FRICTION)
+		velocity = velocity.move_toward(Vector2(0,0), delta * ACCELERATION)
 
 
 func _physics_process(delta):
