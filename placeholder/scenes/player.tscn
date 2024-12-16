@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
-[ext_resource type="Texture2D" uid="uid://d2bs8iy05a77n" path="res://art/characters/ant.png" id="2_aagxe"]
+[ext_resource type="Texture2D" uid="uid://clbey6h85woxo" path="res://art/characters/queen_ant.png" id="2_nnesa"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xmtt7"]
 size = Vector3(1.2, 1.8, 1)
@@ -10,10 +10,8 @@ size = Vector3(1.2, 1.8, 1)
 size = Vector2(2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va5rv"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("2_aagxe")
+transparency = 1
+albedo_texture = ExtResource("2_nnesa")
 billboard_mode = 1
 
 [node name="Player" type="Node3D"]
