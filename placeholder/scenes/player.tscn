@@ -1,28 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=6 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Texture2D" uid="uid://d2bs8iy05a77n" path="res://art/characters/ant.png" id="2_aagxe"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h74y1"]
-atlas = ExtResource("2_aagxe")
-region = Rect2(0, 0, 128, 128)
+[sub_resource type="BoxShape3D" id="BoxShape3D_xmtt7"]
+size = Vector3(1.2, 1.8, 1)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_g5c80"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_h74y1")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="QuadMesh" id="QuadMesh_jj2wh"]
+size = Vector2(2, 2)
 
-[node name="player" type="CharacterBody2D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va5rv"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_aagxe")
+billboard_mode = 1
+
+[node name="Player" type="Node3D"]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
 script = ExtResource("1_2rwgt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_g5c80")
-frame_progress = 0.848623
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000123635, 0.98425, 0.00617027)
+shape = SubResource("BoxShape3D_xmtt7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0077, 0)
+mesh = SubResource("QuadMesh_jj2wh")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_va5rv")

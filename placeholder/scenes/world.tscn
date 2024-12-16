@@ -1,3 +1,32 @@
-[gd_scene format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=4 format=3 uid="uid://bnap8k663i18w"]
+
+[ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pmusy"]
+size = Vector3(60, 2, 40)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k3e5r"]
+size = Vector3(60, 2, 40)
 
 [node name="world" type="Node2D"]
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 10)
+shape = SubResource("BoxShape3D_pmusy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 10)
+mesh = SubResource("BoxMesh_k3e5r")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.532825, 0.664061, -0.524519, -0.573224, 0.739199, 0.353553, 0.622505, 0.112285, 0.774519, -29, 15, 29)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("1_svnxm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.89311)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.976672, 0.214735, 0, -0.214735, 0.976672, 0, 6.37323, 28.3407)
+fov = 73.6702
