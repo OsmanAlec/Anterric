@@ -29,5 +29,7 @@ func _physics_process(delta):
 	player_movement(direction, delta)
 
 	move_and_slide()
+	
+	
 		
 		
