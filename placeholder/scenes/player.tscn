@@ -12,7 +12,7 @@ albedo_texture = ExtResource("2_nnesa")
 billboard_mode = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xmtt7"]
-size = Vector3(1.2, 1.8, 1)
+size = Vector3(1.39542, 2.03477, 1)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2rwgt")
@@ -23,5 +23,5 @@ mesh = SubResource("QuadMesh_jj2wh")
 surface_material_override/0 = SubResource("StandardMaterial3D_va5rv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.013858, 0.905588, 0.0705724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288665, 1.02297, 0.0705724)
 shape = SubResource("BoxShape3D_xmtt7")
