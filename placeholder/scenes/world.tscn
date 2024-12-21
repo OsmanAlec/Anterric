@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=15 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
-[ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_pls87"]
+[ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_a0hjt"]
 [ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_mje5e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pmusy"]
@@ -11,8 +11,8 @@ size = Vector3(32, 2, 18)
 size = Vector3(32, 2, 18)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ja1w"]
-albedo_texture = ExtResource("2_pls87")
-uv1_scale = Vector3(60, 60, 60)
+albedo_texture = ExtResource("2_a0hjt")
+uv1_scale = Vector3(30, 30, 60)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kx5yf"]
 size = Vector3(32, 6, 2)
@@ -22,14 +22,14 @@ size = Vector3(32, 6, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dam5u"]
 albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(40, 10, 1)
+uv1_scale = Vector3(25, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_an0e2"]
 size = Vector3(2, 6, 22)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3534"]
 albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(40, 10, 1)
+uv1_scale = Vector3(25, 5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2spia"]
 material = SubResource("StandardMaterial3D_k3534")
@@ -37,17 +37,9 @@ size = Vector3(2, 6, 22)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbgnm"]
 albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(40, 10, 1)
+uv1_scale = Vector3(25, 5, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtmlw"]
-size = Vector3(32, 4, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tw6o5"]
-albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(40, 10, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_45dqi"]
-material = SubResource("StandardMaterial3D_tw6o5")
 size = Vector3(32, 4, 2)
 
 [node name="world" type="Node2D"]
@@ -71,6 +63,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 10)
 shape = SubResource("BoxShape3D_pmusy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("BoxMesh_k3e5r")
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_2ja1w")
@@ -110,8 +103,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 19)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FrontWall"]
 shape = SubResource("BoxShape3D_qtmlw")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="FrontWall/CollisionShape3D"]
-mesh = SubResource("BoxMesh_45dqi")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
