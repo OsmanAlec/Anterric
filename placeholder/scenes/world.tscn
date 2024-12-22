@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
-[ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_a0hjt"]
+[ext_resource type="Texture2D" uid="uid://ddd17h2bfhi8e" path="res://art/tilesets/UntitledArtwork1.png" id="2_k6vu1"]
 [ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_mje5e"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pmusy"]
@@ -11,7 +11,7 @@ size = Vector3(32, 2, 18)
 size = Vector3(32, 2, 18)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ja1w"]
-albedo_texture = ExtResource("2_a0hjt")
+albedo_texture = ExtResource("2_k6vu1")
 uv1_scale = Vector3(30, 30, 60)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kx5yf"]

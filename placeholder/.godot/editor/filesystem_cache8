@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1734783352
+::res://::1734890450
 communication.txt::TextFile::-1::1734385620::0::1::::<><>::
 ::res://art/::1734777615
 icon.svg::CompressedTexture2D::7209331696306619313::1733500899::1734777615::1::::<><>::
@@ -120,13 +120,13 @@ torch_2.png::CompressedTexture2D::5205473514307014045::1734779347::1734779375::1
 torch_3.png::CompressedTexture2D::5357838766837475446::1734779347::1734779375::1::::<><>::
 torch_4.png::CompressedTexture2D::747150271245402622::1734779347::1734779375::1::::<><>::
 ::res://art/particles/::1734779372
-::res://art/tilesets/::1734782708
+::res://art/tilesets/::1734890478
 cobblestone_3.png::CompressedTexture2D::2658766076712649258::1734780829::1734781052::1::::<><>::
 dirty_1.png::CompressedTexture2D::9113807458441457506::1734780470::1734781052::1::::<><>::
 Dungeon_Tileset.png::CompressedTexture2D::8819493367233328888::1734779319::1734779319::1::::<><>::
-grass_2.png::CompressedTexture2D::5987484839409126566::1734782699::1734782708::1::::<><>::
-::res://scenes/::1734782747
+UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1734890478::1734890486::1::::<><>::
+::res://scenes/::1734783386
 player.tscn::PackedScene::4213710653736826845::1734782747::0::1::::<><>::res://scripts/player.gd<>uid://clbey6h85woxo::::res://art/characters/queen_ant.png
-world.tscn::PackedScene::3299845911646580096::1734782747::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://crknaausl5gmw::::res://art/tilesets/grass_2.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+world.tscn::PackedScene::3299845911646580096::1734783386::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 ::res://scripts/::1734777509
 player.gd::GDScript::-1::1734777509::0::1::::<>CharacterBody3D<>::
