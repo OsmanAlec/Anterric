@@ -1,11 +1,12 @@
-TileMapLayer
-TileMap
-MeshInstance3D
 CollisionShape3D
 StaticBody3D
-CharacterBody3D
+MeshInstance3D
+GridMap
 Node3D
 Camera3D
+CharacterBody3D
+TileMapLayer
+TileMap
 XRCamera3D
 CollisionShape2D
 DirectionalLight3D
