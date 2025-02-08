@@ -1,3 +1,4 @@
+AnimationPlayer
 AnimatedSprite3D
 CollisionShape3D
 CharacterBody3D
@@ -11,5 +12,3 @@ MeshInstance3D
 TileMapLayer
 TileMap
 XRCamera3D
-CollisionShape2D
-DirectionalLight3D

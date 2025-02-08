@@ -1,11 +1,28 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8leysd8nl2tm"]
+[gd_scene load_steps=14 format=3 uid="uid://c8leysd8nl2tm"]
 
 [ext_resource type="Script" path="res://scenes/ladybug.gd" id="1_4v5jg"]
-[ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ladybug.png" id="1_5nhpo"]
+[ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/walking.png" id="1_5nhpo"]
+[ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/idle.png" id="2_qsdln"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78va4"]
 radius = 0.2
 height = 0.7
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r70s0"]
+atlas = ExtResource("2_qsdln")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg6mp"]
+atlas = ExtResource("2_qsdln")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea2is"]
+atlas = ExtResource("2_qsdln")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5salb"]
+atlas = ExtResource("2_qsdln")
+region = Rect2(960, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0hm86"]
 atlas = ExtResource("1_5nhpo")
@@ -27,6 +44,23 @@ region = Rect2(960, 0, 320, 320)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_r70s0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg6mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea2is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5salb")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_0hm86")
 }, {
 "duration": 1.0,
@@ -39,21 +73,20 @@ animations = [{
 "texture": SubResource("AtlasTexture_lqbvs")
 }],
 "loop": true,
-"name": &"walking",
+"name": &"walking horizontal",
 "speed": 8.0
 }]
 
 [node name="Ladybug" type="CharacterBody3D"]
 script = ExtResource("1_4v5jg")
 
-[node name="CharacterBody3D" type="CollisionShape3D" parent="."]
+[node name="Body" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -8.74228e-09, 0.2, 0)
 shape = SubResource("CapsuleShape3D_78va4")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="Animations" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 pixel_size = 0.002
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
-animation = &"walking"
-frame = 2
-frame_progress = 0.724693
+animation = &"idle"
