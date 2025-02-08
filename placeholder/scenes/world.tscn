@@ -1,46 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=3 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
-[ext_resource type="Texture2D" uid="uid://ddd17h2bfhi8e" path="res://art/tilesets/UntitledArtwork1.png" id="2_k6vu1"]
-[ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_mje5e"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_pmusy"]
-size = Vector3(32, 2, 18)
-
-[sub_resource type="BoxMesh" id="BoxMesh_k3e5r"]
-size = Vector3(32, 2, 18)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2ja1w"]
-albedo_texture = ExtResource("2_k6vu1")
-uv1_scale = Vector3(30, 30, 60)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_kx5yf"]
-size = Vector3(32, 6, 2)
-
-[sub_resource type="BoxMesh" id="BoxMesh_c6piu"]
-size = Vector3(32, 6, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dam5u"]
-albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(25, 5, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_an0e2"]
-size = Vector3(2, 6, 22)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k3534"]
-albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(25, 5, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_2spia"]
-material = SubResource("StandardMaterial3D_k3534")
-size = Vector3(2, 6, 22)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbgnm"]
-albedo_texture = ExtResource("3_mje5e")
-uv1_scale = Vector3(25, 5, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_qtmlw"]
-size = Vector3(32, 4, 2)
+[ext_resource type="PackedScene" uid="uid://7n4slgklnggf" path="res://scenes/room_no1.tscn" id="2_4lubw"]
 
 [node name="world" type="Node2D"]
 
@@ -48,60 +9,9 @@ size = Vector3(32, 4, 2)
 transform = Transform3D(0.532825, 0.664061, -0.524519, 0.0348471, 0.60209, 0.797668, 0.845508, -0.443295, 0.297668, 0, 15, 15)
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_svnxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 5.89311)
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.928486, 0.371368, 0, -0.371368, 0.928486, 0, 5.37323, 11.3407)
-fov = 42.1875
-
-[node name="Floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -1)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 10)
-shape = SubResource("BoxShape3D_pmusy")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/CollisionShape3D"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
-mesh = SubResource("BoxMesh_k3e5r")
-skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_2ja1w")
-
-[node name="BackWall" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BackWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 1, -1)
-shape = SubResource("BoxShape3D_kx5yf")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BackWall/CollisionShape3D"]
-mesh = SubResource("BoxMesh_c6piu")
-surface_material_override/0 = SubResource("StandardMaterial3D_dam5u")
-
-[node name="LeftWall" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LeftWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 9)
-shape = SubResource("BoxShape3D_an0e2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="LeftWall/CollisionShape3D"]
-mesh = SubResource("BoxMesh_2spia")
-
-[node name="RightWall" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RightWall"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 9)
-shape = SubResource("BoxShape3D_an0e2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RightWall/CollisionShape3D"]
-mesh = SubResource("BoxMesh_2spia")
-surface_material_override/0 = SubResource("StandardMaterial3D_kbgnm")
-
-[node name="FrontWall" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 19)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FrontWall"]
-shape = SubResource("BoxShape3D_qtmlw")
-
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Node3D" parent="." instance=ExtResource("2_4lubw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 7)
+
+[node name="Player" parent="." instance=ExtResource("1_svnxm")]

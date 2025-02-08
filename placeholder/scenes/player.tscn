@@ -1,27 +1,37 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=4 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Texture2D" uid="uid://clbey6h85woxo" path="res://art/characters/queen_ant.png" id="2_nnesa"]
 
-[sub_resource type="QuadMesh" id="QuadMesh_jj2wh"]
-size = Vector2(2, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_va5rv"]
-transparency = 1
-albedo_texture = ExtResource("2_nnesa")
-billboard_mode = 2
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_xmtt7"]
-size = Vector3(1.39542, 2.03477, 1)
+size = Vector3(0.474354, 0.74469, 0.463379)
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2rwgt")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0077, 0)
-mesh = SubResource("QuadMesh_jj2wh")
-surface_material_override/0 = SubResource("StandardMaterial3D_va5rv")
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+billboard = 1
+texture = ExtResource("2_nnesa")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0288665, 1.02297, 0.0705724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_xmtt7")
+
+[node name="dash_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="dash_again_timer" type="Timer" parent="."]
+wait_time = 0.8
+
+[node name="Camera_Controller" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller"]
+transform = Transform3D(-4.37114e-08, 0.34202, -0.939693, 0, 0.939693, 0.34202, 1, 1.49502e-08, -4.10753e-08, -2.18694, 1.53717, -3.87696e-08)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
+
+[connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
+[connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

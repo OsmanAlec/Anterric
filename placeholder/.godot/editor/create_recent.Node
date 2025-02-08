@@ -1,9 +1,11 @@
+Sprite3D
+Node3D
+Camera3D
+Timer
 GridMap
 CollisionShape3D
 StaticBody3D
 MeshInstance3D
-Node3D
-Camera3D
 CharacterBody3D
 TileMapLayer
 TileMap
@@ -11,4 +13,3 @@ XRCamera3D
 CollisionShape2D
 DirectionalLight3D
 AnimatedSprite2D
-CharacterBody2D
