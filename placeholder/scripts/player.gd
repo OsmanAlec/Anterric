@@ -7,6 +7,7 @@ const DASH_SPEED = 7 * RATE
 var dashing = false
 var canDash = true
 var currentAttack = false
+var state:String = "idle"
 
 func player_movement(direction, delta):
 	
@@ -35,14 +36,17 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1 
+		$Animations.set_flip_h(true)
 	if Input.is_action_pressed("ui_left"):
 		direction.x -= 1
+		$Animations.set_flip_h(false)
 	if Input.is_action_pressed("ui_down"):
 		direction.z += 1
 	if Input.is_action_pressed("ui_up"):
 		direction.z -= 1
 
 	player_movement(direction, delta)
+	$Animations.play(state)
 
 	move_and_slide()
 	

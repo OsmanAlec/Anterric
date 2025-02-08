@@ -1,5 +1,5 @@
-AnimationPlayer
 AnimatedSprite3D
+AnimationPlayer
 CollisionShape3D
 CharacterBody3D
 Sprite3D
