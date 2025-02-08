@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://c8leysd8nl2tm"]
+
+[ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ladybug.png" id="1_5nhpo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78va4"]
+radius = 0.2
+height = 0.7
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hm86"]
+atlas = ExtResource("1_5nhpo")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm2e4"]
+atlas = ExtResource("1_5nhpo")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4q25"]
+atlas = ExtResource("1_5nhpo")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqbvs"]
+atlas = ExtResource("1_5nhpo")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udug2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hm86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm2e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4q25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqbvs")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 8.0
+}]
+
+[node name="Ladybug" type="CharacterBody3D"]
+
+[node name="CharacterBody3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -8.74228e-09, 0.2, 0)
+shape = SubResource("CapsuleShape3D_78va4")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+pixel_size = 0.002
+sprite_frames = SubResource("SpriteFrames_udug2")
+animation = &"walking"
+frame = 2
+frame_progress = 0.724693

@@ -6,6 +6,7 @@ const ACCELERATION = 30 * RATE
 const DASH_SPEED = 7 * RATE
 var dashing = false
 var canDash = true
+var currentAttack = false
 
 func player_movement(direction, delta):
 	
@@ -24,13 +25,13 @@ func player_movement(direction, delta):
 
 	else: 
 		velocity = velocity.move_toward(Vector3.ZERO, delta * ACCELERATION)
+	
 
 
 func _physics_process(delta):
 
 	var direction = Vector3.ZERO
-	
-
+	var facingDir: String = "right"
 
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1 
@@ -44,6 +45,16 @@ func _physics_process(delta):
 	player_movement(direction, delta)
 
 	move_and_slide()
+	
+	if !currentAttack:
+		currentAttack = true
+		if Input.is_action_just_pressed("primary_attack"):
+			#Animation.play("primary_attack" + facingDir)
+			pass
+					
+		
+		
+	
 	if abs($Camera_Controller.position.x - position.x) > 0.5:
 		$Camera_Controller.position.x = lerp($Camera_Controller.position.x, position.x, 0.1 * RATE)
 	if $Camera_Controller.position.z - position.z != 0:

@@ -1,12 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739034371
+::res://::1739038237
 communication.txt::TextFile::-1::1734373323::0::1::::<><>::
-meshlibrary.tres::MeshLibrary::6554742954011064980::1739028294::0::1::::<><>::
-::res://art/::1739028256
+meshlibrary.tres::MeshLibrary::6554742954011064980::1739034382::0::1::::<><>::
+::res://art/::1739037873
 icon.svg::CompressedTexture2D::7209331696306619313::1734299679::1739028256::1::::<><>::
+untitled.blend::PackedScene::6705271700452703530::1739025831::1739035855::1::::<><>::
 ::res://art/characters/::1739028257
 ant.png::CompressedTexture2D::9057577502567016141::1734299679::1739028257::1::::<><>::
 queen_ant.png::CompressedTexture2D::5547270392761227588::1734385151::1739028257::1::::<><>::
+::res://art/enemies/::1739037881
+::res://art/enemies/ladybug/::1739038370
+ladybug.png::CompressedTexture2D::1398722738432311564::1739038370::1739038371::1::::<><>::
 ::res://art/objects/::1734782339
 ::res://art/objects/items and trap_animation/::1734782339
 ::res://art/objects/items and trap_animation/arrow/::1739028257
@@ -125,12 +129,12 @@ cobblestone_3.png::CompressedTexture2D::2658766076712649258::1734782339::1739028
 dirty_1.png::CompressedTexture2D::9113807458441457506::1734782339::1739028256::1::::<><>::
 Dungeon_Tileset.png::CompressedTexture2D::8819493367233328888::1734782339::1739028256::1::::<><>::
 UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1737490846::1739028256::1::::<><>::
-::res://scenes/::1739033339
-gridmapblocks.tscn::PackedScene::1022465763173497471::1739033339::0::1::::<><>::
-player.tscn::PackedScene::4213710653736826845::1739033339::0::1::::<><>::res://scripts/player.gd<>uid://clbey6h85woxo::::res://art/characters/queen_ant.png
-room_no1.tscn::PackedScene::2274673431795579073::1739033339::0::1::::<><>::uid://c0nfwntgksox5::::res://meshlibrary.tres
-untitled.blend::PackedScene::6705271700452703530::1739025831::1739028285::1::::<><>::
-world.tscn::PackedScene::3299845911646580096::1739033339::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn
-::res://scripts/::1739033221
+::res://scenes/::1739037886
+gridmapblocks.tscn::PackedScene::1022465763173497471::1739035814::0::1::::<><>::
+ladybug.tscn::PackedScene::7112068041332633094::1739037370::0::1::::<><>::
+player.tscn::PackedScene::4213710653736826845::1739037333::0::1::::<><>::res://scripts/player.gd<>uid://clbey6h85woxo::::res://art/characters/queen_ant.png
+room_no1.tscn::PackedScene::2274673431795579073::1739035814::0::1::::<><>::uid://c0nfwntgksox5::::res://meshlibrary.tres
+world.tscn::PackedScene::3299845911646580096::1739035814::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn
+::res://scripts/::1739037333
 character_test.gd::GDScript::-1::1739030037::0::1::::<>CharacterBody3D<>::
-player.gd::GDScript::-1::1739033221::0::1::::<>CharacterBody3D<>::
+player.gd::GDScript::-1::1739037333::0::1::::<>CharacterBody3D<>::
