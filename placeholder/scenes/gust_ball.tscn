@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://yab7tmygubnd"]
+
+[ext_resource type="Texture2D" uid="uid://blbpp0tqp6bmi" path="res://art/enemies/ladybug/gust ball.png" id="1_u2xm6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wpgex"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(0, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57f8f"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(75, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm4hu"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(150, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3c1wh"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(225, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06e8m"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(300, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw3gc"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(375, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsc03"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(450, 0, 75, 75)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhiop"]
+atlas = ExtResource("1_u2xm6")
+region = Rect2(525, 0, 75, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p7rak"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wpgex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57f8f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm4hu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3c1wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06e8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw3gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsc03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhiop")
+}],
+"loop": true,
+"name": &"gust ball",
+"speed": 5.0
+}]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_3ifnu"]
+radius = 0.1
+
+[node name="gust ball" type="RigidBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.002
+sprite_frames = SubResource("SpriteFrames_p7rak")
+animation = &"gust ball"
+frame_progress = 0.551764
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("SphereShape3D_3ifnu")

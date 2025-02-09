@@ -1,8 +1,10 @@
+AnimationTree
 AnimatedSprite3D
-AnimationPlayer
+RigidBody3D
 CollisionShape3D
-CharacterBody3D
 Sprite3D
+AnimationPlayer
+CharacterBody3D
 Node3D
 Camera3D
 Timer
@@ -10,5 +12,3 @@ GridMap
 StaticBody3D
 MeshInstance3D
 TileMapLayer
-TileMap
-XRCamera3D

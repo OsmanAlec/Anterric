@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://myfyny1fu7up"
-path.s3tc="res://.godot/imported/idle.png-3cc8f477533337ed2651d0da10592d62.s3tc.ctex"
+uid="uid://bvkhdhmd0rx1s"
+path.s3tc="res://.godot/imported/flying moving.png-1678ad6850aa8e92b6fbc3471b99e7c8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/enemies/ladybug/idle.png"
-dest_files=["res://.godot/imported/idle.png-3cc8f477533337ed2651d0da10592d62.s3tc.ctex"]
+source_file="res://art/enemies/ladybug/flying moving.png"
+dest_files=["res://.godot/imported/flying moving.png-1678ad6850aa8e92b6fbc3471b99e7c8.s3tc.ctex"]
 
 [params]
 
