@@ -1,18 +1,10 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
-var isFlying:bool = false
-var state:String = "idle"
-
+@onready var anim_tree = get_node("AnimationTree")
 
 func _physics_process(delta: float) -> void:
 	
-	$Animations.play(state)
 	
-	if Input.is_action_just_pressed("primary_attack"):
-		$Animations.set_flip_h(true) #all this does is if player attacks, ladybug turns to the left side
-
-
-
+	anim_tree.get("parameters/playback").travel("flying idle")
 
 	move_and_slide()

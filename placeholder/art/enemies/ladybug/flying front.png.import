@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvkhdhmd0rx1s"
-path.s3tc="res://.godot/imported/flying moving.png-1678ad6850aa8e92b6fbc3471b99e7c8.s3tc.ctex"
+uid="uid://cmycvfrhd5uei"
+path.s3tc="res://.godot/imported/flying front.png-8cca8a87519ce8f69f1d197b9e183914.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/enemies/ladybug/flying moving.png"
-dest_files=["res://.godot/imported/flying moving.png-1678ad6850aa8e92b6fbc3471b99e7c8.s3tc.ctex"]
+source_file="res://art/enemies/ladybug/flying front.png"
+dest_files=["res://.godot/imported/flying front.png-8cca8a87519ce8f69f1d197b9e183914.s3tc.ctex"]
 
 [params]
 
