@@ -11,7 +11,7 @@ queen_ant.png::CompressedTexture2D::5547270392761227588::1734385151::1739028257:
 RightFacingIdleWithSword.png::CompressedTexture2D::3591873573807758694::1739126970::1739127023::1::::<><>::
 RightFacingSwordSwing.png::CompressedTexture2D::4510350692271780811::1739108141::1739113343::1::::<><>::
 ::res://art/enemies/::1739037881
-::res://art/enemies/ladybug/::1739135311
+::res://art/enemies/ladybug/::1739135569
 flying attack right.png::CompressedTexture2D::7882575683784023242::1739129239::1739129436::1::::<><>::
 flying attack.png::CompressedTexture2D::3236530143543469808::1739113582::1739114119::1::::<><>::
 flying back.png::CompressedTexture2D::5882500851604443548::1739129775::1739129775::1::::<><>::
@@ -146,14 +146,13 @@ cobblestone_3.png::CompressedTexture2D::2658766076712649258::1734782339::1739028
 dirty_1.png::CompressedTexture2D::9113807458441457506::1734782339::1739028256::1::::<><>::
 Dungeon_Tileset.png::CompressedTexture2D::8819493367233328888::1734782339::1739028256::1::::<><>::
 UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1737490846::1739028256::1::::<><>::
-::res://scenes/::1739133196
-gridmapblocks.tscn::PackedScene::1022465763173497471::1739132097::0::1::::<><>::
-gust_ball.tscn::PackedScene::1684651127291061953::1739115334::0::1::::<><>::uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png
-ladybug.gd::GDScript::-1::1739132075::0::1::::<>CharacterBody3D<>::
-ladybug.tscn::PackedScene::7112068041332633094::1739133196::0::1::::<><>::res://scenes/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://bwnixorinu2ul::::res://art/enemies/ladybug/flying idle left.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://b3jjbywfijc7p::::res://art/enemies/ladybug/flying idle right.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://bn5lwy0nfthhj::::res://art/enemies/ladybug/take off.png
-player.tscn::PackedScene::4213710653736826845::1739132097::0::1::::<><>::res://scripts/player.gd<>uid://clbey6h85woxo::::res://art/characters/queen_ant.png
-room_no1.tscn::PackedScene::2274673431795579073::1739132097::0::1::::<><>::uid://c0nfwntgksox5::::res://meshlibrary.tres
-world.tscn::PackedScene::3299845911646580096::1739132097::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
+::res://scenes/::1739137949
+gridmapblocks.tscn::PackedScene::1022465763173497471::1739137684::0::1::::<><>::
+ladybug.gd::GDScript::-1::1739137723::0::1::::<>CharacterBody3D<>::
+ladybug.tscn::PackedScene::7112068041332633094::1739137956::0::1::::<><>::res://scenes/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://bwnixorinu2ul::::res://art/enemies/ladybug/flying idle left.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://b3jjbywfijc7p::::res://art/enemies/ladybug/flying idle right.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png
+player.tscn::PackedScene::4213710653736826845::1739137684::0::1::::<><>::res://scripts/player.gd<>uid://clbey6h85woxo::::res://art/characters/queen_ant.png
+room_no1.tscn::PackedScene::2274673431795579073::1739137684::0::1::::<><>::uid://c0nfwntgksox5::::res://meshlibrary.tres
+world.tscn::PackedScene::3299845911646580096::1739137723::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
 ::res://scripts/::1739044949
 character_test.gd::GDScript::-1::1739030037::0::1::::<>CharacterBody3D<>::
 player.gd::GDScript::-1::1739044949::0::1::::<>CharacterBody3D<>::
