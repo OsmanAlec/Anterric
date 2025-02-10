@@ -1,8 +1,12 @@
-res://scenes/gridmapblocks.tscn
-res://meshwithtextures.tres
+res://control.gd
+res://meshlibrary.tres
+res://scripts/menu.tscn
+res://scenes/menu.tscn
 res://scenes/room_no1.tscn
-res://withosmansbark.tres
+res://Menu.gd
+res://scenes/gridmapblocks.tscn
 res://scenes/player.tscn
 res://scenes/ladybug.tscn
 res://scenes/world.tscn
-res://scenes/room_no2.tscn
+res://scenes/options_menu.tscn
+res://withosmansbark.tres
