@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clbey6h85woxo"
-path.s3tc="res://.godot/imported/queen_ant.png-c4dc87cba6cb039da3e7139ccec68dd4.s3tc.ctex"
+uid="uid://ia1nrj03itx0"
+path.s3tc="res://.godot/imported/Idle Left.png-1f18f1bfbe0be7552a617f8556f5094c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/characters/queen_ant.png"
-dest_files=["res://.godot/imported/queen_ant.png-c4dc87cba6cb039da3e7139ccec68dd4.s3tc.ctex"]
+source_file="res://art/characters/Idle Left.png"
+dest_files=["res://.godot/imported/Idle Left.png-1f18f1bfbe0be7552a617f8556f5094c.s3tc.ctex"]
 
 [params]
 

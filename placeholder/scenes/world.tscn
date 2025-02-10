@@ -15,9 +15,8 @@ shadow_enabled = true
 [node name="room1" parent="." instance=ExtResource("2_4lubw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
 
-[node name="Player" parent="." instance=ExtResource("1_svnxm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-
 [node name="Ladybug" parent="." instance=ExtResource("3_a3ba7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.35246, 0, 0)
 player_path = NodePath("../Player")
+
+[node name="Player" parent="." instance=ExtResource("1_svnxm")]
