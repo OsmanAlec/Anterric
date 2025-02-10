@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dssy2exuqcb4a"]
 
-[ext_resource type="Script" path="res://ladybug_gust.gd" id="1_gpe51"]
+[ext_resource type="Script" path="res://scripts/ladybug_gust.gd" id="1_gpe51"]
 [ext_resource type="Texture2D" uid="uid://blbpp0tqp6bmi" path="res://art/enemies/ladybug/gust ball.png" id="2_f4x7i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_65ymp"]
