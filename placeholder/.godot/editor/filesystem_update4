@@ -1,4 +1,7 @@
 res://scenes/room_no1.tscn
-res://meshlibrary.tres
 res://meshwithtextures.tres
+res://scenes/gridmapblocks.tscn
+res://scenes/player.tscn
+res://scenes/ladybug.tscn
 res://scenes/world.tscn
+res://anothertextureuipdate.tres
