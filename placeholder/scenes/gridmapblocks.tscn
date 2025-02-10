@@ -1,12 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://otj4kfv8abpn"]
 
-[ext_resource type="Texture2D" uid="uid://7yuri7gymt13" path="res://art/tilesets/treebarknewtexturejpg.jpg" id="1_p2otx"]
+[ext_resource type="Texture2D" uid="uid://cq80pecb0k235" path="res://art/tilesets/6673827.jpg" id="1_d1kod"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]
 [ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_1kohj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rssw5"]
-albedo_texture = ExtResource("1_p2otx")
-uv1_scale = Vector3(3, 3, 3)
+albedo_texture = ExtResource("1_d1kod")
 
 [sub_resource type="BoxMesh" id="BoxMesh_petgk"]
 material = SubResource("StandardMaterial3D_rssw5")
