@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://7n4slgklnggf"]
 
-[ext_resource type="MeshLibrary" path="res://withosmansbark.tres" id="1_lkttt"]
+[ext_resource type="MeshLibrary" uid="uid://fdyn2uimxq5o" path="res://withosmansbark.tres" id="1_lkttt"]
 
 [node name="Node3D" type="Node3D"]
 

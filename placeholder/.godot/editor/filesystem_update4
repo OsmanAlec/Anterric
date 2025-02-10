@@ -10,3 +10,6 @@ res://scenes/ladybug.tscn
 res://scenes/world.tscn
 res://scenes/options_menu.tscn
 res://withosmansbark.tres
+res://scripts/level_select.gd
+res://scenes/level_select.tscn
+res://scripts/Menu.gd
