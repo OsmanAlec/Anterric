@@ -10,6 +10,9 @@ var state: String = "idle"
 @export var flying_height: float = 0.4  # Target height when flying
 @export var ascent_speed: float = 0.5  # Speed of flying up
 
+@onready var anim_tree = get_node("AnimationTree")
+
+
 var isFlying: bool = false  # Tracks if ladybug is flying
 var flight_progress: float = 0.0  # Smooth flight transition
 
@@ -41,5 +44,6 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity = Vector3.ZERO  # Stop moving if player is null
 
-	$Animations.play(state)
+	anim_tree.get("parameters/playback").travel("flying idle")
+	
 	move_and_slide()
