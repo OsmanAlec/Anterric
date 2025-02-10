@@ -1,6 +1,4 @@
-Timer
-GridMap
-Node3D
+Health
 CollisionShape3D
 Area3D
 RigidBody3D
@@ -11,4 +9,6 @@ AnimationTree
 AnimationPlayer
 Sprite3D
 CharacterBody3D
+Node3D
 Camera3D
+Timer
