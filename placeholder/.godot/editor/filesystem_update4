@@ -4,3 +4,4 @@ res://scenes/gridmapblocks.tscn
 res://scenes/player.tscn
 res://scenes/ladybug.tscn
 res://scenes/world.tscn
+res://scripts/ladybug.gd
