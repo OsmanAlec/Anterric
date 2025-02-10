@@ -965,8 +965,9 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_53aeo"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_l5vln"]
+graph_offset = Vector2(-331.584, -47.596)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_q2k6a")
-nodes/BlendSpace1D/position = Vector2(407, 205.7)
+nodes/BlendSpace1D/position = Vector2(380, 200)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_53aeo")
 nodes/TimeScale/position = Vector2(620, 140)
 nodes/output/position = Vector2(900, 160)
@@ -1012,19 +1013,21 @@ animation = &"flying moving front"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1cqlg"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_27ic1")
-blend_point_0/pos = Vector2(-1, 0)
+blend_point_0/pos = Vector2(-2, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_1qqbq")
-blend_point_1/pos = Vector2(1, 0)
+blend_point_1/pos = Vector2(2, 0)
 blend_point_2/node = SubResource("AnimationNodeAnimation_c1p38")
 blend_point_2/pos = Vector2(0, 1)
 blend_point_3/node = SubResource("AnimationNodeAnimation_3og00")
 blend_point_3/pos = Vector2(0, -1)
+min_space = Vector2(-2, -1)
+max_space = Vector2(2, 1)
 blend_mode = 1
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rwwei"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vuwp0"]
-graph_offset = Vector2(-483.483, 169.788)
+graph_offset = Vector2(-570.928, 228.878)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_1cqlg")
 nodes/BlendSpace2D/position = Vector2(-320, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rwwei")
@@ -1131,7 +1134,7 @@ states/death/position = Vector2(846, 369)
 states/takeoff/node = SubResource("AnimationNodeBlendTree_mo64y")
 states/takeoff/position = Vector2(525, 182)
 transitions = ["attack", "flying idle", SubResource("AnimationNodeStateMachineTransition_kqoe4"), "takeoff", "flying idle", SubResource("AnimationNodeStateMachineTransition_oucle"), "death", "End", SubResource("AnimationNodeStateMachineTransition_akqeg")]
-graph_offset = Vector2(-126, 66.0919)
+graph_offset = Vector2(-126, 181.453)
 
 [node name="Ladybug" type="CharacterBody3D"]
 script = ExtResource("1_4v5jg")
@@ -1145,7 +1148,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
-animation = &""
+animation = &"flying idle right"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -1158,9 +1161,9 @@ libraries = {
 root_node = NodePath("../Animations")
 tree_root = SubResource("AnimationNodeStateMachine_bcwcr")
 anim_player = NodePath("../AnimationPlayer")
-parameters/attack/BlendSpace1D/blend_position = 0
+parameters/attack/BlendSpace1D/blend_position = 0.605405
 parameters/attack/TimeScale/scale = 0.2
-"parameters/flying idle/BlendSpace1D/blend_position" = -0.25825
+"parameters/flying idle/BlendSpace1D/blend_position" = 0.322523
 "parameters/flying idle/TimeScale/scale" = 0.2
 "parameters/flying moving/BlendSpace2D/blend_position" = Vector2(-0.0533537, 0.370031)
 "parameters/flying moving/TimeScale/scale" = 0.2
@@ -1170,3 +1173,8 @@ parameters/attack/TimeScale/scale = 0.2
 "parameters/ground moving/TimeScale/scale" = 0.2
 parameters/takeoff/BlendSpace1D/blend_position = -0.992826
 parameters/takeoff/TimeScale/scale = 0.2
+
+[node name="attack_timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

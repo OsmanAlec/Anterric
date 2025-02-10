@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://chyjvi1hjg0kt"]
+[gd_scene load_steps=2 format=3 uid="uid://bh6s2fdem571i"]
 
-[ext_resource type="MeshLibrary" uid="uid://cijpxd53dg6gu" path="res://withosmansbark.tres" id="1_hj2gu"]
+[ext_resource type="MeshLibrary" uid="uid://bamiex3v6snjp" path="res://withosmansbark.tres" id="1_hj2gu"]
 
 [node name="Room2" type="Node3D"]
 
