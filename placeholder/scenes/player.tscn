@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=6 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
+[ext_resource type="Script" path="res://components/health.gd" id="2_kqand"]
 [ext_resource type="Texture2D" uid="uid://clbey6h85woxo" path="res://art/characters/queen_ant.png" id="2_nnesa"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7krk7"]
@@ -20,6 +21,9 @@ animations = [{
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2rwgt")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_kqand")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0262854, 0.334971, 0)
