@@ -1,7 +1,4 @@
-res://scenes/ladybug.tscn
-res://meshlibrary.tres
-res://scripts/ladybug.gd
 res://scenes/room_no1.tscn
-res://scenes/gridmapblocks.tscn
-res://scenes/player.tscn
+res://meshlibrary.tres
+res://meshwithtextures.tres
 res://scenes/world.tscn

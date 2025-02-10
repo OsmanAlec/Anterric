@@ -1,11 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://7n4slgklnggf"]
 
-[ext_resource type="MeshLibrary" uid="uid://c0nfwntgksox5" path="res://meshlibrary.tres" id="2_lkeql"]
+[ext_resource type="MeshLibrary" uid="uid://d1uv01nqd1vf4" path="res://meshwithtextures.tres" id="1_4q8hs"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = ExtResource("2_lkeql")
+mesh_library = ExtResource("1_4q8hs")
 cell_size = Vector3(1, 1, 1)
 cell_octant_size = 2
 cell_scale = 0.5
