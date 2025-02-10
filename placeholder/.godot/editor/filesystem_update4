@@ -1,9 +1,6 @@
-res://scenes/ladybug.tscn
-res://meshlibrary.tres
-res://scenes/ladybug.gd
 res://scenes/room_no1.tscn
+res://meshlibrary.tres
 res://scenes/gridmapblocks.tscn
-res://scenes/world.tscn
 res://scenes/player.tscn
-res://ladybug_gust.gd
-res://scenes/ballofgust.tscn
+res://scenes/ladybug.tscn
+res://scenes/world.tscn
