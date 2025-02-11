@@ -1,11 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://otj4kfv8abpn"]
 
-[ext_resource type="Texture2D" uid="uid://cq80pecb0k235" path="res://art/tilesets/6673827.jpg" id="1_d1kod"]
+[ext_resource type="Texture2D" uid="uid://bs7ltltibntbn" path="res://art/tilesets/dungeonfloor.png" id="1_de7ep"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]
 [ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_1kohj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rssw5"]
-albedo_texture = ExtResource("1_d1kod")
+albedo_texture = ExtResource("1_de7ep")
+uv1_scale = Vector3(2.98, 2.005, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_petgk"]
 material = SubResource("StandardMaterial3D_rssw5")
@@ -23,6 +24,7 @@ albedo_texture = ExtResource("3_1kohj")
 [node name="Node3D" type="Node3D"]
 
 [node name="block1" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("BoxMesh_petgk")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="block1"]
