@@ -1,7 +1,9 @@
+CollisionShape3D
+StaticBody3D
+MeshInstance3D
 AnimationTree
 AnimationPlayer
 Health
-CollisionShape3D
 Area3D
 RigidBody3D
 VisibleOnScreenNotifier3D
@@ -10,5 +12,3 @@ Area2D
 Sprite3D
 CharacterBody3D
 Node3D
-Camera3D
-Timer

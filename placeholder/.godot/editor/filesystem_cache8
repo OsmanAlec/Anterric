@@ -1,10 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739277223
-anothertextureuipdate.tres::MeshLibrary::8527982639222682330::1739196068::0::1::::<><>::uid://7yuri7gymt13::::res://art/tilesets/treebarknewtexturejpg.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+::res://::1739279338
 communication.txt::TextFile::-1::1739193952::0::1::::<><>::
-meshlibrary.tres::MeshLibrary::6554742954011064980::1739277030::0::1::::<><>::
-meshwithtextures.tres::MeshLibrary::9026780628866642139::1739196711::0::1::::<><>::uid://ddd17h2bfhi8e::::res://art/tilesets/UntitledArtwork1.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
-withosmansbark.tres::MeshLibrary::6552196851578896161::1739277124::0::1::::<><>::uid://cq80pecb0k235::::res://art/tilesets/6673827.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+dungeonfloormesh.tres::MeshLibrary::8516824836967079352::1739279079::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 ::res://art/::1739277096
 icon.svg::CompressedTexture2D::7209331696306619313::1739193951::1739277096::1::::<><>::
 ::res://art/characters/::1739277098
@@ -147,7 +144,7 @@ torch_1.png::CompressedTexture2D::5075157073133051451::1739193952::1739277096::1
 torch_2.png::CompressedTexture2D::5205473514307014045::1739193952::1739277096::1::::<><>::
 torch_3.png::CompressedTexture2D::5357838766837475446::1739193952::1739277096::1::::<><>::
 torch_4.png::CompressedTexture2D::747150271245402622::1739193952::1739277096::1::::<><>::
-::res://art/tilesets/::1739277222
+::res://art/tilesets/::1739277294
 6673827.jpg::CompressedTexture2D::5965532256468706370::1739196649::1739277096::1::::<><>::
 cobblestone_3.png::CompressedTexture2D::2658766076712649258::1739193952::1739277096::1::::<><>::
 dirty_1.png::CompressedTexture2D::9113807458441457506::1739193952::1739277096::1::::<><>::
@@ -158,17 +155,17 @@ UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1739193952::1739
 ::res://components/::1739277030
 health.gd::GDScript::-1::1739277030::0::1::::Health<>Node<>::
 ladybug.tscn::PackedScene::7112068041332633094::1739277030::0::1::::<><>::res://scripts/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/hurtbox.gd
-::res://scenes/::1739277125
+::res://scenes/::1739279079
 ballofgust.tscn::PackedScene::8461325706952862126::1739277030::0::1::::<><>::res://scripts/ladybug_gust.gd<>uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png
-gridmapblocks.tscn::PackedScene::1022465763173497471::1739277124::0::1::::<><>::uid://cq80pecb0k235::::res://art/tilesets/6673827.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
-ladybug.tscn::PackedScene::7112068041332633094::1739277125::0::1::::<><>::res://scripts/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://components/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/hurtbox.gd
-level_select.tscn::PackedScene::2475329078300090417::1739277125::0::1::::<><>::res://scripts/level_select.gd
-menu.tscn::PackedScene::7903906278629593331::1739277125::0::1::::<><>::res://scripts/Menu.gd
-options_menu.tscn::PackedScene::8316061357948044168::1739277125::0::1::::<><>::
-player.tscn::PackedScene::4213710653736826845::1739277124::0::1::::<><>::res://scripts/player.gd<>res://components/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png
-room_no1.tscn::PackedScene::2274673431795579073::1739277124::0::1::::<><>::uid://c0l6yv62i00n2::::res://withosmansbark.tres
-room_no2.tscn::PackedScene::2942879689290568044::1739277030::0::1::::<><>::uid://bamiex3v6snjp::::res://withosmansbark.tres
-world.tscn::PackedScene::3299845911646580096::1739277125::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
+gridmapblocks.tscn::PackedScene::1022465763173497471::1739279079::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+ladybug.tscn::PackedScene::7112068041332633094::1739278545::0::1::::<><>::res://scripts/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://components/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/hurtbox.gd
+level_select.tscn::PackedScene::2475329078300090417::1739279079::0::1::::<><>::res://scripts/level_select.gd
+menu.tscn::PackedScene::7903906278629593331::1739278545::0::1::::<><>::res://scripts/Menu.gd
+options_menu.tscn::PackedScene::8316061357948044168::1739278545::0::1::::<><>::
+player.tscn::PackedScene::4213710653736826845::1739278544::0::1::::<><>::res://scripts/player.gd<>res://components/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png
+room_no1.tscn::PackedScene::2274673431795579073::1739279079::0::1::::<><>::uid://dtlu4jatn35fg::::res://dungeonfloormesh.tres
+room_no2.tscn::PackedScene::2942879689290568044::1739279079::0::1::::<><>::uid://dtlu4jatn35fg::::res://dungeonfloormesh.tres
+world.tscn::PackedScene::3299845911646580096::1739278545::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
 ::res://scripts/::1739277030
 character_test.gd::GDScript::-1::1739193952::0::1::::<>CharacterBody3D<>::
 hitbox.gd::GDScript::-1::1739277030::0::1::::HitBox<>Area3D<>::

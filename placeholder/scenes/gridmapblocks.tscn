@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://otj4kfv8abpn"]
+[gd_scene load_steps=12 format=3 uid="uid://otj4kfv8abpn"]
 
 [ext_resource type="Texture2D" uid="uid://bs7ltltibntbn" path="res://art/tilesets/dungeonfloor.png" id="1_de7ep"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]
@@ -20,6 +20,15 @@ albedo_texture = ExtResource("2_gufia")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_81hup"]
 albedo_texture = ExtResource("3_1kohj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_jp66i"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61r0n"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxvve"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -51,3 +60,14 @@ surface_material_override/0 = SubResource("StandardMaterial3D_81hup")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block3/StaticBody3D"]
 shape = SubResource("BoxShape3D_81a30")
+
+[node name="Invisable_block" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+mesh = SubResource("BoxMesh_jp66i")
+surface_material_override/0 = SubResource("StandardMaterial3D_61r0n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Invisable_block"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Invisable_block/StaticBody3D"]
+shape = SubResource("BoxShape3D_mxvve")

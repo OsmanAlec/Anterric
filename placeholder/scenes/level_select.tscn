@@ -27,8 +27,8 @@ text = "Dungeon Level 1"
 layout_mode = 2
 text = "Dungeon Level 2"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 1" to="." method="_on_dungeon_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 1" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 1" to="." method="_on_dungeon_level_1_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 2" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 2" to="." method="_on_dungeon_level_2_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 2" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Dungeon Level 2" to="." method="_on_dungeon_level_2_pressed"]

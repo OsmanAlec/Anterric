@@ -1,12 +1,12 @@
-res://scenes/room_no1.tscn
-res://withosmansbark.tres
 res://scenes/gridmapblocks.tscn
+res://dungeonfloormesh.tres
+res://scenes/room_no1.tscn
+res://meshwithinvisblock_v1.tres
 res://scenes/player.tscn
 res://scenes/world.tscn
 res://scenes/ladybug.tscn
 res://scenes/level_select.tscn
 res://scenes/menu.tscn
 res://scenes/options_menu.tscn
-res://anothertextureuipdate.tres
 res://scenes/room_no2.tscn
-res://dungeonfloormesh.tres
+res://meshwithinvisblock_v2.tres
