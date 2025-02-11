@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ia1nrj03itx0"
-path.s3tc="res://.godot/imported/Idle Left.png-1f18f1bfbe0be7552a617f8556f5094c.s3tc.ctex"
+uid="uid://b5i321mwu7oel"
+path.s3tc="res://.godot/imported/Standing Attack Right.png-b110eeea97510e013be9be76e5f105eb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://art/characters/Idle Left.png"
-dest_files=["res://.godot/imported/Idle Left.png-1f18f1bfbe0be7552a617f8556f5094c.s3tc.ctex"]
+source_file="res://art/characters/Standing Attack Right.png"
+dest_files=["res://.godot/imported/Standing Attack Right.png-b110eeea97510e013be9be76e5f105eb.s3tc.ctex"]
 
 [params]
 

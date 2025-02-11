@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739268805
+::res://::1739273331
 anothertextureuipdate.tres::MeshLibrary::8527982639222682330::1739198034::0::1::::<><>::uid://7yuri7gymt13::::res://art/tilesets/treebarknewtexturejpg.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 communication.txt::TextFile::-1::1739195147::0::1::::<><>::
 meshlibrary.tres::MeshLibrary::6554742954011064980::1739198034::0::1::::<><>::
@@ -7,13 +7,13 @@ meshwithtextures.tres::MeshLibrary::9026780628866642139::1739198034::0::1::::<><
 withosmansbark.tres::MeshLibrary::6552196851578896161::1739268805::0::1::::<><>::uid://cq80pecb0k235::::res://art/tilesets/6673827.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 ::res://art/::1739217440
 icon.svg::CompressedTexture2D::7209331696306619313::1734299679::1739217440::1::::<><>::
-::res://art/characters/::1739270096
-Idle Left.png::CompressedTexture2D::563113514210783187::1739126970::1739219098::1::::<><>::
-Idle Right.png::CompressedTexture2D::3591873573807758694::1739126970::1739219155::1::::<><>::
-Primary Attack Left.png::CompressedTexture2D::5251851131284243770::1739218858::1739219356::1::::<><>::
-Primary Attack Right.png::CompressedTexture2D::4510350692271780811::1739108141::1739219295::1::::<><>::
-Walking Attack Left.png::CompressedTexture2D::3807337624352067081::1739262398::1739268748::1::::<><>::
-Walking Attack Right.png::CompressedTexture2D::718332728642431045::1739262398::1739270550::1::::<><>::
+::res://art/characters/::1739273331
+Standing Attack Left.png::CompressedTexture2D::5251851131284243770::1739218858::1739273297::1::::<><>::
+Standing Attack Right.png::CompressedTexture2D::4510350692271780811::1739108141::1739273308::1::::<><>::
+Standing Idle Left.png::CompressedTexture2D::563113514210783187::1739126970::1739273332::1::::<><>::
+Standing Idle Right.png::CompressedTexture2D::3591873573807758694::1739126970::1739273327::1::::<><>::
+Walking Attack Left.png::CompressedTexture2D::1548920480099849028::1739273092::1739273256::1::::<><>::
+Walking Attack Right.png::CompressedTexture2D::1373994116047591261::1739273092::1739273216::1::::<><>::
 Walking Left.png::CompressedTexture2D::5055170899280730830::1739262398::1739270096::1::::<><>::
 Walking Right.png::CompressedTexture2D::9125294123365693606::1739262398::1739270333::1::::<><>::
 ::res://art/enemies/::1739217204
@@ -157,22 +157,22 @@ UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1737490846::1739
 ::res://components/::1739217530
 health.gd::GDScript::-1::1739217255::0::1::::Health<>Node<>::
 ladybug.tscn::PackedScene::-1::1739217530::0::1::::<><>::
-::res://scenes/::1739270284
+::res://scenes/::1739273331
 ballofgust.tscn::PackedScene::8461325706952862126::1739217357::0::1::::<><>::res://scripts/ladybug_gust.gd<>uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png
-gridmapblocks.tscn::PackedScene::1022465763173497471::1739270283::0::1::::<><>::uid://cq80pecb0k235::::res://art/tilesets/6673827.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
-ladybug.tscn::PackedScene::7112068041332633094::1739270284::0::1::::<><>::res://scripts/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://components/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/hurtbox.gd
+gridmapblocks.tscn::PackedScene::1022465763173497471::1739272825::0::1::::<><>::uid://cq80pecb0k235::::res://art/tilesets/6673827.jpg<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+ladybug.tscn::PackedScene::7112068041332633094::1739272825::0::1::::<><>::res://scripts/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://components/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/hurtbox.gd
 level_select.tscn::PackedScene::2475329078300090417::1739199628::0::1::::<><>::res://scripts/level_select.gd
 menu.tscn::PackedScene::7903906278629593331::1739217357::0::1::::<><>::res://scripts/Menu.gd
 options_menu.tscn::PackedScene::8316061357948044168::1739217405::0::1::::<><>::
-player.tscn::PackedScene::4213710653736826845::1739270283::0::1::::<><>::res://scripts/player.gd<>res://components/health.gd<>uid://ia1nrj03itx0::::res://art/characters/Idle Left.png<>uid://brf6vryxyr2l3::::res://art/characters/Idle Right.png<>uid://cg3bhrjnlniis::::res://art/characters/Primary Attack Left.png<>uid://b5i321mwu7oel::::res://art/characters/Primary Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png
-room_no1.tscn::PackedScene::2274673431795579073::1739270283::0::1::::<><>::uid://c0l6yv62i00n2::::res://withosmansbark.tres
+player.tscn::PackedScene::4213710653736826845::1739273331::0::1::::<><>::res://scripts/player.gd<>res://components/health.gd<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png
+room_no1.tscn::PackedScene::2274673431795579073::1739272825::0::1::::<><>::uid://c0l6yv62i00n2::::res://withosmansbark.tres
 room_no2.tscn::PackedScene::2942879689290568044::1739217357::0::1::::<><>::uid://bamiex3v6snjp::::res://withosmansbark.tres
-world.tscn::PackedScene::3299845911646580096::1739270283::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
-::res://scripts/::1739218694
+world.tscn::PackedScene::3299845911646580096::1739272825::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://7n4slgklnggf::::res://scenes/room_no1.tscn<>uid://c8leysd8nl2tm::::res://scenes/ladybug.tscn
+::res://scripts/::1739272864
 character_test.gd::GDScript::-1::1739030037::0::1::::<>CharacterBody3D<>::
 hitbox.gd::GDScript::-1::1739217170::0::1::::HitBox<>Area3D<>::
 hurtbox.gd::GDScript::-1::1739217170::0::1::::HurtBox<>Area3D<>::
-ladybug.gd::GDScript::-1::1739218694::0::1::::<>CharacterBody3D<>::
+ladybug.gd::GDScript::-1::1739272864::0::1::::<>CharacterBody3D<>::
 ladybug_gust.gd::GDScript::-1::1739217356::0::1::::<>RigidBody3D<>::
 level_select.gd::GDScript::-1::1739199628::0::1::::<>Control<>::
 Menu.gd::GDScript::-1::1739217405::0::1::::<>Control<>::
