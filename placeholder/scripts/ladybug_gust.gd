@@ -1,20 +1,12 @@
 extends RigidBody3D
 
-@export var speed:int = 5.0
-var diection : Vector3
-# Called when the node enters the scene tree for the first time.
-func _read():
-	pass
+@export var speed: float = 10.0
 
-func _process(delta: float) -> void:
-	$animation.play("gust ball", 4.0)
-	
-	move_and_collide(transform.basis.z * delta * speed)
-	
+func _ready() -> void:
+	gravity_scale = 0  # Disable gravity (optional)
+	$VisibleOnScreenNotifier3D.screen_exited.connect(queue_free)
 
-
-func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("HitObject"):
-		print("I'm hit!")
-		body.queue_free()
-		queue_free()
+# Direction is set ONCE when spawned (no physics_process needed)
+func set_direction(target_position: Vector3) -> void:
+	var direction = (target_position - global_transform.origin).normalized()
+	linear_velocity = direction * speed  # Fixed direction

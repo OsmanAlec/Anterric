@@ -1,7 +1,8 @@
-[gd_scene load_steps=121 format=3 uid="uid://c8leysd8nl2tm"]
+[gd_scene load_steps=123 format=3 uid="uid://c8leysd8nl2tm"]
 
 [ext_resource type="Script" path="res://scripts/ladybug.gd" id="1_4v5jg"]
 [ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ground moving.png" id="1_5nhpo"]
+[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/ballofgust.tscn" id="2_0rplw"]
 [ext_resource type="Script" path="res://components/health.gd" id="2_b57c8"]
 [ext_resource type="Texture2D" uid="uid://bmd2gcp0g0u53" path="res://art/enemies/ladybug/flying attack.png" id="2_d0n1a"]
 [ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/ground idle.png" id="2_qsdln"]
@@ -15,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://csdevva5scjy3" path="res://art/enemies/ladybug/take off left.png" id="14_vtbkt"]
 [ext_resource type="Texture2D" uid="uid://dhsqabfbedqv7" path="res://art/enemies/ladybug/take off right.png" id="15_4xup4"]
 [ext_resource type="Script" path="res://scripts/hurtbox.gd" id="15_esixv"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_t4tvl"]
 
 [sub_resource type="Animation" id="Animation_ugtgy"]
 length = 0.001
@@ -1097,6 +1100,13 @@ size = Vector3(0.792236, 0.728394, 0.841461)
 
 [node name="Ladybug" type="CharacterBody3D"]
 script = ExtResource("1_4v5jg")
+ballofgust_scene = ExtResource("2_0rplw")
+
+[node name="ProjectileSpawn" type="Marker3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ProjectileSpawn"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = SubResource("SphereMesh_t4tvl")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_b57c8")

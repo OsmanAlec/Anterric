@@ -18,6 +18,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
 [node name="Ladybug" parent="." instance=ExtResource("3_a3ba7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15246, 0.4, 1.1)
 player_path = NodePath("../Player")
+detection_radius = 4.0
+stopping_distance = 3.0
+flying_height = 0.4
+ascent_speed = 0.5
 
 [node name="Player" parent="." instance=ExtResource("1_svnxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)

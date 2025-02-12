@@ -43,6 +43,7 @@ func _physics_process(delta: float) -> void:
 				if canAttack:
 					$attack_timer.start()
 					canAttack = false
+					shoot_ball_of_gust()
 					anim_tree.get("parameters/playback").travel("attack")
 					anim_tree.set("parameters/attack/BlendSpace1D/blend_position", direction.x) 
 				else:
@@ -60,8 +61,25 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
+@export var ballofgust_scene: PackedScene  # Assign BallOfGust scene in the Inspector
+@onready var marker = $ProjectileSpawn  # Spawn point for projectile
+
 func _on_attack_timer_timeout() -> void:
 	canAttack = true
+
+func shoot_ball_of_gust() -> void:
+	if not isFlying:
+		return
+
+	var player = get_node(player_path)
+	if player:
+		var projectile = ballofgust_scene.instantiate() as RigidBody3D
+		# Add to scene FIRST to ensure proper global coordinates
+		get_tree().current_scene.add_child(projectile)  
+		projectile.global_transform.origin = marker.global_transform.origin
+		
+		# Calculate direction to player's position AT THIS MOMENT
+		projectile.set_direction(player.global_transform.origin)
 
 
 func _on_health_health_depleted() -> void:

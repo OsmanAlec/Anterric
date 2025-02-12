@@ -1,6 +1,7 @@
+MeshInstance3D
+Marker3D
 CollisionShape3D
 StaticBody3D
-MeshInstance3D
 AnimationTree
 AnimationPlayer
 Health
@@ -11,4 +12,3 @@ AnimatedSprite3D
 Area2D
 Sprite3D
 CharacterBody3D
-Node3D
