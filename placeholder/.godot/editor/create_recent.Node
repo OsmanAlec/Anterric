@@ -1,7 +1,9 @@
+CollisionShape3D
+HitBox
+HurtBox
 Timer
 MeshInstance3D
 Marker3D
-CollisionShape3D
 StaticBody3D
 AnimationTree
 AnimationPlayer
@@ -10,6 +12,3 @@ Area3D
 RigidBody3D
 VisibleOnScreenNotifier3D
 AnimatedSprite3D
-Area2D
-Sprite3D
-CharacterBody3D

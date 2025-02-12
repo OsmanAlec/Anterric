@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=88 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://components/health.gd" id="2_kqand"]
@@ -10,10 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://tttqnuhlkpyr" path="res://art/characters/Walking Attack Right.png" id="8_xcqqw"]
 [ext_resource type="Texture2D" uid="uid://cea06qvcfdrt3" path="res://art/characters/Walking Left.png" id="9_u8xip"]
 [ext_resource type="Texture2D" uid="uid://d3ami4x65uove" path="res://art/characters/Walking Right.png" id="10_3wxsy"]
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7krk7"]
-radius = 0.233374
-height = 0.768287
+[ext_resource type="Script" path="res://scripts/hurtbox.gd" id="11_tf5i0"]
+[ext_resource type="Script" path="res://scripts/hitbox.gd" id="12_e4s7a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnt22"]
 atlas = ExtResource("3_1qdcu")
@@ -710,21 +708,20 @@ states/Walking/position = Vector2(376.977, 185.75)
 "states/Walking Attack/position" = Vector2(376.977, 49.5)
 transitions = ["Standing Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_jnyh1"), "Walking Attack", "Walking", SubResource("AnimationNodeStateMachineTransition_a7vpu")]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebpkw"]
+size = Vector3(0.517242, 0.709961, 0.413059)
+
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_2rwgt")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_kqand")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0262854, 0.334971, 0)
-shape = SubResource("CapsuleShape3D_7krk7")
-
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 sprite_frames = SubResource("SpriteFrames_kgdfr")
-animation = &""
+animation = &"Walking Attack Right"
 frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -763,6 +760,18 @@ wait_time = 0.8
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 0.3
+
+[node name="HurtBox" type="Area3D" parent="."]
+script = ExtResource("11_tf5i0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124054, 0.35791, 0.00219154)
+shape = SubResource("BoxShape3D_ebpkw")
+
+[node name="HitBox" type="Area3D" parent="."]
+script = ExtResource("12_e4s7a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

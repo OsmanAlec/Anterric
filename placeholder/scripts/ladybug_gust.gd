@@ -20,3 +20,7 @@ func set_direction(target_position: Vector3) -> void:
 		direction = direction.normalized()
 	# Apply the horizontal velocity
 	linear_velocity = direction * speed
+	
+	await get_tree().create_timer(1).timeout
+	queue_free()
+	
