@@ -7,6 +7,8 @@ const SPEED: float = 5.0
 @export var stopping_distance: float = 3.0  # Maintain distance when following
 @export var flying_height: float = 0.4  # Target height when flying
 @export var ascent_speed: float = 0.5  # Speed of flying up
+@export var ballofgust_scene: PackedScene  # Assign BallOfGust scene in the Inspector
+@onready var marker = $ProjectileSpawn  # Spawn point for projectile
 
 @onready var anim_tree = get_node("AnimationTree")
 
@@ -43,7 +45,7 @@ func _physics_process(delta: float) -> void:
 				if canAttack:
 					$attack_timer.start()
 					canAttack = false
-					shoot_ball_of_gust()
+					shoot_ball_of_gust(player)
 					anim_tree.get("parameters/playback").travel("attack")
 					anim_tree.set("parameters/attack/BlendSpace1D/blend_position", direction.x) 
 				else:
@@ -60,18 +62,11 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
-
-@export var ballofgust_scene: PackedScene  # Assign BallOfGust scene in the Inspector
-@onready var marker = $ProjectileSpawn  # Spawn point for projectile
-
 func _on_attack_timer_timeout() -> void:
 	canAttack = true
 
-func shoot_ball_of_gust() -> void:
-	if not isFlying:
-		return
-
-	var player = get_node(player_path)
+#Shoot out a ball of gust
+func shoot_ball_of_gust(player) -> void:
 	if player:
 		var projectile = ballofgust_scene.instantiate() as RigidBody3D
 		# Add to scene FIRST to ensure proper global coordinates

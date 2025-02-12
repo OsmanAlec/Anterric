@@ -61,10 +61,13 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wpvsc")
+}, {
+"duration": 1.0,
+"texture": null
 }],
-"loop": true,
+"loop": false,
 "name": &"gust ball",
-"speed": 5.0
+"speed": 8.0
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xhnl5"]
@@ -77,6 +80,8 @@ script = ExtResource("1_gpe51")
 pixel_size = 0.002
 sprite_frames = SubResource("SpriteFrames_s46cm")
 animation = &"gust ball"
+frame = 2
+frame_progress = 0.44246
 
 [node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
