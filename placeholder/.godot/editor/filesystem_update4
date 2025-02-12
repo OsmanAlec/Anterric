@@ -7,3 +7,4 @@ res://scenes/ladybug.tscn
 res://scenes/ballofgust.tscn
 res://scripts/ladybug_gust.gd
 res://scripts/player.gd
+res://scripts/hurtbox.gd
