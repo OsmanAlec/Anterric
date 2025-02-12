@@ -1,3 +1,4 @@
+HSlider
 CollisionShape3D
 HitBox
 HurtBox
@@ -11,4 +12,3 @@ Health
 Area3D
 RigidBody3D
 VisibleOnScreenNotifier3D
-AnimatedSprite3D
