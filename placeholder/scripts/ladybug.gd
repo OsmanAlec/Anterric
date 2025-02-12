@@ -45,9 +45,11 @@ func _physics_process(delta: float) -> void:
 				if canAttack:
 					$attack_timer.start()
 					canAttack = false
-					shoot_ball_of_gust(player)
 					anim_tree.get("parameters/playback").travel("attack")
-					anim_tree.set("parameters/attack/BlendSpace1D/blend_position", direction.x) 
+					anim_tree.set("parameters/attack/BlendSpace1D/blend_position", direction.x)
+					# Delay for a short period
+					await get_tree().create_timer(0.6).timeout
+					shoot_ball_of_gust(player)
 				else:
 					anim_tree.get("parameters/playback").travel("flying idle")
 					anim_tree.set("parameters/flying idle/BlendSpace1D/blend_position", direction.x)
