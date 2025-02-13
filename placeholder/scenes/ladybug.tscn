@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/ladybug.gd" id="1_4v5jg"]
 [ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ground moving.png" id="1_5nhpo"]
 [ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/ballofgust.tscn" id="2_0rplw"]
-[ext_resource type="Script" path="res://components/health.gd" id="2_b57c8"]
+[ext_resource type="Script" path="res://scripts/health.gd" id="2_b57c8"]
 [ext_resource type="Texture2D" uid="uid://bmd2gcp0g0u53" path="res://art/enemies/ladybug/flying attack.png" id="2_d0n1a"]
 [ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/ground idle.png" id="2_qsdln"]
 [ext_resource type="Texture2D" uid="uid://dkkm4tsyfcobq" path="res://art/enemies/ladybug/flying attack right.png" id="3_nnhly"]

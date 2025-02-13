@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccm8cvppgh0u4"]
+
+[ext_resource type="Script" path="res://scripts/textbox.gd" id="1_d02aa"]
+[ext_resource type="Texture2D" uid="uid://di08uhinf4us1" path="res://art/UI/textbox.png" id="1_jux8l"]
+[ext_resource type="FontFile" uid="uid://dkymdoh8qfruk" path="res://components/m5x7.ttf" id="2_keixt"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ebtui"]
+viewport_path = NodePath("Label3D")
+
+[node name="Node3D" type="Sprite3D"]
+texture = SubResource("ViewportTexture_ebtui")
+
+[node name="Label3D" type="MeshInstance3D" parent="."]
+
+[node name="Textbox" type="MarginContainer" parent="Label3D"]
+offset_right = 320.0
+offset_bottom = 160.0
+script = ExtResource("1_d02aa")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Label3D/Textbox"]
+layout_mode = 2
+texture = ExtResource("1_jux8l")
+region_rect = Rect2(0, 0, 240, 240)
+patch_margin_left = 160
+patch_margin_top = 80
+patch_margin_right = 160
+patch_margin_bottom = 80
+
+[node name="MarginContainer" type="MarginContainer" parent="Label3D/Textbox"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 30
+
+[node name="Label" type="Label" parent="Label3D/Textbox/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.906507, 0.976358, 0.988432, 1)
+theme_override_fonts/font = ExtResource("2_keixt")
+theme_override_font_sizes/font_size = 128
+uppercase = true
+
+[node name="LetterDisplayTimer" type="Timer" parent="Label3D/Textbox"]
+one_shot = true
+
+[connection signal="timeout" from="Label3D/Textbox/LetterDisplayTimer" to="Label3D/Textbox" method="_on_letter_display_timer_timeout"]

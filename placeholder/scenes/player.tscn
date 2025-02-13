@@ -1,7 +1,7 @@
 [gd_scene load_steps=89 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
-[ext_resource type="Script" path="res://components/health.gd" id="2_kqand"]
+[ext_resource type="Script" path="res://scripts/health.gd" id="2_kqand"]
 [ext_resource type="Texture2D" uid="uid://cg3bhrjnlniis" path="res://art/characters/Standing Attack Left.png" id="3_1qdcu"]
 [ext_resource type="Texture2D" uid="uid://ia1nrj03itx0" path="res://art/characters/Standing Idle Left.png" id="3_3t4oy"]
 [ext_resource type="Texture2D" uid="uid://b5i321mwu7oel" path="res://art/characters/Standing Attack Right.png" id="4_8wmo1"]
@@ -338,18 +338,6 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_yhvh7"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_mhi2m"]
 resource_name = "Standing Attack Left"
@@ -438,7 +426,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_ceewg"]
 resource_name = "Idle Right"
-length = 0.0573
+length = 0.0667
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -725,7 +713,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 sprite_frames = SubResource("SpriteFrames_kgdfr")
 animation = &""
-frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Animations")
