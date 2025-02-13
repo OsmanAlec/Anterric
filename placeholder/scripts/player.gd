@@ -14,6 +14,7 @@ var lastDir: Vector3
 
 func player_movement(direction, delta):
 	
+	
 	if Input.is_action_just_pressed("dash") and canDash:
 		dashing = true
 		canDash = false
@@ -40,6 +41,8 @@ func player_movement(direction, delta):
 
 
 func _physics_process(delta):
+	
+	$HitBox.set_process(false)
 
 	var direction : Vector3
 
@@ -63,6 +66,11 @@ func _physics_process(delta):
 			currentAttack = true
 			anim_tree.get("parameters/playback").travel(state + " Attack")
 			anim_tree.set("parameters/" + state + " Attack/BlendSpace1D/blend_position", lastDir.x) 
+			if lastDir.x > 0:
+				$HitBox/Right.set_process(true)
+			else:
+				$HitBox/Left.set_process(true)
+				
 			$attack_timer.start()
 		
 		

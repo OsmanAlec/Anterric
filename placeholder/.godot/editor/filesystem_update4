@@ -1,16 +1,8 @@
 res://scenes/room_no1.tscn
 res://meshwithinvisblock_v2.tres
+res://scripts/hurtbox.gd
 res://scenes/gridmapblocks.tscn
 res://scenes/player.tscn
 res://scenes/world.tscn
 res://scenes/ladybug.tscn
 res://scenes/ballofgust.tscn
-res://scenes/menu.tscn
-res://scenes/options_menu.tscn
-res://scripts/options_menu.gd
-res://scenes/options_menu.gd
-res://scenes/level_select.tscn
-res://default_bus_layout.tres
-res://volume_slider.gd
-res://volume_slider.tscn
-res://scripts/volume_slider.gd
