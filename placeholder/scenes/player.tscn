@@ -718,6 +718,7 @@ size = Vector3(0.517242, 0.709961, 0.413059)
 size = Vector3(0.6, 0.619446, 0.2)
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 0
 script = ExtResource("1_2rwgt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
