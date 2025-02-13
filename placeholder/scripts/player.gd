@@ -42,7 +42,8 @@ func player_movement(direction, delta):
 
 func _physics_process(delta):
 	
-	$HitBox.set_process(false)
+	$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
+	$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
 
 	var direction : Vector3
 
@@ -67,25 +68,13 @@ func _physics_process(delta):
 			anim_tree.get("parameters/playback").travel(state + " Attack")
 			anim_tree.set("parameters/" + state + " Attack/BlendSpace1D/blend_position", lastDir.x) 
 			if lastDir.x > 0:
-				$HitBox/Right.set_process(true)
+				$HitRight.set_process_mode(Node.PROCESS_MODE_INHERIT)
 			else:
-				$HitBox/Left.set_process(true)
+				$HitLeft.set_process_mode(Node.PROCESS_MODE_INHERIT)
 				
 			$attack_timer.start()
 		
 		
-	###Controls for the camera
-	
-	#add a 'dead-zone' to prevent camera flicking
-	if abs($Camera_Controller.position.x - position.x) > 0.5:
-		$Camera_Controller.position.x = lerp($Camera_Controller.position.x, position.x, 0.05 * RATE)
-	#Always prevent player from walking off screen
-	if $Camera_Controller.position.z - position.z != 0:
-		$Camera_Controller.position.z = lerp($Camera_Controller.position.z, position.z, 0.05 * RATE)
-		
-	
-	
-
 
 
 func _on_dash_timer_timeout() -> void:
@@ -95,4 +84,6 @@ func _on_dash_again_timer_timeout() -> void:
 	canDash = true
 
 func _on_attack_timer_timeout() -> void:
+	$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
+	$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
 	currentAttack = false
