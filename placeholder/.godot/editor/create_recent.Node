@@ -1,3 +1,4 @@
+Label
 Button
 HSlider
 CollisionShape3D
@@ -12,4 +13,3 @@ AnimationTree
 AnimationPlayer
 Health
 RigidBody3D
-VisibleOnScreenNotifier3D

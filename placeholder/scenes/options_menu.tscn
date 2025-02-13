@@ -25,13 +25,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Back"
 
-[node name="Music" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_yxvb2")]
+[node name="Music" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-bus_name = "Music"
+text = "Music"
 
-[node name="menu_music" type="AudioStreamPlayer" parent="MarginContainer/VBoxContainer/Music"]
+[node name="Music_slider" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_yxvb2")]
+layout_mode = 2
+bus_name = "menu_music"
+
+[node name="menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_4um0d")
+autoplay = true
 bus = &"menu_music"
+playback_type = 1
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
