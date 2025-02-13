@@ -1,6 +1,6 @@
 res://scenes/room_no1.tscn
-res://scripts/hurtbox.gd
 res://meshwithinvisblock_v2.tres
+res://scripts/hurtbox.gd
 res://scenes/gridmapblocks.tscn
 res://scenes/player.tscn
 res://scenes/world.tscn

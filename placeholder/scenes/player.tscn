@@ -773,8 +773,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0124054, 0.35791, 0.002191
 shape = SubResource("BoxShape3D_ebpkw")
 
 [node name="HitBox" type="Area3D" parent="."]
-collision_layer = 2
-collision_mask = 0
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("12_e4s7a")
 
 [node name="Left" type="CollisionShape3D" parent="HitBox"]
