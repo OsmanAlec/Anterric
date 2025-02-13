@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkuygf7645ud4"]
+[gd_scene load_steps=3 format=3 uid="uid://dkuygf7645ud4"]
 
 [ext_resource type="Script" path="res://scripts/Menu.gd" id="1_7dmr1"]
+[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="2_i3ie4"]
 
 [node name="Menu2" type="Control"]
 layout_mode = 3
@@ -30,6 +31,11 @@ text = "Options"
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
+
+[node name="ChillMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_i3ie4")
+bus = &"menu_music"
+playback_type = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
