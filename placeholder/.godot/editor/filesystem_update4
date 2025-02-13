@@ -1,9 +1,8 @@
-res://scenes/room_no1.tscn
+res://scenes/player.tscn
 res://meshwithinvisblock_v2.tres
 res://scripts/hurtbox.gd
+res://scenes/room_no1.tscn
 res://scenes/gridmapblocks.tscn
-res://scenes/player.tscn
 res://scenes/world.tscn
 res://scenes/ladybug.tscn
 res://scenes/ballofgust.tscn
-res://scenes/room_no2.tscn
