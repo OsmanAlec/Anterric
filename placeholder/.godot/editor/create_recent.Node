@@ -1,6 +1,7 @@
 Button
 HSlider
 CollisionShape3D
+Area3D
 HitBox
 HurtBox
 Timer
@@ -10,6 +11,5 @@ StaticBody3D
 AnimationTree
 AnimationPlayer
 Health
-Area3D
 RigidBody3D
 VisibleOnScreenNotifier3D
