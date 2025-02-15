@@ -1,14 +1,14 @@
+CollisionShape3D
+Area3D
+GridMap
 AnimationPlayer
 Label3D
 Timer
 Label
 Button
 HSlider
-CollisionShape3D
-Area3D
 HitBox
 HurtBox
 MeshInstance3D
 Marker3D
 StaticBody3D
-AnimationTree
