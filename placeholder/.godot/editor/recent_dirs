@@ -1,3 +1,6 @@
+res://inventory
+res://inventory/items
+res://art/objects/inventoryItems
 res://scenes/dungeonrooms/components
 res://art/objects/dungeonAssets
 res://scenes/UI

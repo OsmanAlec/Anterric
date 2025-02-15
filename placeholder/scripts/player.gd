@@ -1,5 +1,8 @@
 extends CharacterBody3D
 
+# Inventory 
+@export var inv: = Inv
+
 # Movement and action constants
 const RATE = 1.5
 const SPEED = 4 * RATE
