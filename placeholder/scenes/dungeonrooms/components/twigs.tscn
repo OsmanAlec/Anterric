@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://dp00sy3vongwu"]
+
+[ext_resource type="Texture2D" uid="uid://bunx6u6sugqe1" path="res://art/objects/dungeonAssets/twigs.png" id="1_6lidy"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/components/breakbox.gd" id="2_kdvan"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcp2r"]
+atlas = ExtResource("1_6lidy")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbamb"]
+atlas = ExtResource("1_6lidy")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0acgy"]
+atlas = ExtResource("1_6lidy")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqopl"]
+atlas = ExtResource("1_6lidy")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2jkhl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcp2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbamb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0acgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqopl")
+}],
+"loop": false,
+"name": &"break",
+"speed": 12.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qm7ar"]
+size = Vector3(0.488815, 0.683655, 0.718262)
+
+[node name="twigs" type="Node3D"]
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.222491, 0)
+pixel_size = 0.002
+sprite_frames = SubResource("SpriteFrames_2jkhl")
+animation = &"break"
+
+[node name="BreakBox" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_kdvan")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02314, 0.338652, 0.00268555)
+shape = SubResource("BoxShape3D_qm7ar")

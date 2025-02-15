@@ -1,4 +1,9 @@
 CollisionShape3D
+BreakBox
+AnimatedSprite3D
+HurtBox
+Health
+HitBox
 Area3D
 GridMap
 AnimationPlayer
@@ -7,8 +12,3 @@ Timer
 Label
 Button
 HSlider
-HitBox
-HurtBox
-MeshInstance3D
-Marker3D
-StaticBody3D
