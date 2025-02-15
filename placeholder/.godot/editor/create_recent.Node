@@ -1,3 +1,6 @@
+AnimationPlayer
+Label3D
+Timer
 Label
 Button
 HSlider
@@ -5,11 +8,7 @@ CollisionShape3D
 Area3D
 HitBox
 HurtBox
-Timer
 MeshInstance3D
 Marker3D
 StaticBody3D
 AnimationTree
-AnimationPlayer
-Health
-RigidBody3D

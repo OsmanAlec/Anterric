@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/ladybug.gd" id="1_4v5jg"]
 [ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ground moving.png" id="1_5nhpo"]
 [ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/ballofgust.tscn" id="2_0rplw"]
-[ext_resource type="Script" path="res://components/health.gd" id="2_b57c8"]
+[ext_resource type="Script" path="res://scripts/health.gd" id="2_b57c8"]
 [ext_resource type="Texture2D" uid="uid://bmd2gcp0g0u53" path="res://art/enemies/ladybug/flying attack.png" id="2_d0n1a"]
 [ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/ground idle.png" id="2_qsdln"]
 [ext_resource type="Texture2D" uid="uid://dkkm4tsyfcobq" path="res://art/enemies/ladybug/flying attack right.png" id="3_nnhly"]
@@ -24,18 +24,6 @@ size = Vector3(1, 0.587891, 0.526306)
 
 [sub_resource type="Animation" id="Animation_ugtgy"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
 
 [sub_resource type="Animation" id="Animation_kfpun"]
 resource_name = "attack left"
@@ -1129,7 +1117,7 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-root_node = NodePath("../Animations")
+root_node = NodePath("%Animations")
 tree_root = SubResource("AnimationNodeStateMachine_bcwcr")
 anim_player = NodePath("../AnimationPlayer")
 parameters/attack/BlendSpace1D/blend_position = 0.605405
@@ -1146,6 +1134,7 @@ parameters/takeoff/BlendSpace1D/blend_position = -0.992826
 parameters/takeoff/TimeScale/scale = 0.2
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 pixel_size = 0.002
 billboard = 1

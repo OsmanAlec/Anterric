@@ -18,10 +18,10 @@ var canAttack = true
 
 func _physics_process(delta: float) -> void:
 	var player = get_node(player_path)
-	var direction = 0
-	direction = (player.global_transform.origin - global_transform.origin).normalized()
+	var direction : Vector3 = Vector3.ZERO
 	
 	if player:
+		direction = (player.global_transform.origin - global_transform.origin).normalized()
 		var distance = global_transform.origin.distance_to(player.global_transform.origin)
 
 		# If the ant enters the detection radius, the ladybug takes off
@@ -80,4 +80,5 @@ func shoot_ball_of_gust(player) -> void:
 
 
 func _on_health_health_depleted() -> void:
+	print("I'm dead!!!")
 	queue_free()

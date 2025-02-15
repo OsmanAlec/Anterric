@@ -71,11 +71,7 @@ func _physics_process(delta):
 				$HitRight.set_process_mode(Node.PROCESS_MODE_INHERIT)
 			else:
 				$HitLeft.set_process_mode(Node.PROCESS_MODE_INHERIT)
-				
 			$attack_timer.start()
-		
-		
-
 
 func _on_dash_timer_timeout() -> void:
 	dashing = false
@@ -84,6 +80,9 @@ func _on_dash_again_timer_timeout() -> void:
 	canDash = true
 
 func _on_attack_timer_timeout() -> void:
+	currentAttack = false
 	$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
 	$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
-	currentAttack = false
+
+func _on_health_health_depleted() -> void:
+	queue_free()

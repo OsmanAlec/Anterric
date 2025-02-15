@@ -4,4 +4,14 @@ res://meshwithinvisblock_v2.tres
 res://scenes/menu.tscn
 res://scenes/options_menu.tscn
 res://scenes/volume_slider.tscn
-res://scripts/volume_slider.gd
+res://scripts/player.gd
+res://scenes/ballofgust.tscn
+res://scenes/ladybug.tscn
+res://scenes/player.tscn
+res://components/health.gd
+res://scripts/ladybug.gd
+res://scripts/hitbox.gd
+res://scripts/area_3d1.gd
+res://scenes/UI/damage_indicator.tscn
+res://scenes/UI/damageIndicator.gd
+res://scripts/damageIndicator.gd
