@@ -2,7 +2,7 @@
 
 [ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_4hn7j"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_io6id"]
-[ext_resource type="Script" path="res://scenes/area_3droom3.gd" id="3_wgpi6"]
+[ext_resource type="Script" path="res://scripts/area_3droom3.gd" id="3_wgpi6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1mpw"]
 size = Vector3(1.85016, 1, 1)
