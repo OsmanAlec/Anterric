@@ -2,13 +2,13 @@ MultiMeshInstance3D
 MeshInstance3D
 TextureRect
 CollisionShape3D
+Area3D
+GridMap
 BreakBox
 AnimatedSprite3D
 HurtBox
 Health
 HitBox
-Area3D
-GridMap
 AnimationPlayer
 Label3D
 Timer

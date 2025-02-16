@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/ladybug.tscn" id="3_a3ba7"]
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="4_fxafa"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="4_iaa42"]
-[ext_resource type="Script" path="res://scenes/area_3d.gd" id="4_mdkph"]
+[ext_resource type="Script" path="res://scripts/area_3d.gd" id="4_mdkph"]
 [ext_resource type="PackedScene" uid="uid://b8ewdnilwfnln" path="res://scenes/dungeonrooms/components/leaves.tscn" id="5_y672e"]
 [ext_resource type="PackedScene" uid="uid://yis0l5sr02sr" path="res://scenes/dungeonrooms/components/pot.tscn" id="6_gmep6"]
 

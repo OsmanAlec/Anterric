@@ -1,58 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://7n4slgklnggf"]
+[gd_scene load_steps=4 format=3 uid="uid://7n4slgklnggf"]
 
 [ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_aq1wg"]
-[ext_resource type="Script" path="res://scenes/area_3droom1.gd" id="2_iisbi"]
-[ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="2_p2wii"]
-[ext_resource type="Texture2D" uid="uid://eq2j20og6ava" path="res://art/objects/dungeonAssets/backgroundtree2.png" id="3_np8dk"]
-[ext_resource type="Texture2D" uid="uid://bpha665gtlsrx" path="res://art/objects/dungeonAssets/backgroundtree1.png" id="3_urnbo"]
-[ext_resource type="Texture2D" uid="uid://e1ihb37ck1jj" path="res://art/objects/dungeonAssets/foreleaves.png" id="5_atq80"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fo2ao"]
-transparency = 1
-albedo_texture = ExtResource("5_atq80")
-
-[sub_resource type="QuadMesh" id="QuadMesh_dxiy4"]
-material = SubResource("StandardMaterial3D_fo2ao")
-size = Vector2(0.7, 1.28)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehj4i"]
-transparency = 1
-albedo_texture = ExtResource("2_p2wii")
-
-[sub_resource type="QuadMesh" id="QuadMesh_pw7jj"]
-material = SubResource("StandardMaterial3D_ehj4i")
-size = Vector2(0.72, 0.45)
+[ext_resource type="Script" path="res://scripts/area_3droom1.gd" id="2_iisbi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_76xfk"]
-transparency = 1
-albedo_texture = ExtResource("3_np8dk")
-
-[sub_resource type="QuadMesh" id="QuadMesh_fe4sk"]
-material = SubResource("StandardMaterial3D_76xfk")
-size = Vector2(3.62, 3.36)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xh6vs"]
-transparency = 1
-albedo_texture = ExtResource("3_urnbo")
-
-[sub_resource type="QuadMesh" id="QuadMesh_7aw4v"]
-material = SubResource("StandardMaterial3D_xh6vs")
-uv2_padding = 0.0
-size = Vector2(2.89, 2.71)
-
 [node name="Node3D" type="Node3D"]
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 3.35475, 1.74046, -7.42623)
-mesh = SubResource("QuadMesh_dxiy4")
-skeleton = NodePath("../MeshInstance3D")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.21353, -0.881678, 0, 0.763555, 1.05094, 0.75, -0.440839, -0.606763, 1.29904, -1.75682, 1.49145, -4.13462)
-mesh = SubResource("QuadMesh_pw7jj")
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_aq1wg")
@@ -73,38 +27,6 @@ script = ExtResource("2_iisbi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15274, 0.187988, 0)
 shape = SubResource("BoxShape3D_kikyr")
-
-[node name="BackgroundTree2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 5.92586, -2.76475, 4.50736)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree6" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -5.07414, 1.23525, -3.49264)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree7" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -6.07414, -0.764751, 3.50736)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree8" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -3.07414, 1.23525, -0.492645)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree9" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 23.9259, 1.23525, -5.49264)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 18.9259, -2.76475, 4.50736)
-mesh = SubResource("QuadMesh_fe4sk")
-
-[node name="BackgroundTree" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.6, 0, 0, 0, 1.38564, 0.8, 0, -0.8, 1.38564, 0.690344, -1.93662, 3.6384)
-mesh = SubResource("QuadMesh_7aw4v")
-
-[node name="BackgroundTree3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.6, 0, 0, 0, 1.38564, 0.8, 0, -0.8, 1.38564, 12.6903, -1.93662, 2.71085)
-mesh = SubResource("QuadMesh_7aw4v")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
