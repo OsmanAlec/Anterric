@@ -1,6 +1,6 @@
-GridMap
 CollisionShape3D
 Area3D
+GridMap
 BreakBox
 AnimatedSprite3D
 HurtBox
