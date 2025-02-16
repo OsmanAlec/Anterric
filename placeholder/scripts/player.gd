@@ -2,9 +2,9 @@ extends CharacterBody3D
 
 # Movement and action constants
 const RATE = 1.5
-const SPEED = 4 * RATE
+const SPEED = 3 * RATE
 const ACCELERATION = 30 * RATE
-const DASH_SPEED = 7 * RATE
+const DASH_SPEED = 6 * RATE
 
 # State variables
 var dashing = false

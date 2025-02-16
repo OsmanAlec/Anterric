@@ -1,3 +1,6 @@
+MultiMeshInstance3D
+MeshInstance3D
+TextureRect
 CollisionShape3D
 BreakBox
 AnimatedSprite3D
@@ -9,6 +12,3 @@ GridMap
 AnimationPlayer
 Label3D
 Timer
-Label
-Button
-HSlider

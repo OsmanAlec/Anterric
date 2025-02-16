@@ -4,64 +4,64 @@
 [ext_resource type="Texture2D" uid="uid://blbpp0tqp6bmi" path="res://art/enemies/ladybug/gust ball.png" id="2_f4x7i"]
 [ext_resource type="Script" path="res://scripts/hitbox.gd" id="3_5in7m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_65ymp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_meeyg"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(0, 0, 75, 75)
+region = Rect2(0, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4idy3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rqbx"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(75, 0, 75, 75)
+region = Rect2(150, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5dlp0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwvfd"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(150, 0, 75, 75)
+region = Rect2(300, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j8b3o"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3c1i"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(225, 0, 75, 75)
+region = Rect2(450, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m10f4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_i53u3"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(300, 0, 75, 75)
+region = Rect2(600, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o6sxr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w02kg"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(375, 0, 75, 75)
+region = Rect2(750, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q30hl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcvjt"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(450, 0, 75, 75)
+region = Rect2(900, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wpvsc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q43m1"]
 atlas = ExtResource("2_f4x7i")
-region = Rect2(525, 0, 75, 75)
+region = Rect2(1050, 0, 150, 150)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s46cm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_65ymp")
+"texture": SubResource("AtlasTexture_meeyg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_4idy3")
+"texture": SubResource("AtlasTexture_2rqbx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5dlp0")
+"texture": SubResource("AtlasTexture_qwvfd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j8b3o")
+"texture": SubResource("AtlasTexture_y3c1i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m10f4")
+"texture": SubResource("AtlasTexture_i53u3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_o6sxr")
+"texture": SubResource("AtlasTexture_w02kg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q30hl")
+"texture": SubResource("AtlasTexture_gcvjt")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wpvsc")
+"texture": SubResource("AtlasTexture_q43m1")
 }, {
 "duration": 1.0,
 "texture": null
@@ -72,7 +72,7 @@ animations = [{
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xhnl5"]
-radius = 0.495792
+radius = 1.07382
 
 [node name="Area3D" type="RigidBody3D"]
 collision_layer = 0
@@ -81,6 +81,7 @@ script = ExtResource("1_gpe51")
 
 [node name="animation" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.002
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_s46cm")
 animation = &"gust ball"
 frame = 2
@@ -95,7 +96,7 @@ script = ExtResource("3_5in7m")
 damage = 35
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0.000550888, 0)
 shape = SubResource("SphereShape3D_xhnl5")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

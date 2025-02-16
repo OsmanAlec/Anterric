@@ -1,6 +1,7 @@
-res://scenes/world.tscn
+res://scenes/room_no1.tscn
 res://scripts/hurtbox.gd
 res://meshwithinvisblock_v2.tres
+res://scenes/world.tscn
 res://scenes/menu.tscn
 res://scenes/options_menu.tscn
 res://scenes/volume_slider.tscn
@@ -8,12 +9,5 @@ res://scenes/ladybug.tscn
 res://scenes/ballofgust.tscn
 res://scenes/player.tscn
 res://scenes/UI/damage_indicator.tscn
-res://scenes/room_no1.tscn
-res://scripts/area_3d1.gd
-res://scenes/dungeonrooms/components/grass.tscn
-res://scenes/dungeonrooms/components/grass.gd
-res://scenes/dungeonrooms/components/breakbox.gd
-res://scenes/dungeonrooms/components/leaves.tscn
-res://scenes/dungeonrooms/components/pot.tscn
 res://scenes/dungeonrooms/components/twigs.tscn
 res://scripts/player.gd
