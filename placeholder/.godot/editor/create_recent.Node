@@ -1,11 +1,11 @@
+GridMap
 CollisionShape3D
+Area3D
 BreakBox
 AnimatedSprite3D
 HurtBox
 Health
 HitBox
-Area3D
-GridMap
 AnimationPlayer
 Label3D
 Timer
