@@ -10,8 +10,10 @@ res://scenes/dungeonrooms/room_no1.tscn
 res://scenes/UI/menu.tscn
 res://scenes/enemies/ladybug/ladybug.tscn
 res://scenes/dungeonrooms/components/pot.tscn
+res://scenes/items(resource)/1coin.tres
+res://gui.gd
+res://scenes/items(resource)/ItemData.gd
+res://scenes/items(resource)/inventory.tscn
+res://inventory/InventorySlot.gd
 res://scenes/coin.tscn
-res://scenes/dungeonrooms/components/pot_break.gd
-res://scenes/dungeonrooms/components/leaves.tscn
-res://scenes/coin.gd
-res://scenes/dungeonrooms/components/Coin.tscn
+res://inventory/InventoryItem.gd

@@ -1,6 +1,4 @@
-res://art/objects/inventoryItems
-res://inventory/items
-res://scenes
+res://scenes/items(resource)
 res://scripts/dungeonrooms
 res://scenes/enemies/ladybug
 res://art/enemies/ladybug
@@ -10,6 +8,7 @@ res://scenes/UI
 res://scripts
 res://art/characters
 res://
+res://scenes
 C:/Program Files/Blender Foundation/Blender 4.3
 res://art/tilesets
 C:/Users/synoo/Downloads/Placeholder/placeholder

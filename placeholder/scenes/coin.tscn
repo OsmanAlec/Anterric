@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpo5d3bkd0bcx"]
+[gd_scene load_steps=4 format=3 uid="uid://xv1xg13wk422"]
 
-[ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://art/objects/inventoryItems/1Coin.png" id="1_l603b"]
 [ext_resource type="Script" path="res://scenes/coin.gd" id="1_qtiy7"]
+[ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://scenes/items(resource)/1Coin.png" id="2_0pgte"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v0spy"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_l603b")
+"texture": ExtResource("2_0pgte")
 }],
 "loop": false,
 "name": &"coin",
