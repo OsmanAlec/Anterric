@@ -1,25 +1,27 @@
-[gd_scene load_steps=10 format=3 uid="uid://yis0l5sr02sr"]
+[gd_scene load_steps=12 format=3 uid="uid://yis0l5sr02sr"]
 
+[ext_resource type="Script" path="res://scenes/dungeonrooms/components/pot.gd" id="1_4i3ah"]
 [ext_resource type="Texture2D" uid="uid://ctbe5cmuqj8m6" path="res://art/objects/dungeonAssets/pot.png" id="1_uq1w3"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/components/breakbox.gd" id="2_0g6rm"]
+[ext_resource type="PackedScene" uid="uid://bfxcyqwidrc1n" path="res://scenes/coin.tscn" id="4_im057"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v4ead"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nh4jc"]
 atlas = ExtResource("1_uq1w3")
 region = Rect2(0, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pfhht"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypb5n"]
 atlas = ExtResource("1_uq1w3")
 region = Rect2(320, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ws3iy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qh3s"]
 atlas = ExtResource("1_uq1w3")
 region = Rect2(640, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntin1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l5mu"]
 atlas = ExtResource("1_uq1w3")
 region = Rect2(960, 0, 320, 320)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4elv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uoh6"]
 atlas = ExtResource("1_uq1w3")
 region = Rect2(1280, 0, 320, 320)
 
@@ -27,19 +29,19 @@ region = Rect2(1280, 0, 320, 320)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v4ead")
+"texture": SubResource("AtlasTexture_nh4jc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pfhht")
+"texture": SubResource("AtlasTexture_ypb5n")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ws3iy")
+"texture": SubResource("AtlasTexture_0qh3s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ntin1")
+"texture": SubResource("AtlasTexture_4l5mu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i4elv")
+"texture": SubResource("AtlasTexture_6uoh6")
 }],
 "loop": false,
 "name": &"break",
@@ -50,6 +52,7 @@ animations = [{
 size = Vector3(0.432495, 0.821838, 0.544556)
 
 [node name="pot" type="Node3D"]
+script = ExtResource("1_4i3ah")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -66,3 +69,5 @@ script = ExtResource("2_0g6rm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00655556, 0.403669, -0.00262451)
 shape = SubResource("BoxShape3D_0ridd")
+
+[node name="coin" parent="." instance=ExtResource("4_im057")]

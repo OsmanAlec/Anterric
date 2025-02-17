@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_s2n4i"]
 [ext_resource type="PackedScene" uid="uid://bdkb4mb7t2ae2" path="res://scenes/volume_slider.tscn" id="2_yxvb2"]
-[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="3_4um0d"]
+[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://music/menu_music.wav" id="3_4um0d"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,5 +39,5 @@ autoplay = true
 bus = &"menu_music"
 playback_type = 1
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
