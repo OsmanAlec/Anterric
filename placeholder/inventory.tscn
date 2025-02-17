@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dslkcrbtg47b4"]
+
+[ext_resource type="Script" path="res://ItemData.gd" id="1_j22jr"]
+
+[node name="inventory" type="Node3D"]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource("1_j22jr")

@@ -1,11 +1,3 @@
-res://scenes/world.tscn
 res://scripts/hurtbox.gd
 res://meshwithinvisblock_v2.tres
-res://scenes/options_menu.tscn
-res://scenes/volume_slider.tscn
-res://scenes/ladybug.tscn
-res://scenes/ballofgust.tscn
-res://scenes/player.tscn
-res://scenes/UI/damage_indicator.tscn
-res://scenes/dungeonrooms/components/twigs.tscn
-res://scenes/room_no1.tscn
+res://ItemData.gd
