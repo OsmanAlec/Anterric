@@ -1,9 +1,9 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1739818545
+::res://::1739822216
 communication.txt::TextFile::-1::1735324466::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::4286821080437972484::1739456399::0::1::::<><>::
-gui.gd::GDScript::-1::1739816628::0::1::::<>CanvasLayer<>::
-meshwithinvisblock_v2.tres::MeshLibrary::8788599955052914999::1739812387::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
+gui.gd::GDScript::-1::1739822196::0::1::::<>CanvasLayer<>::
+meshwithinvisblock_v2.tres::MeshLibrary::8788599955052914999::1739822196::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 ::res://art/::1739808170
 icon.svg::CompressedTexture2D::7209331696306619313::1735324466::1739808170::1::::<><>::
 ::res://art/characters/::1739808171
@@ -49,7 +49,7 @@ leaf4.png::CompressedTexture2D::2242899178659823768::1739797209::1739808170::1::
 leaves.png::CompressedTexture2D::1207452185910757376::1739797209::1739808170::1::::<><>::
 pot.png::CompressedTexture2D::6108790340565925379::1739797209::1739808170::1::::<><>::
 twigs.png::CompressedTexture2D::3818487416901964882::1739797209::1739808170::1::::<><>::
-::res://art/objects/inventoryItems/::1739816467
+::res://art/objects/inventoryItems/::1739822195
 10Coin.png::CompressedTexture2D::5300324424196603713::1739797209::1739812379::1::::<><>::
 15Coin.png::CompressedTexture2D::6552338093749544008::1739797209::1739812379::1::::<><>::
 ::res://art/objects/items and trap_animation/::1735324599
@@ -77,57 +77,59 @@ UntitledArtwork1.png::CompressedTexture2D::7377657911898037230::1735324466::1739
 ::res://components/::1739797209
 ::res://components/UI/::1739808170
 mitochondria.ttf::FontFile::4847866299201314250::1739797210::1739808170::1::::<><>::
-::res://inventory/::1739816456
+::res://inventory/::1739822196
 inventory.gd::GDScript::-1::1739812375::0::1::::Inv<>Resource<>::
+InventoryItem.gd::GDScript::-1::1739822196::0::1::::InventoryItem<>TextureRect<>::
+InventorySlot.gd::GDScript::-1::1739822196::0::1::::InventorySlot<>PanelContainer<>::
 inventory_item.gd::GDScript::-1::1739812375::0::1::::InvItem<>Resource<>::
-playerInv.tres::Resource/Inv::599608291120049934::1739816456::0::1::::<><>::res://inventory/inventory_item.gd<>uid://ckwminmydcvri::::res://inventory/items/10coin.tres<>uid://ctcfpd4s3mkxd::::res://scenes/items(resource)/1coin.tres<>res://inventory/inventory.gd
-::res://inventory/items/::1739818545
+playerInv.tres::Resource/Inv::599608291120049934::1739822196::0::1::::<><>::res://inventory/inventory_item.gd<>uid://ckwminmydcvri::::res://inventory/items/10coin.tres<>uid://ctcfpd4s3mkxd::::res://scenes/items(resource)/1coin.tres<>res://inventory/inventory.gd
+::res://inventory/items/::1739822195
 10coin.tres::Resource/InvItem::5520889707056045278::1739812375::0::1::::<><>::res://inventory/inventory_item.gd<>uid://chrrtlvica5v6::::res://art/objects/inventoryItems/10Coin.png
-::res://Music/::1739812379
-boss music(maybe).wav::AudioStreamWAV::1787502671980399100::1739797209::1739812379::1::::<><>::
-Dungeon Music.wav::AudioStreamWAV::7238221230711905099::1739465095::1739812379::1::::<><>::
-menu_music.wav::AudioStreamWAV::804184844489676081::1739453718::1739812379::1::::<><>::
+::res://Music/::1739822196
+boss music(maybe).wav::AudioStreamWAV::1787502671980399100::1739797209::1739822218::1::::<><>::
+Dungeon Music.wav::AudioStreamWAV::7238221230711905099::1739465095::1739822218::1::::<><>::
+menu_music.wav::AudioStreamWAV::804184844489676081::1739453718::1739822218::1::::<><>::
 ::res://placeholder/::1733514493
-::res://scenes/::1739815926
+::res://Quests/::1739822195
+::res://scenes/::1739822196
 coin.gd::GDScript::-1::1739812375::0::1::::Coin<>Node3D<>::
-coin.tscn::PackedScene::-1::1739812375::0::1::::<><>::
-player.tscn::PackedScene::4213710653736826845::1739812388::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd
-world.tscn::PackedScene::3299845911646580096::1739812387::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://c8leysd8nl2tm::::res://scenes/enemies/ladybug/ladybug.tscn<>uid://dssy2exuqcb4a::::res://scenes/enemies/ladybug/ballofgust.tscn<>uid://dp00sy3vongwu::::res://scenes/dungeonrooms/components/twigs.tscn<>uid://3wrwr6mib1xr::::res://scenes/dungeonrooms/components/grass.tscn<>uid://b8ewdnilwfnln::::res://scenes/dungeonrooms/components/leaves.tscn<>uid://yis0l5sr02sr::::res://scenes/dungeonrooms/components/pot.tscn<>uid://7n4slgklnggf::::res://scenes/dungeonrooms/room_no1.tscn<>res://scripts/dungeonrooms/area_3droom1.gd
-::res://scenes/dungeonrooms/::1739812388
-room_no1.tscn::PackedScene::2274673431795579073::1739812388::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>res://scripts/dungeonrooms/area_3droom1.gd
+coin.tscn::PackedScene::1659315408188775253::1739822196::0::1::::<><>::res://scenes/coin.gd<>uid://diqboa2pg0wto::::res://scenes/items(resource)/1Coin.png
+player.tscn::PackedScene::4213710653736826845::1739821813::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd
+world.tscn::PackedScene::3299845911646580096::1739822196::0::1::::<><>::uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://c8leysd8nl2tm::::res://scenes/enemies/ladybug/ladybug.tscn<>uid://dssy2exuqcb4a::::res://scenes/enemies/ladybug/ballofgust.tscn<>uid://dp00sy3vongwu::::res://scenes/dungeonrooms/components/twigs.tscn<>uid://3wrwr6mib1xr::::res://scenes/dungeonrooms/components/grass.tscn<>uid://b8ewdnilwfnln::::res://scenes/dungeonrooms/components/leaves.tscn<>uid://yis0l5sr02sr::::res://scenes/dungeonrooms/components/pot.tscn<>uid://7n4slgklnggf::::res://scenes/dungeonrooms/room_no1.tscn<>res://scripts/dungeonrooms/area_3droom1.gd
+::res://scenes/dungeonrooms/::1739821813
+room_no1.tscn::PackedScene::2274673431795579073::1739821813::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>res://scripts/dungeonrooms/area_3droom1.gd
 room_no2.tscn::PackedScene::4327636735694339048::1739806979::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/area_3d_room2.gd
 room_no3.tscn::PackedScene::3436773725910850933::1739806979::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/area_3droom3.gd
 room_no4.tscn::PackedScene::8717469975631806535::1739806979::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/area_3d_room4.gd
 room_no5.tscn::PackedScene::8232516450284697170::1739806979::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn
-::res://scenes/dungeonrooms/components/::1739812388
+::res://scenes/dungeonrooms/components/::1739821813
 breakbox.gd::GDScript::-1::1739808140::0::1::::BreakBox<>Area3D<>::
 Coin.tscn::PackedScene::-1::1739812375::0::1::::<><>::
 grass.gd::GDScript::-1::1739808140::0::1::::<>RefCounted<>::
 grass.tscn::PackedScene::2011776350139034703::1739808140::0::1::::<><>::uid://cvs8hcyfkuhlu::::res://art/objects/dungeonAssets/grass.png<>res://scenes/dungeonrooms/components/breakbox.gd
 gridmapblocks.tscn::PackedScene::1022465763173497471::1739806979::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
 leaves.tscn::PackedScene::4712251861678373919::1739808140::0::1::::<><>::uid://rg5tcvecqvvc::::res://art/objects/dungeonAssets/leaves.png<>res://scenes/dungeonrooms/components/breakbox.gd
-pot.tscn::PackedScene::1702185445005228025::1739812388::0::1::::<><>::uid://ctbe5cmuqj8m6::::res://art/objects/dungeonAssets/pot.png<>res://scenes/dungeonrooms/components/pot_break.gd
+pot.tscn::PackedScene::1702185445005228025::1739821813::0::1::::<><>::uid://ctbe5cmuqj8m6::::res://art/objects/dungeonAssets/pot.png<>res://scenes/dungeonrooms/components/pot_break.gd
 pot_break.gd::GDScript::-1::1739812375::0::1::::pot_break<>Area3D<>::
-twigs.tscn::PackedScene::8265255523399031424::1739812388::0::1::::<><>::uid://bunx6u6sugqe1::::res://art/objects/dungeonAssets/twigs.png<>res://scenes/dungeonrooms/components/breakbox.gd
+twigs.tscn::PackedScene::8265255523399031424::1739821813::0::1::::<><>::uid://bunx6u6sugqe1::::res://art/objects/dungeonAssets/twigs.png<>res://scenes/dungeonrooms/components/breakbox.gd
 ::res://scenes/enemies/::1739806994
-::res://scenes/enemies/ladybug/::1739812388
-ballofgust.tscn::PackedScene::8461325706952862126::1739812388::0::1::::<><>::res://scripts/enemies/ladybug/ladybug_gust.gd<>uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png<>res://scripts/util/hitbox.gd
-ladybug.tscn::PackedScene::7112068041332633094::1739812388::0::1::::<><>::res://scripts/enemies/ladybug/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://scripts/util/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/util/hurtbox.gd
-::res://scenes/items(resource)/::1739818545
-1Coin.png::CompressedTexture2D::7753888604756230964::1739797209::1739816468::1::::<><>::
-1coin.tres::Resource/InvItem::6110888727114460249::1739816483::0::1::::<><>::res://inventory/inventory_item.gd<>uid://diqboa2pg0wto::::res://scenes/items(resource)/1Coin.png
-inventory.tscn::PackedScene::3840165028067277469::1739816628::0::1::::<><>::res://gui.gd<>uid://diqboa2pg0wto::::res://scenes/items(resource)/1Coin.png
-InventorySlot.gd::GDScript::-1::1739817590::0::1::::<>Node<>::
-ItemData.gd::GDScript::-1::1739816483::0::1::::ItemData<>Resource<>::
+::res://scenes/enemies/ladybug/::1739821813
+ballofgust.tscn::PackedScene::8461325706952862126::1739821813::0::1::::<><>::res://scripts/enemies/ladybug/ladybug_gust.gd<>uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png<>res://scripts/util/hitbox.gd
+ladybug.tscn::PackedScene::7112068041332633094::1739821813::0::1::::<><>::res://scripts/enemies/ladybug/ladybug.gd<>uid://t6s02tqf1odo::::res://art/enemies/ladybug/ground moving.png<>res://scripts/util/health.gd<>uid://bmd2gcp0g0u53::::res://art/enemies/ladybug/flying attack.png<>uid://myfyny1fu7up::::res://art/enemies/ladybug/ground idle.png<>uid://dkkm4tsyfcobq::::res://art/enemies/ladybug/flying attack right.png<>uid://cp2r6uuju8w0k::::res://art/enemies/ladybug/flying back.png<>uid://bvkhdhmd0rx1s::::res://art/enemies/ladybug/flying left.png<>uid://cyiegt2ebla3q::::res://art/enemies/ladybug/flying right.png<>uid://cmycvfrhd5uei::::res://art/enemies/ladybug/flying front.png<>uid://cmabu2iuf1tbp::::res://art/enemies/ladybug/ground idle right.png<>uid://jlsmafchndeh::::res://art/enemies/ladybug/ground moving left.png<>uid://csdevva5scjy3::::res://art/enemies/ladybug/take off left.png<>uid://dhsqabfbedqv7::::res://art/enemies/ladybug/take off right.png<>res://scripts/util/hurtbox.gd
+::res://scenes/items(resource)/::1739822196
+1Coin.png::CompressedTexture2D::7753888604756230964::1739822196::1739822217::1::::<><>::
+1coin.tres::Resource/ItemData::6110888727114460249::1739822196::0::1::::<><>::res://scenes/items(resource)/ItemData.gd<>uid://diqboa2pg0wto::::res://scenes/items(resource)/1Coin.png
+inventory.tscn::PackedScene::3840165028067277469::1739822196::0::1::::<><>::res://gui.gd
+ItemData.gd::GDScript::-1::1739822196::0::1::::ItemData<>Resource<>::
 ::res://scenes/ladybug/::1739808139
-::res://scenes/UI/::1739812388
-damage_indicator.tscn::PackedScene::6710151662059374660::1739812388::0::1::::<><>::uid://cbclwdapxhy4i::::res://components/UI/mitochondria.ttf<>res://scripts/UI/damageIndicator.gd
+::res://scenes/UI/::1739822196
+damage_indicator.tscn::PackedScene::6710151662059374660::1739821813::0::1::::<><>::uid://cbclwdapxhy4i::::res://components/UI/mitochondria.ttf<>res://scripts/UI/damageIndicator.gd
 level_select.tscn::PackedScene::2475329078300090417::1739806979::0::1::::<><>::res://scripts/UI/level_select.gd
-menu.tscn::PackedScene::7903906278629593331::1739812388::0::1::::<><>::res://scripts/UI/Menu.gd<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
-options_menu.tscn::PackedScene::8316061357948044168::1739812387::0::1::::<><>::res://scripts/UI/options_menu.gd<>uid://bdkb4mb7t2ae2::::res://scenes/UI/volume_slider.tscn<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
+menu.tscn::PackedScene::7903906278629593331::1739822196::0::1::::<><>::res://scripts/UI/Menu.gd<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
+options_menu.tscn::PackedScene::8316061357948044168::1739822196::0::1::::<><>::res://scripts/UI/options_menu.gd<>uid://bdkb4mb7t2ae2::::res://scenes/UI/volume_slider.tscn<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
 volume_slider.tscn::PackedScene::2617744130469195883::1739812388::0::1::::<><>::res://scripts/UI/volume_slider.gd
-::res://scripts/::1739812375
-player.gd::GDScript::-1::1739812375::0::1::::<>CharacterBody3D<>::
+::res://scripts/::1739822196
+player.gd::GDScript::-1::1739822196::0::1::::<>CharacterBody3D<>::
 ::res://scripts/dungeon/::1739808140
 ::res://scripts/dungeonrooms/::1739806994
 area_3d1.gd::GDScript::-1::1739806979::0::1::::<>Area3D<>::

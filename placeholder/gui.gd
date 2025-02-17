@@ -8,7 +8,7 @@ var itemsLoad = [
 func _ready():
 	for i in InvSize:
 		var slot := InventorySlot.new()
-		slot.init(ItemData.Type.COINS, Vector2(32, 32))
+		slot.init(ItemData.Type.MAIN, Vector2(32, 32))
 		%inv.add_child(slot)
 		
 	for i in itemsLoad.size():

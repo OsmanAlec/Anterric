@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_3vmx4")
-type = 0
+type = 6
 name = "1coin"
 description = "MONEYYY"
 texture = ExtResource("2_8uh8s")
