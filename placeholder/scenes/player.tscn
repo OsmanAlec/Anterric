@@ -353,30 +353,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [1]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("%Animations/../HitRight:collision_layer")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/../HitLeft:collision_layer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
 
 [sub_resource type="Animation" id="Animation_mhi2m"]
 resource_name = "Standing Attack Left"
@@ -405,18 +381,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/../HitLeft:collision_layer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.2, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 2, 0]
-}
 
 [sub_resource type="Animation" id="Animation_x4nrj"]
 resource_name = "Standing Attack Right"
@@ -444,18 +408,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/../HitRight:collision_layer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.2, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 2, 0]
 }
 
 [sub_resource type="Animation" id="Animation_khvj2"]
@@ -543,18 +495,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/../HitLeft:collision_layer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.2, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 2, 0]
-}
 
 [sub_resource type="Animation" id="Animation_qtidj"]
 resource_name = "Walking Attack Right"
@@ -582,18 +522,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/../HitRight:collision_layer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.0333333, 0.2, 0.233333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 2, 2, 0]
 }
 
 [sub_resource type="Animation" id="Animation_cec4d"]
@@ -737,7 +665,7 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeSeek" id="AnimationNodeTimeSeek_axn7f"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_0c33w"]
-graph_offset = Vector2(-45.9273, 5)
+graph_offset = Vector2(-84.6508, 62.2776)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_8sm7i")
 nodes/BlendSpace1D/position = Vector2(40, 110)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_hm8xu")
@@ -848,7 +776,7 @@ wait_time = 0.2
 wait_time = 0.6
 
 [node name="attack_timer" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 0.3
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
@@ -881,7 +809,6 @@ damage = 35
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
 
-[connection signal="health_changed" from="Health" to="." method="_on_health_health_changed"]
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]

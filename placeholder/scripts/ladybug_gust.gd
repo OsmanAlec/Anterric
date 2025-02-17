@@ -1,6 +1,6 @@
 extends RigidBody3D
 
-@export var speed: float = 6.0
+@export var speed: float = 7.0
 
 func _ready() -> void:
 	gravity_scale = 0  # Disable gravity (optional)

@@ -47,13 +47,11 @@ func player_movement(direction: Vector3, delta: float):
 			anim_tree.get("parameters/playback").travel("Standing")
 			anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
 
-func _ready() -> void:
-	$HitLeft.collision_layer = 0
-	$HitRight.collision_layer = 0
-	
 # Called every physics frame
 func _physics_process(delta: float):
-	
+	# Disable hit detection until an attack is made
+	update_hitbox_state(false)
+
 	# Determine movement direction
 	var direction: Vector3
 	if Input.is_action_pressed("ui_right"):
@@ -71,9 +69,10 @@ func _physics_process(delta: float):
 	if Input.is_action_just_pressed("primary_attack"):
 		if !currentAttack and state != "Dashing":
 			start_attack()
-	else:
-		$HitLeft.collision_layer = 0
-		$HitRight.collision_layer = 0
+
+	# Update attack direction during attack
+	if currentAttack:
+		update_attack_direction()
 		
 	# Process movement after animation has played
 	player_movement(direction, delta)
@@ -84,10 +83,23 @@ func start_attack():
 	currentAttack = true
 	anim_tree.get("parameters/playback").travel(state + " Attack")
 	anim_tree.set("parameters/" + state + " Attack/BlendSpace1D/blend_position", lastDir.x)
-	print($HitLeft.collision_layer)
-	print($HitRight.collision_layer)
+	update_hitbox_state(true)
 	$attack_timer.start()
 
+# Update attack direction mid-attack
+func update_attack_direction():
+	if lastDir.x > 0:
+		$HitRight.set_process_mode(Node.PROCESS_MODE_INHERIT)
+		$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
+	else:
+		$HitLeft.set_process_mode(Node.PROCESS_MODE_INHERIT)
+		$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
+
+# Enable or disable the hitbox
+func update_hitbox_state(active: bool):
+	var mode = Node.PROCESS_MODE_INHERIT if active else Node.PROCESS_MODE_DISABLED
+	$HitRight.set_process_mode(mode)
+	$HitLeft.set_process_mode(mode)
 
 # Dash ability cooldown
 func _on_dash_timer_timeout() -> void:
@@ -98,10 +110,8 @@ func _on_dash_again_timer_timeout() -> void:
 
 # Reset attack state after attack timer ends
 func _on_attack_timer_timeout() -> void:
-	$HitLeft.collision_layer = 0
-	$HitRight.collision_layer = 0
 	currentAttack = false
-
+	update_hitbox_state(false)
 
 # Handle player death
 func _on_health_health_depleted() -> void:
