@@ -1,10 +1,10 @@
-[gd_scene load_steps=124 format=3 uid="uid://c8leysd8nl2tm"]
+[gd_scene load_steps=125 format=3 uid="uid://c8leysd8nl2tm"]
 
-[ext_resource type="Script" path="res://scripts/ladybug.gd" id="1_4v5jg"]
+[ext_resource type="Script" path="res://scripts/enemies/ladybug/ladybug.gd" id="1_4v5jg"]
 [ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ground moving.png" id="1_5nhpo"]
-[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/ballofgust.tscn" id="2_0rplw"]
-[ext_resource type="Script" path="res://scripts/health.gd" id="2_b57c8"]
+[ext_resource type="Script" path="res://scripts/util/health.gd" id="2_b57c8"]
 [ext_resource type="Texture2D" uid="uid://bmd2gcp0g0u53" path="res://art/enemies/ladybug/flying attack.png" id="2_d0n1a"]
+[ext_resource type="PackedScene" path="res://scenes/ladybug/ballofgust.tscn" id="2_lmaa5"]
 [ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/ground idle.png" id="2_qsdln"]
 [ext_resource type="Texture2D" uid="uid://dkkm4tsyfcobq" path="res://art/enemies/ladybug/flying attack right.png" id="3_nnhly"]
 [ext_resource type="Texture2D" uid="uid://cp2r6uuju8w0k" path="res://art/enemies/ladybug/flying back.png" id="4_7hmcu"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://jlsmafchndeh" path="res://art/enemies/ladybug/ground moving left.png" id="12_5dn27"]
 [ext_resource type="Texture2D" uid="uid://csdevva5scjy3" path="res://art/enemies/ladybug/take off left.png" id="14_vtbkt"]
 [ext_resource type="Texture2D" uid="uid://dhsqabfbedqv7" path="res://art/enemies/ladybug/take off right.png" id="15_4xup4"]
-[ext_resource type="Script" path="res://scripts/hurtbox.gd" id="15_esixv"]
+[ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="15_esixv"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_obg8h"]
 size = Vector3(1, 0.587891, 0.526306)
@@ -501,10 +501,10 @@ animation = &"flying moving left"
 animation = &"flying moving right"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c1p38"]
-animation = &"flying moving back"
+animation = &"flying moving front"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3og00"]
-animation = &"flying moving front"
+animation = &"flying moving back"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1cqlg"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_27ic1")
@@ -522,7 +522,7 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rwwei"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vuwp0"]
-graph_offset = Vector2(-570.928, 228.878)
+graph_offset = Vector2(-493, 96)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_1cqlg")
 nodes/BlendSpace2D/position = Vector2(-320, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rwwei")
@@ -608,8 +608,12 @@ advance_mode = 2
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_c1l44"]
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bcwcr"]
 states/End/position = Vector2(907, 241)
+states/Start/position = Vector2(199, 100)
 states/attack/node = SubResource("AnimationNodeBlendTree_l5vln")
 states/attack/position = Vector2(405, 343)
 "states/flying idle/node" = SubResource("AnimationNodeBlendTree_jgedu")
@@ -622,8 +626,8 @@ states/attack/position = Vector2(405, 343)
 "states/ground moving/position" = Vector2(645, 100)
 states/takeoff/node = SubResource("AnimationNodeBlendTree_mo64y")
 states/takeoff/position = Vector2(525, 182)
-transitions = ["attack", "flying idle", SubResource("AnimationNodeStateMachineTransition_kqoe4"), "takeoff", "flying idle", SubResource("AnimationNodeStateMachineTransition_oucle")]
-graph_offset = Vector2(-126, 177.732)
+transitions = ["attack", "flying idle", SubResource("AnimationNodeStateMachineTransition_kqoe4"), "takeoff", "flying idle", SubResource("AnimationNodeStateMachineTransition_oucle"), "Start", "ground idle", SubResource("AnimationNodeStateMachineTransition_c1l44")]
+graph_offset = Vector2(-126, 47.6008)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sagy2"]
 atlas = ExtResource("2_d0n1a")
@@ -1093,7 +1097,7 @@ size = Vector3(0.792236, 0.728394, 0.841461)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_4v5jg")
-ballofgust_scene = ExtResource("2_0rplw")
+ballofgust_scene = ExtResource("2_lmaa5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.293945, 0.00485229)
@@ -1124,7 +1128,7 @@ parameters/attack/BlendSpace1D/blend_position = 0.605405
 parameters/attack/TimeScale/scale = 0.2
 "parameters/flying idle/BlendSpace1D/blend_position" = 0.322523
 "parameters/flying idle/TimeScale/scale" = 0.2
-"parameters/flying moving/BlendSpace2D/blend_position" = Vector2(-0.0533537, 0.370031)
+"parameters/flying moving/BlendSpace2D/blend_position" = Vector2(-0.00966179, 0.989362)
 "parameters/flying moving/TimeScale/scale" = 0.2
 "parameters/ground idle/BlendSpace1D/blend_position" = 0.12769
 "parameters/ground idle/TimeScale/scale" = 0.2
@@ -1139,7 +1143,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
-animation = &""
+animation = &"flying moving front"
+frame = 1
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 2.0
@@ -1155,5 +1160,6 @@ health = NodePath("../Health")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.201452, 0.0646362, 0.000869751)
 shape = SubResource("BoxShape3D_hfd0d")
 
+[connection signal="health_changed" from="Health" to="." method="_on_health_health_changed"]
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2uphno7xucbk"]
 
 [ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="1_3kgfs"]
-[ext_resource type="Script" path="res://scripts/damageIndicator.gd" id="1_35j43"]
+[ext_resource type="Script" path="res://scripts/UI/damageIndicator.gd" id="1_35j43"]
 
 [sub_resource type="Animation" id="Animation_yjkoy"]
 length = 0.001
