@@ -1,13 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=11 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
-[ext_resource type="PackedScene" uid="uid://7n4slgklnggf" path="res://scenes/room_no1.tscn" id="2_4lubw"]
-[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/ladybug.tscn" id="3_a3ba7"]
+[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_yki5v"]
+[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="3_gsqx7"]
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="4_fxafa"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="4_iaa42"]
-[ext_resource type="Script" path="res://scripts/area_3d.gd" id="4_mdkph"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/area_3d.gd" id="4_mdkph"]
 [ext_resource type="PackedScene" uid="uid://b8ewdnilwfnln" path="res://scenes/dungeonrooms/components/leaves.tscn" id="5_y672e"]
 [ext_resource type="PackedScene" uid="uid://yis0l5sr02sr" path="res://scenes/dungeonrooms/components/pot.tscn" id="6_gmep6"]
+[ext_resource type="PackedScene" uid="uid://7n4slgklnggf" path="res://scenes/dungeonrooms/room_no1.tscn" id="7_tprwk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_e64la"]
 size = Vector3(1.33894, 0.862823, 1)
@@ -20,17 +21,19 @@ shadow_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 
-[node name="room1" parent="." instance=ExtResource("2_4lubw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
-
-[node name="Ladybug" parent="." instance=ExtResource("3_a3ba7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15246, 0.4, 1.1)
-player_path = NodePath("../Player")
-
 [node name="Player" parent="." instance=ExtResource("1_svnxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
 collision_layer = 4
 collision_mask = 5
+
+[node name="Ladybug" parent="." instance=ExtResource("2_yki5v")]
+player_path = NodePath("../Player")
+ballofgust_scene = ExtResource("3_gsqx7")
+
+[node name="Ladybug2" parent="." instance=ExtResource("2_yki5v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+player_path = NodePath("../Player")
+ballofgust_scene = ExtResource("3_gsqx7")
 
 [node name="twigs" parent="." instance=ExtResource("4_fxafa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
@@ -43,6 +46,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3567, -0.0053488, -0.686207
 
 [node name="pot" parent="." instance=ExtResource("6_gmep6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Node3D" parent="." instance=ExtResource("7_tprwk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.020733, 0.999785, 0, -0.999785, -0.020733, 4, 0.22793, -6.96506)

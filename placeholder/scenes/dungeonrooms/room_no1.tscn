@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://7n4slgklnggf"]
 
 [ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_aq1wg"]
-[ext_resource type="Script" path="res://scripts/area_3droom1.gd" id="2_iisbi"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/area_3droom1.gd" id="2_iisbi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)

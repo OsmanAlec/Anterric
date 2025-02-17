@@ -1,7 +1,7 @@
 [gd_scene load_steps=92 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
-[ext_resource type="Script" path="res://scripts/health.gd" id="2_kqand"]
+[ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
 [ext_resource type="Texture2D" uid="uid://cg3bhrjnlniis" path="res://art/characters/Standing Attack Left.png" id="3_1qdcu"]
 [ext_resource type="Texture2D" uid="uid://ia1nrj03itx0" path="res://art/characters/Standing Idle Left.png" id="3_3t4oy"]
 [ext_resource type="Texture2D" uid="uid://b5i321mwu7oel" path="res://art/characters/Standing Attack Right.png" id="4_8wmo1"]
@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://tttqnuhlkpyr" path="res://art/characters/Walking Attack Right.png" id="8_xcqqw"]
 [ext_resource type="Texture2D" uid="uid://cea06qvcfdrt3" path="res://art/characters/Walking Left.png" id="9_u8xip"]
 [ext_resource type="Texture2D" uid="uid://d3ami4x65uove" path="res://art/characters/Walking Right.png" id="10_3wxsy"]
-[ext_resource type="Script" path="res://scripts/hurtbox.gd" id="11_tf5i0"]
-[ext_resource type="Script" path="res://scripts/hitbox.gd" id="12_e4s7a"]
+[ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="11_tf5i0"]
+[ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="12_e4s7a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.61618, 0.694092, 0.310915)
