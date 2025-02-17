@@ -16,6 +16,11 @@ func _on_area_entered(hitbox: HitBox) -> void:
 	take away whatever is set in the hitbox node's damage,
 	change the colour on the sprite and spawn damage indicators."""
 	if hitbox != null && !health.get_immortality():
+			
+		#Color logic
+		sprite.modulate = Color(1, 0, 0)
+		await get_tree().create_timer(0.2).timeout
+		sprite.modulate = Color(1, 1, 1)
 		
 		#Take damage
 		health.health -= hitbox.damage
@@ -29,8 +34,3 @@ func _on_area_entered(hitbox: HitBox) -> void:
 		get_tree().current_scene.add_child(dmg_indicator)
 		dmg_indicator.global_position = global_position
 		dmg_indicator.label.text = str(hitbox.damage)
-		
-		#Color logic
-		sprite.modulate = Color(1, 0, 0)
-		await get_tree().create_timer(0.2).timeout
-		sprite.modulate = Color(1, 1, 1)

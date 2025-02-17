@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-@export var player_path: NodePath # Follows the ant from world scene
+@export var player_path: NodePath  # Follows the ant from world scene
 const SPEED: float = 5.0
 
 @export var detection_radius: float = 4.0  # Detection range for flying
@@ -80,4 +80,5 @@ func shoot_ball_of_gust(player) -> void:
 
 
 func _on_health_health_depleted() -> void:
+	print("I'm dead!!!")
 	queue_free()
