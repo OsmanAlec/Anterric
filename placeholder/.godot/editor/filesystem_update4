@@ -12,3 +12,5 @@ res://scenes/UI/menu.tscn
 res://scenes/enemies/ladybug/ladybug.tscn
 res://scenes/enemies/ladybug/ballofgust.tscn
 res://scripts/enemies/ladybug/ladybug.gd
+res://scripts/dungeonrooms/area_3droom1.gd
+res://scripts/player.gd

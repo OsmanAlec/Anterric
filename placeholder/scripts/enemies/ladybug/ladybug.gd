@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 			if distance > stopping_distance:
 				velocity = velocity.lerp(direction * SPEED, delta * 5)
 				anim_tree.get("parameters/playback").travel("flying moving")
-				anim_tree.set("parameters/flying moving/BlendSpace2D/blend_position", direction) 
+				anim_tree.set("parameters/flying moving/BlendSpace2D/blend_position", Vector2(direction.x, direction.z)) 
 			else:
 				velocity = Vector3.ZERO  # Stop if too close
 				if canAttack:

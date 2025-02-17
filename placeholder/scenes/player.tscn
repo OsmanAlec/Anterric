@@ -767,7 +767,8 @@ parameters/Walking/TimeScale/scale = 0.4
 "parameters/Walking Attack/TimeSeek/seek_request" = -1.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 1.69812e-09, 1.85923e-09, -2.51696e-09, 0.652853, 0.757485, 7.25002e-11, -0.757485, 0.652853, 5.68247e-08, 2.05127, 1.38729)
+physics_interpolation_mode = 1
+transform = Transform3D(1, 1.69812e-09, 1.85923e-09, -2.46613e-09, 0.511399, 0.859344, 5.08464e-10, -0.859344, 0.511399, 5.68247e-08, 3.58266, 2.84973)
 
 [node name="dash_timer" type="Timer" parent="."]
 wait_time = 0.2
@@ -776,7 +777,7 @@ wait_time = 0.2
 wait_time = 0.6
 
 [node name="attack_timer" type="Timer" parent="."]
-wait_time = 0.3
+wait_time = 0.75
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0

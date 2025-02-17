@@ -501,10 +501,10 @@ animation = &"flying moving left"
 animation = &"flying moving right"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c1p38"]
-animation = &"flying moving back"
+animation = &"flying moving front"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3og00"]
-animation = &"flying moving front"
+animation = &"flying moving back"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_1cqlg"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_27ic1")
@@ -522,7 +522,7 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_rwwei"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_vuwp0"]
-graph_offset = Vector2(-570.928, 228.878)
+graph_offset = Vector2(-493, 96)
 nodes/BlendSpace2D/node = SubResource("AnimationNodeBlendSpace2D_1cqlg")
 nodes/BlendSpace2D/position = Vector2(-320, 120)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_rwwei")
@@ -1128,7 +1128,7 @@ parameters/attack/BlendSpace1D/blend_position = 0.605405
 parameters/attack/TimeScale/scale = 0.2
 "parameters/flying idle/BlendSpace1D/blend_position" = 0.322523
 "parameters/flying idle/TimeScale/scale" = 0.2
-"parameters/flying moving/BlendSpace2D/blend_position" = Vector2(-0.0533537, 0.370031)
+"parameters/flying moving/BlendSpace2D/blend_position" = Vector2(-0.00966179, 0.989362)
 "parameters/flying moving/TimeScale/scale" = 0.2
 "parameters/ground idle/BlendSpace1D/blend_position" = 0.12769
 "parameters/ground idle/TimeScale/scale" = 0.2
@@ -1143,8 +1143,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
-animation = &"ground idle right"
-frame = 3
+animation = &"flying moving front"
+frame = 1
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 2.0
