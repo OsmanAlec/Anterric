@@ -110,3 +110,30 @@ func _on_attack_timer_timeout() -> void:
 # Handle player death
 func _on_health_health_depleted() -> void:
 	queue_free()
+
+# Player Quest Logic !!!
+@export var questManager: Node
+@export var questToAccept: Quest
+
+func _ready():
+	if not questManager:
+		questManager = get_node("../questManager")
+
+# Accept a Quest
+func acceptQuest():
+	if questToAccept:
+		questManager.addQuest(questToAccept)
+		print("Accepted Quest: ", questToAccept.title)
+
+# Update a quest
+func completeObjective(objective: String):
+	for Quest in questManager.getActiveQuest():
+		questManager.updateQuestProgress(Quest, objective)
+
+# Example input handling 
+func _unhandled_input(event):
+	if event.is_action_pressed("AcceptQuest"):
+		acceptQuest()
+	
+	if event.is_action_pressed("completeObjective"):
+		completeObjective("Find Sword")

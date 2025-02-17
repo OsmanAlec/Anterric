@@ -18,3 +18,4 @@ res://scenes/dungeonrooms/components/Coin.tscn
 res://Quests/quest.gd
 res://Quests/Quest1.tres
 res://Quests/questManager.gd
+res://scripts/player.gd

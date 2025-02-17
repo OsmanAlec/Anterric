@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=12 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
+[ext_resource type="Resource" uid="uid://byd11l4rpjtkd" path="res://Quests/Quest1.tres" id="2_8b7ci"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_yki5v"]
 [ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="3_gsqx7"]
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="4_fxafa"]
@@ -25,6 +26,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
 collision_layer = 4
 collision_mask = 5
+questToAccept = ExtResource("2_8b7ci")
 
 [node name="Ladybug" parent="." instance=ExtResource("2_yki5v")]
 player_path = NodePath("../Player")
