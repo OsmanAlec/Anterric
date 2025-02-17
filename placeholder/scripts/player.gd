@@ -69,10 +69,6 @@ func _physics_process(delta: float):
 	if Input.is_action_just_pressed("primary_attack"):
 		if !currentAttack and state != "Dashing":
 			start_attack()
-
-	# Update attack direction during attack
-	if currentAttack:
-		update_attack_direction()
 		
 	# Process movement after animation has played
 	player_movement(direction, delta)
@@ -85,15 +81,13 @@ func start_attack():
 	anim_tree.set("parameters/" + state + " Attack/BlendSpace1D/blend_position", lastDir.x)
 	update_hitbox_state(true)
 	$attack_timer.start()
-
-# Update attack direction mid-attack
-func update_attack_direction():
 	if lastDir.x > 0:
 		$HitRight.set_process_mode(Node.PROCESS_MODE_INHERIT)
 		$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
 	else:
 		$HitLeft.set_process_mode(Node.PROCESS_MODE_INHERIT)
 		$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
+
 
 # Enable or disable the hitbox
 func update_hitbox_state(active: bool):

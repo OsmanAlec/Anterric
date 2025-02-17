@@ -1,3 +1,5 @@
+Node3D
+Camera3D
 MultiMeshInstance3D
 MeshInstance3D
 TextureRect
@@ -11,4 +13,3 @@ Health
 HitBox
 AnimationPlayer
 Label3D
-Timer

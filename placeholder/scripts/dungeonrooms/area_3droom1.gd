@@ -12,5 +12,5 @@ func _on_body_exited(body: PhysicsBody3D) -> void:
 
 func _physics_process(delta):
 	if entered == true:
-
-		get_tree().change_scene_to_file("res://scenes/room_no2.tscn")
+		get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no2.tscn")
+		

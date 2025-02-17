@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkuygf7645ud4"]
 
-[ext_resource type="Script" path="res://scripts/Menu.gd" id="1_cdn1k"]
-[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="2_lyto3"]
+[ext_resource type="Script" path="res://scripts/UI/Menu.gd" id="1_w6e8p"]
+[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="2_vso7r"]
 
 [node name="Menu2" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cdn1k")
+script = ExtResource("1_w6e8p")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0
@@ -33,7 +33,7 @@ layout_mode = 2
 text = "Quit"
 
 [node name="menu_music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_lyto3")
+stream = ExtResource("2_vso7r")
 autoplay = true
 bus = &"menu_music"
 
