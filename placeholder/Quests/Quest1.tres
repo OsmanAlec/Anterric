@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=2 format=3 uid="uid://byd11l4rpjtkd"]
+
+[ext_resource type="Script" path="res://Quests/quest.gd" id="1_aquo3"]
+
+[resource]
+script = ExtResource("1_aquo3")
+title = "Fetch Quest"
+description = "Find a pot and break it in order to gain a coin!"
+is_completed = false
+objectives = Array[String](["- Find a pot.", "- Break pot.", "- Collect the coin hidden inside."])
+reward = "Gold coin"

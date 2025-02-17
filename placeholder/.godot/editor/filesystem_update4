@@ -15,3 +15,6 @@ res://scenes/dungeonrooms/components/pot_break.gd
 res://scenes/dungeonrooms/components/leaves.tscn
 res://scenes/coin.gd
 res://scenes/dungeonrooms/components/Coin.tscn
+res://Quests/quest.gd
+res://Quests/Quest1.tres
+res://Quests/questManager.gd
