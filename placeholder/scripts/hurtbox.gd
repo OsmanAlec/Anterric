@@ -16,7 +16,7 @@ func _on_area_entered(hitbox: HitBox) -> void:
 	take away whatever is set in the hitbox node's damage,
 	change the colour on the sprite and spawn damage indicators."""
 	if hitbox != null && !health.get_immortality():
-		print("damage taken")
+		
 		#Take damage
 		health.health -= hitbox.damage
 		recieved_damage.emit(hitbox.damage)
