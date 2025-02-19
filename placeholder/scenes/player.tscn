@@ -1,7 +1,8 @@
-[gd_scene load_steps=85 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=87 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
+[ext_resource type="Resource" uid="uid://bgh6fdxvj5o02" path="res://inventory/inv2/playerinv.tres" id="2_y6oqg"]
 [ext_resource type="Texture2D" uid="uid://cg3bhrjnlniis" path="res://art/characters/Standing Attack Left.png" id="3_1qdcu"]
 [ext_resource type="Texture2D" uid="uid://ia1nrj03itx0" path="res://art/characters/Standing Idle Left.png" id="3_3t4oy"]
 [ext_resource type="Texture2D" uid="uid://b5i321mwu7oel" path="res://art/characters/Standing Attack Right.png" id="4_8wmo1"]
@@ -12,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://d3ami4x65uove" path="res://art/characters/Walking Right.png" id="10_3wxsy"]
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="11_tf5i0"]
 [ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="12_e4s7a"]
+[ext_resource type="PackedScene" uid="uid://cgbetvcslu26" path="res://inventory/inv2/inventoryUI.tscn" id="14_tbmsb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.61618, 0.694092, 0.310915)
@@ -339,6 +341,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_674i7"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_mhi2m"]
 resource_name = "Standing Attack Left"
 length = 0.2
@@ -567,9 +572,6 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_674i7"]
-length = 0.001
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00efu"]
 _data = {
 "RESET": SubResource("Animation_674i7"),
@@ -690,6 +692,7 @@ size = Vector3(0.6, 0.619446, 0.703076)
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 collision_layer = 0
 script = ExtResource("1_2rwgt")
+inv = ExtResource("2_y6oqg")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000106812, 0.347534, 0.151872)
@@ -705,7 +708,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_kgdfr")
-animation = &"Walking Attack Left"
+animation = &""
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Animations")
@@ -766,6 +769,8 @@ damage = 35
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
+
+[node name="InventoryUi" parent="." instance=ExtResource("14_tbmsb")]
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

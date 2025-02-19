@@ -15,6 +15,7 @@ var state: String = "Idle"
 var lastDir: Vector3
 
 @onready var anim_tree = get_node("AnimationTree")
+@export var inv:  maininv
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
