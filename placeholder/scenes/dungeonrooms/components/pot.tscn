@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://yis0l5sr02sr"]
 
 [ext_resource type="Texture2D" uid="uid://ctbe5cmuqj8m6" path="res://art/objects/dungeonAssets/pot.png" id="1_uq1w3"]
-[ext_resource type="Script" path="res://scenes/dungeonrooms/components/pot_break.gd" id="2_dj0lj"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/components/breakbox.gd" id="2_0g6rm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v4ead"]
 atlas = ExtResource("1_uq1w3")
@@ -61,7 +61,7 @@ animation = &"break"
 [node name="BreakBox" type="Area3D" parent="."]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("2_dj0lj")
+script = ExtResource("2_0g6rm")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00655556, 0.403669, -0.00262451)
