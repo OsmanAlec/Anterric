@@ -1,16 +1,17 @@
 class_name BreakBox
 extends Area3D
 
-var broken = false
+var isBroken = false
+
+signal broken
 
 func _ready():
 	connect("area_entered", Callable(self, "_on_area_entered"))
 
 func _on_area_entered(hitbox: HitBox) -> void:
 	"""Break an item with this function using same hitboxes."""
-	if hitbox != null && !broken:
+	if hitbox != null && !isBroken:
 		%Animations.play("break")
-		broken = true
-		print("I'm broken!!!!!!")
-		#give player the item dynamically, not sure how to do this yet
+		isBroken = true
+		emit_signal("broken") #send a signal broken to any item
 		

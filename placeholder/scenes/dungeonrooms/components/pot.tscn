@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://yis0l5sr02sr"]
+[gd_scene load_steps=11 format=3 uid="uid://yis0l5sr02sr"]
 
 [ext_resource type="Texture2D" uid="uid://ctbe5cmuqj8m6" path="res://art/objects/dungeonAssets/pot.png" id="1_uq1w3"]
-[ext_resource type="Script" path="res://scenes/dungeonrooms/components/breakbox.gd" id="2_0g6rm"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="2_0g6rm"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/pot_break.gd" id="2_dj0lj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v4ead"]
 atlas = ExtResource("1_uq1w3")
@@ -50,6 +51,7 @@ animations = [{
 size = Vector3(0.432495, 0.821838, 0.544556)
 
 [node name="pot" type="Node3D"]
+script = ExtResource("2_dj0lj")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -66,3 +68,5 @@ script = ExtResource("2_0g6rm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00655556, 0.403669, -0.00262451)
 shape = SubResource("BoxShape3D_0ridd")
+
+[connection signal="broken" from="BreakBox" to="." method="_on_break_box_broken"]

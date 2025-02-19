@@ -1,3 +1,4 @@
+AnimatedSprite3D
 Timer
 Transition
 AtomicState
@@ -12,4 +13,3 @@ CollisionShape3D
 Area3D
 GridMap
 BreakBox
-AnimatedSprite3D

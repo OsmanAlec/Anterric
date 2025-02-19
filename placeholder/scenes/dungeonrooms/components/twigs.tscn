@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dp00sy3vongwu"]
 
 [ext_resource type="Texture2D" uid="uid://bunx6u6sugqe1" path="res://art/objects/dungeonAssets/twigs.png" id="1_6lidy"]
-[ext_resource type="Script" path="res://scenes/dungeonrooms/components/breakbox.gd" id="2_kdvan"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="2_kdvan"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pcp2r"]
 atlas = ExtResource("1_6lidy")
