@@ -1,0 +1,3 @@
+Resource
+Inv
+InvItem

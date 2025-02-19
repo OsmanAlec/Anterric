@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://com04dgpjh3nu"]
+
+[ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://art/objects/inventoryItems/1Coin.png" id="1_5enww"]
+
+[node name="Coin" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.005
+billboard = 1
+texture = ExtResource("1_5enww")

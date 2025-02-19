@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://buyg7siijhne0"]
+
+[ext_resource type="Script" path="res://gui.gd" id="1_wgljg"]
+
+[node name="inventory" type="Node2D"]
+
+[node name="GUI" type="CanvasLayer" parent="."]
+script = ExtResource("1_wgljg")
+
+[node name="Panel" type="Panel" parent="GUI"]
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 512.0
+offset_bottom = 320.0
+metadata/_edit_lock_ = true
+
+[node name="inv" type="GridContainer" parent="GUI"]
+unique_name_in_owner = true
+offset_left = 224.0
+offset_top = 80.0
+offset_right = 494.0
+offset_bottom = 304.0
+columns = 4

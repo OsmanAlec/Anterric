@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://xv1xg13wk422"]
+
+[ext_resource type="Script" path="res://scenes/coin.gd" id="1_qtiy7"]
+[ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://scenes/items(resource)/1Coin.png" id="2_0pgte"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0spy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0pgte")
+}],
+"loop": false,
+"name": &"coin",
+"speed": 12.0
+}]
+
+[node name="Coin" type="Node3D"]
+script = ExtResource("1_qtiy7")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.298748, 0)
+pixel_size = 0.002
+sprite_frames = SubResource("SpriteFrames_v0spy")
+animation = &"coin"
