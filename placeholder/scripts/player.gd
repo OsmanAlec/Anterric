@@ -10,6 +10,7 @@ const DASH_SPEED = 6 * RATE
 var dashing = false
 var canDash = true
 var currentAttack = false
+var canAttack = true
 var state: String = "Idle"
 var lastDir: Vector3
 
@@ -23,10 +24,11 @@ func player_movement(direction: Vector3, delta: float):
 		canDash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
-
+		
 	# If player is moving
 	if direction:
 		lastDir = direction.normalized() # Store latest movement direction
+
 		if dashing:
 			state = "Dashing"
 			velocity = velocity.move_toward(direction * DASH_SPEED, delta * ACCELERATION)
@@ -44,13 +46,12 @@ func player_movement(direction: Vector3, delta: float):
 			anim_tree.get("parameters/playback").travel("Standing")
 			anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
 
+		
 # Called every physics frame
 func _physics_process(delta: float):
-	# Disable hit detection until an attack is made
-	update_hitbox_state(false)
 
 	# Determine movement direction
-	var direction: Vector3
+	var direction: Vector3 = Vector3.ZERO
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
 	if Input.is_action_pressed("ui_left"):
@@ -64,33 +65,26 @@ func _physics_process(delta: float):
 
 	# Handle attack input
 	if Input.is_action_just_pressed("primary_attack"):
-		if !currentAttack and state != "Dashing":
-			start_attack()
-		
+		if canAttack and state != "Dashing":
+			start_attack(direction)
+			
 	# Process movement after animation has played
 	player_movement(direction, delta)
 	move_and_slide()
+	
+	
 
 # Start attack sequence
-func start_attack():
+func start_attack(direction):
 	currentAttack = true
-	anim_tree.get("parameters/playback").travel(state + " Attack")
-	anim_tree.set("parameters/" + state + " Attack/BlendSpace1D/blend_position", lastDir.x)
-	update_hitbox_state(true)
+	canAttack = false
+	anim_tree.get("parameters/playback").travel("Attack")
+	if currentAttack:
+		anim_tree.set("parameters/Attack/BlendSpace2D/blend_position", Vector2(lastDir.x, velocity.length()))
+
 	$attack_timer.start()
-	if lastDir.x > 0:
-		$HitRight.set_process_mode(Node.PROCESS_MODE_INHERIT)
-		$HitLeft.set_process_mode(Node.PROCESS_MODE_DISABLED)
-	else:
-		$HitLeft.set_process_mode(Node.PROCESS_MODE_INHERIT)
-		$HitRight.set_process_mode(Node.PROCESS_MODE_DISABLED)
+	
 
-
-# Enable or disable the hitbox
-func update_hitbox_state(active: bool):
-	var mode = Node.PROCESS_MODE_INHERIT if active else Node.PROCESS_MODE_DISABLED
-	$HitRight.set_process_mode(mode)
-	$HitLeft.set_process_mode(mode)
 
 # Dash ability cooldown
 func _on_dash_timer_timeout() -> void:
@@ -99,10 +93,14 @@ func _on_dash_timer_timeout() -> void:
 func _on_dash_again_timer_timeout() -> void:
 	canDash = true
 
-# Reset attack state after attack timer ends
+# Reset attack state after attack animation ends
+func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
+	if "Attack" in anim_name:
+		currentAttack = false
+		
+# Reset after attack timer ends	
 func _on_attack_timer_timeout() -> void:
-	currentAttack = false
-	update_hitbox_state(false)
+	canAttack = true
 
 # Handle player death
 func _on_health_health_depleted() -> void:

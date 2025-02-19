@@ -1,6 +1,5 @@
 extends CharacterBody3D
 
-@export var player_path: NodePath  # Follows the ant from world scene
 const SPEED: float = 5.0
 
 @export var detection_radius: float = 4.0  # Detection range for flying
@@ -17,7 +16,7 @@ var flight_progress: float = 0.0  # Smooth flight transition
 var canAttack = true
 
 func _physics_process(delta: float) -> void:
-	var player = get_node(player_path)
+	var player =  get_tree().get_nodes_in_group("Player")[0]
 	var direction : Vector3 = Vector3.ZERO
 	
 	if player:

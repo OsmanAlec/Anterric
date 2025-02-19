@@ -1,7 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://7n4slgklnggf"]
+[gd_scene load_steps=8 format=3 uid="uid://7n4slgklnggf"]
 
 [ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_aq1wg"]
-[ext_resource type="Script" path="res://scripts/dungeonrooms/area_3droom1.gd" id="2_iisbi"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
+[ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
+[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="4_imkif"]
+[ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
+[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="5_53lnc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)
@@ -9,6 +13,7 @@ size = Vector3(2.14545, 1.37598, 1)
 [node name="Node3D" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh_library = ExtResource("1_aq1wg")
 cell_size = Vector3(1, 1, 1)
 cell_octant_size = 2
@@ -18,8 +23,37 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 1.92767, 4.80304, -8.1538)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("3_8q2t2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.624, 0, 0.832)
+collision_layer = 4
+collision_mask = 5
+
+[node name="Ladybug" parent="." instance=ExtResource("4_imkif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, 0)
+ballofgust_scene = ExtResource("5_53lnc")
+
+[node name="Ladybug2" parent="." instance=ExtResource("4_imkif")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+ballofgust_scene = ExtResource("5_53lnc")
+
+[node name="grass" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15402, 0, -2.04868)
+
+[node name="grass2" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15402, 0, -3.10205)
+
+[node name="grass3" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15402, 0, -4.26619)
+
+[node name="grass4" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15402, 0, -5.20449)
+
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84506, 0.997039, -8.50886)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.88543, 0.997039, -8.50861)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("2_iisbi")

@@ -24,6 +24,10 @@ window/size/viewport_height=360
 
 import/blender/enabled=false
 
+[global_group]
+
+Player="A group containing the player node"
+
 [input]
 
 ui_left={
