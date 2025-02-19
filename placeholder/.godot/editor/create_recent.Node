@@ -1,3 +1,6 @@
+Button
+Label
+CanvasLayer
 ColorRect
 AnimatedSprite3D
 Timer
@@ -10,6 +13,3 @@ Camera3D
 MultiMeshInstance3D
 MeshInstance3D
 TextureRect
-CollisionShape3D
-Area3D
-GridMap

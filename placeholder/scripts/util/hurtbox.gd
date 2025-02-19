@@ -22,13 +22,15 @@ func _on_area_entered(hitbox: HitBox) -> void:
 		recieved_damage.emit(hitbox.damage)
 		
 		#spawn damage indicator
-		var dmg_indicator = load("res://scenes/UI/damage_indicator.tscn").instantiate()
-		get_tree().current_scene.add_child(dmg_indicator)
-		dmg_indicator.global_position = global_position
-		dmg_indicator.label.text = str(hitbox.damage)
+		if health.health > 0:
+			var dmg_indicator = load("res://scenes/UI/damage_indicator.tscn").instantiate()
+			get_tree().current_scene.add_child(dmg_indicator)
+			dmg_indicator.global_position = global_position
+			dmg_indicator.label.text = str(hitbox.damage)
 		
 				
 		#Color logic
 		sprite.modulate = Color(1, 0, 0)
-		await get_tree().create_timer(0.2).timeout
+		if health.health > 0:
+			await get_tree().create_timer(0.2).timeout
 		sprite.modulate = Color(1, 1, 1)

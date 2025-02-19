@@ -15,3 +15,6 @@ res://inventory/inv2/maininv.gd
 res://scripts/player.gd
 res://inventory/inv2/inventoryUI.tscn
 res://inventory/inv2/inventory_ui.gd
+res://scenes/UI/gameover.tscn
+res://scenes/UI/gameover.gd
+res://scripts/util/hurtbox.gd
