@@ -49,6 +49,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 [node name="grass" parent="." instance=ExtResource("5_7j8lv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
 
+[node name="grass2" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3.26076)
+
+[node name="grass3" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.816185)
+
+[node name="grass4" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.286294)
+
 [node name="leaves" parent="." instance=ExtResource("7_l4472")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3567, -0.0053488, -0.686207)
 

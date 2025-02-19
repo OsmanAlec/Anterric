@@ -79,5 +79,4 @@ func shoot_ball_of_gust(player) -> void:
 
 
 func _on_health_health_depleted() -> void:
-	print("I'm dead!!!")
 	queue_free()

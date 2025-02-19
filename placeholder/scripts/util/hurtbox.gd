@@ -21,9 +21,6 @@ func _on_area_entered(hitbox: HitBox) -> void:
 		health.health -= hitbox.damage
 		recieved_damage.emit(hitbox.damage)
 		
-		#Make sure the entity has time to recover and does not die instantly
-		health.set_temporary_immortality(0.1)
-		
 		#spawn damage indicator
 		var dmg_indicator = load("res://scenes/UI/damage_indicator.tscn").instantiate()
 		get_tree().current_scene.add_child(dmg_indicator)
