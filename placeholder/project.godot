@@ -15,10 +15,15 @@ run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://art/icon.svg"
 
+[autoload]
+
+GameManager="*res://components/Quest/GameManager.tscn"
+
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/stretch/mode="canvas_items"
 
 [filesystem]
 

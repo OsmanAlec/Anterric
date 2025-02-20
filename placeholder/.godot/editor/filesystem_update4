@@ -1,6 +1,5 @@
 res://scenes/player.tscn
 res://meshwithinvisblock_v2.tres
-res://scripts/player.gd
 res://scenes/dungeonrooms/room_no1.tscn
 res://scenes/UI/menu.tscn
 res://scenes/dungeonrooms/room_no2.tscn
@@ -8,3 +7,13 @@ res://scenes/dungeonrooms/room_no3.tscn
 res://scenes/dungeonrooms/room_no4.tscn
 res://scenes/dungeonrooms/room_no5.tscn
 res://scenes/dungeonrooms/components/grass.tscn
+res://scripts/QuestManager.gd
+res://components/GameManager.tscn
+res://scripts/QuestManager.tscn
+res://scripts/enemies/ladybug/ladybug.gd
+res://components/Quest/QuestManager.tscn
+res://scenes/dungeonrooms/merchant.gd
+res://components/Quest/SearchQuest.gd
+res://components/Quest/merchant.gd
+res://components/Quest/GameManager.tscn
+res://scripts/dungeonrooms/components/pot_break.gd

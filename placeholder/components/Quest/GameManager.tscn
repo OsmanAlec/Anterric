@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cglqt3ar6l71w"]
+
+[ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_a8lxe"]
+
+[node name="GameManager" type="Node3D"]
+
+[node name="QuestBox" type="CanvasLayer" parent="."]
+
+[node name="Background" type="Sprite2D" parent="QuestBox"]
+modulate = Color(0, 0, 0, 0.682353)
+show_behind_parent = true
+position = Vector2(152.25, 71.25)
+scale = Vector2(304.5, 142.5)
+texture = SubResource("CanvasTexture_a8lxe")
+
+[node name="QuestTitle" type="RichTextLabel" parent="QuestBox"]
+offset_left = 0.5
+offset_top = 0.5
+offset_right = 192.5
+offset_bottom = 40.5
+text = "Quest Title"
+
+[node name="QuestDescription" type="RichTextLabel" parent="QuestBox"]
+modulate = Color(1, 1, 1, 0.690196)
+offset_left = 0.5
+offset_top = 21.5
+offset_right = 153.5
+offset_bottom = 61.5
+text = "Quest Description
+"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Coins" type="Label" parent="CanvasLayer"]
+offset_left = 598.0
+offset_top = 3.0
+offset_right = 638.0
+offset_bottom = 26.0
+text = "0"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(584.125, 16)
+scale = Vector2(0.214063, 0.21875)
+texture = ExtResource("1_goibj")

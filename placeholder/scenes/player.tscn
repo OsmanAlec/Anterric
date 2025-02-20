@@ -339,6 +339,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_674i7"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_mhi2m"]
 resource_name = "Standing Attack Left"
 length = 0.2
@@ -567,9 +570,6 @@ tracks/1/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_674i7"]
-length = 0.001
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00efu"]
 _data = {
 "RESET": SubResource("Animation_674i7"),
@@ -705,7 +705,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_kgdfr")
-animation = &"Walking Attack Left"
+animation = &""
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Animations")
@@ -766,6 +766,12 @@ damage = 35
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(0.731889, 0, -0.681424, 0, 1, 0, 0.681424, 0, 0.731889, 0.0648474, 0.20779, 0)
+collide_with_areas = true
+debug_shape_custom_color = Color(0.371782, 0.678823, 0.916437, 1)
+debug_shape_thickness = 5
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
