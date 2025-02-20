@@ -29,7 +29,7 @@ func player_movement(delta: float):
 	# Determine movement direction
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = Vector3(input_dir.x, 0, input_dir.y)
-
+	
 	direction = direction.normalized()
 	# Handle dashing
 	if Input.is_action_just_pressed("dash") and canDash:
@@ -37,7 +37,7 @@ func player_movement(delta: float):
 		canDash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
-		
+	
 	# If player is moving
 	if direction:
 		lastDir = direction# Store latest movement direction
