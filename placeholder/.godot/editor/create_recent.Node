@@ -1,8 +1,8 @@
+AnimatedSprite3D
 CollisionShape3D
 Health
 HurtBox
 AnimationPlayer
-AnimatedSprite3D
 NavigationAgent3D
 CharacterBody3D
 Area3D

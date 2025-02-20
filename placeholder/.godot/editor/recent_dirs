@@ -1,3 +1,6 @@
+res://scenes/enemies
+res://art/enemies/bee
+res://art/enemies/tick
 res://art/enemies/queen_bee
 res://scripts/enemies/queenbee
 res://scenes/enemies/queenbee
