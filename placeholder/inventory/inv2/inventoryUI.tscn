@@ -11,7 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aflco")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 503.0
-offset_bottom = 359.0
+offset_right = 40.0
+offset_bottom = 40.0
