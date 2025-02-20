@@ -13,6 +13,9 @@ var currentAttack = false
 var canAttack = true
 var state: String = "Idle"
 var lastDir: Vector3
+# Stun Mechanism
+var isStunned: bool = false
+
 
 @onready var anim_tree = get_node("AnimationTree")
 @export var inv:  maininv
@@ -58,7 +61,10 @@ func player_movement(delta: float):
 		
 # Called every physics frame
 func _physics_process(delta: float):
-
+	
+	if isStunned:
+		# ADD STUN ANIMATION HERE
+		return
 	
 	# Handle attack input
 	if Input.is_action_just_pressed("primary_attack"):
@@ -106,3 +112,9 @@ func _on_attack_timer_timeout() -> void:
 # Handle player death
 func _on_health_health_depleted() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/gameover.tscn")
+
+func apply_stun(duration: float) -> void:
+	isStunned = true
+	anim_tree.get("parameters/playback").travel("stunned")  # Play a stunned animation
+	await get_tree().create_timer(duration).timeout         
+	isStunned = false
