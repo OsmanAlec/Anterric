@@ -1,6 +1,10 @@
+CollisionShape3D
+Health
+HurtBox
+AnimationPlayer
+AnimatedSprite3D
 NavigationAgent3D
 CharacterBody3D
-CollisionShape3D
 Area3D
 Timer
 Sprite3D
@@ -8,8 +12,3 @@ Button
 Label
 CanvasLayer
 ColorRect
-AnimatedSprite3D
-Transition
-AtomicState
-CompoundState
-StateChart
