@@ -1,10 +1,10 @@
-res://scenes/UI/textbox.tscn
+res://scenes/enemies/queenbee/queenbee.tscn
 res://scripts/util/npc.gd
 res://meshwithinvisblock_v2.tres
 res://inventory/inv2/playerinv.tres
+res://scenes/player.tscn
+res://scenes/UI/textbox.tscn
 res://scenes/npc.tscn
 res://scenes/dungeonrooms/room_no2.tscn
-res://scenes/player.tscn
-res://scripts/player.gd
-res://scripts/UI/dialog_manager.gd
-res://scenes/enemies/queenbee/queenbee.tscn
+res://scenes/dungeonrooms/room_no1.tscn
+res://scenes/enemies/ladybug/ballofgust.tscn

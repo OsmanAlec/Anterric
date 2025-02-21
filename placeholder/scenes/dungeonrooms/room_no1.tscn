@@ -47,14 +47,6 @@ ballofgust_scene = ExtResource("5_53lnc")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, -1.82519)
 ballofgust_scene = ExtResource("5_53lnc")
 
-[node name="Ladybug2" parent="." instance=ExtResource("4_imkif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
-ballofgust_scene = ExtResource("5_53lnc")
-
-[node name="Ladybug4" parent="." instance=ExtResource("4_imkif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.93294, 0, -1.89455)
-ballofgust_scene = ExtResource("5_53lnc")
-
 [node name="twigs" parent="." instance=ExtResource("5_0224y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
 
