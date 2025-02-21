@@ -4,46 +4,45 @@ Name:
 Student Number: 
 Class Group:
 Github: 
-# What I am most proud of in the assignment
-Each team member
-# What I learned
-Each team member
+
 
 Name: Osman
 Student Number: C23739895
 Class Group: C
 Github: https://github.com/OsmanAlec
-# What I am most proud of in the assignment
-Each team member
-# What I learned
-Each team member
+
 
 Name:
 Student Number: 
 Class Group:
 Github: 
-# What I am most proud of in the assignment
-Each team member
-# What I learned
-Each team member
+
 
 Name:
 Student Number: 
 Class Group:
 Github: 
-# What I am most proud of in the assignment
-Each team member
-# What I learned
-Each team member
+
 
 Name:
 Student Number: 
 Class Group:
 Github: 
+
+
 # What I am most proud of in the assignment
-Each team member
+Harshit:
+Paul:
+Oskar:
+Shane:
+Osman:
+
 # What I learned
-Each team member
+Harshit:
+Paul:
+Oskar:
+Shane:
+Osman:
 
 # Video
 
