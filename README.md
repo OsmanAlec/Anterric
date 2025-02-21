@@ -1,14 +1,49 @@
 # Project Title
 
-Include for each contributer:
+Name:
+Student Number: 
+Class Group:
+Github: 
+# What I am most proud of in the assignment
+Each team member
+# What I learned
+Each team member
+
+Name: Osman
+Student Number: C23739895
+Class Group: C
+Github: https://github.com/OsmanAlec
+# What I am most proud of in the assignment
+Each team member
+# What I learned
+Each team member
 
 Name:
-
 Student Number: 
-
 Class Group:
-
 Github: 
+# What I am most proud of in the assignment
+Each team member
+# What I learned
+Each team member
+
+Name:
+Student Number: 
+Class Group:
+Github: 
+# What I am most proud of in the assignment
+Each team member
+# What I learned
+Each team member
+
+Name:
+Student Number: 
+Class Group:
+Github: 
+# What I am most proud of in the assignment
+Each team member
+# What I learned
+Each team member
 
 # Video
 
@@ -33,14 +68,6 @@ Github:
 # References
 * Item 1
 * Item 2
-
-# What I am most proud of in the assignment
-
-Each team member
-
-# What I learned
-
-Each team member
 
 # Proposal submitted earlier can go here (if there is one):
 
