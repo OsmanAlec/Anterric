@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnap8k663i18w"]
+[gd_scene load_steps=4 format=3 uid="uid://bnap8k663i18w"]
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_svnxm"]
 [ext_resource type="PackedScene" uid="uid://7n4slgklnggf" path="res://scenes/room_no1.tscn" id="2_4lubw"]
-[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/ladybug.tscn" id="3_a3ba7"]
 [ext_resource type="PackedScene" uid="uid://b8v32o1xp04pg" path="res://scenes/npc.tscn" id="4_pkwqx"]
 
 [node name="dungeon level 1" type="Node2D"]
@@ -15,10 +14,7 @@ shadow_enabled = true
 
 [node name="room1" parent="." instance=ExtResource("2_4lubw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
-
-[node name="Ladybug" parent="." instance=ExtResource("3_a3ba7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15246, 0.4, 1.1)
-player_path = NodePath("../Player")
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("1_svnxm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
