@@ -1,5 +1,7 @@
-AnimatedSprite3D
 CollisionShape3D
+StaticBody3D
+MeshInstance3D
+AnimatedSprite3D
 Health
 HurtBox
 AnimationPlayer
@@ -10,5 +12,3 @@ Timer
 Sprite3D
 Button
 Label
-CanvasLayer
-ColorRect

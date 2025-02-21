@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://otj4kfv8abpn"]
+[gd_scene load_steps=20 format=3 uid="uid://dhlgffegt3y6l"]
 
 [ext_resource type="Texture2D" uid="uid://bs7ltltibntbn" path="res://art/tilesets/dungeonfloor.png" id="1_de7ep"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]
 [ext_resource type="Texture2D" uid="uid://bd46qvdc72pl7" path="res://art/tilesets/cobblestone_3.png" id="3_1kohj"]
+[ext_resource type="Texture2D" uid="uid://b8o1ug2awgd0p" path="res://art/tilesets/grassblocksolo.png" id="4_blob4"]
+[ext_resource type="Texture2D" uid="uid://44two7pgjxgo" path="res://art/tilesets/row-1-column-2.png" id="5_6a1bi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rssw5"]
 albedo_texture = ExtResource("1_de7ep")
@@ -29,6 +31,23 @@ transparency = 1
 albedo_color = Color(1, 1, 1, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mxvve"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_an0o0"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_es5aa"]
+albedo_texture = ExtResource("4_blob4")
+uv1_scale = Vector3(-2.965, 2, 0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_llqg2"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2e5t8"]
+size = Vector3(2, 2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sbyv"]
+albedo_texture = ExtResource("5_6a1bi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3ucw4"]
 
 [node name="Node3D2" type="Node3D"]
 
@@ -71,3 +90,23 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Invisable_block/StaticBody3D"]
 shape = SubResource("BoxShape3D_mxvve")
+
+[node name="grassblock" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+mesh = SubResource("BoxMesh_an0o0")
+surface_material_override/0 = SubResource("StandardMaterial3D_es5aa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="grassblock"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="grassblock/StaticBody3D"]
+shape = SubResource("BoxShape3D_llqg2")
+
+[node name="grassedge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 3)
+mesh = SubResource("BoxMesh_2e5t8")
+surface_material_override/0 = SubResource("StandardMaterial3D_6sbyv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="grassedge"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="grassedge/StaticBody3D"]
+shape = SubResource("BoxShape3D_3ucw4")
