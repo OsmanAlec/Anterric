@@ -14,7 +14,7 @@ var canAttack = true
 var state: String = "Idle"
 var lastDir: Vector3
 # Stun Mechanism
-var isStunned: bool = false
+var canMove: bool = true
 
 
 @onready var anim_tree = get_node("AnimationTree")
@@ -62,8 +62,10 @@ func player_movement(delta: float):
 # Called every physics frame
 func _physics_process(delta: float):
 	
-	if isStunned:
-		# ADD STUN ANIMATION HERE
+	if !canMove:
+		if state == "Stunned":
+			#PLAY STUNNED ANIMATION
+			pass
 		return
 	
 	# Handle attack input
@@ -114,7 +116,6 @@ func _on_health_health_depleted() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/gameover.tscn")
 
 func apply_stun(duration: float) -> void:
-	isStunned = true
-	anim_tree.get("parameters/playback").travel("stunned")  # Play a stunned animation
+	canMove = false
 	await get_tree().create_timer(duration).timeout         
-	isStunned = false
+	canMove = true

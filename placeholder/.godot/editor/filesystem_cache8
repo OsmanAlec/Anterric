@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740156346
+::res://::1740159673
 communication.txt::TextFile::-1::1740152907::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::-1::1740152907::0::1::::<><>::
 meshwithinvisblock_v2.tres::MeshLibrary::8788599955052914999::1740153150::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png
@@ -100,14 +100,14 @@ playerinv.tres::Resource/maininv::2823895739612917765::1740153150::0::1::::<><>:
 boss music(maybe).wav::AudioStreamWAV::1787502671980399100::1740152906::1740153028::1::::<><>::
 Dungeon Music.wav::AudioStreamWAV::7238221230711905099::1740152906::1740153027::1::::<><>::
 menu_music.wav::AudioStreamWAV::804184844489676081::1740152906::1740153028::1::::<><>::
-::res://scenes/::1740159246
+::res://scenes/::1740159354
 Boss.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 coin.tscn::PackedScene::-1::1740152907::0::1::::<><>::
-npc.tscn::PackedScene::4747753525374211472::1740159245::0::1::::<><>::res://scripts/util/npc.gd<>uid://dfcur1am0jjb4::::res://components/mitochondria.ttf
-player.tscn::PackedScene::4213710653736826845::1740159246::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://bgh6fdxvj5o02::::res://inventory/inv2/playerinv.tres<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd<>uid://cgbetvcslu26::::res://inventory/inv2/inventoryUI.tscn
-::res://scenes/dungeonrooms/::1740159246
+npc.tscn::PackedScene::4747753525374211472::1740159354::0::1::::<><>::res://scripts/util/npc.gd<>uid://dfcur1am0jjb4::::res://components/mitochondria.ttf
+player.tscn::PackedScene::4213710653736826845::1740159354::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://bgh6fdxvj5o02::::res://inventory/inv2/playerinv.tres<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd<>uid://cgbetvcslu26::::res://inventory/inv2/inventoryUI.tscn
+::res://scenes/dungeonrooms/::1740159354
 room_no1.tscn::PackedScene::2274673431795579073::1740153901::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>res://scripts/dungeonrooms/room_manager.gd<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://c8leysd8nl2tm::::res://scenes/enemies/ladybug/ladybug.tscn<>uid://3wrwr6mib1xr::::res://scenes/dungeonrooms/components/grass.tscn<>uid://dssy2exuqcb4a::::res://scenes/enemies/ladybug/ballofgust.tscn<>uid://dp00sy3vongwu::::res://scenes/dungeonrooms/components/twigs.tscn<>uid://dim7cy7dlks87::::res://scenes/enemies/tick.tscn<>uid://b8ewdnilwfnln::::res://scenes/dungeonrooms/components/leaves.tscn<>uid://yis0l5sr02sr::::res://scenes/dungeonrooms/components/pot.tscn<>uid://ckdmoytquc0qd::::res://scenes/enemies/workerbee.tscn
-room_no2.tscn::PackedScene::4327636735694339048::1740159246::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://b8v32o1xp04pg::::res://scenes/npc.tscn<>res://scripts/dungeonrooms/room_manager.gd
+room_no2.tscn::PackedScene::4327636735694339048::1740159354::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://b8v32o1xp04pg::::res://scenes/npc.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no3.tscn::PackedScene::3436773725910850933::1740152907::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no4.tscn::PackedScene::8717469975631806535::1740152907::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no5.tscn::PackedScene::8232516450284697170::1740152907::0::1::::<><>::uid://dxhi7ss63q4e2::::res://meshwithinvisblock_v2.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn
@@ -130,15 +130,14 @@ queenbee.tscn::PackedScene::2176767490715427077::1740152907::0::1::::<><>::res:/
 1coin.tres::Resource/ItemData::6110888727114460249::1740152907::0::1::::<><>::res://scenes/items(resource)/ItemData.gd<>uid://diqboa2pg0wto::::res://art/objects/inventoryItems/1Coin.png
 inventory.tscn::PackedScene::3840165028067277469::1740152907::0::1::::<><>::res://scripts/util/gui.gd
 ItemData.gd::GDScript::-1::1740152907::0::1::::ItemData<>Resource<>::
-::res://scenes/UI/::1740159289
+::res://scenes/UI/::1740159354
 damage_indicator.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 gameover.gd::GDScript::-1::1740152907::0::1::::<>CanvasLayer<>::
 gameover.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 level_select.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 menu.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 options_menu.tscn::PackedScene::-1::1740152907::0::1::::<><>::
-tbpositioning.gd::GDScript::-1::1740159072::0::1::::<>Sprite3D<>::
-textbox.tscn::PackedScene::4939999946912360673::1740159296::0::1::::<><>::res://scenes/UI/tbpositioning.gd<>res://scripts/UI/textbox.gd<>uid://di08uhinf4us1::::res://art/UI/textbox.png<>uid://dfcur1am0jjb4::::res://components/mitochondria.ttf
+textbox.tscn::PackedScene::4939999946912360673::1740159354::0::1::::<><>::res://scripts/UI/tbpositioning.gd<>res://scripts/UI/textbox.gd<>uid://di08uhinf4us1::::res://art/UI/textbox.png<>uid://dfcur1am0jjb4::::res://components/mitochondria.ttf
 volume_slider.tscn::PackedScene::-1::1740152907::0::1::::<><>::
 ::res://scripts/::1740153150
 health.gd::GDScript::-1::1740152925::0::1::::Health<>Node<>::
@@ -156,12 +155,13 @@ ladybug.gd::GDScript::-1::1740152907::0::1::::<>CharacterBody3D<>::
 ladybug_gust.gd::GDScript::-1::1740152907::0::1::::<>RigidBody3D<>::
 ::res://scripts/enemies/queenbee/::1740152907
 QueenBee.gd::GDScript::-1::1740152907::0::1::::<>CharacterBody3D<>::
-::res://scripts/UI/::1740159270
+::res://scripts/UI/::1740159296
 damageIndicator.gd::GDScript::-1::1740152907::0::1::::<>Node3D<>::
 dialog_manager.gd::GDScript::-1::1740159270::0::1::::<>Node3D<>::
 level_select.gd::GDScript::-1::1740152907::0::1::::<>Control<>::
 Menu.gd::GDScript::-1::1740152907::0::1::::<>Control<>::
 options_menu.gd::GDScript::-1::1740152907::0::1::::<>Control<>::
+tbpositioning.gd::GDScript::-1::1740159072::0::1::::<>Sprite3D<>::
 textbox.gd::GDScript::-1::1740157206::0::1::::<>MarginContainer<>::
 volume_slider.gd::GDScript::-1::1740152907::0::1::::<>HSlider<>::
 ::res://scripts/util/::1740154623
