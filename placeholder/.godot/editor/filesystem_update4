@@ -1,3 +1,11 @@
-res://scenes/dungeonrooms/room_no1.tscn
-res://inventory/inv2/playerinv.tres
+res://scenes/UI/textbox.tscn
 res://meshwithinvisblock_v2.tres
+res://inventory/inv2/playerinv.tres
+res://scenes/npc.tscn
+res://scenes/dungeonrooms/room_no1.tscn
+res://scenes/dungeonrooms/room_no2.tscn
+res://scripts/util/npc.gd
+res://scenes/player.tscn
+res://scripts/UI/dialog_manager.gd
+res://scripts/UI/textbox.gd
+res://scenes/UI/tbpositioning.gd

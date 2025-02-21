@@ -1,17 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2wlsr0kcgdh5"]
+[gd_scene load_steps=6 format=3 uid="uid://b2wlsr0kcgdh5"]
 
 [ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_2n6fb"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_xtvle"]
+[ext_resource type="PackedScene" uid="uid://b8v32o1xp04pg" path="res://scenes/npc.tscn" id="3_n0o4j"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="3_yguxx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mgyrc"]
 size = Vector3(1.94293, 1, 0.86438)
 
 [node name="RoomNo2" type="Node3D"]
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = ExtResource("1_2n6fb")
@@ -24,14 +21,20 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_xtvle")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585326, 1, 3.79532)
-collision_layer = 4
-collision_mask = 5
+collision_mask = 0
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -13.9776)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("3_yguxx")
+
+[node name="NPC" parent="Area3D" instance=ExtResource("3_n0o4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.012887, 0.984248, 13.9812)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Area3D/NPC"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, -0.012887, -0.984248, -0.00359917)
+shadow_enabled = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463721, 1.11884, -0.585549)
