@@ -15,7 +15,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)
 
-[node name="Node3D" type="Node3D"]
+[node name="room_no1" type="Node3D"]
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

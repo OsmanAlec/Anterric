@@ -12,7 +12,6 @@ uv1_scale = Vector3(2.98, 2.005, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_petgk"]
 material = SubResource("StandardMaterial3D_rssw5")
-size = Vector3(2, 2, 2)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_81a30"]
 size = Vector3(2, 2, 2)
@@ -33,7 +32,6 @@ albedo_color = Color(1, 1, 1, 0)
 [sub_resource type="BoxShape3D" id="BoxShape3D_mxvve"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_an0o0"]
-size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_es5aa"]
 albedo_texture = ExtResource("4_blob4")
@@ -42,7 +40,6 @@ uv1_scale = Vector3(-2.965, 2, 0)
 [sub_resource type="BoxShape3D" id="BoxShape3D_llqg2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2e5t8"]
-size = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6sbyv"]
 albedo_texture = ExtResource("5_6a1bi")
@@ -58,6 +55,7 @@ mesh = SubResource("BoxMesh_petgk")
 [node name="StaticBody3D" type="StaticBody3D" parent="block1"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="block1/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("BoxShape3D_81a30")
 
 [node name="block2" type="MeshInstance3D" parent="."]
