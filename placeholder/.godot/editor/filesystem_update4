@@ -1,7 +1,6 @@
 res://scenes/UI/textbox.tscn
-res://scripts/util/npc.gd
-res://meshwithinvisblock_v2.tres
 res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
 res://hopefullyfinalgridmap.tres
 res://scenes/npc.tscn
 res://scenes/dungeonrooms/room_no2.tscn
@@ -14,3 +13,4 @@ res://scenes/dungeonrooms/components/gridmapblocks.tscn
 res://scenes/dungeonrooms/room_no3.tscn
 res://scenes/dungeonrooms/room_no4.tscn
 res://scenes/dungeonrooms/room_no5.tscn
+res://scripts/dungeonrooms/room_manager.gd
