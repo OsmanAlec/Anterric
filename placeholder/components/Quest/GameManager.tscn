@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://cglqt3ar6l71w"]
+[gd_scene load_steps=4 format=3 uid="uid://cglqt3ar6l71w"]
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
+[ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_a8lxe"]
 
 [node name="GameManager" type="Node3D"]
+script = ExtResource("1_ylaw4")
 
 [node name="QuestBox" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Background" type="Sprite2D" parent="QuestBox"]
 modulate = Color(0, 0, 0, 0.682353)
@@ -40,7 +43,7 @@ offset_right = 638.0
 offset_bottom = 26.0
 text = "0"
 
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+[node name="Coin" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(584.125, 16)
 scale = Vector2(0.214063, 0.21875)
 texture = ExtResource("1_goibj")

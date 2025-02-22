@@ -1,8 +1,9 @@
-res://scenes/player.tscn
-res://meshwithinvisblock_v2.tres
-res://scripts/dungeonrooms/components/pot_break.gd
-res://components/Quest/QuestManager.tscn
 res://components/Quest/GameManager.tscn
-res://scenes/dungeonrooms/room_no1.tscn
+res://meshwithinvisblock_v2.tres
+res://components/Quest/game_manager.gd
+res://scripts/dungeonrooms/components/pot_break.gd
+res://scenes/player.tscn
+res://components/Quest/QuestManager.tscn
 res://scenes/dungeonrooms/pot.tscn
 res://scenes/coin.tscn
+res://scenes/dungeonrooms/room_no1.tscn
