@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://2mxfem08kla8"]
+
+[ext_resource type="Script" path="res://scripts/UI/hearts.gd" id="1_tarx8"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Hearts" type="GridContainer" parent="."]
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 2
+columns = 6
+script = ExtResource("1_tarx8")

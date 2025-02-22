@@ -7,13 +7,17 @@ signal health_changed(diff: int)
 signal health_depleted
 
  # Maximum Health 
-@export var max_health: int = 100 : set = set_max_health, get = get_max_health
+@export var max_health: int : set = set_max_health, get = get_max_health
 @export var immortality: bool = false : set = set_immortality, get = get_immortality # When player respawns enemy cannot hit for few secs
 
 var immortality_timer: Timer = null
 
 @onready var health: int = max_health : set = set_health, get = get_health
 
+func _ready() -> void:
+	if get_parent().is_in_group("Player"):
+		max_health = PlayerData.max_health
+		health = PlayerData.current_health
 
 func set_max_health(value: int):
 	var clamped_value = 1 if value <= 0 else value
@@ -56,14 +60,17 @@ func set_temporary_immortality(time : float):
 func set_health(value: int):
 	if value < health and immortality:
 		return
-		
+	
+	if health == 0:
+		health = value
+		return
+	
 	var clamped_value = clampi(value, 0, max_health)
 	
 	if clamped_value != health:
 		var difference = clamped_value - health
 		health = value
 		health_changed.emit(difference)
-		
 		if health <= 0:
 			health_depleted.emit()
 			
