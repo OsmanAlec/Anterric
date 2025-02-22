@@ -696,6 +696,8 @@ inv = ExtResource("2_y6oqg")
 
 [node name="HUD" parent="." instance=ExtResource("3_hjrx5")]
 
+[node name="InventoryUi" parent="." instance=ExtResource("14_tbmsb")]
+
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_kqand")
 
@@ -708,6 +710,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 billboard = 1
+alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_kgdfr")
 animation = &""
 
@@ -770,8 +773,6 @@ damage = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
-
-[node name="InventoryUi" parent="." instance=ExtResource("14_tbmsb")]
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
