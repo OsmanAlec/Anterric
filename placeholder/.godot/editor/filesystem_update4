@@ -11,3 +11,6 @@ res://scenes/dungeonrooms/room_no1.tscn
 res://scenes/enemies/ladybug/ballofgust.tscn
 res://scenes/UI/menu.tscn
 res://scenes/dungeonrooms/components/gridmapblocks.tscn
+res://scenes/dungeonrooms/room_no3.tscn
+res://scenes/dungeonrooms/room_no4.tscn
+res://scenes/dungeonrooms/room_no5.tscn
