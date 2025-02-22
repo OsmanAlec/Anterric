@@ -9,14 +9,12 @@ func _on_break_box_broken() -> void:
 	# Spawn the coin
 	var coin = Coin.instantiate()
 	add_child(coin) 
-	
-	#NEWCODE
-	func _on_body_entered(body Node3D) -> void:
-		if body.is_in_group("Player"):
-			quest.reached_goal()
-			queue_free()
-	#NEWCODE
-	
 	# Position the coin slightly above the pot
 	coin.global_position = global_position + Vector3(0, 0.5, 0)
-		
+	
+	#NEWCODE
+func _on_body_entered(body) -> void:
+	if body.is_in_group("Player"):
+		quest.reached_goal()
+		queue_free()
+	#NEWCODE

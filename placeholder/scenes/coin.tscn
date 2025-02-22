@@ -1,6 +1,5 @@
-[gd_scene load_steps=4 format=3 uid="uid://xv1xg13wk422"]
+[gd_scene load_steps=3 format=3 uid="uid://xv1xg13wk422"]
 
-[ext_resource type="Script" path="res://scenes/coin.gd" id="1_qtiy7"]
 [ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://scenes/items(resource)/1Coin.png" id="2_0pgte"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v0spy"]
@@ -15,7 +14,6 @@ animations = [{
 }]
 
 [node name="Coin" type="Node3D"]
-script = ExtResource("1_qtiy7")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
