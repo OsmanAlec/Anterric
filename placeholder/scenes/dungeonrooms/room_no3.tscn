@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bo72fqjykm7m4"]
 
-[ext_resource type="MeshLibrary" uid="uid://bjbjy7u0b8c44" path="res://hopefullyfinalgridmap.tres" id="1_jsb75"]
+[ext_resource type="MeshLibrary" uid="uid://hov70gec1s63" path="res://hopefullyfinalgridmap.tres" id="1_jsb75"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_io6id"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="3_ckr72"]
 

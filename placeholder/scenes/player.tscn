@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=93 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
@@ -690,6 +690,23 @@ size = Vector3(0.517242, 0.709961, 0.413059)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wl5v0"]
 size = Vector3(0.6, 0.619446, 0.703076)
 
+[sub_resource type="Gradient" id="Gradient_swtm1"]
+colors = PackedColorArray(0, 0, 0, 1, 0.129412, 0.129412, 0.129412, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5d8wl"]
+gradient = SubResource("Gradient_swtm1")
+fill = 1
+
+[sub_resource type="Gradient" id="Gradient_ggak0"]
+colors = PackedColorArray(0, 0, 0, 1, 0.129558, 0.129558, 0.129558, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r5ivk"]
+gradient = SubResource("Gradient_ggak0")
+fill = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ymga0"]
+height = 0.001
+
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_2rwgt")
 inv = ExtResource("2_y6oqg")
@@ -710,7 +727,6 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499266, 0)
 pixel_size = 0.002
 billboard = 1
-alpha_cut = 2
 sprite_frames = SubResource("SpriteFrames_kgdfr")
 animation = &""
 
@@ -773,6 +789,21 @@ damage = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
+
+[node name="Shadow" type="Decal" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0.01, 0.199955)
+size = Vector3(2, 0.218689, 2)
+texture_albedo = SubResource("GradientTexture2D_5d8wl")
+texture_normal = SubResource("GradientTexture2D_r5ivk")
+cull_mask = 524288
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Shadow"]
+transform = Transform3D(1.66586, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+layers = 524289
+transparency = 0.5
+cast_shadow = 0
+ignore_occlusion_culling = true
+mesh = SubResource("CylinderMesh_ymga0")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

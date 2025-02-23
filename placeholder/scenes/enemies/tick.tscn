@@ -102,7 +102,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_os53b")
 }],
-"loop": false,
+"loop": true,
 "name": &"attack",
 "speed": 12.0
 }, {
@@ -141,10 +141,11 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="dickhead" type="Node3D"]
+[node name="dickhead" type="CharacterBody3D"]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_xu8nr")
-animation = &"attack"
+animation = &"walk"
+frame_progress = 0.71377

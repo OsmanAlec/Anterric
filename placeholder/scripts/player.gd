@@ -50,6 +50,7 @@ func player_movement(delta: float):
 			if !currentAttack:
 				anim_tree.get("parameters/playback").travel("Walking")
 				anim_tree.set("parameters/Walking/BlendSpace1D/blend_position", lastDir.x)
+				
 	# If player is not moving
 	else:
 		state = "Standing"
@@ -57,8 +58,7 @@ func player_movement(delta: float):
 		if !currentAttack:
 			anim_tree.get("parameters/playback").travel("Standing")
 			anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
-
-		
+			
 # Called every physics frame
 func _physics_process(delta: float):
 	
