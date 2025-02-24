@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740413964
+::res://::1740414130
 communication.txt::TextFile::-1::1740162926::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::4286821080437972484::1740162926::0::1::::<><>::
 hopefullyfinalgridmap.tres::MeshLibrary::521556718814154226::1740319206::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://jhxsrtvq6lj3::::res://art/tilesets/grasstileset/row-5-column-6.png<>uid://dw6fevcrp51lx::::res://art/tilesets/grasstileset/row-5-column-5.png<>uid://c73jk00hpfstf::::res://art/tilesets/grasstileset/row-5-column-4.png<>uid://i0sqk4nad5n0::::res://art/tilesets/grasstileset/row-5-column-3.png<>uid://2i777y6x3bs1::::res://art/tilesets/grasstileset/row-5-column-2.png<>uid://cr4ib104cy16g::::res://art/tilesets/grasstileset/row-5-column-1.png<>uid://cbwvsbscfsadc::::res://art/tilesets/grasstileset/row-4-column-6.png<>uid://ctjl6wdjbq8bs::::res://art/tilesets/grasstileset/row-4-column-5.png<>uid://b2g77voic2jfv::::res://art/tilesets/grasstileset/row-4-column-4.png<>uid://b8cceu5ic36rq::::res://art/tilesets/grasstileset/row-4-column-3.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png<>uid://c7ctl7brmo5a1::::res://art/tilesets/grasstileset/row-4-column-2.png<>uid://se5mnb14gr4f::::res://art/tilesets/grasstileset/row-4-column-1.png<>uid://bo0xlthycmvws::::res://art/tilesets/grasstileset/row-3-column-6.png<>uid://bco7v3skgbsk8::::res://art/tilesets/grasstileset/row-3-column-5.png<>uid://bgfmhcx7otom1::::res://art/tilesets/grasstileset/row-3-column-4.png<>uid://ca65neklv8ece::::res://art/tilesets/grasstileset/row-3-column-3.png<>uid://c5wycepms5eo0::::res://art/tilesets/grasstileset/row-3-column-2.png<>uid://c66o4hd630gl1::::res://art/tilesets/grasstileset/row-3-column-1.png<>uid://ci5uqd32cvc4b::::res://art/tilesets/grasstileset/row-2-column-6.png<>uid://c62wl7ie5qnon::::res://art/tilesets/grasstileset/row-2-column-5.png<>uid://ckeh1kp37b1i::::res://art/tilesets/grasstileset/row-2-column-4.png<>uid://dkimw3r3fsk5u::::res://art/tilesets/grasstileset/row-2-column-3.png<>uid://cntqlfm7vx87d::::res://art/tilesets/grasstileset/row-2-column-2.png<>uid://bc20u1dil5uq2::::res://art/tilesets/grasstileset/row-2-column-1.png<>uid://belb11vwuwsph::::res://art/tilesets/grasstileset/row-1-column-6.png<>uid://bher4bptqr4fh::::res://art/tilesets/grasstileset/row-1-column-5.png<>uid://dk2vev202p42c::::res://art/tilesets/grasstileset/row-1-column-4.png<>uid://cq32b7jkjusmu::::res://art/tilesets/grasstileset/row-1-column-3.png<>uid://dsabnq8u6a6jd::::res://art/tilesets/grasstileset/row-1-column-2.png<>uid://rotqvyl2j4nm::::res://art/tilesets/grasstileset/row-1-column-1.png<>uid://csdsrhpll466f::::res://art/tilesets/grasstileset/row-6-column-6.png<>uid://psmqi5tcsnx4::::res://art/tilesets/grasstileset/row-6-column-5.png<>uid://dh68j8u0x8uuj::::res://art/tilesets/grasstileset/row-6-column-4.png<>uid://dbmtan27fcuha::::res://art/tilesets/grasstileset/row-6-column-3.png<>uid://v1p3piamthy::::res://art/tilesets/grasstileset/row-6-column-2.png<>uid://dcdvu2jkfhbm6::::res://art/tilesets/grasstileset/row-6-column-1.png
@@ -78,15 +78,15 @@ twigs.png::CompressedTexture2D::3818487416901964882::1740162925::1740230597::1::
 15Coin.png::CompressedTexture2D::6552338093749544008::1740162926::1740230597::1::::<><>::
 inventory-background.png::CompressedTexture2D::492711938451176810::1740162926::1740230597::1::::<><>::
 inventory-slot.png::CompressedTexture2D::2441861140721413863::1740162926::1740230597::1::::<><>::
-::res://art/tilesets/::1740315114
+::res://art/tilesets/::1740414130
 anthill ground_0001.png::CompressedTexture2D::1380869397965747327::1740315013::1740315022::1::::<><>::
 anthill ground_0002.png::CompressedTexture2D::6695366093806123945::1740315013::1740315114::1::::<><>::
 anthill ground_0003.png::CompressedTexture2D::3487539620785091055::1740315013::1740315013::1::::<><>::
+anthill ground_0004.png::CompressedTexture2D::2768813132585827593::1740314983::1740414130::1::::<><>::
 cobblestone_3.png::CompressedTexture2D::2658766076712649258::1734782339::1740167688::1::::<><>::
 dirty_1.png::CompressedTexture2D::9113807458441457506::1734782339::1740167688::1::::<><>::
 grassblocksolo.png::CompressedTexture2D::4733168526874492221::1740167625::1740230597::1::::<><>::
-::res://art/tilesets/grasstileset/::1740315019
-anthill ground_0004.png::CompressedTexture2D::2768813132585827593::1740314983::1740315019::1::::<><>::
+::res://art/tilesets/grasstileset/::1740414130
 row-1-column-1.png::CompressedTexture2D::1223294966570346002::1740247257::1740247337::1::::<><>::
 row-1-column-2.png::CompressedTexture2D::8422746061179735265::1740247257::1740247337::1::::<><>::
 row-1-column-3.png::CompressedTexture2D::5955308282424626340::1740247257::1740247337::1::::<><>::

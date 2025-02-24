@@ -1,0 +1,4 @@
+res://scenes/dungeonrooms/room_no1.tscn
+res://inventory/inv2/playerinv.tres
+res://hopefullyfinalgridmap.tres
+res://scripts/util/npc.gd
