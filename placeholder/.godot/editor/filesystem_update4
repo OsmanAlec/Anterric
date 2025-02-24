@@ -23,3 +23,16 @@ res://scenes/dungeonrooms/room_no5.tscn
 res://scenes/home/ant_hill.tscn
 res://scenes/npc.tscn
 res://scripts/dungeonrooms/room_manager.gd
+res://scripts/UI/dialog_manager.gd
+res://scenes/dungeonrooms/door.gd
+res://scenes/UI/gameover.gd
+res://scripts/util/health.gd
+res://scripts/UI/hearts.gd
+res://scripts/util/hurtbox.gd
+res://inventory/inv2/inventory_ui.gd
+res://scripts/enemies/ladybug/ladybug.gd
+res://scripts/player.gd
+res://scripts/util/player_data.gd
+res://scripts/enemies/queenbee/QueenBee.gd
+res://scripts/UI/tbpositioning.gd
+res://scripts/UI/textbox.gd
