@@ -27,8 +27,6 @@ func _physics_process(delta):
 			get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no5.tscn")
 		else:
 			
-		
-			
 			get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no" + str(room_num) + ".tscn")
 		
 		
