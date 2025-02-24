@@ -10,17 +10,19 @@ var dialog_lines: Array[String] = []
 
 var current_line: int = 0
 
-var text_box_scene = preload("res://scenes/UI/textbox.tscn").instantiate()
+var text_box_scene
 
 var text_box 
 var text_box_position: Vector3
 
 var dialog_state: bool = false
+var canAdvance: bool = false
 
 func start_dialog(position: Vector3, lines: Array[String]):
 		
 		#if the dialog is active, don't start a new one
 		if dialog_state:
+			canAdvance = true
 			return
 		
 		get_tree().current_scene.get_node("Player").canMove = false
@@ -46,7 +48,7 @@ func _show_text_box():
 	
 func _unhandled_key_input(event):
 	if (event.is_action_pressed("advance_dialog") &&
-	dialog_state):
+	dialog_state && canAdvance):
 		text_box_scene.visible = false
 		
 		current_line += 1

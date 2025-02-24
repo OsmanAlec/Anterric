@@ -25,7 +25,7 @@ shape = SubResource("BoxShape3D_mfupm")
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 billboard = 1
-text = "T"
+text = "Press T(alk)"
 font = ExtResource("2_1501b")
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]

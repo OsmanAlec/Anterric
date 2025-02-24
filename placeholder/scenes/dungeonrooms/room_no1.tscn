@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://7n4slgklnggf"]
+[gd_scene load_steps=42 format=4 uid="uid://7n4slgklnggf"]
 
 [ext_resource type="MeshLibrary" uid="uid://hov70gec1s63" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
@@ -7,54 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
 [ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="5_53lnc"]
 [ext_resource type="Texture2D" uid="uid://dase8eyjsqn73" path="res://art/objects/dungeonAssets/branhces_0002.png" id="6_68rwo"]
-[ext_resource type="Texture2D" uid="uid://bgnfkflgl1g4y" path="res://art/objects/dungeonAssets/hangingleaves.png" id="9_woho1"]
+[ext_resource type="Texture2D" uid="uid://dvowooiw1f7hi" path="res://art/objects/dungeonAssets/foreleaves2.png" id="7_6phln"]
+[ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="8_ai6ns"]
+[ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="9_a4tny"]
+[ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="10_334wo"]
 [ext_resource type="Texture2D" uid="uid://ra53udonybgf" path="res://art/objects/dungeonAssets/branhces_0001.png" id="11_2lbpu"]
-[ext_resource type="Texture2D" uid="uid://oj52516i0esq" path="res://art/objects/dungeonAssets/ferns_0001.png" id="13_da7lm"]
 [ext_resource type="Texture2D" uid="uid://4sbw8qqp0iak" path="res://art/objects/dungeonAssets/bg2.png" id="13_yhpu4"]
 [ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="14_ggxmr"]
-[ext_resource type="Texture2D" uid="uid://ceixto636hnqh" path="res://art/objects/dungeonAssets/ferns_0002.png" id="14_yu8ce"]
 [ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="15_o0ern"]
 [ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="16_qt0mw"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3lwo"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("13_da7lm")
-
-[sub_resource type="QuadMesh" id="QuadMesh_qoegd"]
-material = SubResource("StandardMaterial3D_m3lwo")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d2q66"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("14_yu8ce")
-
-[sub_resource type="QuadMesh" id="QuadMesh_r07ur"]
-material = SubResource("StandardMaterial3D_d2q66")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ehkxl"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("14_yu8ce")
-
-[sub_resource type="QuadMesh" id="QuadMesh_ju642"]
-material = SubResource("StandardMaterial3D_ehkxl")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_seiqa"]
-transparency = 2
-alpha_scissor_threshold = 0.5
-alpha_antialiasing_mode = 0
-cull_mode = 2
-albedo_texture = ExtResource("13_da7lm")
-
-[sub_resource type="QuadMesh" id="QuadMesh_1i0qt"]
-material = SubResource("StandardMaterial3D_seiqa")
 
 [sub_resource type="VoxelGIData" id="VoxelGIData_bsxh7"]
 _data = {
@@ -144,14 +105,45 @@ material = SubResource("StandardMaterial3D_qcn1d")
 flip_faces = true
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6ki73"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5ofe"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("9_woho1")
+albedo_texture = ExtResource("7_6phln")
 
 [sub_resource type="QuadMesh" id="QuadMesh_6fvxa"]
-material = SubResource("StandardMaterial3D_6ki73")
+material = SubResource("StandardMaterial3D_w5ofe")
+size = Vector2(0.815, 0.415)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3ofn"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("8_ai6ns")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ed1f6"]
+material = SubResource("StandardMaterial3D_g3ofn")
+size = Vector2(0.36, 0.228)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkgqm"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("9_a4tny")
+
+[sub_resource type="QuadMesh" id="QuadMesh_l1oej"]
+material = SubResource("StandardMaterial3D_tkgqm")
+size = Vector2(0.41, 0.325)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5h6n"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("10_334wo")
+
+[sub_resource type="QuadMesh" id="QuadMesh_88wfn"]
+material = SubResource("StandardMaterial3D_h5h6n")
+size = Vector2(0.43, 0.255)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)
@@ -159,628 +151,6 @@ size = Vector3(2.14545, 1.37598, 1)
 [node name="room_no1" type="Node3D"]
 
 [node name="Environment" type="Node" parent="."]
-
-[node name="Floor" type="Node" parent="Environment"]
-
-[node name="fern5" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, 5.61943e-08, 6.69697e-08, 0, 0.766044, -0.642788, -8.74228e-08, -0.642788, -0.766044, -7, -3.50218, 0)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern6" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, 1.45587e-07, 1.73504e-07, 0, 1.14907, -0.964181, -2.26494e-07, -0.964181, -1.14907, -4.97038, -3.4, 0.688612)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern2" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, -5.67415, -3, -0.6458)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern7" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, 5.61943e-08, 6.69697e-08, 0, 0.766044, -0.642788, -8.74228e-08, -0.642788, -0.766044, -4.09838, -3, 0.186066)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern4" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -6.55975, -3.2, 2.0076)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern10" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -9.12856, -3.50218, 1.05882)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern12" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -9.83233, -3.50218, -0.275595)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern13" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, -8.25656, -3.90218, 0.55627)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern17" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -1.41598, -3, 2.48867)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern18" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 0.61364, -3, 3.17728)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern19" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.116007, -3, 4.11203)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern20" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -0.0901284, -3.4, 1.84287)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern21" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 1.48564, -3, 2.67474)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern22" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -2.86896, -3, 1.91665)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern23" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -2.08185, -3.4, 3.8334)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern25" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -5.57416, -3.2, 2.85888)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern27" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -4.04217, -3, 4.48224)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern29" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, -2.67254, -3.4, 3.04494)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern34" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -7.72708, -3.2, 3.6994)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern36" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -8.43085, -3.2, 2.36498)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern50" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 7.02962, -3, -3.31139)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern51" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 6.53199, -3, -2.37664)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern52" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 6.32585, -2.6, -4.6458)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern53" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 7.90162, -3, -3.81393)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern54" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 3.54703, -3, -4.57202)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern55" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.33413, -3.73311, -2.65527)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern56" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 5.44025, -3, -2.9924)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern57" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 0.84182, -3.73311, -3.6298)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern59" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 2.37381, -3.73311, -2.00643)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern60" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 2.16767, -2.6, -4.2756)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern61" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 3.74344, -3, -3.44373)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern63" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.175953, -3, -2.28507)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern64" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1.28207, -3.73311, -2.62219)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern65" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 10.584, -3.58648, -1.51133)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern66" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 12.6136, -3, -0.822716)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern68" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 11.9099, -3, -2.15713)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern69" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 13.4856, -3, -1.32526)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern71" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 9.91815, -3, -0.166598)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern73" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 6.42584, -3.73311, -1.14112)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern75" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 7.95783, -3, 0.48224)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern76" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 7.75169, -3, -1.78692)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern78" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 4.97286, -3.73311, -1.71315)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern80" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 6.86608, -3, -0.133522)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern81" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 2.2433, -3.73311, -0.989215)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern82" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 4.27292, -3.73311, -0.300603)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern85" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 5.14492, -3.58648, -0.803149)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern86" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 0.790321, -3.73311, -1.56124)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern90" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 0.114738, -3, 0.0696015)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern91" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -0.382895, -3.4, 1.00435)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern92" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.589029, -3, -1.26481)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern93" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 0.986738, -3.73311, -0.432945)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern94" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -3.36786, -3, -1.19103)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern95" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -2.58075, -3, 0.725719)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern96" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -1.47464, -3, 0.388591)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern99" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 9.53199, -3, 3.62336)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern100" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 9.32585, -3, 1.3542)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern101" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 10.9016, -3, 2.18607)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern103" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 7.33413, -3, 3.34473)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern104" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 8.44025, -3, 3.0076)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern107" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 5.37381, -2.77242, 3.99357)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern110" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 2.38885, -3, 1.79818)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern111" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 3.17595, -3, 3.71493)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern114" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 15.6136, -3, 5.17728)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern115" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 15.116, -3.58648, 6.11203)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern118" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 12.131, -3.3, 3.91665)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern120" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 14.0243, -3, 5.49627)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern122" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 11.4555, -3.3, 5.54749)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern123" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.9578, -3, 6.48224)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern124" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.7517, -3, 4.21308)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern127" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 8.75997, -3.0455, 6.20361)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern128" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 9.86608, -2.7455, 5.86648)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern130" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 7.27292, -2.51792, 5.6994)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern131" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 6.77529, -2.51792, 6.63415)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern133" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 8.14492, -2.51792, 5.19685)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern135" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.57743, -2.77242, 6.35551)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern193" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -3.22471, -3, 7.63415)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern194" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -3.43085, -3, 5.36498)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern196" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, -6.20968, -3.6, 5.43876)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern26" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 5.53304, -3.2, -0.255173)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern35" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 3.38012, -3.2, 0.585346)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern198" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 4.89752, -2.8, 2.32471)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern197" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -5.42257, -3.2, 7.35551)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern199" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -4.22471, -3, -2.36585)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern200" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -4.43085, -3, -4.63502)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern201" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -2.85508, -3, -3.80315)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern202" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, -7.20968, -2.6, -4.56124)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern203" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -6.42257, -3.50218, -2.64449)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern204" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, -5.31646, -2.6, -2.98161)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern205" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -10.2247, -3.50218, -1.36585)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern206" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -10.4308, -3, -3.63502)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern207" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, -8.85508, -3.4, -2.80315)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern211" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 12.7753, -3, -2.36585)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern212" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 12.5692, -3, -4.63502)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern213" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 14.1449, -3, -3.80315)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern215" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.5774, -3, -2.64449)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern216" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 11.6835, -3, -2.98161)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern220" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 16.7903, -3.64105, 3.43876)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern221" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 17.5774, -3, 5.35551)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern138" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 3.11474, -3.3, 6.0696)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern140" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 2.41097, -3, 4.73519)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern141" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 3.98674, -2.77242, 5.56706)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern142" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, -0.367859, -3, 4.80897)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern143" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0.419249, -3, 6.72572)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern144" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1.52536, -3, 6.38859)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern145" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 20, -3.58648, -2)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern148" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 21.3259, -3, -2.6458)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern150" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 18.547, -3, -2.57202)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern152" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 20.4402, -3.58648, -0.992399)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern156" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 17.1677, -3.58648, -2.2756)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern158" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 14.3888, -3, -2.20182)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern159" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 15.176, -3, -0.285066)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern160" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 16.2821, -3, -0.622194)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern178" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 19.2729, -3.64105, 1.6994)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern180" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 18.5692, -3.64105, 0.364985)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern181" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 20.1449, -3.64105, 1.19685)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern182" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 15.7903, -3, 0.438763)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern183" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 16.5774, -4.22752, 2.35551)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern184" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 17.6835, -3.64105, 2.01839)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern185" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1.5, -1.13247e-07, -1.96149e-07, 0, 1.29904, -0.75, 2.26494e-07, -0.75, -1.29904, 13.0851, -3.3, 1.38099)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern187" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 14.6171, -3.64105, 3.00435)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
-
-[node name="fern188" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 14.411, -3.58648, 0.73519)
-mesh = SubResource("QuadMesh_ju642")
-skeleton = NodePath("../../..")
-
-[node name="fern189" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 15.9867, -3.64105, 1.56706)
-mesh = SubResource("QuadMesh_qoegd")
-skeleton = NodePath("")
-
-[node name="fern190" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(-1, -7.54979e-08, -1.30766e-07, 0, 0.866025, -0.5, 1.50996e-07, -0.5, -0.866025, 11.6321, -3, 0.808967)
-mesh = SubResource("QuadMesh_r07ur")
-skeleton = NodePath("")
-
-[node name="fern191" type="MeshInstance3D" parent="Environment/Floor"]
-transform = Transform3D(1.5, 0, 0, 0, 1.29904, 0.75, 0, -0.75, 1.29904, 12.4192, -3.3, 2.72572)
-mesh = SubResource("QuadMesh_1i0qt")
-skeleton = NodePath("../../..")
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, -0.310179, 0.950678, 0, -0.950678, -0.310179, 0, 3.77559, -9.90802)
@@ -821,34 +191,60 @@ mesh = SubResource("QuadMesh_uye6l")
 skeleton = NodePath("../..")
 
 [node name="Branch" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -4.04787, -1, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.9521, 2, 0)
 mesh = SubResource("QuadMesh_aoo7v")
 skeleton = NodePath("../..")
 
 [node name="Branch2" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(-1, -4.37114e-08, -7.57103e-08, 0, 0.866025, -0.5, 8.74228e-08, -0.5, -0.866025, 12.1, -1, 1)
+transform = Transform3D(-0.833946, -0.542859, 0.0991829, -0.47, 0.604508, -0.643172, 0.289195, -0.582987, -0.759271, -2.49026, 0.745816, 1.06865)
 mesh = SubResource("QuadMesh_4be5m")
 skeleton = NodePath("../..")
 
 [node name="HangingLeaves" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -0.5, -0.378789, 2.70085)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -0.5, 0.152245, 2.70085)
 mesh = SubResource("QuadMesh_6fvxa")
 
 [node name="HangingLeaves2" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 3.48442, -0.378789, 2.70085)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 3.48442, 0.152245, 2.70085)
 mesh = SubResource("QuadMesh_6fvxa")
 
 [node name="HangingLeaves3" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 9.5, -0.378789, 2.70085)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 9.5, 0.152245, 2.70085)
 mesh = SubResource("QuadMesh_6fvxa")
 
 [node name="HangingLeaves4" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 7.5, -0.378789, 2.70085)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 7.5, 0.152245, 2.70085)
 mesh = SubResource("QuadMesh_6fvxa")
 
 [node name="HangingLeaves5" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 1, -0.378789, 2.70085)
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 1.3, 0.152245, 2.70085)
 mesh = SubResource("QuadMesh_6fvxa")
+
+[node name="leafy" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.76336, -2.42705, 0, 1.85923, 1.35081, 1.92836, -1.56008, -1.13346, 2.29813, -1.40483, 0.414491, 2.02733)
+mesh = SubResource("QuadMesh_ed1f6")
+
+[node name="leafy2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.76336, -2.42705, 0, 1.85923, 1.35081, 1.92836, -1.56008, -1.13346, 2.29813, -1.40483, 0.414491, -2.97267)
+mesh = SubResource("QuadMesh_ed1f6")
+
+[node name="leaf" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.6773, -1.08895, -0.0294122, 0.850071, 1.27463, 1.28558, -0.68122, -1.09065, 1.53181, -1.3249, 0.152245, 0.14675)
+mesh = SubResource("QuadMesh_l1oej")
+skeleton = NodePath("../HangingLeaves5")
+
+[node name="leaf2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.63841, -1.14379, -0.0857512, 0.922796, 1.22566, 1.28305, -0.68122, -1.09065, 1.53181, -1.29127, 0.351741, -1.34779)
+mesh = SubResource("QuadMesh_l1oej")
+skeleton = NodePath("../HangingLeaves5")
+
+[node name="levi" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.59095, 1.21198, 0, -0.928428, 1.21874, 1.28558, 0.779044, -1.02264, 1.53209, -1.67578, 0.312116, 1.3062)
+mesh = SubResource("QuadMesh_88wfn")
+
+[node name="levi2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.83724, 0.551281, -0.56624, -0.132776, 1.62797, 1.15416, 0.779044, -1.02264, 1.53209, -1.75202, 0.0934227, -1.6938)
+mesh = SubResource("QuadMesh_88wfn")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
@@ -859,7 +255,7 @@ cell_scale = 0.5
 collision_layer = 3
 collision_mask = 3
 data = {
-"cells": PackedInt32Array(0, 0, 4, 0, 1, 4, 0, 2, 4, 1, 2, 4, 1, 1, 4, 1, 0, 4, 0, 65535, 4, 65535, 65534, 4, 65535, 65535, 4, 65534, 65535, 4, 65535, 0, 4, 65535, 1, 4, 65535, 2, 4, 65534, 1, 4, 65534, 0, 4, 65534, 65534, 4, 65535, 65533, 4, 0, 65533, 4, 1, 65533, 4, 65534, 2, 4, 1, 65534, 4, 1, 65535, 4, 0, 65534, 4, 65534, 65533, 4, 2, 65533, 4, 2, 65534, 4, 2, 65535, 4, 2, 0, 4, 2, 1, 4, 2, 2, 4, 65534, 3, 4, 65535, 3, 4, 0, 3, 4, 1, 3, 4, 2, 3, 4, 3, 3, 4, 3, 2, 4, 3, 1, 4, 3, 0, 4, 3, 65534, 4, 3, 65533, 4, 4, 65533, 34, 5, 65533, 1048615, 7, 65533, 36, 8, 65533, 4, 8, 65535, 4, 7, 65535, 4, 6, 65535, 4, 5, 65535, 4, 5, 65534, 1441828, 6, 65534, 36, 7, 65534, 4, 8, 0, 4, 8, 65534, 4, 7, 0, 4, 7, 1, 4, 6, 1, 4, 5, 1, 4, 4, 1, 4, 5, 0, 4, 6, 0, 4, 4, 0, 4, 4, 2, 4, 4, 3, 4, 5, 3, 4, 5, 2, 4, 6, 2, 4, 7, 2, 4, 6, 3, 4, 7, 3, 4, 8, 3, 4, 8, 2, 4, 8, 1, 4, 6, 65533, 589851, 8, 65532, 4, 7, 65532, 655393, 6, 65532, 21, 5, 65532, 21, 4, 65532, 1048614, 3, 65532, 4, 2, 65532, 4, 1, 65532, 4, 0, 65532, 4, 65535, 65532, 4, 65534, 65532, 4, 1, 65531, 4, 3, 65531, 4, 4, 65531, 1048614, 6, 65531, 327709, 7, 65531, 655393, 5, 65531, 851997, 2, 65531, 4, 0, 65531, 4, 65535, 65531, 4, 65534, 65531, 4, 8, 65531, 4, 65534, 65529, 4, 65534, 65530, 4, 65535, 65529, 4, 0, 65529, 4, 1, 65529, 4, 1, 65530, 4, 2, 65530, 4, 2, 65529, 4, 3, 65529, 4, 4, 65529, 4, 5, 65529, 4, 5, 65530, 1441825, 6, 65530, 1441825, 7, 65530, 1048612, 8, 65530, 4, 8, 65529, 4, 7, 65529, 4, 6, 65529, 4, 0, 65530, 4, 65535, 65530, 4, 3, 65530, 4, 4, 65530, 1441826, 131069, 65528, 4, 131069, 65529, 4, 131069, 65530, 4, 131069, 65531, 4, 131069, 65532, 4, 131069, 65533, 4, 131069, 65534, 4, 131069, 65535, 4, 131069, 0, 4, 131069, 1, 4, 131069, 2, 4, 131069, 3, 4, 131069, 4, 4, 65544, 4, 4, 65543, 4, 4, 65542, 4, 4, 65541, 4, 4, 65540, 4, 4, 65539, 4, 4, 65538, 4, 4, 65536, 4, 4, 131071, 4, 4, 131070, 4, 4, 65545, 4, 4, 65546, 4, 4, 65547, 4, 4, 65548, 4, 4, 65549, 4, 4, 65550, 4, 4, 65551, 4, 4, 65552, 4, 4, 65553, 4, 4, 65554, 4, 4, 65557, 4, 3, 65557, 65529, 3, 65557, 65530, 3, 65557, 65531, 3, 65557, 65532, 3, 65557, 65533, 3, 65557, 65534, 3, 65557, 65535, 3, 65557, 0, 3, 65557, 1, 3, 65557, 2, 3, 65557, 65527, 3, 65557, 65528, 3, 65546, 65528, 4, 65547, 65528, 4, 65548, 65528, 4, 65549, 65528, 4, 65550, 65528, 4, 65551, 65528, 4, 65552, 65528, 4, 65553, 65528, 4, 65554, 65528, 4, 65555, 65528, 4, 65556, 65528, 3, 131070, 65528, 4, 131071, 65528, 4, 65536, 65528, 4, 65537, 65528, 4, 65538, 65528, 4, 65541, 65528, 4, 65542, 65528, 4, 65543, 65528, 4, 65544, 65528, 4, 65545, 65528, 4, 4, 65528, 4, 3, 65528, 4, 3, 65527, 0, 4, 65527, 0, 65538, 65527, 40, 65538, 65526, 3, 65539, 65526, 786464, 65540, 65526, 786464, 65541, 65526, 3, 65541, 65527, 40, 3, 65535, 4, 65545, 65529, 4, 65545, 65531, 4, 65545, 65532, 4, 65545, 65533, 4, 65545, 65534, 4, 65546, 65535, 4, 65545, 65535, 4, 65546, 0, 4, 65545, 1, 4, 65546, 1, 4, 65545, 2, 4, 65545, 3, 4, 65539, 65528, 4, 65539, 65529, 4, 65538, 65529, 4, 65540, 65528, 4, 65540, 65529, 4, 65539, 65527, 4, 65540, 65527, 4, 65537, 65529, 4, 65544, 65523, 40, 65543, 65523, 40, 65543, 65524, 40, 65544, 65524, 40, 65545, 65523, 41, 65542, 65523, 40, 65541, 65523, 40, 65540, 65523, 40, 65539, 65523, 40, 65538, 65523, 40, 65537, 65523, 40, 65536, 65523, 40, 131071, 65523, 40, 9, 3, 4, 9, 2, 4, 9, 1, 4, 10, 1, 4, 10, 0, 4, 9, 0, 4, 65533, 65535, 4, 65533, 65534, 4, 65533, 0, 4, 65533, 65533, 4, 65533, 1, 4, 65533, 2, 4, 65533, 3, 4, 10, 3, 4, 10, 2, 4, 65533, 65532, 4, 65533, 65531, 4, 65533, 65530, 4, 65533, 65529, 4, 65533, 65528, 4, 65534, 65528, 4, 65535, 65528, 4, 0, 65528, 4, 6, 65528, 4, 5, 65528, 4, 2, 65528, 4, 1, 65528, 4, 7, 65528, 4, 8, 65528, 4, 9, 65528, 4, 9, 65529, 4, 9, 65530, 4, 9, 65531, 4, 9, 65532, 4, 9, 65533, 4, 9, 65534, 4, 9, 65535, 4, 10, 65535, 4, 10, 65534, 4, 10, 65533, 4, 10, 65532, 4, 10, 65531, 4, 10, 65530, 4, 10, 65529, 4, 4, 65535, 4, 4, 65534, 4, 65533, 4, 4, 65534, 4, 4, 65535, 4, 4, 0, 4, 4, 1, 4, 4, 2, 4, 4, 3, 4, 4, 4, 4, 4, 5, 4, 4, 6, 4, 4, 7, 4, 4, 8, 4, 4, 9, 4, 4, 10, 4, 4, 11, 4, 4, 12, 4, 4, 13, 4, 4, 14, 4, 4, 15, 4, 4, 16, 4, 4, 17, 4, 4, 18, 4, 4, 19, 4, 4, 19, 3, 4, 19, 2, 4, 19, 1, 4, 19, 0, 4, 19, 65535, 4, 19, 65534, 4, 19, 65533, 4, 19, 65532, 4, 19, 65531, 4, 19, 65530, 4, 19, 65529, 4, 19, 65528, 4, 18, 65528, 4, 17, 65528, 4, 16, 65528, 4, 15, 65528, 4, 14, 65528, 4, 13, 65528, 4, 11, 65528, 4, 10, 65528, 4, 11, 65529, 4, 12, 65530, 4, 12, 65531, 4, 12, 65532, 4, 12, 65533, 4, 11, 65533, 4, 11, 65534, 4, 11, 65535, 4, 11, 0, 4, 11, 1, 4, 11, 2, 4, 11, 3, 4, 12, 3, 4, 13, 3, 4, 14, 3, 4, 15, 3, 4, 16, 3, 4, 17, 3, 4, 18, 3, 4, 18, 2, 4, 17, 2, 4, 16, 2, 4, 15, 2, 4, 14, 2, 4, 13, 2, 4, 13, 1, 4, 14, 1, 4, 15, 1, 4, 16, 1, 4, 17, 1, 4, 18, 1, 4, 18, 0, 4, 18, 65535, 4, 18, 65534, 4, 18, 65533, 4, 18, 65532, 4, 18, 65531, 4, 18, 65530, 4, 18, 65529, 4, 17, 65529, 4, 17, 65530, 4, 17, 65531, 4, 17, 65532, 4, 17, 65533, 4, 17, 65534, 4, 17, 65535, 4, 17, 0, 4, 16, 0, 4, 15, 0, 4, 15, 65535, 4, 15, 65534, 4, 16, 65533, 4, 16, 65532, 4, 16, 65531, 4, 16, 65530, 4, 15, 65530, 4, 15, 65529, 4, 14, 65531, 4, 14, 65532, 4, 15, 65533, 4, 16, 65534, 4, 16, 65529, 4, 15, 65531, 4, 15, 65532, 4, 16, 65535, 4, 14, 0, 4, 13, 0, 4, 12, 1, 4, 12, 2, 4, 14, 65535, 4, 13, 65535, 4, 12, 0, 4, 14, 65534, 4, 12, 65535, 4, 14, 65533, 4, 13, 65533, 4, 12, 65534, 4, 13, 65532, 4, 11, 65532, 4, 14, 65530, 4, 11, 65530, 4, 13, 65530, 4, 13, 65529, 4, 12, 65529, 4, 14, 65529, 4, 12, 65528, 4, 11, 65531, 4, 13, 65531, 4, 13, 65534, 4, 65540, 65534, 29, 65540, 65535, 29, 65541, 65535, 29, 65541, 65534, 29, 65541, 65533, 29, 65541, 65532, 29, 65542, 65532, 29, 65542, 65533, 29, 65542, 65534, 786465, 65542, 65535, 786465, 65540, 65533, 29, 65539, 65533, 29, 65539, 65532, 786457, 65540, 65532, 29, 65539, 65534, 29, 65541, 0, 393252, 65542, 0, 4, 65543, 0, 4, 65542, 1, 4, 65543, 1, 4, 65544, 1, 4, 65541, 1, 4, 65540, 1, 393252, 65540, 0, 1114149, 65537, 4, 4, 65538, 3, 4, 65537, 3, 4, 65536, 3, 4, 131071, 3, 4, 131070, 3, 4, 131070, 2, 4, 131070, 1, 4, 131070, 0, 4, 65555, 4, 4, 65555, 3, 4, 65555, 2, 4, 65555, 1, 4, 65555, 0, 4, 65555, 65535, 4, 65554, 65535, 4, 65554, 65534, 4, 65554, 65533, 4, 65554, 65532, 4, 65553, 65531, 4, 65552, 65531, 4, 65552, 65533, 4, 65551, 65534, 4, 65550, 0, 4, 65550, 1, 4, 65551, 1, 4, 65552, 0, 4, 65552, 65535, 4, 65552, 65534, 4, 65551, 65532, 4, 65550, 65532, 4, 65550, 65533, 4, 65549, 65534, 4, 65549, 65535, 4, 65551, 65535, 4, 65549, 65533, 4, 65548, 65534, 4, 65547, 65534, 4, 65547, 65535, 4, 65547, 0, 4, 65548, 0, 4, 65549, 0, 4, 65550, 65535, 4, 65550, 65534, 4, 65547, 65533, 4, 65546, 65534, 4, 65548, 2, 4, 65544, 2, 4, 65546, 2, 4, 65547, 2, 4, 65549, 1, 4, 65545, 0, 4, 65544, 0, 4, 65543, 2, 4, 65547, 1, 4, 65541, 2, 4, 65542, 2, 4, 65540, 2, 4, 65542, 3, 4, 65543, 3, 4, 65544, 3, 4, 65540, 3, 4, 65541, 3, 4, 65546, 3, 4, 65547, 3, 4, 65539, 3, 4, 65549, 3, 4, 65550, 3, 4, 65551, 3, 4, 65552, 3, 4, 65553, 3, 4, 65548, 3, 4, 65554, 3, 4, 65554, 2, 4, 65553, 2, 4, 65552, 2, 4, 65552, 1, 4, 65550, 2, 4, 65551, 2, 4, 65553, 1, 4, 65554, 0, 4, 65553, 65535, 4, 65554, 1, 4, 65551, 0, 4, 65549, 2, 4, 65548, 65535, 4, 65548, 1, 4, 65553, 65534, 4, 65553, 0, 4, 65553, 65532, 4, 65552, 65532, 4, 65551, 65531, 4, 65553, 65533, 4, 65551, 65533, 4, 65543, 65532, 393241, 65544, 65534, 4, 65544, 65533, 4, 65543, 65533, 786465, 65538, 65534, 393249, 65538, 65533, 393249, 65544, 65532, 786454, 65544, 65531, 786465, 65542, 65530, 29, 65541, 65530, 29, 65540, 65531, 1376293, 65543, 65531, 29, 65542, 65531, 29, 65541, 65531, 29, 65539, 65530, 4, 65539, 65531, 22, 65538, 65531, 4, 65541, 65529, 786467, 65536, 65529, 4, 131070, 65529, 4, 131070, 65530, 4, 131070, 65531, 4, 131070, 65532, 4, 131071, 65532, 4, 65536, 65532, 4, 131071, 65533, 4, 131071, 65534, 4, 131070, 65534, 4, 131070, 65535, 4, 131071, 65535, 4, 131070, 65533, 4, 65536, 65533, 4, 65537, 65533, 4, 65538, 65535, 393249, 65537, 65535, 4, 65536, 65535, 4, 131071, 2, 4, 65536, 1, 4, 65536, 0, 4, 131071, 0, 4, 131071, 1, 4, 65536, 2, 4, 65537, 1, 4, 65537, 2, 4, 65538, 2, 4, 65538, 1, 4, 65538, 0, 786456, 65537, 0, 4, 65539, 2, 4, 65539, 1, 786456, 65539, 0, 786469, 65539, 65535, 29, 65537, 65534, 4, 65543, 65535, 4, 65543, 65534, 4, 65544, 65535, 4, 65536, 65534, 4, 65538, 65532, 786468, 65537, 65532, 4, 65537, 65531, 4, 65536, 65531, 4, 131071, 65531, 4, 131071, 65530, 4, 65536, 65530, 4, 131071, 65529, 4, 65538, 65530, 4, 65537, 65530, 4, 65540, 65530, 786468, 65542, 65529, 786467, 65543, 65529, 786467, 65544, 65529, 786466, 65551, 65529, 4, 65550, 65529, 4, 65549, 65529, 4, 65548, 65529, 4, 65547, 65529, 4, 65546, 65529, 4, 65546, 65530, 4, 65545, 65530, 4, 65544, 65530, 786465, 65543, 65530, 29, 65546, 65531, 4, 65547, 65531, 4, 65549, 65531, 4, 65550, 65530, 4, 65551, 65530, 4, 65552, 65530, 4, 65550, 65531, 4, 65548, 65531, 4, 65547, 65532, 4, 65546, 65532, 4, 65547, 65530, 4, 65548, 65532, 4, 65549, 65532, 4, 65548, 65530, 4, 65546, 65533, 4, 65549, 65530, 4, 65548, 65533, 4, 65555, 65529, 4, 65555, 65530, 4, 65555, 65531, 4, 65555, 65532, 4, 65555, 65533, 4, 65555, 65534, 4, 65554, 65530, 4, 65554, 65529, 4, 65554, 65531, 4, 65553, 65530, 4, 65553, 65529, 4, 65552, 65529, 4, 131092, 65527, 3, 131092, 65528, 3, 131092, 65529, 3, 131092, 65530, 3, 131092, 65531, 3, 131092, 65532, 3, 131092, 65533, 3, 131092, 65534, 3, 131092, 65535, 3, 131092, 0, 3, 131092, 1, 3, 131092, 2, 3, 131092, 3, 3, 131092, 4, 3, 131092, 5, 3, 131091, 5, 3, 131090, 5, 3, 131089, 5, 3, 131088, 5, 3, 131087, 5, 3, 131086, 5, 3, 131085, 5, 3, 131084, 5, 3, 131083, 5, 3, 131082, 5, 3, 131081, 5, 3, 131080, 5, 3, 131079, 5, 3, 131078, 5, 3, 131077, 5, 3, 131076, 5, 3, 131075, 5, 3, 131074, 5, 3, 131073, 5, 3, 131072, 5, 3, 196607, 5, 3, 196606, 5, 3, 196605, 5, 3, 196604, 5, 3, 196604, 4, 3, 196604, 3, 3, 196604, 2, 3, 196604, 1, 3, 196604, 0, 3, 196604, 65535, 3, 196604, 65534, 3, 196604, 65533, 3, 196604, 65532, 3, 196604, 65531, 3, 196604, 65530, 3, 196604, 65529, 3, 196604, 65528, 3, 196604, 65527, 3, 196605, 65527, 3, 196606, 65527, 3, 196607, 65527, 3, 131072, 65527, 3, 131073, 65527, 3, 131074, 65527, 786435, 131074, 65526, 786435, 131077, 65526, 786435, 131077, 65527, 786435, 131078, 65527, 3, 131079, 65527, 3, 131080, 65527, 3, 131081, 65527, 3, 131082, 65527, 3, 131083, 65527, 3, 131084, 65527, 3, 131085, 65527, 3, 131086, 65527, 3, 131087, 65527, 3, 131088, 65527, 3, 131089, 65527, 3, 131090, 65527, 3, 131091, 65527, 3, 131077, 65525, 786435, 131076, 65525, 786435, 131075, 65525, 786435, 131074, 65525, 786435, 65537, 6, 196611)
+"cells": PackedInt32Array(0, 0, 4, 0, 1, 4, 0, 2, 4, 1, 2, 4, 1, 1, 4, 1, 0, 4, 0, 65535, 4, 65535, 65534, 4, 65535, 65535, 4, 65534, 65535, 4, 65535, 0, 4, 65535, 1, 4, 65535, 2, 4, 65534, 1, 4, 65534, 0, 4, 65534, 65534, 4, 65535, 65533, 4, 0, 65533, 4, 1, 65533, 4, 65534, 2, 4, 1, 65534, 4, 1, 65535, 4, 0, 65534, 4, 65534, 65533, 4, 2, 65533, 4, 2, 65534, 4, 2, 65535, 4, 2, 0, 4, 2, 1, 4, 2, 2, 4, 65534, 3, 4, 65535, 3, 4, 0, 3, 4, 1, 3, 4, 2, 3, 4, 3, 3, 4, 3, 2, 4, 3, 1, 4, 3, 0, 4, 3, 65534, 4, 3, 65533, 4, 4, 65533, 34, 5, 65533, 1048615, 7, 65533, 36, 8, 65533, 4, 8, 65535, 4, 7, 65535, 4, 6, 65535, 4, 5, 65535, 4, 5, 65534, 1441828, 6, 65534, 36, 7, 65534, 4, 8, 0, 4, 8, 65534, 4, 7, 0, 4, 7, 1, 4, 6, 1, 4, 5, 1, 4, 4, 1, 4, 5, 0, 4, 6, 0, 4, 4, 0, 4, 4, 2, 4, 4, 3, 4, 5, 3, 4, 5, 2, 4, 6, 2, 4, 7, 2, 4, 6, 3, 4, 7, 3, 4, 8, 3, 4, 8, 2, 4, 8, 1, 4, 6, 65533, 589851, 8, 65532, 4, 7, 65532, 655393, 6, 65532, 21, 5, 65532, 21, 4, 65532, 1048614, 3, 65532, 4, 2, 65532, 4, 1, 65532, 4, 0, 65532, 4, 65535, 65532, 4, 65534, 65532, 4, 1, 65531, 4, 3, 65531, 4, 4, 65531, 1048614, 6, 65531, 327709, 7, 65531, 655393, 5, 65531, 851997, 2, 65531, 4, 0, 65531, 4, 65535, 65531, 4, 65534, 65531, 4, 8, 65531, 4, 65534, 65529, 4, 65534, 65530, 4, 65535, 65529, 4, 0, 65529, 4, 1, 65529, 4, 1, 65530, 4, 2, 65530, 4, 2, 65529, 4, 3, 65529, 4, 4, 65529, 4, 5, 65529, 4, 5, 65530, 1441825, 6, 65530, 1441825, 7, 65530, 1048612, 8, 65530, 4, 8, 65529, 4, 7, 65529, 4, 6, 65529, 4, 0, 65530, 4, 65535, 65530, 4, 3, 65530, 4, 4, 65530, 1441826, 131069, 65528, 4, 131069, 65529, 4, 131069, 65530, 4, 131069, 65531, 4, 131069, 65532, 4, 131069, 65533, 4, 131069, 65534, 4, 131069, 65535, 196612, 131069, 0, 196612, 131069, 1, 196612, 131069, 2, 196612, 131069, 3, 196612, 131069, 4, 4, 65544, 4, 4, 65543, 4, 4, 65542, 4, 4, 65541, 4, 4, 65540, 4, 4, 65539, 4, 4, 65538, 4, 4, 65536, 4, 4, 131071, 4, 4, 131070, 4, 4, 65545, 4, 4, 65546, 4, 4, 65547, 4, 4, 65548, 4, 4, 65549, 4, 4, 65550, 4, 4, 65551, 4, 4, 65552, 4, 4, 65553, 4, 4, 65554, 4, 4, 65557, 4, 3, 65557, 65529, 3, 65557, 65530, 3, 65557, 65531, 3, 65557, 65532, 3, 65557, 65533, 3, 65557, 65534, 3, 65557, 65535, 3, 65557, 0, 3, 65557, 1, 3, 65557, 2, 3, 65557, 65527, 3, 65557, 65528, 3, 65546, 65528, 4, 65547, 65528, 4, 65548, 65528, 4, 65549, 65528, 4, 65550, 65528, 4, 65551, 65528, 4, 65552, 65528, 4, 65553, 65528, 4, 65554, 65528, 4, 65555, 65528, 4, 65556, 65528, 3, 131070, 65528, 4, 131071, 65528, 4, 65536, 65528, 4, 65537, 65528, 4, 65538, 65528, 4, 65541, 65528, 4, 65542, 65528, 4, 65543, 65528, 4, 65544, 65528, 4, 65545, 65528, 4, 4, 65528, 4, 3, 65528, 4, 3, 65527, 0, 4, 65527, 0, 65538, 65527, 40, 65538, 65526, 3, 65539, 65526, 786464, 65540, 65526, 786464, 65541, 65526, 3, 65541, 65527, 40, 3, 65535, 4, 65545, 65529, 4, 65545, 65531, 4, 65545, 65532, 4, 65545, 65533, 4, 65545, 65534, 4, 65545, 65535, 4, 65545, 1, 4, 65546, 1, 4, 65545, 2, 4, 65545, 3, 4, 65539, 65528, 4, 65539, 65529, 4, 65538, 65529, 4, 65540, 65528, 4, 65540, 65529, 4, 65539, 65527, 4, 65540, 65527, 4, 65537, 65529, 4, 65544, 65523, 40, 65543, 65523, 40, 65543, 65524, 40, 65544, 65524, 40, 65545, 65523, 41, 65542, 65523, 40, 65541, 65523, 40, 65540, 65523, 40, 65539, 65523, 40, 65538, 65523, 40, 65537, 65523, 40, 65536, 65523, 40, 131071, 65523, 40, 9, 3, 4, 9, 2, 4, 9, 1, 4, 10, 1, 4, 10, 0, 4, 9, 0, 4, 65533, 65535, 4, 65533, 65534, 4, 65533, 0, 4, 65533, 65533, 4, 65533, 1, 4, 65533, 2, 4, 65533, 3, 4, 10, 3, 4, 10, 2, 4, 65533, 65532, 4, 65533, 65531, 4, 65533, 65530, 4, 65533, 65529, 4, 65533, 65528, 4, 65534, 65528, 4, 65535, 65528, 4, 0, 65528, 4, 6, 65528, 4, 5, 65528, 4, 2, 65528, 4, 1, 65528, 4, 7, 65528, 4, 8, 65528, 4, 9, 65528, 4, 9, 65529, 4, 9, 65530, 4, 9, 65531, 4, 9, 65532, 4, 9, 65533, 4, 9, 65534, 4, 9, 65535, 4, 10, 65535, 4, 10, 65534, 4, 10, 65533, 4, 10, 65532, 4, 10, 65531, 4, 10, 65530, 4, 10, 65529, 4, 4, 65535, 4, 4, 65534, 4, 65533, 4, 4, 65534, 4, 4, 65535, 4, 4, 0, 4, 4, 1, 4, 4, 2, 4, 4, 3, 4, 4, 4, 4, 4, 5, 4, 4, 6, 4, 4, 7, 4, 4, 8, 4, 4, 9, 4, 4, 10, 4, 4, 11, 4, 4, 12, 4, 4, 13, 4, 4, 14, 4, 4, 15, 4, 4, 16, 4, 4, 17, 4, 4, 18, 4, 4, 19, 4, 4, 19, 3, 4, 19, 2, 4, 19, 1, 4, 19, 0, 4, 19, 65535, 4, 19, 65534, 4, 19, 65533, 4, 19, 65532, 4, 19, 65531, 4, 19, 65530, 4, 19, 65529, 4, 19, 65528, 4, 18, 65528, 4, 17, 65528, 4, 16, 65528, 4, 15, 65528, 4, 14, 65528, 4, 13, 65528, 4, 11, 65528, 4, 10, 65528, 4, 11, 65529, 4, 12, 65530, 4, 12, 65531, 4, 12, 65532, 4, 12, 65533, 4, 11, 65533, 4, 11, 65534, 4, 11, 65535, 4, 11, 0, 4, 11, 1, 4, 11, 2, 4, 11, 3, 4, 12, 3, 4, 13, 3, 4, 14, 3, 4, 15, 3, 4, 16, 3, 4, 17, 3, 4, 18, 3, 4, 18, 2, 4, 17, 2, 4, 16, 2, 4, 15, 2, 4, 14, 2, 4, 13, 2, 4, 13, 1, 4, 14, 1, 4, 15, 1, 4, 16, 1, 4, 17, 1, 4, 18, 1, 4, 18, 0, 4, 18, 65535, 4, 18, 65534, 4, 18, 65533, 4, 18, 65532, 4, 18, 65531, 4, 18, 65530, 4, 18, 65529, 4, 17, 65529, 4, 17, 65530, 4, 17, 65531, 4, 17, 65532, 4, 17, 65533, 4, 17, 65534, 4, 17, 65535, 4, 17, 0, 4, 16, 0, 4, 15, 0, 4, 15, 65535, 4, 15, 65534, 4, 16, 65533, 4, 16, 65532, 4, 16, 65531, 4, 16, 65530, 4, 15, 65530, 4, 15, 65529, 4, 14, 65531, 4, 14, 65532, 4, 15, 65533, 4, 16, 65534, 4, 16, 65529, 4, 15, 65531, 4, 15, 65532, 4, 16, 65535, 4, 14, 0, 4, 13, 0, 4, 12, 1, 4, 12, 2, 4, 14, 65535, 4, 13, 65535, 4, 12, 0, 4, 14, 65534, 4, 12, 65535, 4, 14, 65533, 4, 13, 65533, 4, 12, 65534, 4, 13, 65532, 4, 11, 65532, 4, 14, 65530, 4, 11, 65530, 4, 13, 65530, 4, 13, 65529, 4, 12, 65529, 4, 14, 65529, 4, 12, 65528, 4, 11, 65531, 4, 13, 65531, 4, 13, 65534, 4, 65540, 65534, 29, 65540, 65535, 29, 65541, 65535, 29, 65541, 65534, 29, 65541, 65533, 29, 65541, 65532, 29, 65542, 65532, 29, 65542, 65533, 29, 65542, 65534, 786465, 65542, 65535, 786465, 65540, 65533, 29, 65539, 65533, 29, 65539, 65532, 786457, 65540, 65532, 29, 65539, 65534, 29, 65541, 0, 393252, 65542, 0, 4, 65543, 0, 4, 65542, 1, 4, 65543, 1, 4, 65544, 1, 4, 65541, 1, 196612, 65540, 1, 393252, 65540, 0, 1114149, 65537, 4, 4, 65538, 3, 4, 65537, 3, 4, 65536, 3, 4, 131071, 3, 4, 131070, 3, 4, 131070, 2, 4, 131070, 1, 196612, 131070, 0, 196612, 65555, 4, 4, 65555, 3, 4, 65555, 2, 4, 65555, 1, 4, 65555, 0, 4, 65555, 65535, 4, 65554, 65535, 4, 65554, 65534, 4, 65554, 65533, 4, 65554, 65532, 4, 65553, 65531, 4, 65552, 65531, 4, 65552, 65533, 4, 65551, 65534, 4, 65550, 0, 4, 65550, 1, 4, 65551, 1, 4, 65552, 0, 4, 65552, 65535, 4, 65552, 65534, 4, 65551, 65532, 4, 65550, 65532, 4, 65550, 65533, 4, 65549, 65534, 4, 65549, 65535, 4, 65551, 65535, 4, 65549, 65533, 4, 65548, 65534, 4, 65547, 65534, 4, 65547, 65535, 4, 65547, 0, 4, 65548, 0, 4, 65549, 0, 4, 65550, 65535, 4, 65550, 65534, 4, 65547, 65533, 4, 65546, 65534, 4, 65548, 2, 4, 65544, 2, 4, 65546, 2, 4, 65547, 2, 4, 65549, 1, 4, 65545, 0, 4, 65544, 0, 4, 65543, 2, 4, 65547, 1, 4, 65541, 2, 4, 65542, 2, 4, 65540, 2, 4, 65542, 3, 4, 65543, 3, 4, 65544, 3, 4, 65540, 3, 4, 65541, 3, 4, 65546, 3, 4, 65547, 3, 4, 65539, 3, 4, 65549, 3, 4, 65550, 3, 4, 65551, 3, 4, 65552, 3, 4, 65553, 3, 4, 65548, 3, 4, 65554, 3, 4, 65554, 2, 4, 65553, 2, 4, 65552, 2, 4, 65552, 1, 4, 65550, 2, 4, 65551, 2, 4, 65553, 1, 4, 65554, 0, 4, 65553, 65535, 4, 65554, 1, 4, 65551, 0, 4, 65549, 2, 4, 65548, 65535, 4, 65548, 1, 4, 65553, 65534, 4, 65553, 0, 4, 65553, 65532, 4, 65552, 65532, 4, 65551, 65531, 4, 65553, 65533, 4, 65551, 65533, 4, 65543, 65532, 393241, 65544, 65534, 4, 65544, 65533, 4, 65543, 65533, 786465, 65538, 65534, 393249, 65538, 65533, 393249, 65544, 65532, 786454, 65544, 65531, 786465, 65542, 65530, 29, 65541, 65530, 29, 65540, 65531, 1376293, 65543, 65531, 29, 65542, 65531, 29, 65541, 65531, 29, 65539, 65530, 4, 65539, 65531, 22, 65538, 65531, 4, 65541, 65529, 786467, 65536, 65529, 4, 131070, 65529, 4, 131070, 65530, 4, 131070, 65531, 4, 131070, 65532, 4, 131071, 65532, 4, 65536, 65532, 4, 131071, 65533, 4, 131071, 65534, 4, 131070, 65534, 4, 131070, 65535, 4, 131071, 65535, 4, 131070, 65533, 4, 65536, 65533, 4, 65537, 65533, 4, 65538, 65535, 393249, 65537, 65535, 4, 65536, 65535, 4, 131071, 2, 4, 65536, 1, 4, 65536, 0, 4, 131071, 0, 4, 131071, 1, 4, 65536, 2, 4, 65537, 1, 196612, 65537, 2, 4, 65538, 2, 4, 65538, 1, 4, 65538, 0, 786456, 65537, 0, 4, 65539, 2, 4, 65539, 1, 786456, 65539, 0, 786469, 65539, 65535, 29, 65537, 65534, 4, 65543, 65535, 4, 65543, 65534, 4, 65544, 65535, 4, 65536, 65534, 4, 65538, 65532, 786468, 65537, 65532, 4, 65537, 65531, 4, 65536, 65531, 4, 131071, 65531, 4, 131071, 65530, 4, 65536, 65530, 4, 131071, 65529, 4, 65538, 65530, 4, 65537, 65530, 4, 65540, 65530, 786468, 65542, 65529, 786467, 65543, 65529, 786467, 65544, 65529, 786466, 65551, 65529, 4, 65550, 65529, 4, 65549, 65529, 4, 65548, 65529, 4, 65547, 65529, 4, 65546, 65529, 4, 65546, 65530, 4, 65545, 65530, 4, 65544, 65530, 786465, 65543, 65530, 29, 65546, 65531, 4, 65547, 65531, 4, 65549, 65531, 4, 65550, 65530, 4, 65551, 65530, 4, 65552, 65530, 4, 65550, 65531, 4, 65548, 65531, 4, 65547, 65532, 4, 65546, 65532, 4, 65547, 65530, 4, 65548, 65532, 4, 65549, 65532, 4, 65548, 65530, 4, 65546, 65533, 4, 65549, 65530, 4, 65548, 65533, 4, 65555, 65529, 4, 65555, 65530, 4, 65555, 65531, 4, 65555, 65532, 4, 65555, 65533, 4, 65555, 65534, 4, 65554, 65530, 4, 65554, 65529, 4, 65554, 65531, 4, 65553, 65530, 4, 65553, 65529, 4, 65552, 65529, 4, 131092, 65527, 3, 131092, 65528, 3, 131092, 65529, 3, 131092, 65530, 3, 131092, 65531, 3, 131092, 65532, 3, 131092, 65533, 3, 131092, 65534, 3, 131092, 65535, 3, 131092, 0, 3, 131092, 1, 3, 131092, 2, 3, 131092, 3, 3, 131092, 4, 3, 131092, 5, 3, 131091, 5, 3, 131090, 5, 3, 131089, 5, 3, 131088, 5, 3, 131087, 5, 3, 131086, 5, 3, 131085, 5, 3, 131084, 5, 3, 131083, 5, 3, 131082, 5, 3, 131081, 5, 3, 131080, 5, 3, 131079, 5, 3, 131078, 5, 3, 131077, 5, 3, 131076, 5, 3, 131075, 5, 3, 131074, 5, 3, 131073, 5, 3, 131072, 5, 3, 196607, 5, 3, 196606, 5, 3, 196605, 5, 3, 196604, 5, 3, 196604, 4, 3, 196604, 3, 3, 196604, 2, 3, 196604, 1, 3, 196604, 0, 3, 196604, 65535, 3, 196604, 65534, 3, 196604, 65533, 3, 196604, 65532, 3, 196604, 65531, 3, 196604, 65530, 3, 196604, 65529, 3, 196604, 65528, 3, 196604, 65527, 3, 196605, 65527, 3, 196606, 65527, 3, 196607, 65527, 3, 131072, 65527, 3, 131073, 65527, 3, 131074, 65527, 786435, 131074, 65526, 786435, 131077, 65526, 786435, 131077, 65527, 786435, 131078, 65527, 3, 131079, 65527, 3, 131080, 65527, 3, 131081, 65527, 3, 131082, 65527, 3, 131083, 65527, 3, 131084, 65527, 3, 131085, 65527, 3, 131086, 65527, 3, 131087, 65527, 3, 131088, 65527, 3, 131089, 65527, 3, 131090, 65527, 3, 131091, 65527, 3, 131077, 65525, 786435, 131076, 65525, 786435, 131075, 65525, 786435, 131074, 65525, 786435, 65537, 6, 196611, 65546, 65535, 4, 65546, 0, 4)
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 metadata/_edit_group_ = true
@@ -889,6 +285,10 @@ script = ExtResource("2_iisbi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15274, 0.187988, 0)
 shape = SubResource("BoxShape3D_kikyr")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.25, -0.5, 0)
+size = Vector3(11.5, 1, 1)
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
