@@ -13,20 +13,20 @@ func _ready():
 func update_enemy_count():
 	var enemies_left = get_child_count()
 	enemies_left = enemies_left - 1
-	print("Enemies left:", enemies_left)  # Debug message
+	print("Enemies left:", enemies_left)  
 
 	if enemies_left == 0:
-		print("All enemies defeated. Calling open_door()")  # Debug message
+		print("All enemies defeated. Calling open_door()") 
 		open_door()
 
 func _on_enemy_died():
-	print("An enemy died!")  # Debug message
+	print("An enemy died!") 
 	update_enemy_count()
 
 func open_door():
-	print("open_door() function called!")  # Debaug message
+	print("open_door() function called!")  
 	if door:
-		print("Calling door.open() function!")  # Debug message
+		print("Calling door.open() function!") 
 		door.open()
 	else:
 		print("ERROR: No door assigned in Enemies.gd")
