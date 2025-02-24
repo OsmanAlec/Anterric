@@ -2,4 +2,7 @@ extends Resource
 
 class_name maininv
 
-@export var items: Array[invitem2]
+@export var slots : Array[InvSlot]
+
+func insert(item: invitem2):
+	pass
