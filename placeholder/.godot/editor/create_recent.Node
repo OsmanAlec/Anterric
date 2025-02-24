@@ -1,14 +1,14 @@
+CollisionShape3D
+StaticBody3D
+Node3D
 GridMap
 CSGBox3D
 MeshInstance3D
 WorldEnvironment
 OmniLight3D
 DirectionalLight3D
-CollisionShape3D
 Node
-Node3D
 MultiMeshInstance3D
 CharacterBody3D
 Decal
 Container
-RayCast3D

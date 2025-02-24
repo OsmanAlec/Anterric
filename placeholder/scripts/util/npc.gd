@@ -5,6 +5,8 @@ extends CharacterBody3D
 
 var canInteract = false
 
+
+
 func _ready() -> void:
 	InteractionLabel.hide()
 
