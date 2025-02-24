@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://7n4slgklnggf"]
 
-[ext_resource type="MeshLibrary" uid="uid://64tp634twpfa" path="res://meshwithinvisblock_v2.tres" id="1_aq1wg"]
+[ext_resource type="MeshLibrary" uid="uid://bhruwvhtiplgb" path="res://meshwithinvisblock_v2.tres" id="1_aq1wg"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
@@ -52,18 +52,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -0.286294)
 
 [node name="leaves" parent="." instance=ExtResource("7_l4472")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3567, -0.0053488, -0.686207)
-
-[node name="pot" parent="."]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-script = null
 
 [node name="Merchant" parent="." instance=ExtResource("6_3omhm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6421, 0.59218, 0)

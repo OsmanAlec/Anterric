@@ -21,9 +21,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_q0j75"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_18606"]
+size = Vector3(2.06418, 1.06592, 2)
 
-[node name="StaticBody3D" type="CharacterBody3D" node_paths=PackedStringArray("quest")]
+[node name="Merchant" type="CharacterBody3D" node_paths=PackedStringArray("quest")]
 script = ExtResource("2_gv48c")
 quest = NodePath("SearchQuest")
 
@@ -34,15 +35,13 @@ shape = SubResource("SphereShape3D_66pwh")
 sprite_frames = SubResource("SpriteFrames_2mf2x")
 
 [node name="InteractionArea" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622885, 0)
-monitorable = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
-shape = SubResource("BoxShape3D_q0j75")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00411367, 0.523431, 0)
+shape = SubResource("BoxShape3D_18606")
 
 [node name="SearchQuest" type="Node2D" parent="."]
 script = ExtResource("3_6ta85")
 
-[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]
