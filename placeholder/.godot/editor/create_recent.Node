@@ -1,3 +1,4 @@
+GridMap
 CSGBox3D
 MeshInstance3D
 WorldEnvironment
@@ -11,5 +12,3 @@ CharacterBody3D
 Decal
 Container
 RayCast3D
-LightmapProbe
-VoxelGI
