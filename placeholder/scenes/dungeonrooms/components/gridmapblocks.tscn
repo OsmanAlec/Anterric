@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://otj4kfv8abpn"]
+[gd_scene load_steps=12 format=3 uid="uid://dhlgffegt3y6l"]
 
 [ext_resource type="Texture2D" uid="uid://bs7ltltibntbn" path="res://art/tilesets/dungeonfloor.png" id="1_de7ep"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]

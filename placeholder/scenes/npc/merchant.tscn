@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://dak2vflr4v1r5"]
+
+[ext_resource type="Texture2D" uid="uid://dayiv0sn1c082" path="res://art/icon.svg" id="1_dpf5h"]
+[ext_resource type="Script" path="res://components/Quest/merchant.gd" id="2_gv48c"]
+[ext_resource type="Script" path="res://components/Quest/SearchQuest.gd" id="3_6ta85"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_66pwh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87m5c"]
+atlas = ExtResource("1_dpf5h")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2mf2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87m5c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q0j75"]
+
+[node name="StaticBody3D" type="CharacterBody3D" node_paths=PackedStringArray("quest")]
+script = ExtResource("2_gv48c")
+quest = NodePath("SearchQuest")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_66pwh")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2mf2x")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.622885, 0)
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_q0j75")
+
+[node name="SearchQuest" type="Node2D" parent="."]
+script = ExtResource("3_6ta85")
+
+[connection signal="body_entered" from="InteractionArea" to="InteractionArea" method="_on_body_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

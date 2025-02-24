@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpj5lwxglxbks"]
 
-[ext_resource type="MeshLibrary" uid="uid://dxhi7ss63q4e2" path="res://meshwithinvisblock_v2.tres" id="1_4wvl4"]
+[ext_resource type="MeshLibrary" uid="uid://64tp634twpfa" path="res://meshwithinvisblock_v2.tres" id="1_4wvl4"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_vom0q"]
 
 [node name="RoomNo5" type="Node3D"]

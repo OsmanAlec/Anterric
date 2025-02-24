@@ -688,12 +688,10 @@ size = Vector3(0.517242, 0.709961, 0.413059)
 size = Vector3(0.6, 0.619446, 0.703076)
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
-collision_layer = 0
 script = ExtResource("1_2rwgt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000106812, 0.347534, 0.151872)
-visible = false
 shape = SubResource("BoxShape3D_ot60s")
 
 [node name="Health" type="Node" parent="."]

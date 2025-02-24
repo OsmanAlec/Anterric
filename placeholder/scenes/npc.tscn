@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://y6ci8a7ep280"]
+
+[ext_resource type="Script" path="res://scripts/util/npc.gd" id="1_xwrtr"]
+[ext_resource type="FontFile" path="res://components/mitochondria.ttf" id="2_1501b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8oxan"]
+height = 1.56535
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mfupm"]
+size = Vector3(2.06418, 1.06592, 2)
+
+[node name="NPC" type="CharacterBody3D"]
+script = ExtResource("1_xwrtr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+shape = SubResource("CapsuleShape3D_8oxan")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00411367, 0.523431, 0)
+shape = SubResource("BoxShape3D_mfupm")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+billboard = 1
+text = "Press T(alk)"
+font = ExtResource("2_1501b")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

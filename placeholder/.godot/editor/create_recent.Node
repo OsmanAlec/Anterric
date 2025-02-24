@@ -1,14 +1,14 @@
 CollisionShape3D
+CharacterBody3D
+AnimatedSprite3D
+StaticBody3D
 Area3D
 SearchQuest
 QuestManager
 Sprite3D
-AnimatedSprite3D
-CharacterBody3D
 Sprite2D
 Label
 CanvasLayer
 RichTextLabel
 RayCast3D
 RayCast2D
-Timer
