@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d34vpxvm5vasf"]
+
+[ext_resource type="Texture2D" uid="uid://cs2begdfk031o" path="res://art/objects/inventoryItems/bomb.png" id="1_0f7s3"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/components/bomb.gd" id="1_hmbrh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs6an"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0f7s3")
+}],
+"loop": true,
+"name": &"bomb",
+"speed": 5.0
+}]
+
+[node name="Bomb" type="Node3D"]
+script = ExtResource("1_hmbrh")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.002
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_bs6an")
+animation = &"bomb"
