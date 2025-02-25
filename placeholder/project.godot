@@ -20,6 +20,8 @@ config/icon="res://art/icon.svg"
 DialogManager="*res://scripts/util/dialog_manager.gd"
 PlayerData="*res://scripts/util/player_data.gd"
 AudioPlayer="*res://scenes/audio_player.tscn"
+GameManager="*res://components/Quest/GameManager.tscn"
+QuestControl="*res://components/Quest/QuestManager.tscn"
 
 [display]
 

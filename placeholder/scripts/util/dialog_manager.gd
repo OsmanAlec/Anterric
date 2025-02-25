@@ -7,7 +7,7 @@
 extends Node3D
 
 # Signal emitted when the dialog finishes
-signal finished_talking
+signal finished_talking(char_name: String)
 
 # Variables for managing dialogue
 var dialog_lines: Array[String] = []
@@ -17,15 +17,18 @@ var text_box
 var text_box_position: Vector3
 var dialog_state: bool = false
 var can_advance: bool = false
+var char_name: String
 
 @onready var player = get_tree().current_scene.get_node("Player")
 
 # Starts a dialogue at a given position with an array of lines
-func start_dialog(position: Vector3, lines: Array[String]):
+func start_dialog(position: Vector3, lines: Array[String], caller: String):
 	# If a dialog is already active, allow advancing but don't restart
 	if dialog_state:
 		can_advance = true
 		return
+	#Track down which character is talking
+	char_name = caller
 	
 	# Disable player movement
 	player.canMove = false
@@ -72,7 +75,7 @@ func _unhandled_key_input(event):
 			dialog_state = false
 			current_line = 0
 			player.canMove = true
-			finished_talking.emit()
+			finished_talking.emit(char_name)
 			return
 		
 		# Show the next line of dialogue

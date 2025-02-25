@@ -1,9 +1,12 @@
-res://scenes/player.tscn
+res://scenes/home/ant_hill.tscn
 res://inventory/inv2/playerinv.tres
 res://hopefullyfinalgridmap.tres
-res://scripts/player.gd
+res://scripts/worker_ant.gd
+res://scenes/player.tscn
 res://scenes/dungeonrooms/pot.tscn
 res://scenes/coin.tscn
 res://scenes/dungeonrooms/room_no1change.tscn
 res://scenes/dungeonrooms/room_no1.tscn
 res://scenes/audio_player.tscn
+res://scenes/home/workerant.tscn
+res://components/Quest/QuestManager.tscn

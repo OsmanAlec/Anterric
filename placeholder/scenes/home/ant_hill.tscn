@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_3g8p3"]
 [ext_resource type="Texture2D" uid="uid://tw5ynejtaxgh" path="res://art/tilesets/anthill ground_0001.png" id="1_pe133"]
-[ext_resource type="PackedScene" uid="uid://bx8gyquytdno3" path="res://scenes/home/alchemist_ant.tscn" id="1_yq6h1"]
-[ext_resource type="PackedScene" uid="uid://b8v32o1xp04pg" path="res://scenes/home/workerant.tscn" id="3_1avkl"]
+[ext_resource type="PackedScene" uid="uid://dlhwgagal4mgl" path="res://scenes/home/alchemist_ant.tscn" id="1_yq6h1"]
+[ext_resource type="PackedScene" uid="uid://bnbalt7o36vu1" path="res://scenes/home/workerant.tscn" id="3_1avkl"]
 [ext_resource type="PackedScene" uid="uid://gchytlw2aytx" path="res://scenes/home/super_major.tscn" id="5_wqnrr"]
 
 [sub_resource type="Environment" id="Environment_bhis6"]
@@ -47,10 +47,9 @@ mesh = SubResource("BoxMesh_ihvoh")
 
 [node name="Player" parent="." instance=ExtResource("1_3g8p3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4976, 0)
-inv = null
 
 [node name="WorkerAnt" parent="." instance=ExtResource("3_1avkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.87279, -0.2, -0.574824)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 
 [node name="SuperMajor" parent="." instance=ExtResource("5_wqnrr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)

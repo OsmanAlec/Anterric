@@ -5,6 +5,7 @@ extends CharacterBody3D
 
 var canInteract = false
 var talking = false
+const char_name = "SuperMajor"
 
 
 const prologue: Array[String] = [
@@ -36,7 +37,7 @@ func _unhandled_key_input(event):
 	if event.is_action_pressed("advance_dialog"):
 		if canInteract:
 			InteractionLabel.hide()
-			DialogManager.start_dialog(global_position, prologue)
+			DialogManager.start_dialog(global_position, prologue, char_name)
 			$AnimatedSprite3D.play("talking")
 	
 func _on_interaction_area_body_entered(body: Node3D) -> void:
@@ -50,5 +51,7 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 		canInteract = false
 
 
-func _on_finished_talking() -> void:
+func _on_finished_talking(cn) -> void:
+	if cn != char_name:
+		return
 	$AnimatedSprite3D.play("idle")
