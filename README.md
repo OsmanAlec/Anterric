@@ -32,7 +32,7 @@ Github:
 
 # What I am most proud of in the assignment
 Harshit:
-Paul: I really enjoyed composing the score and making the Player Sprite as well as its animations.
+Paul: I really enjoyed composing the score and making the Player Sprite as well as its animations.\n
 Oskar:
 Shane:
 Osman:
