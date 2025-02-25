@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=2 format=3 uid="uid://8vuf7etqhlym"]
-
-[ext_resource type="Script" path="res://components/Quest/QuestManager.gd" id="1_oalig"]
-
-[node name="QuestManager" type="Node3D"]
-script = ExtResource("1_oalig")
-=======
 [gd_scene load_steps=3 format=3 uid="uid://bokc5in53nais"]
 
 [ext_resource type="Script" path="res://components/Quest/QuestManager.gd" id="1_oalig"]
@@ -25,4 +17,3 @@ script = ExtResource("2_6rgki")
 quest_name = "Money Talks"
 quest_description = "Collect 50 coins to upgrade your health"
 reached_goal_text = "Dirty cash i want you"
->>>>>>> Stashed changes

@@ -1,9 +1,5 @@
-<<<<<<< Updated upstream
-class_name QuestManager extends Node2D
-=======
 class_name QuestManager 
 extends Node3D
->>>>>>> Stashed changes
 
 #ui elements for quest info to show on screen
 @onready var QuestBox: CanvasLayer = GameManager.get_node('QuestBox')
@@ -28,9 +24,4 @@ enum QuestStatus{
 
 #reward settings
 @export_group("Reward Settings")
-<<<<<<< Updated upstream
-@export var reward_amount: int #curreny reward
-@export var xp_amount: int 
-=======
 @export var reward_amount: int #currency reward
->>>>>>> Stashed changes

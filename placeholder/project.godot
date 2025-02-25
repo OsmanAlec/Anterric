@@ -10,32 +10,26 @@ config_version=5
 
 [application]
 
-<<<<<<< Updated upstream
-config/name="QueenOfAnts"
-=======
 config/name="Anterric"
->>>>>>> Stashed changes
 run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://art/icon.svg"
 
 [autoload]
 
-<<<<<<< Updated upstream
-GameManager="*res://components/Quest/GameManager.tscn"
-=======
 DialogManager="*res://scripts/util/dialog_manager.gd"
 PlayerData="*res://scripts/util/player_data.gd"
 AudioPlayer="*res://scenes/audio_player.tscn"
 GameManager="*res://components/Quest/GameManager.tscn"
 QuestControl="*res://components/Quest/QuestManager.tscn"
->>>>>>> Stashed changes
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/stretch/mode="canvas_items"
+window/directional_shadow/soft_shadow_filter_quality=1
+window/positional_shadow/soft_shadow_filter_quality=1
 
 [filesystem]
 
@@ -92,6 +86,17 @@ primary_attack={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":102,"location":0,"echo":false,"script":null)
 ]
 }
+i={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":73,"key_label":0,"unicode":105,"location":0,"echo":false,"script":null)
+]
+}
+advance_dialog={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+]
+}
 
 [layer_names]
 
@@ -101,4 +106,6 @@ primary_attack={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=1
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=1
 environment/defaults/default_clear_color=Color(0.585631, 0.721838, 0.593056, 1)
