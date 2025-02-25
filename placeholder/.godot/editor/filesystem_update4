@@ -1,4 +1,10 @@
-res://scenes/dungeonrooms/room_no1change.tscn
+res://scenes/dungeonrooms/room_no1.tscn
 res://inventory/inv2/playerinv.tres
 res://hopefullyfinalgridmap.tres
-res://scripts/util/worker_ant.gd
+res://scenes/player.tscn
+res://scenes/dungeonrooms/pot.tscn
+res://scenes/coin.tscn
+res://scenes/dungeonrooms/room_no1change.tscn
+res://audio_player.gd
+res://scenes/dungeonrooms/room_no_1_change.gd
+res://scenes/audio_player.tscn

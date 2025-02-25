@@ -1,8 +1,7 @@
-[gd_scene load_steps=93 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=92 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
-[ext_resource type="Resource" uid="uid://bgh6fdxvj5o02" path="res://inventory/inv2/playerinv.tres" id="2_y6oqg"]
 [ext_resource type="Texture2D" uid="uid://cg3bhrjnlniis" path="res://art/characters/Standing Attack Left.png" id="3_1qdcu"]
 [ext_resource type="Texture2D" uid="uid://ia1nrj03itx0" path="res://art/characters/Standing Idle Left.png" id="3_3t4oy"]
 [ext_resource type="PackedScene" uid="uid://2mxfem08kla8" path="res://scenes/UI/hud.tscn" id="3_hjrx5"]
@@ -709,7 +708,6 @@ height = 0.001
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_2rwgt")
-inv = ExtResource("2_y6oqg")
 
 [node name="HUD" parent="." instance=ExtResource("3_hjrx5")]
 

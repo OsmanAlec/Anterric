@@ -1,7 +1,8 @@
-[gd_scene load_steps=45 format=4 uid="uid://cf7fahlmpftff"]
+[gd_scene load_steps=46 format=4 uid="uid://dyf7vrhjbma6r"]
 
+[ext_resource type="Script" path="res://scenes/dungeonrooms/room_no_1_change.gd" id="1_geasy"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_ni8h7"]
-[ext_resource type="MeshLibrary" uid="uid://hov70gec1s63" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="4_imkif"]
@@ -153,6 +154,7 @@ size = Vector3(2.14545, 1.37598, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_prnt8"]
 
 [node name="room_no1" type="Node3D"]
+script = ExtResource("1_geasy")
 
 [node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]
 script = ExtResource("1_ni8h7")

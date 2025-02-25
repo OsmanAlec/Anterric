@@ -1,17 +1,9 @@
-res://art/characters/npcs
-res://scenes/home
-res://scripts
-res://scripts/UI
+res://music
 res://scenes
-res://scenes/dungeonrooms
-res://
-res://scenes/enemies
-res://art/enemies/bee
-res://art/enemies/tick
-res://art/enemies/queen_bee
-res://scripts/enemies/queenbee
-res://scenes/enemies/queenbee
+res://components/UI
 res://art/objects/inventoryItems
+res://components
+res://scripts
 C:/Users/synoo/Downloads
 res://scripts/dungeonrooms
 res://scenes/enemies/ladybug
@@ -20,5 +12,7 @@ res://scenes/dungeonrooms/components
 res://art/objects/dungeonAssets
 res://scenes/UI
 res://art/characters
+res://
 C:/Program Files/Blender Foundation/Blender 4.3
+res://art/tilesets
 C:/Users/synoo/Downloads/Placeholder/placeholder
