@@ -1,9 +1,9 @@
 # Project Title
 
-Name:
-Student Number: 
-Class Group:
-Github: 
+Name: Paul Colclough
+Student Number: C23361081
+Class Group: 
+Github: Coakly
 
 
 Name: Osman
@@ -32,7 +32,7 @@ Github:
 
 # What I am most proud of in the assignment
 Harshit:
-Paul:
+Paul: I really enjoyed composing the score and making the Player Sprite as well as its animations.  
 Oskar:
 Shane:
 Osman:
