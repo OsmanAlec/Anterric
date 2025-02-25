@@ -1,7 +1,15 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=4 format=3 uid="uid://cglqt3ar6l71w"]
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://uup5ae5i1lpm"]
+
+[ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
+[ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_amfqk"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_a8lxe"]
 
@@ -10,6 +18,11 @@ script = ExtResource("1_ylaw4")
 
 [node name="QuestBox" type="CanvasLayer" parent="."]
 visible = false
+<<<<<<< Updated upstream
+=======
+offset = Vector2(10, 0)
+transform = Transform2D(1, 0, 0, 1, 10, 0)
+>>>>>>> Stashed changes
 
 [node name="Background" type="Sprite2D" parent="QuestBox"]
 modulate = Color(0, 0, 0, 0.682353)
@@ -23,16 +36,33 @@ offset_left = 0.5
 offset_top = 0.5
 offset_right = 192.5
 offset_bottom = 40.5
+<<<<<<< Updated upstream
+=======
+theme_override_fonts/normal_font = ExtResource("2_amfqk")
+>>>>>>> Stashed changes
 text = "Quest Title"
 
 [node name="QuestDescription" type="RichTextLabel" parent="QuestBox"]
 modulate = Color(1, 1, 1, 0.690196)
+<<<<<<< Updated upstream
+=======
+clip_contents = false
+>>>>>>> Stashed changes
 offset_left = 0.5
 offset_top = 21.5
 offset_right = 153.5
 offset_bottom = 61.5
+<<<<<<< Updated upstream
 text = "Quest Description
 "
+=======
+theme_override_fonts/normal_font = ExtResource("2_amfqk")
+theme_override_font_sizes/normal_font_size = 18
+text = "Quest Description
+"
+fit_content = true
+scroll_active = false
+>>>>>>> Stashed changes
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -41,6 +71,10 @@ offset_left = 598.0
 offset_top = 3.0
 offset_right = 638.0
 offset_bottom = 26.0
+<<<<<<< Updated upstream
+=======
+theme_override_fonts/font = ExtResource("2_amfqk")
+>>>>>>> Stashed changes
 text = "0"
 
 [node name="Coin" type="Sprite2D" parent="CanvasLayer"]

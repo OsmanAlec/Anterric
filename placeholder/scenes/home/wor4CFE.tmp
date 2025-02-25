@@ -1,0 +1,136 @@
+[gd_scene load_steps=18 format=3 uid="uid://bnbalt7o36vu1"]
+
+[ext_resource type="Script" path="res://scripts/util/worker_ant.gd" id="1_xwrtr"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="2_1501b"]
+[ext_resource type="Texture2D" uid="uid://brf0jfi8od276" path="res://art/characters/npcs/workerant.png" id="2_aohpl"]
+[ext_resource type="PackedScene" uid="uid://bokc5in53nais" path="res://components/Quest/QuestManager.tscn" id="2_x8w1u"]
+[ext_resource type="Script" path="res://scripts/util/dialog_manager.gd" id="4_3ay5p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wstq"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulrd0"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(0, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6v743"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(0, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0e626"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqoud"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(640, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3rkk"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(320, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2d531"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(640, 640, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fmaq"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(320, 320, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_515li"]
+atlas = ExtResource("2_aohpl")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1v7p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wstq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulrd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6v743")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulrd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1wstq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0e626")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqoud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3rkk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2d531")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fmaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_515li")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 6.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wuq2f"]
+size = Vector3(0.62915, 0.56958, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mfupm"]
+size = Vector3(2.06418, 0.861085, 2)
+
+[node name="WorkerAnt" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_xwrtr")
+
+[node name="QuestManager" parent="." instance=ExtResource("2_x8w1u")]
+quest_name = "Find the thingy"
+quest_description = "okokok"
+reached_goal_text = "YAY"
+
+[node name="DialogManager" type="Node3D" parent="."]
+script = ExtResource("4_3ay5p")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.002
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_k1v7p")
+animation = &"talking"
+frame_progress = 0.578411
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("BoxShape3D_wuq2f")
+
+[node name="InteractionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
+shape = SubResource("BoxShape3D_mfupm")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+billboard = 1
+text = "Press T(alk)"
+font = ExtResource("2_1501b")
+font_size = 17
+
+[connection signal="finished_talking" from="DialogManager" to="." method="_on_finished_talking"]
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

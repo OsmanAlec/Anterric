@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 res://scenes/home
 res://art
 res://scenes/npc
+=======
+res://components/Quest
+res://art/characters
+res://music
+>>>>>>> Stashed changes
 res://scenes
 res://scenes/dungeonrooms
 res://
