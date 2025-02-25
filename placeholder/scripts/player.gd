@@ -119,3 +119,6 @@ func apply_stun(duration: float) -> void:
 	canMove = false
 	await get_tree().create_timer(duration).timeout         
 	canMove = true
+
+func collect(item):
+	inv.insert(item)

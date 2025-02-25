@@ -211,11 +211,23 @@ func shoot_ball_of_gust(player) -> void:
 		projectile.global_position = marker.global_position  # Set its position.
 		projectile.set_direction(player.global_position)  # Set its direction toward the player.
 
+signal died  # Signal to notify when an enemy dies
+
 # Called when the ladybug's health is depleted.
 func _on_health_health_depleted() -> void:
 	remove_from_group(LADYBUG_GROUP)  # Remove from the ladybug group.
 	var ladybugs = get_tree().get_nodes_in_group(LADYBUG_GROUP)  # Get remaining ladybugs.
+	
+	
+	died.emit()  # Notify the parent node
+	print("enemiy dead")
+	
 	for bug in ladybugs:
 		if is_instance_valid(bug):
 			bug.update_formation_index()  # Update their formation indices.
 	queue_free()  # Remove this ladybug from the scene.
+	
+
+
+
+	

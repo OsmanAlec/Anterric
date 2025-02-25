@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=3 uid="uid://dhlgffegt3y6l"]
+[gd_scene load_steps=131 format=3 uid="uid://dhlgffegt3y6l"]
 
 [ext_resource type="Texture2D" uid="uid://bs7ltltibntbn" path="res://art/tilesets/dungeonfloor.png" id="1_de7ep"]
 [ext_resource type="Texture2D" uid="uid://d232cvmchwfha" path="res://art/tilesets/dirty_1.png" id="2_gufia"]
@@ -39,6 +39,10 @@
 [ext_resource type="Texture2D" uid="uid://cq32b7jkjusmu" path="res://art/tilesets/grasstileset/row-1-column-3.png" id="16_07d24"]
 [ext_resource type="Texture2D" uid="uid://c5wycepms5eo0" path="res://art/tilesets/grasstileset/row-3-column-2.png" id="16_xh7tq"]
 [ext_resource type="Texture2D" uid="uid://c66o4hd630gl1" path="res://art/tilesets/grasstileset/row-3-column-1.png" id="17_ff73j"]
+[ext_resource type="Texture2D" uid="uid://tw5ynejtaxgh" path="res://art/tilesets/anthill ground_0001.png" id="35_d1w0u"]
+[ext_resource type="Texture2D" uid="uid://c2njx31ij832l" path="res://art/tilesets/anthill ground_0002.png" id="36_eej8j"]
+[ext_resource type="Texture2D" uid="uid://bpxnjd3gwlcsl" path="res://art/tilesets/anthill ground_0003.png" id="37_e7ak8"]
+[ext_resource type="Texture2D" uid="uid://bfph7hu7r4nr2" path="res://art/tilesets/anthill ground_0004.png" id="38_5q617"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_jp66i"]
 size = Vector3(2, 2, 2)
@@ -274,6 +278,34 @@ uv1_scale = Vector3(3, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lohj4"]
 material = SubResource("StandardMaterial3D_niu26")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_38r2q"]
+albedo_texture = ExtResource("35_d1w0u")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_e2p06"]
+material = SubResource("StandardMaterial3D_38r2q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h04fg"]
+albedo_texture = ExtResource("36_eej8j")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n1xnx"]
+material = SubResource("StandardMaterial3D_h04fg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4qs3q"]
+albedo_texture = ExtResource("37_e7ak8")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xw0wl"]
+material = SubResource("StandardMaterial3D_4qs3q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcw1c"]
+albedo_texture = ExtResource("38_5q617")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lvu8a"]
+material = SubResource("StandardMaterial3D_qcw1c")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvw16"]
 albedo_texture = ExtResource("13_hobdb")
@@ -657,6 +689,61 @@ mesh = SubResource("BoxMesh_lohj4")
 [node name="StaticBody3D" type="StaticBody3D" parent="r5c6"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="r5c6/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_81a30")
+
+[node name="r1c7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, 1, -18, 0, -12)
+mesh = SubResource("BoxMesh_auk82")
+skeleton = NodePath("../r6c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="r1c7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="r1c7/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_81a30")
+
+[node name="anthill1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, 1, -22, 0, 3)
+mesh = SubResource("BoxMesh_e2p06")
+skeleton = NodePath("../r6c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="anthill1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="anthill1/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_81a30")
+
+[node name="anthill2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, 1, -20, 0, 3)
+mesh = SubResource("BoxMesh_n1xnx")
+skeleton = NodePath("../r6c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="anthill2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="anthill2/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_81a30")
+
+[node name="anthill3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, 1, -18, 0, 3)
+mesh = SubResource("BoxMesh_xw0wl")
+skeleton = NodePath("../r6c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="anthill3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="anthill3/StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_81a30")
+
+[node name="anthill4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, -3.01992e-07, 0, 1, 0, 3.01992e-07, 0, 1, -16, 0, 3)
+mesh = SubResource("BoxMesh_lvu8a")
+skeleton = NodePath("../r6c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="anthill4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="anthill4/StaticBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("BoxShape3D_81a30")
 
