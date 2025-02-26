@@ -1,3 +1,4 @@
+DirectionalLight3D
 ShaderGlobalsOverride
 CanvasModulate
 Timer
@@ -12,4 +13,3 @@ AnimatedSprite3D
 CharacterBody3D
 Node
 CSGBox3D
-MeshInstance3D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://txoympwk61ot"]
+[gd_scene load_steps=51 format=4 uid="uid://txoympwk61ot"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="13_woxl8"]
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="14_w0aqb"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
+[ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yluk7"]
 size = Vector3(13.4885, 1, 12.2496)
@@ -334,6 +335,8 @@ script = ExtResource("18_m1w6w")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_prnt8")
+
+[node name="bomb" parent="." instance=ExtResource("21_53axm")]
 
 [connection signal="body_entered" from="RoomTrigger" to="." method="_on_room_trigger_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

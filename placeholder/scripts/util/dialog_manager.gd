@@ -38,8 +38,9 @@ func start_dialog(position: Vector3, lines: Array[String], caller: String):
 	text_box_position = position
 	
 	# Show first line of dialogue
+	await _show_text_box()
+	await get_tree().create_timer(0.3).timeout
 	dialog_state = true
-	_show_text_box()
 
 # Handles displaying the text box and setting its position
 func _show_text_box():
@@ -62,8 +63,9 @@ func _show_text_box():
 	text_box_scene.global_position.y += 0.5
 
 # Handles advancing the dialog when the player presses the "advance_dialog" action
-func _unhandled_key_input(event):
-	if event.is_action_pressed("advance_dialog") and dialog_state and can_advance:
+func _unhandled_input(event):
+	if event.is_action_released("advance_dialog") and dialog_state and can_advance:
+		print("hey")
 		# Hide the current text box
 		text_box_scene.queue_free()
 
