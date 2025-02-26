@@ -46,12 +46,23 @@ func attack():
 	await get_tree().create_timer(0.5).timeout
 	$HitBox/CollisionShape3D.disabled = true
 	isAttacking = false
+	
+signal died  # Signal to notify when an enemy dies
+
+func die():
+	print("Enemy died!")
+	died.emit()  # Notify the Enemies node
+	queue_free()  # Remove the enemy from the scene
+
 
 
 func _on_attack_cooldown_timeout() -> void:
 	canAttack = true
 
 func _on_health_health_depleted() -> void:
+	
+	died.emit()  # Notify the parent node
+	print("enemiy dead")
 	queue_free()
 
 func _on_animations_animation_finished() -> void:
