@@ -4,6 +4,7 @@ extends Node
 
 signal max_health_changed(diff:int)
 signal health_changed(diff: int)
+signal poisoned
 signal health_depleted
 
  # Maximum Health 
@@ -11,10 +12,19 @@ signal health_depleted
 @export var immortality: bool = false : set = set_immortality, get = get_immortality # When player respawns enemy cannot hit for few secs
 
 var immortality_timer: Timer = null
+var poison: Array[int] = []
+var last_poison_index: int = 0 # index to keep track of poison timing
+var current_poison_index: int = 0 #index to keep adding poison to the bounded buffer
 
 @onready var health: int = max_health : set = set_health, get = get_health
+@onready var poison_timer: Timer = Timer.new()
 
 func _ready() -> void:
+	poison.resize(4)
+	poison.fill(0) #initialise poison to 0
+	poison_timer.wait_time = 2.0
+	poison_timer.connect("timeout", Callable(self, "_on_poison_timer_timeout"))
+	add_child(poison_timer)
 	if get_parent().is_in_group("Player"):
 		max_health = PlayerData.max_health
 		health = PlayerData.current_health
@@ -75,6 +85,42 @@ func set_health(value: int):
 			health_depleted.emit()
 			
 
-
 func get_health():
 	return health
+	
+
+
+func apply_poison(damage: int):
+	"""Position can stack up 4 times,
+	but never more than 4. Update how much poison
+	damage is caused in total"""
+	if poison[current_poison_index] == 0:
+		print("added poison")
+		poison[current_poison_index] = damage
+		current_poison_index = (current_poison_index + 1) % 4
+		print("starting")
+		if poison_timer.time_left == 0:
+			poison_timer.start()
+	else:
+		return
+
+func _on_poison_timer_timeout():
+	
+	if poison.max() == 0:
+		print("stopping")
+		poison_timer.stop()
+		poisoned.emit(false)
+		return
+	var total_damage: int = 0
+	for dmg in poison:
+		total_damage += dmg
+	print("Took ", total_damage/2, " total poison damage")
+	health -= total_damage / 2
+	poisoned.emit(true)
+	if poison[last_poison_index] != 0:
+		print("removed poison")
+		poison[last_poison_index] = 0
+		last_poison_index = (last_poison_index + 1) % 4
+		
+	
+	

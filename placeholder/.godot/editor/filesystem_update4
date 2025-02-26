@@ -5,8 +5,7 @@ res://scripts/worker_ant.gd
 res://scenes/dungeonrooms/room_no1change.tscn
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
-res://components/Quest/Quest.gd
-res://scenes/enemies/workerbee.gd
-res://scripts/enemies/tick.gd
+res://scenes/UI/hud.tscn
+res://scripts/util/health.gd
 res://scripts/util/player_data.gd
-res://scripts/util/hitbox.gd
+res://scripts/UI/hearts.gd

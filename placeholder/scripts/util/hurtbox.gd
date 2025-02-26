@@ -1,7 +1,7 @@
 class_name HurtBox
 extends Area3D
 
-signal  recieved_damage(damage: int)
+signal recieved_damage(damage: int)
 
 @onready var sprite = %Animations #access animations3D no matter what the entity structure looks like
 @export var health: Health
@@ -17,9 +17,12 @@ func _on_area_entered(hitbox: HitBox) -> void:
 	change the colour on the sprite and spawn damage indicators."""
 	if hitbox != null && !health.get_immortality():
 		
-		#Take damage
-		health.health -= hitbox.damage
-		recieved_damage.emit(hitbox.damage)
+		#Take damage if the damge type is physical
+		if hitbox.type == hitbox.Types.physical:
+			health.health -= hitbox.damage
+			recieved_damage.emit(hitbox.damage)
+		elif hitbox.type == hitbox.Types.poison:
+			health.apply_poison(hitbox.damage)
 		
 		#spawn damage indicator
 		if health.health > 0:
