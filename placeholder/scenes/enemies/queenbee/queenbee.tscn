@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://6apbpgc5y8ir"]
+[gd_scene load_steps=39 format=3 uid="uid://b0cnxefxej1jl"]
 
 [ext_resource type="Script" path="res://scripts/enemies/queenbee/QueenBee.gd" id="1_hl85j"]
 [ext_resource type="Texture2D" uid="uid://dki8pjvntf2ji" path="res://art/enemies/queen_bee/diagonal flying.png" id="2_d1scn"]
@@ -241,12 +241,18 @@ max_health = 300
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.002
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_dtgpi")
-animation = &"flying"
+animation = &"stomp"
 
 [node name="StunTimer" type="Timer" parent="."]
 
+[node name="StompTimer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
 [node name="StunArea" type="Area3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StunArea"]
 shape = SubResource("SphereShape3D_xifky")
@@ -260,5 +266,7 @@ health = NodePath("../Health")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
 shape = SubResource("BoxShape3D_vjldp")
 
+[connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]
 [connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
+[connection signal="timeout" from="StompTimer" to="." method="_on_stomp_timer_timeout"]
 [connection signal="body_entered" from="StunArea" to="." method="_on_stun_area_body_entered"]

@@ -1,10 +1,6 @@
-res://scenes/enemies/tick.tscn
-res://inventory/inv2/playerinv.tres
+res://scenes/enemies/queenbee/queenbee.tscn
 res://hopefullyfinalgridmap.tres
-res://scripts/worker_ant.gd
-res://scripts/enemies/tick.gd
-res://scenes/dungeonrooms/room_no1change.tscn
-res://scenes/player.tscn
-res://scripts/util/hurtbox.gd
-res://scripts/enemies/workerbee.tscn
-res://scenes/enemies/workerbee.gd
+res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
+res://scripts/enemies/queenbee/QueenBee.gd
+res://scenes/dungeonrooms/room_no5.tscn
