@@ -1,8 +1,9 @@
+CollisionShape3D
+Area3D
 ShaderGlobalsOverride
 CanvasModulate
 Timer
 Health
-CollisionShape3D
 HurtBox
 HitBox
 AudioStreamPlayer
@@ -11,5 +12,3 @@ Node3D
 AnimatedSprite3D
 CharacterBody3D
 Node
-CSGBox3D
-MeshInstance3D

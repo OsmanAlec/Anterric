@@ -1,11 +1,12 @@
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
-res://hopefullyfinalgridmap.tres
+res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
-res://scenes/dungeonrooms/room_no1change.tscn
+res://hopefullyfinalgridmap.tres
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
-res://scripts/util/health.gd
-res://scripts/util/player_data.gd
-res://scripts/UI/hearts.gd
+res://scenes/dungeonrooms/room_no1.tscn
+res://inventory/items/bomb.tscn
+res://scenes/dungeonrooms/pot.tscn
+res://inventory/items/item_pickup.gd
