@@ -6,12 +6,12 @@ extends CharacterBody3D
 const char_name: String = "George"
 var canInteract = false
 
-const lines: Array[String] = [
-	"OMG I LOVE YOUR GAME!!",
-	"Wait, I should probably introduce myself.",
-	"I'm an invisible NPC, isn't that crAaAZzY?",
-	"Anywho....",
-	"I'm so glad this works!!!",
+const prologue: Array[String] = [
+	"heyyyyyy",
+	"RQUEEN Who are you???",
+	"i need coin",
+	"RQUEEN for who?",
+	"for you..."
 ]
 
 func _ready() -> void:
@@ -23,7 +23,7 @@ func _unhandled_key_input(event):
 	if event.is_action_pressed("advance_dialog"):
 		if canInteract:
 			InteractionLabel.hide()
-			DialogManager.start_dialog(global_position, lines, char_name)
+			DialogManager.start_dialog(global_position, prologue, char_name)
 			
 func _on_interaction_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
