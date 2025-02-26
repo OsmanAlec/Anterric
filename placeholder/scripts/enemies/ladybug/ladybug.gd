@@ -206,10 +206,12 @@ func _on_attack_timer_timeout() -> void:
 # Shoots a projectile (Ball of Gust) toward the player.
 func shoot_ball_of_gust(player) -> void:
 	if player and ballofgust_scene and is_instance_valid(player):
+		
 		var projectile = ballofgust_scene.instantiate() as RigidBody3D  # Instantiate the projectile.
 		get_tree().current_scene.add_child(projectile)  # Add it to the scene.
 		projectile.global_position = marker.global_position  # Set its position.
 		projectile.set_direction(player.global_position)  # Set its direction toward the player.
+	
 
 signal died  # Signal to notify when an enemy dies
 
@@ -231,6 +233,10 @@ func _on_health_health_depleted() -> void:
 		if is_instance_valid(bug):
 			bug.update_formation_index()  # Update their formation indices.
 	queue_free()  # Remove this ladybug from the scene.
+	
+	
+func set_projectile_scene(scene: PackedScene):
+	ballofgust_scene = scene
 	
 
 
