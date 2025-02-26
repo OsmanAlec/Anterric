@@ -1,3 +1,4 @@
+GridContainer
 DirectionalLight3D
 ShaderGlobalsOverride
 CanvasModulate
@@ -12,4 +13,3 @@ Node3D
 AnimatedSprite3D
 CharacterBody3D
 Node
-CSGBox3D

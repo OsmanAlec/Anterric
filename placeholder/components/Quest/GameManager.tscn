@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
-[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_amfqk"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="2_amfqk"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_a8lxe"]
 
@@ -21,12 +21,17 @@ position = Vector2(152.25, 71.25)
 scale = Vector2(304.5, 142.5)
 texture = SubResource("CanvasTexture_a8lxe")
 
+[node name="GridContainer" type="GridContainer" parent="QuestBox"]
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="QuestTitle" type="RichTextLabel" parent="QuestBox"]
 offset_left = 0.5
 offset_top = 0.5
 offset_right = 192.5
 offset_bottom = 40.5
 theme_override_fonts/normal_font = ExtResource("2_amfqk")
+theme_override_font_sizes/normal_font_size = 18
 text = "Quest Title"
 
 [node name="QuestDescription" type="RichTextLabel" parent="QuestBox"]
@@ -37,7 +42,7 @@ offset_top = 21.5
 offset_right = 153.5
 offset_bottom = 61.5
 theme_override_fonts/normal_font = ExtResource("2_amfqk")
-theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/normal_font_size = 8
 text = "Quest Description
 "
 fit_content = true

@@ -17,3 +17,5 @@ res://scenes/home/alchemist_ant.tscn
 res://scripts/alchemist_ant.gd
 res://scripts/util/dialog_manager.gd
 res://scripts/UI/textbox.gd
+res://components/Quest/GameManager.tscn
+res://components/Quest/Quest.gd

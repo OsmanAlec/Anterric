@@ -107,18 +107,16 @@ func apply_poison(damage: int):
 func _on_poison_timer_timeout():
 	
 	if poison.max() == 0:
-		print("stopping")
 		poison_timer.stop()
 		poisoned.emit(false)
 		return
 	var total_damage: int = 0
 	for dmg in poison:
 		total_damage += dmg
-	print("Took ", total_damage/2, " total poison damage")
-	health -= total_damage / 2
-	poisoned.emit(true)
+	if total_damage:
+		health -= total_damage / 2
+		poisoned.emit(true)
 	if poison[last_poison_index] != 0:
-		print("removed poison")
 		poison[last_poison_index] = 0
 		last_poison_index = (last_poison_index + 1) % 4
 		
