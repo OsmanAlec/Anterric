@@ -9,9 +9,9 @@ func _ready():
 	#update_slots()
 	close()
 	
-#func update_slots():
-	#for i in range(min(inv.items.size(), slots.size())):
-	#	slots[i].update(inv.items[i])
+func update_slots():
+	for i in range(min(inv.items.size(), slots.size())):
+		slots[i].update(inv.items[i])
 
 	
 func _physics_process(delta):

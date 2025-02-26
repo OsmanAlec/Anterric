@@ -1,8 +1,8 @@
-res://scenes/dungeonrooms/room_no5.tscn
+res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
 res://hopefullyfinalgridmap.tres
-res://scenes/player.tscn
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
@@ -19,3 +19,5 @@ res://scenes/UI/options_menu.tscn
 res://scenes/UI/menu.tscn
 res://scenes/dungeonrooms/room_no3.tscn
 res://scenes/dungeonrooms/room_no4.tscn
+res://scenes/dungeonrooms/room_no5.tscn
+res://inventory/inv2/inventory_ui.gd
