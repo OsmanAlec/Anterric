@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="21_ro3ei"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ndte3"]
-size = Vector3(24, 0.371948, 20)
+size = Vector3(24, 4.15903, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hyta"]
 size = Vector3(2.22632, 1, 1)
@@ -170,7 +170,7 @@ collision_mask = 256
 script = ExtResource("2_v7y44")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11633, 0.83457, -6.87495)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11633, 0.475607, -6.87495)
 shape = SubResource("BoxShape3D_ndte3")
 
 [node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]

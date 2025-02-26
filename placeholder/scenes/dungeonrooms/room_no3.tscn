@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="21_qxlmp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_26qbi"]
-size = Vector3(24, 0.371948, 15.0621)
+size = Vector3(24, 5, 15.0621)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h1mpw"]
 size = Vector3(1.85016, 1, 1)
@@ -170,7 +170,7 @@ collision_mask = 256
 script = ExtResource("1_q8e65")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RoomTrigger"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11633, 0.83457, -4.406)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11633, -0.479456, -4.406)
 shape = SubResource("BoxShape3D_26qbi")
 
 [node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]
@@ -179,7 +179,7 @@ script = ExtResource("1_fj6qh")
 door = NodePath("../door/door")
 
 [node name="Enemy_spawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0.2, 0)
 script = ExtResource("3_sm0mm")
 enemy_scenes = [ExtResource("2_6828f"), ExtResource("5_lckwp"), ExtResource("6_amigk")]
 enemies_parent = NodePath("../Enemies")
@@ -194,10 +194,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08615, 0, -2.2148)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.96278, 0, -0.42925)
 
 [node name="Marker3D4" type="Marker3D" parent="Enemy_spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70635, 0, -1.18355)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.70635, 0, -1.18355)
 
 [node name="Marker3D5" type="Marker3D" parent="Enemy_spawner"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.03405, 0, -1.38238)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.03405, 0, -1.38238)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, -1)
