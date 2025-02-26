@@ -41,7 +41,7 @@ script = ExtResource("1_fj6qh")
 door = NodePath("../door/door")
 
 [node name="Enemy_spawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.2, 0)
 script = ExtResource("3_sm0mm")
 enemy_scenes = [ExtResource("2_6828f"), ExtResource("5_lckwp"), ExtResource("6_amigk")]
 enemies_parent = NodePath("../Enemies")
