@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://txoympwk61ot"]
+[gd_scene load_steps=50 format=4 uid="uid://txoympwk61ot"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
 [ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="5_nlsd8"]
 [ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="6_ek6x4"]
+[ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="6_eyipp"]
+[ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="7_5yqcl"]
 [ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="7_vty2l"]
 [ext_resource type="Texture2D" uid="uid://ra53udonybgf" path="res://art/objects/dungeonAssets/branhces_0001.png" id="8_xd7um"]
 [ext_resource type="Texture2D" uid="uid://dase8eyjsqn73" path="res://art/objects/dungeonAssets/branhces_0002.png" id="9_5t0e7"]
@@ -173,7 +175,7 @@ door = NodePath("../door/door")
 
 [node name="Enemy_spawner" type="Node3D" parent="."]
 script = ExtResource("3_1sp66")
-enemy_scene = ExtResource("4_imkif")
+enemy_scenes = [ExtResource("4_imkif"), ExtResource("6_eyipp"), ExtResource("7_5yqcl")]
 enemies_parent = NodePath("../Enemies")
 
 [node name="Marker3D" type="Marker3D" parent="Enemy_spawner"]
