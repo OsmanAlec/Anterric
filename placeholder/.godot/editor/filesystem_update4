@@ -1,6 +1,5 @@
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
-res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
 res://hopefullyfinalgridmap.tres
 res://scenes/enemies/tick.tscn
@@ -20,4 +19,9 @@ res://scenes/UI/menu.tscn
 res://scenes/dungeonrooms/room_no3.tscn
 res://scenes/dungeonrooms/room_no4.tscn
 res://scenes/dungeonrooms/room_no5.tscn
-res://inventory/inv2/inventory_ui.gd
+res://scenes/dungeonrooms/enemy_spawner.gd
+res://scenes/dungeonrooms/enemies.gd
+res://scenes/enemies/ladybug/ladybug.tscn
+res://scripts/enemies/ladybug/ladybug.gd
+res://inventory/items/bomb.tscn
+res://scripts/player.gd

@@ -36,6 +36,8 @@ const FORCED_ATTACK_TIME: float = 5.0  # Time interval for forced attacks.
 
 # Called when the node enters the scene tree.
 func _ready() -> void:
+	
+	
 	add_to_group(LADYBUG_GROUP)  # Add this ladybug to the ladybug group.
 	update_formation_index()  # Update its formation index.
 	formation_lag *= (1.0 + randf_range(-0.1, 0.1))  # Add slight randomness to formation lag.

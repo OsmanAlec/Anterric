@@ -19,12 +19,24 @@ var canMove: bool = true
 
 @onready var anim_tree = get_node("AnimationTree")
 @export var inv:  maininv
+ 
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
+	
+	var tween = get_tree().create_tween()
+	# Start with the player invisible and tiny
+	scale = Vector3(0, 0, 0)  # Make the player tiny
+	
+	# Smoothly scale up the player and move them into position
+	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.5).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	#tween.tween_property(self, "global_position", global_position + Vector3(0, 0, 0), 0.2).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	
+	
+	
 
-# Handles player movement logic
+	# Handles player movement logic
 func player_movement(delta: float):
 	# Determine movement direction
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
