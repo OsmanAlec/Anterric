@@ -1,7 +1,11 @@
+Timer
+Health
+CollisionShape3D
+HurtBox
+HitBox
 AudioStreamPlayer
 AudioStreamPlayer3D
 Node3D
-CollisionShape3D
 AnimatedSprite3D
 CharacterBody3D
 Node
@@ -9,6 +13,3 @@ CSGBox3D
 MeshInstance3D
 WorldEnvironment
 OmniLight3D
-DirectionalLight3D
-MultiMeshInstance3D
-Decal

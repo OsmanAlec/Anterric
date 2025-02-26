@@ -1,8 +1,15 @@
-[gd_scene load_steps=22 format=3 uid="uid://dim7cy7dlks87"]
+[gd_scene load_steps=28 format=3 uid="uid://dim7cy7dlks87"]
 
 [ext_resource type="Texture2D" uid="uid://bq8is0k3btla6" path="res://art/enemies/tick/tickjumping.png" id="1_hut6t"]
+[ext_resource type="Script" path="res://scripts/enemies/tick.gd" id="1_hvf24"]
+[ext_resource type="Script" path="res://scripts/util/health.gd" id="2_vcqct"]
 [ext_resource type="Texture2D" uid="uid://5pat1acbhd4k" path="res://art/enemies/tick/tickidle.png" id="2_wdvu5"]
 [ext_resource type="Texture2D" uid="uid://bosob2qw04tix" path="res://art/enemies/tick/tickiwalking.png" id="3_8j7hd"]
+[ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="5_x506n"]
+[ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="6_c0l5h"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5rho6"]
+radius = 0.194157
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rwxi5"]
 atlas = ExtResource("1_hut6t")
@@ -102,7 +109,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_os53b")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack",
 "speed": 12.0
 }, {
@@ -141,11 +148,49 @@ animations = [{
 "speed": 12.0
 }]
 
-[node name="dickhead" type="CharacterBody3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_8ehre"]
+size = Vector3(0.488449, 0.51593, 0.682373)
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="tick" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_hvf24")
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_vcqct")
+max_health = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("SphereShape3D_5rho6")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
 pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_xu8nr")
 animation = &"walk"
-frame_progress = 0.71377
+
+[node name="HitBox" type="Area3D" parent="."]
+script = ExtResource("5_x506n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00441742, 0.0909729, 0.000854492)
+shape = SubResource("BoxShape3D_8ehre")
+disabled = true
+
+[node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("6_c0l5h")
+health = NodePath("../Health")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00441742, 0.0909729, 0.000854492)
+shape = SubResource("BoxShape3D_8ehre")
+
+[node name="attack_cooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

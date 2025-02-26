@@ -5,9 +5,9 @@
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
-[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="4_imkif"]
+[ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="4_lsrei"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
-[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="5_53lnc"]
+[ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="5_wgnrd"]
 [ext_resource type="Texture2D" uid="uid://dase8eyjsqn73" path="res://art/objects/dungeonAssets/branhces_0002.png" id="6_68rwo"]
 [ext_resource type="Texture2D" uid="uid://dvowooiw1f7hi" path="res://art/objects/dungeonAssets/foreleaves2.png" id="7_6phln"]
 [ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="8_ai6ns"]
@@ -160,13 +160,11 @@ script = ExtResource("1_geasy")
 script = ExtResource("1_ni8h7")
 door = NodePath("../door/door")
 
-[node name="Ladybug" parent="Enemies" instance=ExtResource("4_imkif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, 0)
-ballofgust_scene = ExtResource("5_53lnc")
+[node name="tick" parent="Enemies" instance=ExtResource("5_wgnrd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7394, 0.220654, 0)
 
-[node name="Ladybug3" parent="Enemies" instance=ExtResource("4_imkif")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, -1.82519)
-ballofgust_scene = ExtResource("5_53lnc")
+[node name="workerbee" parent="Enemies" instance=ExtResource("4_lsrei")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57415, 0.328111, 0)
 
 [node name="Environment" type="Node" parent="."]
 
