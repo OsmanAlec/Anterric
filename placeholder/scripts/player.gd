@@ -44,6 +44,8 @@ func player_movement(delta: float):
 		if dashing:
 			state = "Dashing"
 			velocity = velocity.move_toward(direction * DASH_SPEED, delta * ACCELERATION)
+			anim_tree.get("parameters/playback").travel("Dashing")
+			anim_tree.set("parameters/Dashing/BlendSpace1D/blend_position", lastDir.x)
 		else:
 			state = "Walking"
 			velocity = velocity.move_toward(direction * SPEED, delta * ACCELERATION)

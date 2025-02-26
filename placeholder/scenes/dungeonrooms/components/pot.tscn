@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://yis0l5sr02sr"]
+[gd_scene load_steps=11 format=3 uid="uid://cxcxqtbwen86e"]
 
 [ext_resource type="Texture2D" uid="uid://ctbe5cmuqj8m6" path="res://art/objects/dungeonAssets/pot.png" id="1_uq1w3"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="2_0g6rm"]

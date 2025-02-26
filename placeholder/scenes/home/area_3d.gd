@@ -16,6 +16,6 @@ func _physics_process(delta):
 	
 	if entered == true:
 	
-			get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no1change.tscn")
+			get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no1.tscn")
 			
 	

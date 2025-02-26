@@ -8,8 +8,10 @@ func start_quest() -> void:
 		quest_status = QuestStatus.started
 		#update UI
 		QuestBox.visible = true
-		QuestTitle.text = quest_name
-		QuestDescription.text = quest_description
+		QuestContainer.add_child
+		#QuestTitle.text = quest_name
+		#QuestDescription.text = quest_description
+	
 
 #mark goal as reached
 func reached_goal() -> void:
@@ -17,7 +19,7 @@ func reached_goal() -> void:
 		#update quest status
 		quest_status = QuestStatus.reached_goal
 		#update ui
-		QuestDescription.text = reached_goal_text
+		#QuestDescription.text = reached_goal_text
 
 #finish the quest
 func finish_quest() -> void:

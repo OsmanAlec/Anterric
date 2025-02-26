@@ -3,8 +3,8 @@ extends Node3D
 
 #ui elements for quest info to show on screen
 @onready var QuestBox: CanvasLayer = GameManager.get_node('QuestBox')
-@onready var QuestTitle: RichTextLabel = GameManager.get_node('QuestBox').get_node('QuestTitle')
-@onready var QuestDescription: RichTextLabel = GameManager.get_node('QuestBox').get_node('QuestDescription')
+@onready var QuestContainer: GridContainer = GameManager.get_node('QuestBox').get_node('GridContainer')
+
 
 @export_group("Quest Settings")
 @export var quest_name: String #name of quest
