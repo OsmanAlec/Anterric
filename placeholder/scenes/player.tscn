@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=112 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://2mxfem08kla8" path="res://scenes/UI/hud.tscn" id="3_hjrx5"]
 [ext_resource type="Texture2D" uid="uid://b5i321mwu7oel" path="res://art/characters/Standing Attack Right.png" id="4_8wmo1"]
 [ext_resource type="Texture2D" uid="uid://brf6vryxyr2l3" path="res://art/characters/Standing Idle Right.png" id="4_d0t1k"]
+[ext_resource type="Texture2D" uid="uid://c3mv4w3k55tne" path="res://art/characters/Roll left.png" id="5_ibfqy"]
+[ext_resource type="Texture2D" uid="uid://dgo2alas8njt" path="res://art/characters/Roll right.png" id="6_ndmnp"]
 [ext_resource type="Texture2D" uid="uid://wckq2cproknc" path="res://art/characters/Walking Attack Left.png" id="7_oyc2y"]
 [ext_resource type="Texture2D" uid="uid://tttqnuhlkpyr" path="res://art/characters/Walking Attack Right.png" id="8_xcqqw"]
 [ext_resource type="Texture2D" uid="uid://cea06qvcfdrt3" path="res://art/characters/Walking Left.png" id="9_u8xip"]
@@ -17,6 +19,54 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.61618, 0.694092, 0.310915)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnjmw"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04jfb"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvubh"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6y6xw"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(1920, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nhrd7"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(2560, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b30p2"]
+atlas = ExtResource("5_ibfqy")
+region = Rect2(3200, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0cmn"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(0, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cfvbu"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(640, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlwq5"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(1280, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42inh"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(1920, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0oe0"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(2560, 0, 640, 640)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fvlt"]
+atlas = ExtResource("6_ndmnp")
+region = Rect2(3200, 0, 640, 640)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnt22"]
 atlas = ExtResource("3_1qdcu")
@@ -182,6 +232,52 @@ region = Rect2(3200, 0, 640, 490)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_dnjmw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04jfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvubh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6y6xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nhrd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b30p2")
+}],
+"loop": true,
+"name": &"Rolling Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0cmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cfvbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlwq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42inh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0oe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fvlt")
+}],
+"loop": true,
+"name": &"Rolling Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dnt22")
 }, {
 "duration": 1.0,
@@ -341,8 +437,76 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Animation" id="Animation_qtj8p"]
+resource_name = "Rolling Left"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Rolling Left"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_ibl47"]
+resource_name = "Rolling Right"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Rolling Right"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+
 [sub_resource type="Animation" id="Animation_674i7"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
 
 [sub_resource type="Animation" id="Animation_mhi2m"]
 resource_name = "Standing Attack Left"
@@ -574,6 +738,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00efu"]
 _data = {
+"Dashing Left": SubResource("Animation_qtj8p"),
+"Dashing Right": SubResource("Animation_ibl47"),
 "RESET": SubResource("Animation_674i7"),
 "Standing Attack Left": SubResource("Animation_mhi2m"),
 "Standing Attack Right": SubResource("Animation_x4nrj"),
@@ -620,6 +786,19 @@ nodes/BlendSpace2D/position = Vector2(380, 240)
 nodes/output/position = Vector2(740, 260)
 node_connections = [&"output", 0, &"BlendSpace2D"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bjgrf"]
+animation = &"Dashing Left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_b4q3r"]
+animation = &"Dashing Right"
+
+[sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_fp6rl"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_bjgrf")
+blend_point_0/pos = -1.0
+blend_point_1/node = SubResource("AnimationNodeAnimation_b4q3r")
+blend_point_1/pos = 1.0
+blend_mode = 1
+
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2dmpi"]
 animation = &"Standing Idle Left"
 
@@ -660,7 +839,6 @@ blend_mode = 1
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_s2dx5"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_xcbvr"]
-graph_offset = Vector2(-122.85, -33.6747)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_dwwsv")
 nodes/BlendSpace1D/position = Vector2(140, 90)
 nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_s2dx5")
@@ -672,15 +850,21 @@ node_connections = [&"TimeScale", 0, &"BlendSpace1D", &"output", 0, &"TimeScale"
 switch_mode = 2
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8clqr"]
+switch_mode = 2
+advance_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_g2e0h"]
 states/Attack/node = SubResource("AnimationNodeBlendTree_uhhgr")
 states/Attack/position = Vector2(400.638, 50.5)
+states/Dashing/node = SubResource("AnimationNodeBlendSpace1D_fp6rl")
+states/Dashing/position = Vector2(582.638, 67)
 states/Standing/node = SubResource("AnimationNodeBlendTree_7eqyc")
 states/Standing/position = Vector2(400.638, 185.75)
 states/Start/position = Vector2(203.5, 100.25)
 states/Walking/node = SubResource("AnimationNodeBlendTree_xcbvr")
 states/Walking/position = Vector2(582.638, 185.75)
-transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_n0o46")]
+transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_n0o46"), "Dashing", "Walking", SubResource("AnimationNodeStateMachineTransition_8clqr")]
 graph_offset = Vector2(-27.4962, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebpkw"]
@@ -727,6 +911,7 @@ pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_kgdfr")
 animation = &""
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Animations")
@@ -739,9 +924,10 @@ root_node = NodePath("%Animations")
 tree_root = SubResource("AnimationNodeStateMachine_g2e0h")
 anim_player = NodePath("../AnimationPlayer")
 parameters/Attack/BlendSpace2D/blend_position = Vector2(-1, 0.0478723)
+parameters/Dashing/blend_position = 0.0
 parameters/Standing/BlendSpace1D/blend_position = -0.22864
 parameters/Standing/TimeScale/scale = 0.2
-parameters/Walking/BlendSpace1D/blend_position = -0.0196375
+parameters/Walking/BlendSpace1D/blend_position = 0.564547
 parameters/Walking/TimeScale/scale = 0.4
 
 [node name="Camera3D" type="Camera3D" parent="."]

@@ -3,20 +3,19 @@ extends CharacterBody3D
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var InteractionLabel: Label3D = $Label3D
 
+
 var canInteract = false
 var talking = false
-const char_name = "SuperMajor"
+const char_name = "Erric"
 
 
 const prologue: Array[String] = [
-	"Your Majesty.",
-	"RQUEEN ...",
-	"...",
-	"RQUEEN ?",
-	"Oh, uhh-",
-	"Termites- bad deal, tree is falling",
-	"Our soldiers are starving",
-	"We need to build an army."
+	"Your Majesty!",
+	"Our colony, we've never been worse",
+	"You claimed to have dealth with the termites",
+	"So . . .?",
+	"RQUEEN So???",
+	"Well, go deal with them!",
 ]
 
 const level1: Array[String] = [
@@ -54,4 +53,6 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn) -> void:
 	if cn != char_name:
 		return
+	QuestControl.get_node("Collect50coins")
 	$AnimatedSprite3D.play("idle")
+	QuestControl.get_node("Retrieve5Wings").start_quest()

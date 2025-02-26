@@ -1,0 +1,145 @@
+[gd_scene load_steps=20 format=3 uid="uid://ckdmoytquc0qd"]
+
+[ext_resource type="Script" path="res://scenes/enemies/workerbee.gd" id="1_nvx3a"]
+[ext_resource type="Script" path="res://scripts/util/health.gd" id="2_uogy0"]
+[ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="3_djqg0"]
+[ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="4_ojram"]
+[ext_resource type="Texture2D" uid="uid://dogsclmbq5lvx" path="res://art/enemies/bee/beesting.png" id="5_7mb0x"]
+[ext_resource type="Texture2D" uid="uid://bf5bwpndbbrbq" path="res://art/enemies/bee/beeidle.png" id="6_a41yf"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_0i8l0"]
+radius = 0.194157
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ns3mr"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hl6x"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hpwi"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wphkp"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkmmv"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uieam"]
+atlas = ExtResource("5_7mb0x")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cnpc"]
+atlas = ExtResource("6_a41yf")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tr3gp"]
+atlas = ExtResource("6_a41yf")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5ay4"]
+atlas = ExtResource("6_a41yf")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bfg0"]
+atlas = ExtResource("6_a41yf")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c1gok"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ns3mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hl6x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hpwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wphkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkmmv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uieam")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cnpc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tr3gp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5ay4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bfg0")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 12.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2t0b8"]
+size = Vector3(0.488449, 0.51593, 0.682373)
+
+[node name="workerbee" type="CharacterBody3D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_nvx3a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+visible = false
+shape = SubResource("SphereShape3D_0i8l0")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+pixel_size = 0.002
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_c1gok")
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_uogy0")
+max_health = 4
+
+[node name="HitBox" type="Area3D" parent="."]
+collision_mask = 0
+script = ExtResource("3_djqg0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00441742, 0.0909729, 0.000854492)
+shape = SubResource("BoxShape3D_2t0b8")
+disabled = true
+
+[node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("4_ojram")
+health = NodePath("../Health")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.195583, 0.0909729, 0.000854492)
+shape = SubResource("BoxShape3D_2t0b8")
+
+[node name="attack_cooldown" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]

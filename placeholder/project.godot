@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="QueenOfHills"
+config/name="Anterric"
 run/main_scene="res://scenes/player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://art/icon.svg"
@@ -20,6 +20,8 @@ config/icon="res://art/icon.svg"
 DialogManager="*res://scripts/util/dialog_manager.gd"
 PlayerData="*res://scripts/util/player_data.gd"
 AudioPlayer="*res://scenes/audio_player.tscn"
+GameManager="*res://components/Quest/GameManager.tscn"
+QuestControl="*res://components/Quest/QuestManager.tscn"
 
 [display]
 
