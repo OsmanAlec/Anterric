@@ -97,6 +97,7 @@ animations = [{
 size = Vector3(0.488449, 0.51593, 0.682373)
 
 [node name="workerbee" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.323304, 0)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_nvx3a")

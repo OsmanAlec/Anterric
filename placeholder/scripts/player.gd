@@ -64,8 +64,8 @@ func _physics_process(delta: float):
 	
 	if !canMove:
 		if state == "Stunned":
-			#PLAY STUNNED ANIMATION
-			pass
+			anim_tree.get("parameters/playback").travel("Standing")
+			anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
 		return
 	
 	# Handle attack input

@@ -1,16 +1,16 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1740577146
+::res://::1740579160
 audio_player.gd::GDScript::-1::1740525476::0::1::::<>AudioStreamPlayer<>::
 communication.txt::TextFile::-1::1740524972::0::1::::<><>::
 default_bus_layout.tres::AudioBusLayout::4286821080437972484::1740162926::0::1::::<><>::
 gridmapwithanthill.tres::MeshLibrary::873147028838755479::1740524972::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://jhxsrtvq6lj3::::res://art/tilesets/grasstileset/row-5-column-6.png<>uid://dw6fevcrp51lx::::res://art/tilesets/grasstileset/row-5-column-5.png<>uid://c73jk00hpfstf::::res://art/tilesets/grasstileset/row-5-column-4.png<>uid://i0sqk4nad5n0::::res://art/tilesets/grasstileset/row-5-column-3.png<>uid://2i777y6x3bs1::::res://art/tilesets/grasstileset/row-5-column-2.png<>uid://cr4ib104cy16g::::res://art/tilesets/grasstileset/row-5-column-1.png<>uid://cbwvsbscfsadc::::res://art/tilesets/grasstileset/row-4-column-6.png<>uid://ctjl6wdjbq8bs::::res://art/tilesets/grasstileset/row-4-column-5.png<>uid://b2g77voic2jfv::::res://art/tilesets/grasstileset/row-4-column-4.png<>uid://b8cceu5ic36rq::::res://art/tilesets/grasstileset/row-4-column-3.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://c7ctl7brmo5a1::::res://art/tilesets/grasstileset/row-4-column-2.png<>uid://se5mnb14gr4f::::res://art/tilesets/grasstileset/row-4-column-1.png<>uid://bo0xlthycmvws::::res://art/tilesets/grasstileset/row-3-column-6.png<>uid://bco7v3skgbsk8::::res://art/tilesets/grasstileset/row-3-column-5.png<>uid://bgfmhcx7otom1::::res://art/tilesets/grasstileset/row-3-column-4.png<>uid://ca65neklv8ece::::res://art/tilesets/grasstileset/row-3-column-3.png<>uid://c5wycepms5eo0::::res://art/tilesets/grasstileset/row-3-column-2.png<>uid://c66o4hd630gl1::::res://art/tilesets/grasstileset/row-3-column-1.png<>uid://ci5uqd32cvc4b::::res://art/tilesets/grasstileset/row-2-column-6.png<>uid://c62wl7ie5qnon::::res://art/tilesets/grasstileset/row-2-column-5.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png<>uid://ckeh1kp37b1i::::res://art/tilesets/grasstileset/row-2-column-4.png<>uid://dkimw3r3fsk5u::::res://art/tilesets/grasstileset/row-2-column-3.png<>uid://cntqlfm7vx87d::::res://art/tilesets/grasstileset/row-2-column-2.png<>uid://bc20u1dil5uq2::::res://art/tilesets/grasstileset/row-2-column-1.png<>uid://belb11vwuwsph::::res://art/tilesets/grasstileset/row-1-column-6.png<>uid://tw5ynejtaxgh::::res://art/tilesets/anthill ground_0001.png<>uid://bher4bptqr4fh::::res://art/tilesets/grasstileset/row-1-column-5.png<>uid://c2njx31ij832l::::res://art/tilesets/anthill ground_0002.png<>uid://dk2vev202p42c::::res://art/tilesets/grasstileset/row-1-column-4.png<>uid://bpxnjd3gwlcsl::::res://art/tilesets/anthill ground_0003.png<>uid://cq32b7jkjusmu::::res://art/tilesets/grasstileset/row-1-column-3.png<>uid://bfph7hu7r4nr2::::res://art/tilesets/anthill ground_0004.png<>uid://dsabnq8u6a6jd::::res://art/tilesets/grasstileset/row-1-column-2.png<>uid://rotqvyl2j4nm::::res://art/tilesets/grasstileset/row-1-column-1.png<>uid://csdsrhpll466f::::res://art/tilesets/grasstileset/row-6-column-6.png<>uid://psmqi5tcsnx4::::res://art/tilesets/grasstileset/row-6-column-5.png<>uid://dh68j8u0x8uuj::::res://art/tilesets/grasstileset/row-6-column-4.png<>uid://dbmtan27fcuha::::res://art/tilesets/grasstileset/row-6-column-3.png<>uid://v1p3piamthy::::res://art/tilesets/grasstileset/row-6-column-2.png<>uid://dcdvu2jkfhbm6::::res://art/tilesets/grasstileset/row-6-column-1.png
-hopefullyfinalgridmap.tres::MeshLibrary::487881272760481413::1740570585::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://jhxsrtvq6lj3::::res://art/tilesets/grasstileset/row-5-column-6.png<>uid://dw6fevcrp51lx::::res://art/tilesets/grasstileset/row-5-column-5.png<>uid://c73jk00hpfstf::::res://art/tilesets/grasstileset/row-5-column-4.png<>uid://i0sqk4nad5n0::::res://art/tilesets/grasstileset/row-5-column-3.png<>uid://2i777y6x3bs1::::res://art/tilesets/grasstileset/row-5-column-2.png<>uid://cr4ib104cy16g::::res://art/tilesets/grasstileset/row-5-column-1.png<>uid://cbwvsbscfsadc::::res://art/tilesets/grasstileset/row-4-column-6.png<>uid://ctjl6wdjbq8bs::::res://art/tilesets/grasstileset/row-4-column-5.png<>uid://b2g77voic2jfv::::res://art/tilesets/grasstileset/row-4-column-4.png<>uid://b8cceu5ic36rq::::res://art/tilesets/grasstileset/row-4-column-3.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png<>uid://c7ctl7brmo5a1::::res://art/tilesets/grasstileset/row-4-column-2.png<>uid://se5mnb14gr4f::::res://art/tilesets/grasstileset/row-4-column-1.png<>uid://bo0xlthycmvws::::res://art/tilesets/grasstileset/row-3-column-6.png<>uid://bco7v3skgbsk8::::res://art/tilesets/grasstileset/row-3-column-5.png<>uid://bgfmhcx7otom1::::res://art/tilesets/grasstileset/row-3-column-4.png<>uid://ca65neklv8ece::::res://art/tilesets/grasstileset/row-3-column-3.png<>uid://c5wycepms5eo0::::res://art/tilesets/grasstileset/row-3-column-2.png<>uid://c66o4hd630gl1::::res://art/tilesets/grasstileset/row-3-column-1.png<>uid://ci5uqd32cvc4b::::res://art/tilesets/grasstileset/row-2-column-6.png<>uid://c62wl7ie5qnon::::res://art/tilesets/grasstileset/row-2-column-5.png<>uid://ckeh1kp37b1i::::res://art/tilesets/grasstileset/row-2-column-4.png<>uid://dkimw3r3fsk5u::::res://art/tilesets/grasstileset/row-2-column-3.png<>uid://cntqlfm7vx87d::::res://art/tilesets/grasstileset/row-2-column-2.png<>uid://bc20u1dil5uq2::::res://art/tilesets/grasstileset/row-2-column-1.png<>uid://belb11vwuwsph::::res://art/tilesets/grasstileset/row-1-column-6.png<>uid://bher4bptqr4fh::::res://art/tilesets/grasstileset/row-1-column-5.png<>uid://dk2vev202p42c::::res://art/tilesets/grasstileset/row-1-column-4.png<>uid://cq32b7jkjusmu::::res://art/tilesets/grasstileset/row-1-column-3.png<>uid://dsabnq8u6a6jd::::res://art/tilesets/grasstileset/row-1-column-2.png<>uid://rotqvyl2j4nm::::res://art/tilesets/grasstileset/row-1-column-1.png<>uid://csdsrhpll466f::::res://art/tilesets/grasstileset/row-6-column-6.png<>uid://psmqi5tcsnx4::::res://art/tilesets/grasstileset/row-6-column-5.png<>uid://dh68j8u0x8uuj::::res://art/tilesets/grasstileset/row-6-column-4.png<>uid://dbmtan27fcuha::::res://art/tilesets/grasstileset/row-6-column-3.png<>uid://v1p3piamthy::::res://art/tilesets/grasstileset/row-6-column-2.png<>uid://dcdvu2jkfhbm6::::res://art/tilesets/grasstileset/row-6-column-1.png
+hopefullyfinalgridmap.tres::MeshLibrary::487881272760481413::1740579160::0::1::::<><>::uid://bs7ltltibntbn::::res://art/tilesets/dungeonfloor.png<>uid://d232cvmchwfha::::res://art/tilesets/dirty_1.png<>uid://jhxsrtvq6lj3::::res://art/tilesets/grasstileset/row-5-column-6.png<>uid://dw6fevcrp51lx::::res://art/tilesets/grasstileset/row-5-column-5.png<>uid://c73jk00hpfstf::::res://art/tilesets/grasstileset/row-5-column-4.png<>uid://i0sqk4nad5n0::::res://art/tilesets/grasstileset/row-5-column-3.png<>uid://2i777y6x3bs1::::res://art/tilesets/grasstileset/row-5-column-2.png<>uid://cr4ib104cy16g::::res://art/tilesets/grasstileset/row-5-column-1.png<>uid://cbwvsbscfsadc::::res://art/tilesets/grasstileset/row-4-column-6.png<>uid://ctjl6wdjbq8bs::::res://art/tilesets/grasstileset/row-4-column-5.png<>uid://b2g77voic2jfv::::res://art/tilesets/grasstileset/row-4-column-4.png<>uid://b8cceu5ic36rq::::res://art/tilesets/grasstileset/row-4-column-3.png<>uid://bd46qvdc72pl7::::res://art/tilesets/cobblestone_3.png<>uid://c7ctl7brmo5a1::::res://art/tilesets/grasstileset/row-4-column-2.png<>uid://se5mnb14gr4f::::res://art/tilesets/grasstileset/row-4-column-1.png<>uid://bo0xlthycmvws::::res://art/tilesets/grasstileset/row-3-column-6.png<>uid://bco7v3skgbsk8::::res://art/tilesets/grasstileset/row-3-column-5.png<>uid://bgfmhcx7otom1::::res://art/tilesets/grasstileset/row-3-column-4.png<>uid://ca65neklv8ece::::res://art/tilesets/grasstileset/row-3-column-3.png<>uid://c5wycepms5eo0::::res://art/tilesets/grasstileset/row-3-column-2.png<>uid://c66o4hd630gl1::::res://art/tilesets/grasstileset/row-3-column-1.png<>uid://ci5uqd32cvc4b::::res://art/tilesets/grasstileset/row-2-column-6.png<>uid://c62wl7ie5qnon::::res://art/tilesets/grasstileset/row-2-column-5.png<>uid://ckeh1kp37b1i::::res://art/tilesets/grasstileset/row-2-column-4.png<>uid://dkimw3r3fsk5u::::res://art/tilesets/grasstileset/row-2-column-3.png<>uid://cntqlfm7vx87d::::res://art/tilesets/grasstileset/row-2-column-2.png<>uid://bc20u1dil5uq2::::res://art/tilesets/grasstileset/row-2-column-1.png<>uid://belb11vwuwsph::::res://art/tilesets/grasstileset/row-1-column-6.png<>uid://bher4bptqr4fh::::res://art/tilesets/grasstileset/row-1-column-5.png<>uid://dk2vev202p42c::::res://art/tilesets/grasstileset/row-1-column-4.png<>uid://cq32b7jkjusmu::::res://art/tilesets/grasstileset/row-1-column-3.png<>uid://dsabnq8u6a6jd::::res://art/tilesets/grasstileset/row-1-column-2.png<>uid://rotqvyl2j4nm::::res://art/tilesets/grasstileset/row-1-column-1.png<>uid://csdsrhpll466f::::res://art/tilesets/grasstileset/row-6-column-6.png<>uid://psmqi5tcsnx4::::res://art/tilesets/grasstileset/row-6-column-5.png<>uid://dh68j8u0x8uuj::::res://art/tilesets/grasstileset/row-6-column-4.png<>uid://dbmtan27fcuha::::res://art/tilesets/grasstileset/row-6-column-3.png<>uid://v1p3piamthy::::res://art/tilesets/grasstileset/row-6-column-2.png<>uid://dcdvu2jkfhbm6::::res://art/tilesets/grasstileset/row-6-column-1.png
 inv_slot_2.gd::GDScript::-1::1740524972::0::1::::InvSlot<>Resource<>::
 ::res://art/::1740525002
 icon.svg::CompressedTexture2D::7209331696306619313::1734299679::1740525002::1::::<><>::
-::res://art/characters/::1740525002
-Roll left.png::CompressedTexture2D::6764229566435036570::1740524972::1740525002::1::::<><>::
-Roll right.png::CompressedTexture2D::223851068790833505::1740524972::1740525002::1::::<><>::
+::res://art/characters/::1740579118
+Roll left.png::CompressedTexture2D::540102093667006881::1740524972::1740579176::1::::<><>::
+Roll right.png::CompressedTexture2D::586186485195250409::1740524972::1740579176::1::::<><>::
 Standing Attack Left.png::CompressedTexture2D::5251851131284243770::1740162925::1740513917::1::::<><>::
 Standing Attack Right.png::CompressedTexture2D::4510350692271780811::1740162925::1740513917::1::::<><>::
 Standing Idle Left.png::CompressedTexture2D::563113514210783187::1740162925::1740513917::1::::<><>::
@@ -157,7 +157,7 @@ InventoryItem.gd::GDScript::-1::1740415568::0::1::::InventoryItem<>TextureRect<>
 InventorySlot.gd::GDScript::-1::1740415568::0::1::::InventorySlot<>PanelContainer<>::
 inventory_item.gd::GDScript::-1::1740162926::0::1::::InvItem<>Resource<>::
 playerInv.tres::Resource/Inv::599608291120049934::1740415568::0::1::::<><>::res://inventory/inventory_item.gd<>uid://ckwminmydcvri::::res://inventory/items/10coin.tres<>uid://ctcfpd4s3mkxd::::res://scenes/items(resource)/1coin.tres<>res://inventory/inventory.gd
-::res://inventory/inv2/::1740568701
+::res://inventory/inv2/::1740577172
 1coin.tres::Resource/invitem2::4904328553570130883::1740524972::0::1::::<><>::res://inventory/inv2/invitem2.gd<>uid://diqboa2pg0wto::::res://art/objects/inventoryItems/1Coin.png
 bomb.tres::Resource/invitem2::505859340688522455::1740524972::0::1::::<><>::res://inventory/inv2/invitem2.gd<>uid://cs2begdfk031o::::res://art/objects/inventoryItems/bomb.png
 inventoryUI.tscn::PackedScene::152832844468736253::1740524972::0::1::::<><>::res://inventory/inv2/inventory_ui.gd<>uid://haw5nbvsj3uk::::res://art/objects/inventoryItems/inventory-background.png<>uid://c3ya30myc0rcf::::res://inventory/inv2/inv_slot_2.tscn
@@ -166,7 +166,7 @@ invitem2.gd::GDScript::-1::1740524972::0::1::::invitem2<>Resource<>::
 inv_slot_2.tscn::PackedScene::6787725390293412341::1740524972::0::1::::<><>::res://inventory/inv2/item_display.gd<>uid://ba14djieamoj4::::res://art/objects/inventoryItems/inventory-slot.png
 item_display.gd::GDScript::-1::1740524972::0::1::::<>Panel<>::
 maininv.gd::GDScript::-1::1740524972::0::1::::maininv<>Resource<>::
-playerinv.tres::Resource/maininv::2823895739612917765::1740568701::0::1::::<><>::res://inventory/inv2/maininv.gd<>res://inv_slot_2.gd
+playerinv.tres::Resource/maininv::2823895739612917765::1740577172::0::1::::<><>::res://inventory/inv2/maininv.gd<>res://inv_slot_2.gd
 ::res://inventory/items/::1740415559
 10coin.tres::Resource/InvItem::5520889707056045278::1740162926::0::1::::<><>::res://inventory/inventory_item.gd<>uid://chrrtlvica5v6::::res://art/objects/inventoryItems/10Coin.png
 ::res://Music/::1740525005
@@ -174,23 +174,24 @@ boss music(maybe).wav::AudioStreamWAV::1787502671980399100::1740162924::17405139
 Dungeon Music.wav::AudioStreamWAV::7238221230711905099::1740162924::1740513921::1::::<><>::
 dungeonmusic8bit.wav::AudioStreamWAV::8502693289293764483::1740524972::1740525005::1::::<><>::
 menu_music.wav::AudioStreamWAV::804184844489676081::1740162924::1740513922::1::::<><>::
-::res://scenes/::1740574215
+::res://scenes/::1740578947
 audio_player.tscn::PackedScene::5331365323764849260::1740525806::0::1::::<><>::uid://dte1d7l0erkjb::::res://Music/dungeonmusic8bit.wav<>res://audio_player.gd
 Boss.tscn::PackedScene::2956791374356591993::1740524972::0::1::::<><>::res://scenes/QueenBee.gd<>res://queenbee.png
 coin.tscn::PackedScene::1659315408188775253::1740525806::0::1::::<><>::uid://diqboa2pg0wto::::res://art/objects/inventoryItems/1Coin.png
-player.tscn::PackedScene::4213710653736826845::1740574215::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://2mxfem08kla8::::res://scenes/UI/hud.tscn<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://c3mv4w3k55tne::::res://art/characters/Roll left.png<>uid://dgo2alas8njt::::res://art/characters/Roll right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd<>uid://cgbetvcslu26::::res://inventory/inv2/inventoryUI.tscn
-::res://scenes/dungeonrooms/::1740574265
+player.tscn::PackedScene::4213710653736826845::1740578947::0::1::::<><>::res://scripts/player.gd<>res://scripts/util/health.gd<>uid://cg3bhrjnlniis::::res://art/characters/Standing Attack Left.png<>uid://ia1nrj03itx0::::res://art/characters/Standing Idle Left.png<>uid://2mxfem08kla8::::res://scenes/UI/hud.tscn<>uid://b5i321mwu7oel::::res://art/characters/Standing Attack Right.png<>uid://brf6vryxyr2l3::::res://art/characters/Standing Idle Right.png<>uid://c3mv4w3k55tne::::res://art/characters/Roll left.png<>uid://dgo2alas8njt::::res://art/characters/Roll right.png<>uid://wckq2cproknc::::res://art/characters/Walking Attack Left.png<>uid://tttqnuhlkpyr::::res://art/characters/Walking Attack Right.png<>uid://cea06qvcfdrt3::::res://art/characters/Walking Left.png<>uid://d3ami4x65uove::::res://art/characters/Walking Right.png<>res://scripts/util/hurtbox.gd<>res://scripts/util/hitbox.gd<>uid://cgbetvcslu26::::res://inventory/inv2/inventoryUI.tscn
+::res://scenes/dungeonrooms/::1740579159
 door.gd::GDScript::-1::1740524972::0::1::::<>StaticBody3D<>::
-enemies.gd::GDScript::-1::1740524972::0::1::::<>Node3D<>::
+enemies.gd::GDScript::-1::1740579118::0::1::::<>Node3D<>::
+enemy_spawner.gd::GDScript::-1::1740579118::0::1::::enemies_spawner<>Node3D<>::
 pot.tscn::PackedScene::6392739590599105486::1740525806::0::1::::<><>::uid://ctbe5cmuqj8m6::::res://art/objects/dungeonAssets/pot.png<>res://scripts/dungeonrooms/components/breakbox.gd<>res://scripts/dungeonrooms/components/pot_break.gd
+room.gd::GDScript::-1::1740579118::0::1::::<>Node3D<>::
+RoomTrigger.gd::GDScript::-1::1740579118::0::1::::<>Area3D<>::
 room_no1.tscn::PackedScene::1381962268884897775::1740525806::0::1::::<><>::res://scripts/dungeonrooms/room_manager.gd<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://c8leysd8nl2tm::::res://scenes/enemies/ladybug/ladybug.tscn<>uid://3wrwr6mib1xr::::res://scenes/dungeonrooms/components/grass.tscn<>uid://dssy2exuqcb4a::::res://scenes/enemies/ladybug/ballofgust.tscn<>uid://dp00sy3vongwu::::res://scenes/dungeonrooms/components/twigs.tscn<>uid://b8ewdnilwfnln::::res://scenes/dungeonrooms/components/leaves.tscn<>uid://cxcxqtbwen86e::::res://scenes/dungeonrooms/pot.tscn
 room_no1.VoxelGI_data.res::VoxelGIData::3790669544681614938::1740524972::0::1::::<><>::
-room_no1change.tscn::PackedScene::8856097536724220159::1740574265::0::1::::<><>::res://scenes/dungeonrooms/room_no_1_change.gd<>res://scenes/dungeonrooms/enemies.gd<>uid://g7llljk035ev::::res://hopefullyfinalgridmap.tres<>res://scripts/dungeonrooms/room_manager.gd<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://3wrwr6mib1xr::::res://scenes/dungeonrooms/components/grass.tscn<>uid://dim7cy7dlks87::::res://scenes/enemies/tick.tscn<>uid://dase8eyjsqn73::::res://art/objects/dungeonAssets/branhces_0002.png<>uid://dvowooiw1f7hi::::res://art/objects/dungeonAssets/foreleaves2.png<>uid://dhykqmaxccg8v::::res://art/objects/dungeonAssets/leaf3.png<>uid://b0ktwg35prrws::::res://art/objects/dungeonAssets/leaf1.png<>uid://cailkqgrtlkvu::::res://art/objects/dungeonAssets/leaf2.png<>uid://ra53udonybgf::::res://art/objects/dungeonAssets/branhces_0001.png<>uid://4sbw8qqp0iak::::res://art/objects/dungeonAssets/bg2.png<>uid://csededbek4fuo::::res://art/objects/dungeonAssets/bg3.png<>uid://k7rfkqfreqrn::::res://art/objects/dungeonAssets/bg4.png<>uid://di0gesvbp74va::::res://art/objects/dungeonAssets/bg5.png<>res://scenes/dungeonrooms/door.gd
 room_no2.tscn::PackedScene::4327636735694339048::1740524972::0::1::::<><>::uid://hov70gec1s63::::res://hopefullyfinalgridmap.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no3.tscn::PackedScene::3436773725910850933::1740524972::0::1::::<><>::uid://hov70gec1s63::::res://hopefullyfinalgridmap.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no4.tscn::PackedScene::8717469975631806535::1740524972::0::1::::<><>::uid://hov70gec1s63::::res://hopefullyfinalgridmap.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>res://scripts/dungeonrooms/room_manager.gd
 room_no5.tscn::PackedScene::7162232052781574355::1740570487::0::1::::<><>::uid://cnk0jatcmeg16::::res://hopefullyfinalgridmap.tres<>uid://b1bfg04b8ycqf::::res://scenes/player.tscn<>uid://b0cnxefxej1jl::::res://scenes/enemies/queenbee/queenbee.tscn
-room_no_1_change.gd::GDScript::-1::1740525476::0::1::::<>Node3D<>::
 ::res://scenes/dungeonrooms/components/::1740524972
 Coin.tscn::PackedScene::5892375234647797746::1740415568::0::1::::<><>::res://scripts/dungeonrooms/components/coin.gd<>uid://chrrtlvica5v6::::res://art/objects/inventoryItems/10Coin.png
 grass.tscn::PackedScene::2011776350139034703::1740524972::0::1::::<><>::uid://cvs8hcyfkuhlu::::res://art/objects/dungeonAssets/grass.png<>res://scripts/dungeonrooms/components/breakbox.gd
@@ -198,8 +199,8 @@ gridmapblocks.tscn::PackedScene::7673665611861411289::1740524972::0::1::::<><>::
 leaves.tscn::PackedScene::4712251861678373919::1740415568::0::1::::<><>::uid://rg5tcvecqvvc::::res://art/objects/dungeonAssets/leaves.png<>res://scripts/dungeonrooms/components/breakbox.gd
 pot.tscn::PackedScene::1702185445005228025::1740524972::0::1::::<><>::uid://ctbe5cmuqj8m6::::res://art/objects/dungeonAssets/pot.png<>res://scripts/dungeonrooms/components/breakbox.gd<>res://scripts/dungeonrooms/components/pot_break.gd
 twigs.tscn::PackedScene::8265255523399031424::1740497325::0::1::::<><>::uid://bunx6u6sugqe1::::res://art/objects/dungeonAssets/twigs.png<>res://scripts/dungeonrooms/components/breakbox.gd
-::res://scenes/enemies/::1740574216
-tick.tscn::PackedScene::7747493158734181930::1740574216::0::1::::<><>::uid://bq8is0k3btla6::::res://art/enemies/tick/tickjumping.png<>res://scripts/enemies/tick.gd<>res://scripts/util/health.gd<>uid://5pat1acbhd4k::::res://art/enemies/tick/tickidle.png<>uid://bosob2qw04tix::::res://art/enemies/tick/tickiwalking.png<>res://scripts/util/hitbox.gd<>res://scripts/util/hurtbox.gd
+::res://scenes/enemies/::1740578947
+tick.tscn::PackedScene::7747493158734181930::1740578947::0::1::::<><>::uid://bq8is0k3btla6::::res://art/enemies/tick/tickjumping.png<>res://scripts/enemies/tick.gd<>res://scripts/util/health.gd<>uid://5pat1acbhd4k::::res://art/enemies/tick/tickidle.png<>uid://bosob2qw04tix::::res://art/enemies/tick/tickiwalking.png<>res://scripts/util/hitbox.gd<>res://scripts/util/hurtbox.gd
 workerbee.gd::GDScript::-1::1740569587::0::1::::<>CharacterBody3D<>::
 ::res://scenes/enemies/ladybug/::1740524972
 ballofgust.tscn::PackedScene::8461325706952862126::1740524972::0::1::::<><>::res://scripts/enemies/ladybug/ladybug_gust.gd<>uid://blbpp0tqp6bmi::::res://art/enemies/ladybug/gust ball.png<>res://scripts/util/hitbox.gd
@@ -215,52 +216,52 @@ workerant.tscn::PackedScene::3300960720526686478::1740525807::0::1::::<><>::res:
 1coin.tres::Resource/ItemData::6110888727114460249::1740524972::0::1::::<><>::res://scenes/items(resource)/ItemData.gd<>uid://diqboa2pg0wto::::res://art/objects/inventoryItems/1Coin.png
 inventory.tscn::PackedScene::3840165028067277469::1740524972::0::1::::<><>::res://scripts/util/gui.gd
 ItemData.gd::GDScript::-1::1740415568::0::1::::ItemData<>Resource<>::
-::res://scenes/UI/::1740525264
+::res://scenes/UI/::1740578947
 damage_indicator.tscn::PackedScene::6710151662059374660::1740162926::0::1::::<><>::uid://cbclwdapxhy4i::::res://components/UI/mitochondria.ttf<>res://scripts/UI/damageIndicator.gd
 gameover.gd::GDScript::-1::1740524972::0::1::::<>CanvasLayer<>::
 gameover.tscn::PackedScene::5779971325368807958::1740524972::0::1::::<><>::res://scenes/UI/gameover.gd
-hud.tscn::PackedScene::1921276960890188877::1740525256::0::1::::<><>::res://scripts/UI/hearts.gd
+hud.tscn::PackedScene::1921276960890188877::1740578947::0::1::::<><>::res://scripts/UI/hearts.gd
 level_select.tscn::PackedScene::2475329078300090417::1740162926::0::1::::<><>::res://scripts/UI/level_select.gd
 menu.tscn::PackedScene::7903906278629593331::1740497325::0::1::::<><>::res://scripts/UI/Menu.gd<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
 options_menu.tscn::PackedScene::8316061357948044168::1740524972::0::1::::<><>::res://scripts/UI/options_menu.gd<>uid://bdkb4mb7t2ae2::::res://scenes/UI/volume_slider.tscn<>uid://lps2o1h86kxt::::res://Music/menu_music.wav
 textbox.tscn::PackedScene::4939999946912360673::1740524972::0::1::::<><>::res://scripts/UI/tbpositioning.gd<>res://scripts/UI/textbox.gd<>uid://di08uhinf4us1::::res://art/UI/textbox.png<>uid://dfcur1am0jjb4::::res://components/mitochondria.ttf
 volume_slider.tscn::PackedScene::2617744130469195883::1740162926::0::1::::<><>::res://scripts/UI/volume_slider.gd
-::res://scripts/::1740570487
+::res://scripts/::1740577172
 alchemist_ant.gd::GDScript::-1::1740525511::0::1::::<>CharacterBody3D<>::
 player.gd::GDScript::-1::1740570487::0::1::::<>CharacterBody3D<>::
 super_major.gd::GDScript::-1::1740525172::0::1::::<>CharacterBody3D<>::
-worker_ant.gd::GDScript::-1::1740568701::0::1::::<>CharacterBody3D<>::
-::res://scripts/dungeonrooms/::1740524972
-room_manager.gd::GDScript::-1::1740524972::0::1::::<>Area3D<>::
+worker_ant.gd::GDScript::-1::1740577172::0::1::::<>CharacterBody3D<>::
+::res://scripts/dungeonrooms/::1740579119
+room_manager.gd::GDScript::-1::1740579119::0::1::::<>Area3D<>::
 ::res://scripts/dungeonrooms/components/::1740525476
 breakbox.gd::GDScript::-1::1740525476::0::1::::BreakBox<>Area3D<>::
 coin.gd::GDScript::-1::1740415568::0::1::::<>Node3D<>::
 grass.gd::GDScript::-1::1740415568::0::1::::<>RefCounted<>::
 pot_break.gd::GDScript::-1::1740525476::0::1::::<>Node3D<>::
-::res://scripts/enemies/::1740574216
+::res://scripts/enemies/::1740578947
 tick.gd::GDScript::-1::1740569748::0::1::::<>CharacterBody3D<>::
-workerbee.tscn::PackedScene::5481677832722060311::1740574216::0::1::::<><>::res://scenes/enemies/workerbee.gd<>res://scripts/util/health.gd<>res://scripts/util/hitbox.gd<>res://scripts/util/hurtbox.gd<>uid://dogsclmbq5lvx::::res://art/enemies/bee/beesting.png<>uid://bf5bwpndbbrbq::::res://art/enemies/bee/beeidle.png
-::res://scripts/enemies/ladybug/::1740525476
-ladybug.gd::GDScript::-1::1740525476::0::1::::<>CharacterBody3D<>::
+workerbee.tscn::PackedScene::5481677832722060311::1740578947::0::1::::<><>::res://scenes/enemies/workerbee.gd<>res://scripts/util/health.gd<>res://scripts/util/hitbox.gd<>res://scripts/util/hurtbox.gd<>uid://dogsclmbq5lvx::::res://art/enemies/bee/beesting.png<>uid://bf5bwpndbbrbq::::res://art/enemies/bee/beeidle.png
+::res://scripts/enemies/ladybug/::1740579119
+ladybug.gd::GDScript::-1::1740579119::0::1::::<>CharacterBody3D<>::
 ladybug_gust.gd::GDScript::-1::1740162927::0::1::::<>RigidBody3D<>::
 ::res://scripts/enemies/queenbee/::1740570487
 QueenBee.gd::GDScript::-1::1740570487::0::1::::<>CharacterBody3D<>::
-::res://scripts/UI/::1740524972
+::res://scripts/UI/::1740578946
 damageIndicator.gd::GDScript::-1::1740162927::0::1::::<>Node3D<>::
-hearts.gd::GDScript::-1::1740524972::0::1::::<>GridContainer<>::
+hearts.gd::GDScript::-1::1740578946::0::1::::<>GridContainer<>::
 level_select.gd::GDScript::-1::1740162927::0::1::::<>Control<>::
 Menu.gd::GDScript::-1::1740162927::0::1::::<>Control<>::
 options_menu.gd::GDScript::-1::1740162927::0::1::::<>Control<>::
 tbpositioning.gd::GDScript::-1::1740524972::0::1::::<>Sprite3D<>::
 textbox.gd::GDScript::-1::1740524972::0::1::::<>MarginContainer<>::
 volume_slider.gd::GDScript::-1::1740162927::0::1::::<>HSlider<>::
-::res://scripts/util/::1740574265
+::res://scripts/util/::1740577746
 dialog_manager.gd::GDScript::-1::1740525476::0::1::::<>Node3D<>::
 gui.gd::GDScript::-1::1740524972::0::1::::<>CanvasLayer<>::
-health.gd::GDScript::-1::1740574265::0::1::::Health<>Node<>::
+health.gd::GDScript::-1::1740577746::0::1::::Health<>Node<>::
 hitbox.gd::GDScript::-1::1740570409::0::1::::HitBox<>Area3D<>::
 hurtbox.gd::GDScript::-1::1740570891::0::1::::HurtBox<>Area3D<>::
 npc.gd::GDScript::-1::1740570585::0::1::::<>CharacterBody3D<>::
-player_data.gd::GDScript::-1::1740569966::0::1::::<>Node<>::
+player_data.gd::GDScript::-1::1740577681::0::1::::<>Node<>::
 ::res://sfx/::1740570572
 MovingSound.wav::AudioStreamWAV::4614730444844646419::1740570487::1740570572::1::::<><>::

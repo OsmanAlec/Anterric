@@ -16,6 +16,7 @@ const lines: Array[String] = [
 
 func _ready() -> void:
 	InteractionLabel.hide()
+	$AnimatedSprite3D.play("idle")
 	DialogManager.finished_talking.connect(_on_finished_talking)
 
 func _unhandled_key_input(event):

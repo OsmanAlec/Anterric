@@ -9,3 +9,11 @@ res://scenes/UI/hud.tscn
 res://scripts/util/health.gd
 res://scripts/util/player_data.gd
 res://scripts/UI/hearts.gd
+res://scenes/home/ant_hill.tscn
+res://scripts/dungeonrooms/room_manager.gd
+res://scenes/home/area_3d.gd
+res://scripts/player.gd
+res://scenes/home/alchemist_ant.tscn
+res://scripts/alchemist_ant.gd
+res://scripts/util/dialog_manager.gd
+res://scripts/UI/textbox.gd
