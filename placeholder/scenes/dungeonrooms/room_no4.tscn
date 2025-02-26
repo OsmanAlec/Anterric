@@ -1,12 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://dwg2pseo63sk2"]
+[gd_scene load_steps=15 format=3 uid="uid://dwg2pseo63sk2"]
 
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_aua2x"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_sp2eo"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_y7m81"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_07lrf"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_oboct"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/RoomTrigger.gd" id="2_v7y44"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="3_byqma"]
-[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="3_eoy1l"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/enemy_spawner.gd" id="4_p1v84"]
+[ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="6_jgdir"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="7_ab5m0"]
+[ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="7_pknoq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ndte3"]
+size = Vector3(24, 0.371948, 20)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hyta"]
 size = Vector3(2.22632, 1, 1)
@@ -15,19 +22,44 @@ size = Vector3(2.22632, 1, 1)
 size = Vector3(2, 2, 1)
 
 [node name="RoomNo4" type="Node3D"]
+script = ExtResource("1_sp2eo")
+enemy_spawner = NodePath("Enemy_spawner")
+
+[node name="RoomTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.727374, 0, 3.81612)
+collision_layer = 256
+collision_mask = 256
+script = ExtResource("2_v7y44")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.11633, 0.83457, -6.87495)
+shape = SubResource("BoxShape3D_ndte3")
 
 [node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78571, 0, 0)
 script = ExtResource("1_y7m81")
 door = NodePath("../door/door")
 
-[node name="Ladybug" parent="Enemies" instance=ExtResource("2_07lrf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, 0)
-ballofgust_scene = ExtResource("3_eoy1l")
+[node name="Enemy_spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+script = ExtResource("4_p1v84")
+enemy_scenes = [ExtResource("2_07lrf"), ExtResource("6_jgdir"), ExtResource("7_pknoq")]
+enemies_parent = NodePath("../Enemies")
 
-[node name="Ladybug3" parent="Enemies" instance=ExtResource("2_07lrf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, -1.82519)
-ballofgust_scene = ExtResource("3_eoy1l")
+[node name="Marker3D" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.09823, 0, -9.23319)
+
+[node name="Marker3D2" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.08615, 0, -9.2148)
+
+[node name="Marker3D3" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.96278, 0, -5.42925)
+
+[node name="Marker3D4" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29365, 0, -1.18355)
+
+[node name="Marker3D5" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03405, 0, -1.38238)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -46,8 +78,8 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_oboct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904802, 0, 2.21415)
-collision_layer = 4
-collision_mask = 5
+collision_layer = 260
+collision_mask = 261
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2773, -0.066864, -14.7034)
@@ -67,8 +99,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 script = ExtResource("7_ab5m0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -1.5, -0.5, 3.34755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 shape = SubResource("BoxShape3D_5rerq")
 
+[connection signal="body_entered" from="RoomTrigger" to="." method="_on_room_trigger_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
