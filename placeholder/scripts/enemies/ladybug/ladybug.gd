@@ -213,6 +213,11 @@ func shoot_ball_of_gust(player) -> void:
 
 signal died  # Signal to notify when an enemy dies
 
+func die():
+	print("Enemy died!")
+	died.emit()  # Notify the Enemies node
+	queue_free()  # Remove the enemy from the scene
+
 # Called when the ladybug's health is depleted.
 func _on_health_health_depleted() -> void:
 	remove_from_group(LADYBUG_GROUP)  # Remove from the ladybug group.

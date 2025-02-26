@@ -1,7 +1,9 @@
+CollisionShape3D
+Area3D
+Marker3D
+Node3D
 AudioStreamPlayer
 AudioStreamPlayer3D
-Node3D
-CollisionShape3D
 AnimatedSprite3D
 CharacterBody3D
 Node
@@ -10,5 +12,3 @@ MeshInstance3D
 WorldEnvironment
 OmniLight3D
 DirectionalLight3D
-MultiMeshInstance3D
-Decal

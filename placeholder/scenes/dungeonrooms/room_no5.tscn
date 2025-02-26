@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpj5lwxglxbks"]
 
-[ext_resource type="MeshLibrary" uid="uid://hov70gec1s63" path="res://hopefullyfinalgridmap.tres" id="1_6wpnj"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_6wpnj"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_vom0q"]
 
 [node name="RoomNo5" type="Node3D"]
