@@ -1,7 +1,5 @@
 class_name Quest extends QuestManager
 
-@onready var quest_manager = get_tree().get
-
 #start quest
 func start_quest() -> void:
 	#make sure this quest is available to start

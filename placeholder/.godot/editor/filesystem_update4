@@ -1,10 +1,12 @@
-res://scenes/enemies/tick.tscn
+res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
 res://hopefullyfinalgridmap.tres
 res://scripts/worker_ant.gd
-res://scripts/enemies/tick.gd
 res://scenes/dungeonrooms/room_no1change.tscn
-res://scenes/player.tscn
-res://scripts/util/hurtbox.gd
+res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
+res://components/Quest/Quest.gd
 res://scenes/enemies/workerbee.gd
+res://scripts/enemies/tick.gd
+res://scripts/util/player_data.gd
+res://scripts/util/hitbox.gd

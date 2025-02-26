@@ -10,7 +10,6 @@ extends CharacterBody3D
 
 var canAttack = true
 var isAttacking = false
-var lastDir: int = -1
 
 func _physics_process(delta):
 	if player and global_position.distance_to(player.global_position) <= detection_range:
@@ -25,14 +24,12 @@ func move_towards_player(delta):
 	if global_position.distance_to(player.global_position) > attack_range:
 		var direction = (player.global_position - global_position).normalized()
 		velocity = direction * speed
-		lastDir = direction.x
-		print(direction)
 		if not isAttacking:
 			anim.play("fly")
-		if lastDir < 1:
-			anim.flip_h = true
-		else:
+		if direction.x < 0:
 			anim.flip_h = false
+		else:
+			anim.flip_h = true
 		move_and_slide()
 	else:
 		velocity = Vector3.ZERO
@@ -49,11 +46,18 @@ func attack():
 	$HitBox/CollisionShape3D.disabled = false
 	await get_tree().create_timer(0.5).timeout
 	$HitBox/CollisionShape3D.disabled = true
-	$attack_cooldown.start()
 	isAttacking = false
+
 
 func _on_attack_cooldown_timeout() -> void:
 	canAttack = true
 
 func _on_health_health_depleted() -> void:
 	queue_free()
+
+
+func _on_animations_animation_finished() -> void:
+	if anim.animation == "attack":
+		$attack_cooldown.start()
+		anim.play("fly")
+		

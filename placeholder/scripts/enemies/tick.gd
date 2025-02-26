@@ -13,8 +13,7 @@ var isAttacking = false
 
 func _physics_process(delta):
 	if player and global_position.distance_to(player.global_position) <= detection_range:
-		if not isAttacking:
-			move_towards_player(delta)
+		move_towards_player(delta)
 		check_attack()
 	else:
 		if not isAttacking:
@@ -26,6 +25,10 @@ func move_towards_player(delta):
 		velocity = direction * speed
 		if not isAttacking:
 			anim.play("walk")
+		if direction.x < 0:
+			anim.flip_h = false
+		else:
+			anim.flip_h = true
 		move_and_slide()
 	else:
 		velocity = Vector3.ZERO
@@ -42,11 +45,17 @@ func attack():
 	$HitBox/CollisionShape3D.disabled = false
 	await get_tree().create_timer(0.5).timeout
 	$HitBox/CollisionShape3D.disabled = true
-	$attack_cooldown.start()
 	isAttacking = false
+
 
 func _on_attack_cooldown_timeout() -> void:
 	canAttack = true
 
 func _on_health_health_depleted() -> void:
 	queue_free()
+
+func _on_animations_animation_finished() -> void:
+	if anim.animation == "attack":
+		$attack_cooldown.start()
+		anim.play("idle")
+		
