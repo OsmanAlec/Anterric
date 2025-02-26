@@ -40,12 +40,12 @@ _data = {
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mwfq2"]
 
-[sub_resource type="Sky" id="Sky_x12d0"]
+[sub_resource type="Sky" id="Sky_5eugw"]
 sky_material = SubResource("PhysicalSkyMaterial_mwfq2")
 
 [sub_resource type="Environment" id="Environment_t5jpx"]
 background_mode = 2
-sky = SubResource("Sky_x12d0")
+sky = SubResource("Sky_5eugw")
 ambient_light_source = 2
 ambient_light_color = Color(0.87451, 0.941176, 0.745098, 1)
 glow_enabled = true
@@ -55,16 +55,16 @@ fog_height_density = 0.8
 volumetric_fog_albedo = Color(0.897271, 0.923325, 0.828499, 1)
 volumetric_fog_emission = Color(0.87451, 0.941176, 0.745098, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yicrq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k528y"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("4_4o7dv")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_cp468"]
-material = SubResource("StandardMaterial3D_yicrq")
+material = SubResource("StandardMaterial3D_k528y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1omj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o3xm"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("5_nlsd8")
@@ -73,18 +73,18 @@ uv1_scale = Vector3(5, 1, 1)
 disable_receive_shadows = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_jv6oi"]
-material = SubResource("StandardMaterial3D_m1omj")
+material = SubResource("StandardMaterial3D_2o3xm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8byrm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hp7l"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("6_ek6x4")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_dwurr"]
-material = SubResource("StandardMaterial3D_8byrm")
+material = SubResource("StandardMaterial3D_6hp7l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3bjd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmvjr"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("7_vty2l")
@@ -92,67 +92,67 @@ uv1_scale = Vector3(5, 1, 1)
 uv2_triplanar = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_uye6l"]
-material = SubResource("StandardMaterial3D_g3bjd")
+material = SubResource("StandardMaterial3D_xmvjr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efpne"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovj8u"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("8_xd7um")
 
 [sub_resource type="QuadMesh" id="QuadMesh_aoo7v"]
-material = SubResource("StandardMaterial3D_efpne")
+material = SubResource("StandardMaterial3D_ovj8u")
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcn1d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0hup"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("9_5t0e7")
 
 [sub_resource type="QuadMesh" id="QuadMesh_4be5m"]
-material = SubResource("StandardMaterial3D_qcn1d")
+material = SubResource("StandardMaterial3D_g0hup")
 flip_faces = true
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5ofe"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi1mw"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("10_abuow")
 
 [sub_resource type="QuadMesh" id="QuadMesh_6fvxa"]
-material = SubResource("StandardMaterial3D_w5ofe")
+material = SubResource("StandardMaterial3D_pi1mw")
 size = Vector2(0.815, 0.415)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3ofn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21nku"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("11_hlpc4")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ed1f6"]
-material = SubResource("StandardMaterial3D_g3ofn")
+material = SubResource("StandardMaterial3D_21nku")
 size = Vector2(0.36, 0.228)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkgqm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qopxa"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("12_fqbbh")
 
 [sub_resource type="QuadMesh" id="QuadMesh_l1oej"]
-material = SubResource("StandardMaterial3D_tkgqm")
+material = SubResource("StandardMaterial3D_qopxa")
 size = Vector2(0.41, 0.325)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5h6n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j25bv"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("13_woxl8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_88wfn"]
-material = SubResource("StandardMaterial3D_h5h6n")
+material = SubResource("StandardMaterial3D_j25bv")
 size = Vector2(0.43, 0.255)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
@@ -179,6 +179,7 @@ script = ExtResource("2_cnocm")
 door = NodePath("../door/door")
 
 [node name="Enemy_spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 script = ExtResource("3_1sp66")
 enemy_scenes = [ExtResource("4_imkif"), ExtResource("6_eyipp"), ExtResource("7_5yqcl")]
 enemies_parent = NodePath("../Enemies")
@@ -239,12 +240,12 @@ mesh = SubResource("QuadMesh_uye6l")
 skeleton = NodePath("../..")
 
 [node name="Branch" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.9521, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -3.46479, -0.158536, -3.55321)
 mesh = SubResource("QuadMesh_aoo7v")
 skeleton = NodePath("../..")
 
 [node name="Branch2" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(-0.833946, -0.542859, 0.0991829, -0.47, 0.604508, -0.643172, 0.289195, -0.582987, -0.759271, -2.49026, 0.745816, 1.06865)
+transform = Transform3D(-0.833946, -0.542859, 0.0991829, -0.47, 0.604508, -0.643172, 0.289195, -0.582987, -0.759271, 10.7834, 0.745816, 1.06865)
 mesh = SubResource("QuadMesh_4be5m")
 skeleton = NodePath("../..")
 
