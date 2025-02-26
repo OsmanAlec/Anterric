@@ -12,4 +12,3 @@ Node
 CSGBox3D
 MeshInstance3D
 WorldEnvironment
-OmniLight3D
