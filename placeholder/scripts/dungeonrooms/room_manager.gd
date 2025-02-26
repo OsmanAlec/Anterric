@@ -1,11 +1,10 @@
 extends Area3D
-
 static var counter = 0
 var entered = false 
 
 func _on_body_entered(body: PhysicsBody3D) -> void:
 	entered = true
-
+	
 func _on_body_exited(body: PhysicsBody3D) -> void:
 	entered = false 
 	

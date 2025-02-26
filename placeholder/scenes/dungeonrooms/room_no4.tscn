@@ -1,13 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwg2pseo63sk2"]
+[gd_scene load_steps=10 format=3 uid="uid://dwg2pseo63sk2"]
 
-[ext_resource type="MeshLibrary" uid="uid://hov70gec1s63" path="res://hopefullyfinalgridmap.tres" id="1_aua2x"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_aua2x"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_y7m81"]
+[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_07lrf"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_oboct"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="3_byqma"]
+[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="3_eoy1l"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="7_ab5m0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0hyta"]
 size = Vector3(2.22632, 1, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5rerq"]
+size = Vector3(2, 2, 1)
+
 [node name="RoomNo4" type="Node3D"]
+
+[node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.78571, 0, 0)
+script = ExtResource("1_y7m81")
+door = NodePath("../door/door")
+
+[node name="Ladybug" parent="Enemies" instance=ExtResource("2_07lrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, 0)
+ballofgust_scene = ExtResource("3_eoy1l")
+
+[node name="Ladybug3" parent="Enemies" instance=ExtResource("2_07lrf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.362, 0, -1.82519)
+ballofgust_scene = ExtResource("3_eoy1l")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -15,6 +35,7 @@ light_color = Color(0.999999, 0.997062, 0.746328, 1)
 shadow_enabled = true
 
 [node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 mesh_library = ExtResource("1_aua2x")
 cell_size = Vector3(0.5, 0.5, 0.5)
 cell_scale = 0.5
@@ -24,12 +45,12 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_oboct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904802, 1, 2.21415)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.904802, 0, 2.21415)
 collision_layer = 4
 collision_mask = 5
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2773, 0.933136, -14.7034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2773, -0.066864, -14.7034)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("3_byqma")
@@ -37,6 +58,17 @@ script = ExtResource("3_byqma")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1448, 0.537293, 2.81927)
 shape = SubResource("BoxShape3D_0hyta")
+
+[node name="door" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -10)
+
+[node name="door" type="StaticBody3D" parent="door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+script = ExtResource("7_ab5m0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.3, -1.5, -0.5, 3.34755)
+shape = SubResource("BoxShape3D_5rerq")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

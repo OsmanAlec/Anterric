@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dabo6ekt0hych"]
+[gd_scene load_steps=3 format=3 uid="uid://dpj5lwxglxbks"]
 
-[ext_resource type="MeshLibrary" uid="uid://cnk0jatcmeg16" path="res://hopefullyfinalgridmap.tres" id="1_6wpnj"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_6wpnj"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_vom0q"]
-[ext_resource type="PackedScene" uid="uid://b0cnxefxej1jl" path="res://scenes/enemies/queenbee/queenbee.tscn" id="3_21isf"]
 
 [node name="RoomNo5" type="Node3D"]
 
@@ -20,9 +19,6 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_vom0q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4147, 1, 5.79532)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.585326, 1, 3.79532)
 collision_layer = 4
 collision_mask = 5
-
-[node name="QueenBee" parent="." instance=ExtResource("3_21isf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, 3)

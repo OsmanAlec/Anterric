@@ -1,6 +1,4 @@
-res://components/Quest
 res://scripts
-res://art/characters
 res://music
 res://scenes
 res://components/UI
@@ -13,6 +11,7 @@ res://art/enemies/ladybug
 res://scenes/dungeonrooms/components
 res://art/objects/dungeonAssets
 res://scenes/UI
+res://art/characters
 res://
 C:/Program Files/Blender Foundation/Blender 4.3
 res://art/tilesets
