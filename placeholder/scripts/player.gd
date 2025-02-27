@@ -76,7 +76,6 @@ func player_movement(delta: float):
 # Called every physics frame
 func _physics_process(delta: float):
 	
-	
 	if !canMove:
 		if state == "Stunned":
 			anim_tree.get("parameters/playback").travel("Standing")
@@ -100,7 +99,7 @@ func start_attack():
 	canAttack = false
 	anim_tree.get("parameters/playback").travel("Attack")
 	anim_tree.set("parameters/Attack/BlendSpace2D/blend_position", Vector2(lastDir.x, velocity.length()))
-	if lastDir.x < 0:
+	if lastDir.x <= 0:
 		$HitLeft/CollisionShape3D.disabled = false
 	else:
 		$HitRight/CollisionShape3D.disabled = false
@@ -119,9 +118,10 @@ func _on_dash_again_timer_timeout() -> void:
 	canDash = true
 	
 
+
 # Reset attack state after attack animation ends
-func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
-	if "Attack" in anim_name:
+func _on_animation_tree_animation_started(anim_name: StringName) -> void:
+	if "Attack" not in anim_name:
 		currentAttack = false
 		$HitLeft/CollisionShape3D.disabled = true
 		$HitRight/CollisionShape3D.disabled = true
@@ -129,6 +129,7 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 # Reset after attack timer ends	
 func _on_attack_timer_timeout() -> void:
 	canAttack = true
+	currentAttack = false
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
 		

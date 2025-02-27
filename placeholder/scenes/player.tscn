@@ -858,11 +858,11 @@ nodes/TimeScale/position = Vector2(360, 90)
 nodes/output/position = Vector2(540, 110)
 node_connections = [&"TimeScale", 0, &"BlendSpace1D", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0o46"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ou2v5"]
 switch_mode = 2
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8clqr"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_33yxl"]
 switch_mode = 2
 advance_mode = 2
 
@@ -876,7 +876,7 @@ states/Standing/position = Vector2(400.638, 185.75)
 states/Start/position = Vector2(203.5, 100.25)
 states/Walking/node = SubResource("AnimationNodeBlendTree_xcbvr")
 states/Walking/position = Vector2(582.638, 185.75)
-transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_n0o46"), "Dashing", "Walking", SubResource("AnimationNodeStateMachineTransition_8clqr")]
+transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_ou2v5"), "Dashing", "Walking", SubResource("AnimationNodeStateMachineTransition_33yxl")]
 graph_offset = Vector2(-27.4962, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebpkw"]
@@ -1006,6 +1006,8 @@ stream = ExtResource("17_3aef1")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="animation_player_changed" from="AnimationTree" to="." method="_on_animation_tree_animation_player_changed"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
