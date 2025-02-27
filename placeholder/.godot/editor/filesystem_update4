@@ -17,3 +17,4 @@ res://scenes/enemies/ladybug/ladybug.tscn
 res://inventory/items/bomb.tscn
 res://scenes/dungeonrooms/room_no2.tscn
 res://scripts/player.gd
+res://scripts/util/dialog_manager.gd
