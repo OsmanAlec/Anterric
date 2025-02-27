@@ -20,9 +20,11 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_vom0q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4147, 1, 5.79532)
-collision_layer = 4
-collision_mask = 5
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5853, 2, 5.79532)
+collision_layer = 1028
+collision_mask = 1029
 
 [node name="QueenBee" parent="." instance=ExtResource("3_21isf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, 3)
+collision_layer = 1024
+collision_mask = 1024

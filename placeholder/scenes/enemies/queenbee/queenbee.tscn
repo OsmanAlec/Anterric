@@ -252,7 +252,9 @@ wait_time = 5.0
 autostart = true
 
 [node name="StunArea" type="Area3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.26, 0, 0, 0, 0.26, 0, 0, 0, 0.26, 0, 0, 0)
+collision_layer = 1024
+collision_mask = 1024
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StunArea"]
 shape = SubResource("SphereShape3D_xifky")
@@ -265,6 +267,10 @@ health = NodePath("../Health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
 shape = SubResource("BoxShape3D_vjldp")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -2, 0)
+target_position = Vector3(0, -10, 0)
 
 [connection signal="animation_finished" from="Animations" to="." method="_on_animations_animation_finished"]
 [connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
