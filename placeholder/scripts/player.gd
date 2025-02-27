@@ -27,10 +27,10 @@ func _ready() -> void:
 	
 	var tween = get_tree().create_tween()
 	# Start with the player invisible and tiny
-	scale = Vector3(0, 0, 0)  # Make the player tiny
+	scale = Vector3(5, 5, 5)  # Make the player tiny
 	
 	# Smoothly scale up the player and move them into position
-	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.4).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.4).set_ease(Tween.EASE_OUT)
 	
 	
 
@@ -108,9 +108,13 @@ func start_attack():
 # Dash ability cooldown
 func _on_dash_timer_timeout() -> void:
 	dashing = false
+	$HitLeft/CollisionShape3D.disabled = true
+	$HitRight/CollisionShape3D.disabled = true
+		
 
 func _on_dash_again_timer_timeout() -> void:
 	canDash = true
+	
 
 # Reset attack state after attack animation ends
 func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
@@ -122,6 +126,9 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 # Reset after attack timer ends	
 func _on_attack_timer_timeout() -> void:
 	canAttack = true
+	$HitLeft/CollisionShape3D.disabled = true
+	$HitRight/CollisionShape3D.disabled = true
+		
 
 # Handle player death
 func _on_health_health_depleted() -> void:
