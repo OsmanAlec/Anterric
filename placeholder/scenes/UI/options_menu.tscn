@@ -39,5 +39,5 @@ autoplay = true
 bus = &"menu_music"
 playback_type = 1
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_play_pressed"]

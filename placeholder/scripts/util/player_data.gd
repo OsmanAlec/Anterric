@@ -1,6 +1,6 @@
 extends Node
 
-var max_health: int = 6
+var max_health: int = 20
 var current_health: int = max_health
 var applied_poison: int = 0
 

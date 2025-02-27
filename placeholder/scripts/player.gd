@@ -16,15 +16,25 @@ var lastDir: Vector3
 # Stun Mechanism
 var canMove: bool = true
 
-
+@onready var sfx_walk = $AudioStreamPlayer3D
 @onready var anim_tree = get_node("AnimationTree")
 @export var inv:  maininv
+ 
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
+	
+	var tween = get_tree().create_tween()
+	# Start with the player invisible and tiny
+	scale = Vector3(5, 5, 5)  # Make the player tiny
+	
+	# Smoothly scale up the player and move them into position
+	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.4).set_ease(Tween.EASE_OUT)
+	
+	
 
-# Handles player movement logic
+	# Handles player movement logic
 func player_movement(delta: float):
 	# Determine movement direction
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -37,9 +47,11 @@ func player_movement(delta: float):
 		canDash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
+		GameManager.sfx_dash.play()
 	
 	# If player is moving
 	if direction:
+		
 		lastDir = direction# Store latest movement direction
 		if dashing:
 			state = "Dashing"
@@ -87,7 +99,7 @@ func start_attack():
 	canAttack = false
 	anim_tree.get("parameters/playback").travel("Attack")
 	anim_tree.set("parameters/Attack/BlendSpace2D/blend_position", Vector2(lastDir.x, velocity.length()))
-	if lastDir.x < 0:
+	if lastDir.x <= 0:
 		$HitLeft/CollisionShape3D.disabled = false
 	else:
 		$HitRight/CollisionShape3D.disabled = false
@@ -98,13 +110,18 @@ func start_attack():
 # Dash ability cooldown
 func _on_dash_timer_timeout() -> void:
 	dashing = false
+	$HitLeft/CollisionShape3D.disabled = true
+	$HitRight/CollisionShape3D.disabled = true
+		
 
 func _on_dash_again_timer_timeout() -> void:
 	canDash = true
+	
+
 
 # Reset attack state after attack animation ends
-func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
-	if "Attack" in anim_name:
+func _on_animation_tree_animation_started(anim_name: StringName) -> void:
+	if "Attack" not in anim_name:
 		currentAttack = false
 		$HitLeft/CollisionShape3D.disabled = true
 		$HitRight/CollisionShape3D.disabled = true
@@ -112,6 +129,10 @@ func _on_animation_tree_animation_finished(anim_name: StringName) -> void:
 # Reset after attack timer ends	
 func _on_attack_timer_timeout() -> void:
 	canAttack = true
+	currentAttack = false
+	$HitLeft/CollisionShape3D.disabled = true
+	$HitRight/CollisionShape3D.disabled = true
+		
 
 # Handle player death
 func _on_health_health_depleted() -> void:
@@ -124,3 +145,4 @@ func apply_stun(duration: float) -> void:
 
 func collect(item):
 	inv.insert(item)
+	

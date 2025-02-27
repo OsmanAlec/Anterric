@@ -17,6 +17,7 @@
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="11_tf5i0"]
 [ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="12_e4s7a"]
 [ext_resource type="PackedScene" uid="uid://cgbetvcslu26" path="res://inventory/inv2/inventoryUI.tscn" id="14_tbmsb"]
+[ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="17_3aef1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.61618, 0.694092, 0.310915)
@@ -736,6 +737,17 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Animations/..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00efu"]
 _data = {
@@ -847,11 +859,11 @@ nodes/TimeScale/position = Vector2(360, 90)
 nodes/output/position = Vector2(540, 110)
 node_connections = [&"TimeScale", 0, &"BlendSpace1D", &"output", 0, &"TimeScale"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n0o46"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ou2v5"]
 switch_mode = 2
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8clqr"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_33yxl"]
 switch_mode = 2
 advance_mode = 2
 
@@ -865,7 +877,7 @@ states/Standing/position = Vector2(400.638, 185.75)
 states/Start/position = Vector2(203.5, 100.25)
 states/Walking/node = SubResource("AnimationNodeBlendTree_xcbvr")
 states/Walking/position = Vector2(582.638, 185.75)
-transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_n0o46"), "Dashing", "Walking", SubResource("AnimationNodeStateMachineTransition_8clqr")]
+transitions = ["Attack", "Standing", SubResource("AnimationNodeStateMachineTransition_ou2v5"), "Dashing", "Walking", SubResource("AnimationNodeStateMachineTransition_33yxl")]
 graph_offset = Vector2(-27.4962, 0)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ebpkw"]
@@ -991,8 +1003,13 @@ cast_shadow = 0
 ignore_occlusion_culling = true
 mesh = SubResource("CylinderMesh_ymga0")
 
+[node name="Hitsound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("17_3aef1")
+
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
+[connection signal="animation_player_changed" from="AnimationTree" to="." method="_on_animation_tree_animation_player_changed"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]

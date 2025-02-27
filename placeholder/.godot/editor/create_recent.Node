@@ -1,3 +1,8 @@
+MeshInstance3D
+AnimationPlayer
+AudioStreamPlayer3D
+GridMap
+RigidBody3D
 GridContainer
 DirectionalLight3D
 ShaderGlobalsOverride
@@ -7,9 +12,3 @@ Health
 CollisionShape3D
 HurtBox
 HitBox
-AudioStreamPlayer
-AudioStreamPlayer3D
-Node3D
-AnimatedSprite3D
-CharacterBody3D
-Node

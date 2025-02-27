@@ -1,23 +1,31 @@
-[gd_scene load_steps=45 format=4 uid="uid://cfomctla63m1v"]
+[gd_scene load_steps=51 format=4 uid="uid://txoympwk61ot"]
 
-[ext_resource type="Script" path="res://scenes/dungeonrooms/room_no_1_change.gd" id="1_geasy"]
-[ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_ni8h7"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/RoomTrigger.gd" id="2_jojtt"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/enemy_spawner.gd" id="3_1sp66"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
+[ext_resource type="Texture2D" uid="uid://4sbw8qqp0iak" path="res://art/objects/dungeonAssets/bg2.png" id="4_4o7dv"]
+[ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="4_imkif"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
-[ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="5_wgnrd"]
-[ext_resource type="Texture2D" uid="uid://dase8eyjsqn73" path="res://art/objects/dungeonAssets/branhces_0002.png" id="6_68rwo"]
-[ext_resource type="Texture2D" uid="uid://dvowooiw1f7hi" path="res://art/objects/dungeonAssets/foreleaves2.png" id="7_6phln"]
-[ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="8_ai6ns"]
-[ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="9_a4tny"]
-[ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="10_334wo"]
-[ext_resource type="Texture2D" uid="uid://ra53udonybgf" path="res://art/objects/dungeonAssets/branhces_0001.png" id="11_2lbpu"]
-[ext_resource type="Texture2D" uid="uid://4sbw8qqp0iak" path="res://art/objects/dungeonAssets/bg2.png" id="13_yhpu4"]
-[ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="14_ggxmr"]
-[ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="15_o0ern"]
-[ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="16_qt0mw"]
-[ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_772ni"]
+[ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="5_nlsd8"]
+[ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="6_ek6x4"]
+[ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="6_eyipp"]
+[ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="7_5yqcl"]
+[ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="7_vty2l"]
+[ext_resource type="Texture2D" uid="uid://ra53udonybgf" path="res://art/objects/dungeonAssets/branhces_0001.png" id="8_xd7um"]
+[ext_resource type="Texture2D" uid="uid://dase8eyjsqn73" path="res://art/objects/dungeonAssets/branhces_0002.png" id="9_5t0e7"]
+[ext_resource type="Texture2D" uid="uid://dvowooiw1f7hi" path="res://art/objects/dungeonAssets/foreleaves2.png" id="10_abuow"]
+[ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="11_hlpc4"]
+[ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="12_fqbbh"]
+[ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="13_woxl8"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="14_w0aqb"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
+[ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yluk7"]
+size = Vector3(13.4885, 1, 12.2496)
 
 [sub_resource type="VoxelGIData" id="VoxelGIData_bsxh7"]
 _data = {
@@ -32,12 +40,12 @@ _data = {
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_mwfq2"]
 
-[sub_resource type="Sky" id="Sky_x12d0"]
+[sub_resource type="Sky" id="Sky_5eugw"]
 sky_material = SubResource("PhysicalSkyMaterial_mwfq2")
 
 [sub_resource type="Environment" id="Environment_t5jpx"]
 background_mode = 2
-sky = SubResource("Sky_x12d0")
+sky = SubResource("Sky_5eugw")
 ambient_light_source = 2
 ambient_light_color = Color(0.87451, 0.941176, 0.745098, 1)
 glow_enabled = true
@@ -47,104 +55,104 @@ fog_height_density = 0.8
 volumetric_fog_albedo = Color(0.897271, 0.923325, 0.828499, 1)
 volumetric_fog_emission = Color(0.87451, 0.941176, 0.745098, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yicrq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k528y"]
 transparency = 4
 shading_mode = 0
-albedo_texture = ExtResource("13_yhpu4")
+albedo_texture = ExtResource("4_4o7dv")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_cp468"]
-material = SubResource("StandardMaterial3D_yicrq")
+material = SubResource("StandardMaterial3D_k528y")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1omj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o3xm"]
 transparency = 4
 shading_mode = 0
-albedo_texture = ExtResource("14_ggxmr")
+albedo_texture = ExtResource("5_nlsd8")
 heightmap_scale = -16.0
 uv1_scale = Vector3(5, 1, 1)
 disable_receive_shadows = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_jv6oi"]
-material = SubResource("StandardMaterial3D_m1omj")
+material = SubResource("StandardMaterial3D_2o3xm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8byrm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6hp7l"]
 transparency = 4
 shading_mode = 0
-albedo_texture = ExtResource("15_o0ern")
+albedo_texture = ExtResource("6_ek6x4")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_dwurr"]
-material = SubResource("StandardMaterial3D_8byrm")
+material = SubResource("StandardMaterial3D_6hp7l")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3bjd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xmvjr"]
 transparency = 4
 shading_mode = 0
-albedo_texture = ExtResource("16_qt0mw")
+albedo_texture = ExtResource("7_vty2l")
 uv1_scale = Vector3(5, 1, 1)
 uv2_triplanar = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_uye6l"]
-material = SubResource("StandardMaterial3D_g3bjd")
+material = SubResource("StandardMaterial3D_xmvjr")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efpne"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovj8u"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("11_2lbpu")
+albedo_texture = ExtResource("8_xd7um")
 
 [sub_resource type="QuadMesh" id="QuadMesh_aoo7v"]
-material = SubResource("StandardMaterial3D_efpne")
+material = SubResource("StandardMaterial3D_ovj8u")
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcn1d"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0hup"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("6_68rwo")
+albedo_texture = ExtResource("9_5t0e7")
 
 [sub_resource type="QuadMesh" id="QuadMesh_4be5m"]
-material = SubResource("StandardMaterial3D_qcn1d")
+material = SubResource("StandardMaterial3D_g0hup")
 flip_faces = true
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5ofe"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pi1mw"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("7_6phln")
+albedo_texture = ExtResource("10_abuow")
 
 [sub_resource type="QuadMesh" id="QuadMesh_6fvxa"]
-material = SubResource("StandardMaterial3D_w5ofe")
+material = SubResource("StandardMaterial3D_pi1mw")
 size = Vector2(0.815, 0.415)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3ofn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_21nku"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("8_ai6ns")
+albedo_texture = ExtResource("11_hlpc4")
 
 [sub_resource type="QuadMesh" id="QuadMesh_ed1f6"]
-material = SubResource("StandardMaterial3D_g3ofn")
+material = SubResource("StandardMaterial3D_21nku")
 size = Vector2(0.36, 0.228)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkgqm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qopxa"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("9_a4tny")
+albedo_texture = ExtResource("12_fqbbh")
 
 [sub_resource type="QuadMesh" id="QuadMesh_l1oej"]
-material = SubResource("StandardMaterial3D_tkgqm")
+material = SubResource("StandardMaterial3D_qopxa")
 size = Vector2(0.41, 0.325)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5h6n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j25bv"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
-albedo_texture = ExtResource("10_334wo")
+albedo_texture = ExtResource("13_woxl8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_88wfn"]
-material = SubResource("StandardMaterial3D_h5h6n")
+material = SubResource("StandardMaterial3D_j25bv")
 size = Vector2(0.43, 0.255)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
@@ -153,14 +161,43 @@ size = Vector3(2.14545, 1.37598, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_prnt8"]
 
 [node name="room_no1" type="Node3D"]
-script = ExtResource("1_geasy")
+script = ExtResource("1_twj2x")
+enemy_spawner = NodePath("Enemy_spawner")
+
+[node name="RoomTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616147, 0, 0.985204)
+collision_layer = 256
+collision_mask = 256
+script = ExtResource("2_jojtt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RoomTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12341, 0, -3.59634)
+shape = SubResource("BoxShape3D_yluk7")
 
 [node name="Enemies" type="Node3D" parent="." node_paths=PackedStringArray("door") groups=["enemies"]]
-script = ExtResource("1_ni8h7")
+script = ExtResource("2_cnocm")
 door = NodePath("../door/door")
 
-[node name="tick" parent="Enemies" instance=ExtResource("5_wgnrd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7394, 0.220654, 0)
+[node name="Enemy_spawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+script = ExtResource("3_1sp66")
+enemy_scenes = [ExtResource("4_imkif"), ExtResource("6_eyipp"), ExtResource("7_5yqcl")]
+enemies_parent = NodePath("../Enemies")
+
+[node name="Marker3D" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.54026, 0, 0.766806)
+
+[node name="Marker3D2" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.43864, 0, -2.2148)
+
+[node name="Marker3D3" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33464, 0, -2.42925)
+
+[node name="Marker3D4" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06741, 0, 0.816446)
+
+[node name="Marker3D5" type="Marker3D" parent="Enemy_spawner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.63649)
 
 [node name="Environment" type="Node" parent="."]
 
@@ -203,12 +240,12 @@ mesh = SubResource("QuadMesh_uye6l")
 skeleton = NodePath("../..")
 
 [node name="Branch" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 10.9521, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -3.46479, -0.158536, -3.55321)
 mesh = SubResource("QuadMesh_aoo7v")
 skeleton = NodePath("../..")
 
 [node name="Branch2" type="MeshInstance3D" parent="Environment"]
-transform = Transform3D(-0.833946, -0.542859, 0.0991829, -0.47, 0.604508, -0.643172, 0.289195, -0.582987, -0.759271, -2.49026, 0.745816, 1.06865)
+transform = Transform3D(-0.833946, -0.542859, 0.0991829, -0.47, 0.604508, -0.643172, 0.289195, -0.582987, -0.759271, 10.7834, 0.745816, 1.06865)
 mesh = SubResource("QuadMesh_4be5m")
 skeleton = NodePath("../..")
 
@@ -260,7 +297,7 @@ mesh = SubResource("QuadMesh_88wfn")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
-mesh_library = ExtResource("1_oofpg")
+mesh_library = ExtResource("14_w0aqb")
 cell_size = Vector3(0.5, 0.5, 0.5)
 cell_octant_size = 2
 cell_scale = 0.5
@@ -274,8 +311,8 @@ metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_8q2t2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.624, 0, 0.832)
-collision_layer = 4
-collision_mask = 5
+collision_layer = 260
+collision_mask = 261
 
 [node name="grass" parent="." instance=ExtResource("5_7j8lv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
@@ -294,10 +331,14 @@ shape = SubResource("BoxShape3D_kikyr")
 
 [node name="door" type="StaticBody3D" parent="door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
-script = ExtResource("18_772ni")
+script = ExtResource("18_m1w6w")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_prnt8")
 
+[node name="bomb" parent="." instance=ExtResource("21_53axm")]
+
+[connection signal="body_entered" from="RoomTrigger" to="." method="_on_room_trigger_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]

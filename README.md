@@ -12,10 +12,10 @@ Class Group: C
 Github: https://github.com/OsmanAlec
 
 
-Name:
-Student Number: 
-Class Group:
-Github: 
+Name: Oskar Sadowski
+Student Number: C23341983
+Class Group: D
+Github: https://github.com/OzilooG
 
 
 Name:

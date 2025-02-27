@@ -5,4 +5,4 @@ func open():
 	print("door openeing!!!")
 	collision_layer = 0  
 	collision_mask = 0  # Prevents interactions with other bodies
-	visible = false  # Optionally hide the door
+	$"branch door/AnimationPlayer".current_animation = "open"
