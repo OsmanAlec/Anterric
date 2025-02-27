@@ -1,0 +1,7 @@
+res://scenes/enemies/queenbee/queenbee.tscn
+res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
+res://scripts/worker_ant.gd
+res://hopefullyfinalgridmap.tres
+res://scenes/dungeonrooms/room_no5.tscn
+res://scripts/enemies/queenbee/QueenBee.gd

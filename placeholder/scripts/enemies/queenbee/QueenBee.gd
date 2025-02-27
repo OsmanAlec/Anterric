@@ -33,7 +33,7 @@ func get_ground_level() -> float:
 		return ground_y
 	else:
 		print("WARNING: No ground detected! Using fallback ground level.")
-		return 0.5  # Default ground level if no collision is detected
+		return 1.5  # Default ground level if no collision is detected
 
 # Called when the StompTimer times out 
 func _on_stomp_timer_timeout() -> void:
