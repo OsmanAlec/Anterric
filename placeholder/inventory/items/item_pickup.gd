@@ -1,9 +1,14 @@
 extends Area3D
 
+signal item_pickedup
+
 @export var item: invitem2
+@onready var player = get_tree().get_first_node_in_group("Player")
 
-var bomb = preload("res://inventory/items/bomb.tscn")
-var player = null
 
-func _on_area_entered(area: Area3D) -> void:
-	player.collect(item)
+func _on_body_entered(body: Node3D) -> void:
+	print("hi")
+	if player == body:
+		print("in")
+		item_pickedup.emit()
+		player.collect(item)
