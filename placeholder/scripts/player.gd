@@ -74,6 +74,7 @@ func player_movement(delta: float):
 # Called every physics frame
 func _physics_process(delta: float):
 	
+	
 	if !canMove:
 		if state == "Stunned":
 			anim_tree.get("parameters/playback").travel("Standing")

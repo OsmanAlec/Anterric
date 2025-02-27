@@ -1,7 +1,7 @@
 [gd_scene load_steps=49 format=4 uid="uid://bo72fqjykm7m4"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_fj6qh"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_jsb75"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_jsb75"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/RoomTrigger.gd" id="1_q8e65"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_vgfeo"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_6828f"]

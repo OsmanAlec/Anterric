@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="11_hlpc4"]
 [ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="12_fqbbh"]
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="13_woxl8"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="14_w0aqb"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="14_w0aqb"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
 [ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
 
