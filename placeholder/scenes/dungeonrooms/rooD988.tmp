@@ -23,6 +23,21 @@ func _ready() -> void:
 	$AnimationPlayer.current_animation = \"Enterance\"
 "
 
+[sub_resource type="GDScript" id="GDScript_c6afi"]
+script/source = "extends Camera3D
+
+func _process(delta: float) -> void:
+	var tween = get_tree().create_tween()
+	
+	var shake = 5
+	var shake_duration = 0.1
+	var shake_count = 10
+
+	for i in shake_count:
+		tween.tween_property(self, \"position\", Vector2(randf_range(-shake, shake), randf_range(-shake, shake)), shake_duration)
+	tween.start()
+"
+
 [sub_resource type="Animation" id="Animation_uno6o"]
 resource_name = "Enterance"
 length = 5.0
@@ -45,10 +60,10 @@ tracks/1/path = NodePath("Player/Camera3D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2, 3.4, 4.23333, 5),
-"transitions": PackedFloat32Array(1, 1.27, 0.450625, 0.450625, 1),
+"times": PackedFloat32Array(0, 1.26667, 2, 3.4, 4.23333, 5),
+"transitions": PackedFloat32Array(1, 1, 2.37842, 0.450625, 0.450625, 1),
 "update": 0,
-"values": [Vector3(6.62203, 6.54621, -2.69358), Vector3(6.62203, 6.54621, -2.69358), Vector3(0.280716, 4.55303, -2.48621), Vector3(0.280716, 4.55303, -2.48621), Vector3(5.68247e-08, 3.58266, 2.84973)]
+"values": [Vector3(6.62203, 6.54621, -2.69358), Vector3(6.62203, 6.54621, -2.69358), Vector3(6.62203, 6.54621, -2.69358), Vector3(0.280716, 4.55303, -2.48621), Vector3(0.280716, 4.55303, -2.48621), Vector3(5.68247e-08, 3.58266, 2.84973)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -89,14 +104,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Player/Camera3D:fov")
+tracks/5/path = NodePath("Player/Camera3D:script")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.26667, 1.33333, 1.43333, 1.53333, 1.63333, 1.73333, 1.86667, 2),
-"transitions": PackedFloat32Array(1, 1, 2.21914, 0.258816, 2.07053, 0.329877, 1.8025, 0.120742, 1),
-"update": 0,
-"values": [75.0, 75.0, 90.0, 60.0, 85.0, 65.0, 80.0, 70.0, 75.0]
+"times": PackedFloat32Array(0, 1.36667, 1.86667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [null, SubResource("GDScript_c6afi"), null]
 }
 
 [sub_resource type="Animation" id="Animation_rnhgq"]
@@ -164,14 +179,14 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Player/Camera3D:fov")
+tracks/5/path = NodePath("Player/Camera3D:script")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [75.0]
+"update": 1,
+"values": [SubResource("GDScript_c6afi")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rs2cx"]
@@ -182,26 +197,6 @@ _data = {
 
 [sub_resource type="GDScript" id="GDScript_iaenn"]
 resource_name = "Enteranceanimation"
-
-[sub_resource type="GDScript" id="GDScript_c6afi"]
-script/source = "extends Camera3D
-
-@export var decay = 0.8  # How quickly the shaking stops [0, 1].
-@export var max_offset = Vector2(2, 1)  # Maximum hor/ver shake in pixels.
-@export var max_roll = 0.1  # Maximum rotation in radians (use sparingly).
-
-var trauma = 0.0  # Current shake strength.
-var trauma_power = 2  # Trauma exponent. Use [2, 3].
-	
-func _process(delta):
-	print(\"shaking\")
-	var amount = pow(trauma, trauma_power)
-	trauma = min(trauma + amount, 1.0)
-	trauma = max(trauma - decay * delta, 0)
-	h_offset = max_offset.x * amount * randf_range(-1, 1)
-	v_offset = max_offset.y * amount * randf_range(-1, 1)
-		
-"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_knq6s"]
 transparency = 2
@@ -386,9 +381,6 @@ script = SubResource("GDScript_c6afi")
 [node name="QueenBee" parent="." instance=ExtResource("1_e1v6h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87105, 4.74048, -3.48879)
 script = SubResource("GDScript_iaenn")
-
-[node name="Animations" parent="QueenBee" index="2"]
-autoplay = "flying"
 
 [node name="Beehive" type="MeshInstance3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 3.83022, 3.21394, 0, -3.21394, 3.83022, 5.94406, 5.25227, -3.10279)

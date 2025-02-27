@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room_no_1_change.gd" id="1_geasy"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_ni8h7"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_oofpg"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_oofpg"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="2_iisbi"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="15_o0ern"]
 [ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="16_qt0mw"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_772ni"]
-
 
 [sub_resource type="VoxelGIData" id="VoxelGIData_bsxh7"]
 _data = {

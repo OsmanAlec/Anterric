@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=112 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
@@ -16,7 +16,6 @@
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="11_tf5i0"]
 [ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="12_e4s7a"]
 [ext_resource type="PackedScene" uid="uid://cgbetvcslu26" path="res://inventory/inv2/inventoryUI.tscn" id="14_tbmsb"]
-[ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="17_3aef1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.61618, 0.694092, 0.310915)
@@ -736,17 +735,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
-tracks/2/type = "method"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("%Animations/..")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"values": []
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_00efu"]
 _data = {
@@ -1000,9 +988,6 @@ transparency = 0.5
 cast_shadow = 0
 ignore_occlusion_culling = true
 mesh = SubResource("CylinderMesh_ymga0")
-
-[node name="Hitsound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("17_3aef1")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

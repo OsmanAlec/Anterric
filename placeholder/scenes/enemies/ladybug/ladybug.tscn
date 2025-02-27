@@ -1143,7 +1143,7 @@ pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
 animation = &"ground idle right"
-frame = 2
+frame = 3
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 2.0

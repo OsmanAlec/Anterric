@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://uup5ae5i1lpm"]
+[gd_scene load_steps=5 format=3 uid="uid://uup5ae5i1lpm"]
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="2_amfqk"]
-[ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="4_g6m0d"]
-[ext_resource type="AudioStream" uid="uid://uflq5ltbpbs4" path="res://sfx/dash.wav" id="5_ex8hs"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_a8lxe"]
 
@@ -64,9 +62,3 @@ text = "0"
 position = Vector2(584.125, 16)
 scale = Vector2(0.214063, 0.21875)
 texture = ExtResource("1_goibj")
-
-[node name="Hitsound" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("4_g6m0d")
-
-[node name="Dash" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("5_ex8hs")

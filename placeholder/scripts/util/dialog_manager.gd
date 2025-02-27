@@ -19,7 +19,6 @@ var dialog_state: bool = false
 var can_advance: bool = false
 var char_name: String
 
-
 @onready var player = get_tree().current_scene.get_node("Player")
 
 # Starts a dialogue at a given position with an array of lines
@@ -31,7 +30,6 @@ func start_dialog(position: Vector3, lines: Array[String], caller: String):
 	#Track down which character is talking
 	char_name = caller
 	
-	player = get_tree().current_scene.get_node("Player")
 	# Disable player movement
 	player.canMove = false
 	

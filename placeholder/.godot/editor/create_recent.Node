@@ -1,6 +1,6 @@
+AnimationPlayer
 MeshInstance3D
-AudioStreamPlayer3D
-GridMap
+CollisionShape3D
 RigidBody3D
 GridContainer
 DirectionalLight3D
@@ -8,7 +8,8 @@ ShaderGlobalsOverride
 CanvasModulate
 Timer
 Health
-CollisionShape3D
 HurtBox
 HitBox
 AudioStreamPlayer
+AudioStreamPlayer3D
+Node3D

@@ -23,6 +23,8 @@ func _on_animations_animation_finished(anim_name: StringName) -> void:
 func _on_stun_area_body_entered(body: Node) -> void:
 	print("Something entered StunArea:", body.name)  # Debugging line
 
+
+
 	# Check if the body is in the "player" group
 	if body.is_in_group("Player"):
 		print("I am stunned")  # Confirm player stun
