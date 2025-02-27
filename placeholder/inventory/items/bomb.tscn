@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://mtj27p3ikcv2"]
 
 [ext_resource type="Script" path="res://inventory/items/bomb.gd" id="1_nb3m7"]
-[ext_resource type="Texture2D" uid="uid://cfp0c2rapsatd" path="res://art/objects/inventoryItems/bomb.png" id="1_t0c26"]
+[ext_resource type="Texture2D" uid="uid://yhr5iicj3qyi" path="res://art/objects/inventoryItems/bomb.png" id="1_t0c26"]
 [ext_resource type="Script" path="res://inventory/items/item_pickup.gd" id="2_emj7x"]
 [ext_resource type="Resource" uid="uid://hhbouoqlnafv" path="res://inventory/inv2/bomb.tres" id="4_w4igj"]
 
@@ -26,7 +26,7 @@ script = ExtResource("1_nb3m7")
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.298748, 0)
-pixel_size = 0.0003
+pixel_size = 0.005
 sprite_frames = SubResource("SpriteFrames_sooi6")
 animation = &"bomb"
 

@@ -4,7 +4,6 @@ res://scripts/worker_ant.gd
 res://anthillgridmap.tres
 res://inventory/inv2/bomb.tres
 res://roomsgridmap.tres
-res://inventory/items/item_pickup.gd
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
