@@ -1,8 +1,9 @@
 extends Area3D
 
-func _ready():
-	connect("area_entered", Callable(self, "_on_area_entered"))
+@export var item: invitem2
 
+var bomb = preload("res://inventory/items/bomb.tscn")
+var player = null
 
 func _on_area_entered(area: Area3D) -> void:
-	pass
+	player.collect(item)

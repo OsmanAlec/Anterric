@@ -1,5 +1,3 @@
 maininv
-invitem2
 Resource
-Inv
-InvItem
+invitem2

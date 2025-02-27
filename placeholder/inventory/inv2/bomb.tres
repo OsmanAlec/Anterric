@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="invitem2" load_steps=3 format=3 uid="uid://hhbouoqlnafv"]
 
 [ext_resource type="Script" path="res://inventory/inv2/invitem2.gd" id="1_lu00c"]
-[ext_resource type="Texture2D" uid="uid://cs2begdfk031o" path="res://art/objects/inventoryItems/bomb.png" id="2_44qbs"]
+[ext_resource type="Texture2D" uid="uid://cfp0c2rapsatd" path="res://art/objects/inventoryItems/bomb.png" id="2_44qbs"]
 
 [resource]
 script = ExtResource("1_lu00c")
