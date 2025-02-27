@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://txoympwk61ot"]
+[gd_scene load_steps=56 format=4 uid="uid://txoympwk61ot"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]
@@ -20,7 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="11_hlpc4"]
 [ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="12_fqbbh"]
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="13_woxl8"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="14_w0aqb"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="14_w0aqb"]
+[ext_resource type="Texture2D" uid="uid://wfxfw1a02q1v" path="res://art/objects/dungeonAssets/hanging grass_0001.png" id="18_kgo1s"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
 [ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
 
@@ -154,6 +155,26 @@ albedo_texture = ExtResource("13_woxl8")
 [sub_resource type="QuadMesh" id="QuadMesh_88wfn"]
 material = SubResource("StandardMaterial3D_j25bv")
 size = Vector2(0.43, 0.255)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ibydk"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("10_abuow")
+
+[sub_resource type="QuadMesh" id="QuadMesh_j16f6"]
+material = SubResource("StandardMaterial3D_ibydk")
+size = Vector2(0.815, 0.415)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tlxx0"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("18_kgo1s")
+
+[sub_resource type="QuadMesh" id="QuadMesh_hgmnr"]
+material = SubResource("StandardMaterial3D_tlxx0")
+size = Vector2(0.715, 0.415)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kikyr"]
 size = Vector3(2.14545, 1.37598, 1)
@@ -294,6 +315,14 @@ mesh = SubResource("QuadMesh_88wfn")
 [node name="levi2" type="MeshInstance3D" parent="Environment"]
 transform = Transform3D(1.83724, 0.551281, -0.56624, -0.132776, 1.62797, 1.15416, 0.779044, -1.02264, 1.53209, -1.75202, 0.0934227, -1.6938)
 mesh = SubResource("QuadMesh_88wfn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(2.105, 0, 0, 0, 1.82298, 1.0525, 0, -1.0525, 1.82298, 5.01447, 0.127694, 2.56657)
+mesh = SubResource("QuadMesh_j16f6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Environment"]
+transform = Transform3D(1.67, 0, 0, 0, 1.44626, 0.835, 0, -0.835, 1.44626, 6.28027, -0.265954, 2.75905)
+mesh = SubResource("QuadMesh_hgmnr")
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)

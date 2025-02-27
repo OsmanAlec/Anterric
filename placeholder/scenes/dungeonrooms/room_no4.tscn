@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=4 uid="uid://dwg2pseo63sk2"]
 
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://hopefullyfinalgridmap.tres" id="1_aua2x"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_aua2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_sp2eo"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_y7m81"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_07lrf"]
@@ -44,12 +44,12 @@ _data = {
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_d1hak"]
 
-[sub_resource type="Sky" id="Sky_or3q2"]
+[sub_resource type="Sky" id="Sky_x12d0"]
 sky_material = SubResource("PhysicalSkyMaterial_d1hak")
 
 [sub_resource type="Environment" id="Environment_y882f"]
 background_mode = 2
-sky = SubResource("Sky_or3q2")
+sky = SubResource("Sky_x12d0")
 ambient_light_source = 2
 ambient_light_color = Color(0.87451, 0.941176, 0.745098, 1)
 glow_enabled = true
@@ -59,16 +59,16 @@ fog_height_density = 0.8
 volumetric_fog_albedo = Color(0.897271, 0.923325, 0.828499, 1)
 volumetric_fog_emission = Color(0.87451, 0.941176, 0.745098, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8nstp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yicrq"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("12_5t2in")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_uquva"]
-material = SubResource("StandardMaterial3D_8nstp")
+material = SubResource("StandardMaterial3D_yicrq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5dsaw"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m1omj"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("13_4a0r5")
@@ -77,18 +77,18 @@ uv1_scale = Vector3(5, 1, 1)
 disable_receive_shadows = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_h50rp"]
-material = SubResource("StandardMaterial3D_5dsaw")
+material = SubResource("StandardMaterial3D_m1omj")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8u1k"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8byrm"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("14_imsbr")
 uv1_scale = Vector3(5, 1, 1)
 
 [sub_resource type="QuadMesh" id="QuadMesh_cnkr1"]
-material = SubResource("StandardMaterial3D_c8u1k")
+material = SubResource("StandardMaterial3D_8byrm")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ogfqp"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3bjd"]
 transparency = 4
 shading_mode = 0
 albedo_texture = ExtResource("15_idyj6")
@@ -96,67 +96,67 @@ uv1_scale = Vector3(5, 1, 1)
 uv2_triplanar = true
 
 [sub_resource type="QuadMesh" id="QuadMesh_dv5nl"]
-material = SubResource("StandardMaterial3D_ogfqp")
+material = SubResource("StandardMaterial3D_g3bjd")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c1smd"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efpne"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("16_v0hwi")
 
 [sub_resource type="QuadMesh" id="QuadMesh_k8ryv"]
-material = SubResource("StandardMaterial3D_c1smd")
+material = SubResource("StandardMaterial3D_efpne")
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdvh4"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcn1d"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("17_lm07q")
 
 [sub_resource type="QuadMesh" id="QuadMesh_u112r"]
-material = SubResource("StandardMaterial3D_hdvh4")
+material = SubResource("StandardMaterial3D_qcn1d")
 flip_faces = true
 size = Vector2(5.12, 2.56)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ni3mm"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w5ofe"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("18_wgso8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_7dpy0"]
-material = SubResource("StandardMaterial3D_ni3mm")
+material = SubResource("StandardMaterial3D_w5ofe")
 size = Vector2(0.815, 0.415)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_105uc"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g3ofn"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("19_wr5f1")
 
 [sub_resource type="QuadMesh" id="QuadMesh_3ifgh"]
-material = SubResource("StandardMaterial3D_105uc")
+material = SubResource("StandardMaterial3D_g3ofn")
 size = Vector2(0.36, 0.228)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_theam"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tkgqm"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("20_ob6n6")
 
 [sub_resource type="QuadMesh" id="QuadMesh_qsrbi"]
-material = SubResource("StandardMaterial3D_theam")
+material = SubResource("StandardMaterial3D_tkgqm")
 size = Vector2(0.41, 0.325)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fste0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h5h6n"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("21_ro3ei")
 
 [sub_resource type="QuadMesh" id="QuadMesh_3psw6"]
-material = SubResource("StandardMaterial3D_fste0")
+material = SubResource("StandardMaterial3D_h5h6n")
 size = Vector2(0.43, 0.255)
 
 [node name="RoomNo4" type="Node3D"]

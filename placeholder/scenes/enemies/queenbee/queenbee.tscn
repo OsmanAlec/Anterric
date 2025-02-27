@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://b0cnxefxej1jl"]
+[gd_scene load_steps=39 format=3 uid="uid://b0cnxefxej1jl"]
 
 [ext_resource type="Script" path="res://scripts/enemies/queenbee/QueenBee.gd" id="1_hl85j"]
 [ext_resource type="Texture2D" uid="uid://dki8pjvntf2ji" path="res://art/enemies/queen_bee/diagonal flying.png" id="2_d1scn"]
@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b8yxqtxafybot" path="res://art/enemies/queen_bee/diagonal stomp.png" id="4_mtmch"]
 [ext_resource type="Texture2D" uid="uid://de7pblx8nm17b" path="res://art/enemies/queen_bee/diagonal takeoff.png" id="5_3a77u"]
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="7_h4tar"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_tliej"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0eukq"]
 atlas = ExtResource("2_d1scn")
@@ -236,9 +234,6 @@ radius = 36.7497
 
 [node name="QueenBee" type="CharacterBody3D"]
 script = ExtResource("1_hl85j")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_tliej")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_kllia")

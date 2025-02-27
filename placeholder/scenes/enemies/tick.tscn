@@ -153,8 +153,8 @@ size = Vector3(0.488449, 0.51593, 0.682373)
 
 [node name="tick" type="CharacterBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.243815, 0)
-collision_layer = 0
-collision_mask = 2
+collision_layer = 512
+collision_mask = 514
 script = ExtResource("1_hvf24")
 
 [node name="Health" type="Node" parent="."]
