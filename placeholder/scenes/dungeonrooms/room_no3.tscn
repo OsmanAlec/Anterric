@@ -218,8 +218,8 @@ metadata/_editor_floor_ = Vector3(0, 1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_io6id")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.133374, 0, 1.9112)
-collision_layer = 260
-collision_mask = 261
+collision_layer = 772
+collision_mask = 773
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8164, 1, -5.00113)
