@@ -1,6 +1,5 @@
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
-res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
 res://anthillgridmap.tres
 res://roomsgridmap.tres
@@ -22,3 +21,4 @@ res://scenes/items(resource)/inventory.tscn
 res://inventory/inv2/inv_slot_2.tscn
 res://scenes/dungeonrooms/branch_door.tscn
 res://scripts/player.gd
+res://scripts/UI/hearts.gd
