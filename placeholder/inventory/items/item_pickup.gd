@@ -7,8 +7,6 @@ signal item_pickedup
 
 
 func _on_body_entered(body: Node3D) -> void:
-	print("hi")
 	if player == body:
-		print("in")
 		item_pickedup.emit()
 		player.collect(item)

@@ -1,12 +1,10 @@
-res://inventory/items/bomb.tscn
+res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
 res://scripts/worker_ant.gd
 res://anthillgridmap.tres
-res://inventory/items/bomb.gd
-res://inventory/items/item_pickup.gd
-res://scenes/dungeonrooms/room_no1.tscn
-res://scenes/player.tscn
+res://inventory/inv2/bomb.tres
 res://roomsgridmap.tres
+res://inventory/items/item_pickup.gd
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
@@ -20,5 +18,5 @@ res://scenes/items(resource)/inventory.tscn
 res://inventory/inv2/inv_slot_2.tscn
 res://scenes/UI/options_menu.tscn
 res://scenes/UI/menu.tscn
-res://inventory/inv2/item_display.gd
-res://inventory/inv2/bomb.tres
+res://inventory/items/bomb.tscn
+res://scenes/dungeonrooms/room_no1.tscn
