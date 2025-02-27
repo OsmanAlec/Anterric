@@ -1,6 +1,6 @@
-res://scenes/dungeonrooms/room_no5.tscn
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
 res://anthillgridmap.tres
 res://roomsgridmap.tres
@@ -18,3 +18,5 @@ res://scenes/enemies/ladybug/ladybug.tscn
 res://inventory/items/bomb.tscn
 res://scenes/dungeonrooms/room_no2.tscn
 res://scenes/audio_player.tscn
+res://scenes/dungeonrooms/room_no5.tscn
+res://scenes/dungeonrooms/components/grass.tscn
