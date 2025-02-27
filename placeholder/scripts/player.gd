@@ -16,7 +16,7 @@ var lastDir: Vector3
 # Stun Mechanism
 var canMove: bool = true
 
-
+@onready var sfx_walk = $AudioStreamPlayer3D
 @onready var anim_tree = get_node("AnimationTree")
 @export var inv:  maininv
  
@@ -47,9 +47,11 @@ func player_movement(delta: float):
 		canDash = false
 		$dash_timer.start()
 		$dash_again_timer.start()
+		GameManager.sfx_dash.play()
 	
 	# If player is moving
 	if direction:
+		
 		lastDir = direction# Store latest movement direction
 		if dashing:
 			state = "Dashing"
@@ -142,3 +144,4 @@ func apply_stun(duration: float) -> void:
 
 func collect(item):
 	inv.insert(item)
+	

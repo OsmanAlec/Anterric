@@ -1,5 +1,6 @@
-GridMap
 MeshInstance3D
+AudioStreamPlayer3D
+GridMap
 RigidBody3D
 GridContainer
 DirectionalLight3D
@@ -11,5 +12,3 @@ CollisionShape3D
 HurtBox
 HitBox
 AudioStreamPlayer
-AudioStreamPlayer3D
-Node3D

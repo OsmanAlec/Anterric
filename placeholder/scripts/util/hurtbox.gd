@@ -21,6 +21,7 @@ func _on_area_entered(hitbox: HitBox) -> void:
 		if hitbox.type == hitbox.Types.physical:
 			health.health -= hitbox.damage
 			recieved_damage.emit(hitbox.damage)
+			GameManager.sfx_hit.play()
 		elif hitbox.type == hitbox.Types.poison:
 			health.apply_poison(hitbox.damage)
 		

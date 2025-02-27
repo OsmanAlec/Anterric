@@ -1,7 +1,8 @@
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
 res://scripts/worker_ant.gd
-res://hopefullyfinalgridmap.tres
+res://anthillgridmap.tres
+res://roomsgridmap.tres
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
@@ -16,7 +17,9 @@ res://scenes/dungeonrooms/room_no5.tscn
 res://scenes/enemies/ladybug/ladybug.tscn
 res://inventory/items/bomb.tscn
 res://scenes/dungeonrooms/room_no2.tscn
+res://audio_player.gd
+res://scenes/audio_player.tscn
 res://scripts/player.gd
-res://scripts/util/dialog_manager.gd
-res://gridmapwithanthill.tres
-res://anthillgridmap.tres
+res://scripts/util/hitbox.gd
+res://scripts/util/hurtbox.gd
+res://components/Quest/game_manager.gd
