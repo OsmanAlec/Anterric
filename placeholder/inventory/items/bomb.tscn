@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://mtj27p3ikcv2"]
+[gd_scene load_steps=7 format=3 uid="uid://mtj27p3ikcv2"]
 
+[ext_resource type="Script" path="res://inventory/items/bomb.gd" id="1_ljlpj"]
 [ext_resource type="Texture2D" uid="uid://cfp0c2rapsatd" path="res://art/objects/inventoryItems/bomb.png" id="1_t0c26"]
 [ext_resource type="Script" path="res://inventory/items/item_pickup.gd" id="2_emj7x"]
+[ext_resource type="Resource" uid="uid://hhbouoqlnafv" path="res://art/objects/inventoryItems/bomb.tres" id="3_60egl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sooi6"]
 animations = [{
@@ -19,6 +21,7 @@ size = Vector3(0.425262, 0.567627, 0.38385)
 
 [node name="bomb" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.131364, 0)
+script = ExtResource("1_ljlpj")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -28,10 +31,15 @@ sprite_frames = SubResource("SpriteFrames_sooi6")
 animation = &"bomb"
 
 [node name="item_pickup" type="Area3D" parent="."]
+collision_layer = 1285
+collision_mask = 1285
 script = ExtResource("2_emj7x")
+item = ExtResource("3_60egl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="item_pickup"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000919312, 0.364327, -0.0326936)
 shape = SubResource("BoxShape3D_dt6bv")
 
 [connection signal="area_entered" from="item_pickup" to="item_pickup" method="_on_area_entered"]
+[connection signal="body_entered" from="item_pickup" to="item_pickup" method="_on_body_entered"]
+[connection signal="item_picked_up" from="item_pickup" to="." method="_on_item_pickup_item_picked_up"]
