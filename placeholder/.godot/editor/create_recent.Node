@@ -1,4 +1,5 @@
 MeshInstance3D
+AnimationPlayer
 AudioStreamPlayer3D
 GridMap
 RigidBody3D
@@ -11,4 +12,3 @@ Health
 CollisionShape3D
 HurtBox
 HitBox
-AudioStreamPlayer

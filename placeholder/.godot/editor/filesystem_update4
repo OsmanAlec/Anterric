@@ -18,3 +18,8 @@ res://scenes/enemies/ladybug/ladybug.tscn
 res://inventory/items/bomb.tscn
 res://scenes/dungeonrooms/room_no2.tscn
 res://scenes/audio_player.tscn
+res://scripts/util/player_data.gd
+res://scenes/dungeonrooms/door.gd
+res://scenes/items(resource)/inventory.tscn
+res://inventory/inv2/inv_slot_2.tscn
+res://scenes/dungeonrooms/branch_door.tscn

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://dwg2pseo63sk2"]
+[gd_scene load_steps=50 format=4 uid="uid://dwg2pseo63sk2"]
 
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_aua2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_sp2eo"]
@@ -12,6 +12,7 @@
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="7_ab5m0"]
 [ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="7_pknoq"]
 [ext_resource type="Texture2D" uid="uid://4sbw8qqp0iak" path="res://art/objects/dungeonAssets/bg2.png" id="12_5t2in"]
+[ext_resource type="PackedScene" uid="uid://dr7ggnptmv048" path="res://scenes/dungeonrooms/branch_door.tscn" id="12_te226"]
 [ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="13_4a0r5"]
 [ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="14_imsbr"]
 [ext_resource type="Texture2D" uid="uid://di0gesvbp74va" path="res://art/objects/dungeonAssets/bg5.png" id="15_idyj6"]
@@ -235,6 +236,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, -10)
 [node name="door" type="StaticBody3D" parent="door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
 script = ExtResource("7_ab5m0")
+
+[node name="branch door" parent="door/door" instance=ExtResource("12_te226")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, -0.5, 3.4)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
