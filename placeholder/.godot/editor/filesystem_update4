@@ -1,5 +1,6 @@
 res://scenes/player.tscn
 res://inventory/inv2/playerinv.tres
+res://scripts/util/npc.gd
 res://scripts/worker_ant.gd
 res://anthillgridmap.tres
 res://roomsgridmap.tres
