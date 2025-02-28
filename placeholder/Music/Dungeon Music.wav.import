@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dbeipf0tutpih"
-path="res://.godot/imported/Dungeon Music.wav-9262fcd2bef37e5fb296b970e98d43e0.sample"
+path="res://.godot/imported/Dungeon Music.wav-1740f255910975e0e6726c2071c03b68.sample"
 
 [deps]
 
-source_file="res://Music/Dungeon Music.wav"
-dest_files=["res://.godot/imported/Dungeon Music.wav-9262fcd2bef37e5fb296b970e98d43e0.sample"]
+source_file="res://music/Dungeon Music.wav"
+dest_files=["res://.godot/imported/Dungeon Music.wav-1740f255910975e0e6726c2071c03b68.sample"]
 
 [params]
 
