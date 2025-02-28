@@ -20,7 +20,7 @@ Github: https://github.com/OzilooG
 
 Name: Harshit Panchal
 Student Number: C23419542
-Class Group: D
+Class Group: C
 Github: https://github.com/Artemis-Coder17
 
 
