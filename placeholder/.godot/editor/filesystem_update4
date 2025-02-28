@@ -24,3 +24,4 @@ res://scenes/UI/textbox.tscn
 res://scripts/enemies/queenbee/QueenBee.gd
 res://scripts/player.gd
 res://scripts/util/player_data.gd
+res://scripts/util/dialog_manager.gd

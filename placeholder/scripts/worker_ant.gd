@@ -12,10 +12,10 @@ const char_name = "Erric"
 const prologue: Array[String] = [
 	"Your Majesty!",
 	"Our colony, we've never been worse",
-	"You claimed to have dealth with the termites",
+	"You claimed to have dealt with the termites",
 	"So . . .?",
 	"RQUEEN So???",
-	"Well, go deal with them!",
+	"So go deal with them and their brainwashed army!",
 ]
 
 const level1: Array[String] = [

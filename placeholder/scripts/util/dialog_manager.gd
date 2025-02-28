@@ -24,6 +24,7 @@ var char_name: String
 
 # Starts a dialogue at a given position with an array of lines
 func start_dialog(position: Vector3, lines: Array[String], caller: String):
+
 	# If a dialog is already active, allow advancing but don't restart
 	if dialog_state:
 		can_advance = true
@@ -62,11 +63,13 @@ func _show_text_box():
 
 	# Offset the text box slightly upwards
 	text_box_scene.global_position.y += 0.5
+	
+	return
 
 # Handles advancing the dialog when the player presses the "advance_dialog" action
 func _unhandled_input(event):
 	if event.is_action_released("advance_dialog") and dialog_state and can_advance:
-		# Hide the current text box
+		#Free the current text box
 		text_box_scene.queue_free()
 
 		# Move to the next line
@@ -75,6 +78,7 @@ func _unhandled_input(event):
 		# If all lines are finished, reset state and emit signal
 		if current_line >= dialog_lines.size():
 			dialog_state = false
+			can_advance = false
 			current_line = 0
 			player.canMove = true
 			finished_talking.emit(char_name)

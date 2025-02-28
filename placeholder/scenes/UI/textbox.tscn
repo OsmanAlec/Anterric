@@ -46,7 +46,7 @@ theme_override_constants/margin_bottom = 50
 
 [node name="Label" type="Label" parent="SubViewport/GUI/Textbox/MarginContainer"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.906507, 0.976358, 0.988432, 1)
+theme_override_colors/font_color = Color(3.76021e-09, 0.0432832, 0.0140676, 1)
 theme_override_fonts/font = ExtResource("4_qd6mo")
 theme_override_font_sizes/font_size = 52
 horizontal_alignment = 1
