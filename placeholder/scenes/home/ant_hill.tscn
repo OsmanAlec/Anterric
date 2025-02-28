@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bnbalt7o36vu1" path="res://scenes/home/workerant.tscn" id="3_1avkl"]
 [ext_resource type="PackedScene" uid="uid://gchytlw2aytx" path="res://scenes/home/super_major.tscn" id="5_wqnrr"]
 [ext_resource type="Script" path="res://scenes/home/area_3d.gd" id="6_hiurc"]
-[ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://anthillgridmap.tres" id="6_kdh5m"]
+[ext_resource type="MeshLibrary" uid="uid://6nqdxvfvl55b" path="res://anthillgridmap.tres" id="6_kdh5m"]
 
 [sub_resource type="Environment" id="Environment_bhis6"]
 background_mode = 1

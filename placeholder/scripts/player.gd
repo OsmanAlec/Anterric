@@ -77,9 +77,8 @@ func player_movement(delta: float):
 func _physics_process(delta: float):
 	
 	if !canMove:
-		if state == "Stunned":
-			anim_tree.get("parameters/playback").travel("Standing")
-			anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
+		anim_tree.get("parameters/playback").travel("Standing")
+		anim_tree.set("parameters/Standing/BlendSpace1D/blend_position", lastDir.x)
 		return
 	
 	# Handle attack input
@@ -107,7 +106,6 @@ func start_attack():
 	
 
 
-# Dash ability cooldown
 func _on_dash_timer_timeout() -> void:
 	dashing = false
 	$HitLeft/CollisionShape3D.disabled = true

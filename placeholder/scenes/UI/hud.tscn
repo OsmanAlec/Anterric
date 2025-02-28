@@ -10,7 +10,7 @@ wait_time = 2.0
 [node name="Hearts" type="GridContainer" parent="."]
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 2
-columns = 6
+columns = 5
 script = ExtResource("1_tarx8")
 
 [connection signal="timeout" from="heart_beat" to="Hearts" method="_on_heart_beat_timeout"]

@@ -1,9 +1,10 @@
-res://scenes/player.tscn
+res://scenes/dungeonrooms/room_no5.tscn
 res://inventory/inv2/playerinv.tres
 res://scripts/worker_ant.gd
 res://anthillgridmap.tres
-res://inventory/inv2/bomb.tres
 res://roomsgridmap.tres
+res://inventory/inv2/bomb.tres
+res://scenes/player.tscn
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/UI/hud.tscn
@@ -17,5 +18,9 @@ res://scenes/items(resource)/inventory.tscn
 res://inventory/inv2/inv_slot_2.tscn
 res://scenes/UI/options_menu.tscn
 res://scenes/UI/menu.tscn
-res://inventory/items/bomb.tscn
 res://scenes/dungeonrooms/room_no1.tscn
+res://scenes/enemies/queenbee/queenbee.tscn
+res://scenes/UI/textbox.tscn
+res://scripts/enemies/queenbee/QueenBee.gd
+res://scripts/player.gd
+res://scripts/util/player_data.gd

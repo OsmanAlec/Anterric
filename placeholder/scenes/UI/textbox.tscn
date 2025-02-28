@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/UI/tbpositioning.gd" id="1_4681s"]
 [ext_resource type="Script" path="res://scripts/UI/textbox.gd" id="1_d02aa"]
-[ext_resource type="Texture2D" uid="uid://di08uhinf4us1" path="res://art/UI/textbox.png" id="1_jux8l"]
+[ext_resource type="Texture2D" uid="uid://c2pr2gdpleknk" path="res://art/UI/textbox.png" id="1_jux8l"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="4_qd6mo"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_jx13w"]

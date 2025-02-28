@@ -20,11 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="11_hlpc4"]
 [ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="12_fqbbh"]
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="13_woxl8"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="14_w0aqb"]
+[ext_resource type="MeshLibrary" uid="uid://cr0i1u3fug0px" path="res://roomsgridmap.tres" id="14_w0aqb"]
 [ext_resource type="Texture2D" uid="uid://wfxfw1a02q1v" path="res://art/objects/dungeonAssets/hanging grass_0001.png" id="18_kgo1s"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
-[ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
-[ext_resource type="PackedScene" uid="uid://dr7ggnptmv048" path="res://scenes/dungeonrooms/branch_door.tscn" id="24_xr322"]
+[ext_resource type="PackedScene" path="res://inventory/items/bomb.tscn" id="21_53axm"]
+[ext_resource type="PackedScene" path="res://scenes/dungeonrooms/branch_door.tscn" id="24_xr322"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yluk7"]
 size = Vector3(13.4885, 1, 12.2496)
