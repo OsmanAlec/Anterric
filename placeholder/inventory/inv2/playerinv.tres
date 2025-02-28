@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="maininv" load_steps=3 format=3 uid="uid://b65vii8blmrr4"]
+[gd_resource type="Resource" script_class="maininv" load_steps=3 format=3 uid="uid://bgh6fdxvj5o02"]
 
 [ext_resource type="Script" path="res://inventory/inv2/maininv.gd" id="2_bavf3"]
 [ext_resource type="Script" path="res://inventory/inv2/inv_slot_2.gd" id="2_hxasg"]
