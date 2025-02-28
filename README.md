@@ -18,10 +18,10 @@ Class Group: D
 Github: https://github.com/OzilooG
 
 
-Name:
-Student Number: 
-Class Group:
-Github: 
+Name: Harshit Panchal
+Student Number: C23419542
+Class Group: D
+Github: https://github.com/Artemis-Coder17
 
 
 Name:
@@ -31,7 +31,7 @@ Github:
 
 
 # What I am most proud of in the assignment
-Harshit:
+Harshit: I really enjoyed working on the making smart enemy formations and working on how enemies follow the player and shoot projectile.
 Paul: I really enjoyed composing the score and making the Player Sprite as well as its animations.  
 Oskar:
 Shane:
