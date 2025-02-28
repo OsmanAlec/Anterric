@@ -23,3 +23,5 @@ res://inventory/inv2/inv_slot_2.tscn
 res://scenes/dungeonrooms/branch_door.tscn
 res://inventory/inv2/maininv.gd
 res://inventory/inv2/bomb.tres
+res://scripts/MusicManager.gd
+res://scenes/home/ant_hill.gd
