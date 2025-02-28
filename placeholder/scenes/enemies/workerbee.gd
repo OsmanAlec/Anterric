@@ -4,7 +4,7 @@ extends CharacterBody3D
 
 @export var speed: float = 2.0
 @export var attack_range: float = 0.5
-@export var detection_range: float = 1.7
+@export var detection_range: float = 3
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 

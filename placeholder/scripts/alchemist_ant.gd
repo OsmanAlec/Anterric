@@ -38,4 +38,4 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn):
 	if cn != char_name:
 		return
-	QuestControl.get_node("Collect50coins").start_quest()
+	#QuestControl.get_node("Collect50coins").start_quest()

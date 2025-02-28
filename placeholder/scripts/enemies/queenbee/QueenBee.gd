@@ -3,7 +3,7 @@ extends CharacterBody3D
 @onready var anim_player = $AnimationPlayer
 @onready var stun_area = $StunArea  
 @onready var stomp_timer = $StompTimer 
-@onready var player: CharacterBody3D = PlayerData.player
+@onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 @onready var HealthBar: ProgressBar = $HealthBar
 const attack_range: float = 1.5
 var is_stomping = false  # Track if Queen Bee is currently stomping
@@ -110,6 +110,7 @@ func _on_sting_timer_timeout() -> void:
 
 
 func _on_health_health_depleted() -> void:
+	get_tree().change_scene_to_file("res://scenes/home/ant_hill.tscn")
 	queue_free()
 
 

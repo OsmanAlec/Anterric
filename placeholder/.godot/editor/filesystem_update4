@@ -4,6 +4,7 @@ res://scripts/worker_ant.gd
 res://anthillgridmap.tres
 res://roomsgridmap.tres
 res://inventory/inv2/bomb.tres
+res://scripts/enemies/queenbee/QueenBee.gd
 res://scenes/player.tscn
 res://scenes/enemies/tick.tscn
 res://scripts/enemies/workerbee.tscn
@@ -21,7 +22,6 @@ res://scenes/UI/menu.tscn
 res://scenes/dungeonrooms/room_no1.tscn
 res://scenes/enemies/queenbee/queenbee.tscn
 res://scenes/UI/textbox.tscn
-res://scripts/enemies/queenbee/QueenBee.gd
-res://scripts/player.gd
-res://scripts/util/player_data.gd
-res://scripts/util/dialog_manager.gd
+res://scenes/audio_player.tscn
+res://scenes/enemies/workerbee.gd
+res://scripts/alchemist_ant.gd
