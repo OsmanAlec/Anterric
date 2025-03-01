@@ -1,10 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ch7s2qacjt22c"]
+[gd_scene load_steps=2 format=3 uid="uid://ch7s2qacjt22c"]
 
-[ext_resource type="AudioStream" uid="uid://dte1d7l0erkjb" path="res://Music/dungeonmusic8bit.wav" id="1_3ystw"]
 [ext_resource type="Script" path="res://audio_player.gd" id="1_rfkrl"]
 
 [node name="audio_player" type="AudioStreamPlayer"]
-stream = ExtResource("1_3ystw")
 volume_db = -3.884
 autoplay = true
 script = ExtResource("1_rfkrl")

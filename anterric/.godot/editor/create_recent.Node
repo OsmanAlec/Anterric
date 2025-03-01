@@ -1,0 +1,14 @@
+DirectionalLight3D
+GridMap
+CollisionShape3D
+StaticBody3D
+NinePatchRect
+CanvasLayer
+AudioStreamPlayer
+Timer
+MeshInstance3D
+Timer
+AnimationPlayer
+AudioStreamPlayer3D
+RigidBody3D
+GridContainer

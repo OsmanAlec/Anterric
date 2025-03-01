@@ -1,0 +1,13 @@
+res://scenes/player.tscn
+res://inventory/inv2/playerinv.tres
+res://scripts/worker_ant.gd
+res://roomsgridmap.tres
+res://inventory/inv2/bomb.tres
+res://scenes/dungeonrooms/room_no1.tscn
+res://scenes/audio_player.tscn
+res://inventory/inv2/inv_slot_2.tscn
+res://scenes/dungeonrooms/branch_door.tscn
+res://scenes/home/ant_hill.tscn
+res://scripts/enemies/queenbee/QueenBee.gd
+res://anthillgridmap.tres
+res://scenes/dungeonrooms/components/gridmapblocks.tscn
