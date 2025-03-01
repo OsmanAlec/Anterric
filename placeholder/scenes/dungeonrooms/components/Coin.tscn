@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp7ktap5kvs0q"]
+
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/coin.gd" id="1_1jgtu"]
+[ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="2_sdwqe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuhwf"]
+atlas = ExtResource("2_sdwqe")
+region = Rect2(0, 0, 160, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ar38"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuhwf")
+}],
+"loop": true,
+"name": &"coin",
+"speed": 5.0
+}]
+
+[node name="Coin" type="Node3D"]
+script = ExtResource("1_1jgtu")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.002
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_6ar38")
+animation = &"coin"

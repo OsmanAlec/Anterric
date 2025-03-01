@@ -1,0 +1,3 @@
+maininv
+Resource
+invitem2

@@ -1,0 +1,11 @@
+Queen bee boss function:
+There is two attacks: sting and stomp.
+Track which attack it desires play with an enum variable (suggestion)
+
+When the desired attack is sting, go to player, 
+	when player is in range- sting.
+	Idle for a few seconds and go sting again. Repeat this 2 or three times (suggestion)
+
+After the desired amount of stings switch desired attack to stomp.
+The bee will fly to one of the corners of the room OR the middle of the room.
+Make the stomp.

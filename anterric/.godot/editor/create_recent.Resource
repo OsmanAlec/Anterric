@@ -1,3 +1,0 @@
-maininv
-Resource
-invitem2
