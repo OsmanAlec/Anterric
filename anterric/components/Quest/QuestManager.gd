@@ -9,6 +9,9 @@ var completed_quests: Array[Quest]
 	
 
 func draw_quests():
+	for child in QuestContainer.get_children():
+		child.queue_free()
+	
 	for quest in active_quests:
 		var quest_format = load("res://components/UI/QuestVisual.tscn").instantiate()
 		quest_format.get_node("Title").text = quest.quest_name

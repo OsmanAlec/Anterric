@@ -7,7 +7,7 @@
 custom_minimum_size = Vector2(100, 100)
 offset_right = 200.0
 offset_bottom = 200.0
-theme_override_constants/separation = 7
+theme_override_constants/separation = 1
 script = ExtResource("1_jjlle")
 
 [node name="Title" type="RichTextLabel" parent="."]
