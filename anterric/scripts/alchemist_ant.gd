@@ -3,16 +3,55 @@ extends CharacterBody3D
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var InteractionLabel: Label3D = $Label3D
 
-const char_name: String = "George"
+const char_name: String = "Garvan"
 var canInteract = false
+
+@onready var quests: Array[Quest] = [
+	QuestControl.get_node("Collect50coins"),
+	QuestControl.get_node("Retrieve5Wings")
+]
 
 const prologue: Array[String] = [
 	"heyyyyyy",
-	"RQUEEN Who are you???",
-	"i need coin",
+	"RQUEEN Who are you?",
+	"my name is secret",
+	"but i need coin",
 	"RQUEEN for who?",
 	"for you..."
 ]
+
+const prologue_questComplete: Array[String] = [
+	"heyy hey heyyy",
+	"RQUEEN here I got you the coins!",
+	"thanks... I'll take ALL of them",
+	"RQUEEN What!?"
+]
+
+const level1: Array[String] = [
+	"heyYyYy",
+	"RQUEEN Now what do you want?",
+	"you need lady bird wings",
+	"RQUEEN Do YOU need them?",
+	"no, you do... trust me."
+]
+
+const level1_questComplete: Array[String] = [
+	"good job",
+	"...",
+	"RQUEEN you scammed me again!",
+	"no, I did not",
+	"it's dangerous to go alone",
+	"take this"
+]
+
+# A dictionary to keep track of the dialogues dynamically according to the stage the player is at
+var dialogs: Dictionary = {
+	"prologue": prologue,
+	"prologue_questComplete": prologue_questComplete,
+	"level1": level1,
+	"level1_questComplete": level1_questComplete
+}
+
 
 func _ready() -> void:
 	InteractionLabel.hide()
@@ -21,9 +60,12 @@ func _ready() -> void:
 
 func _unhandled_key_input(event):
 	if event.is_action_pressed("advance_dialog"):
+		var key: String = PlayerData.Stage[PlayerData.current_stage]
 		if canInteract:
 			InteractionLabel.hide()
-			DialogManager.start_dialog(global_position, prologue, char_name)
+			if quests[0].quest_status == Quest.QuestStatus.reached_goal:
+				key += "_questComplete"
+			DialogManager.start_dialog(global_position, dialogs[key], char_name)
 			
 func _on_interaction_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
@@ -38,4 +80,10 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn):
 	if cn != char_name:
 		return
-	QuestControl.get_node("Collect50coins").start_quest()
+	var key: String = PlayerData.Stage[PlayerData.current_stage]
+	
+	if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
+		quests[PlayerData.current_stage].finish_quest()
+		PlayerData.current_stage += 1
+	elif quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.available:
+		quests[PlayerData.current_stage].start_quest()

@@ -1,9 +1,10 @@
-[gd_scene load_steps=124 format=3 uid="uid://c8leysd8nl2tm"]
+[gd_scene load_steps=125 format=3 uid="uid://c8leysd8nl2tm"]
 
 [ext_resource type="Script" path="res://scripts/enemies/ladybug/ladybug.gd" id="1_4v5jg"]
 [ext_resource type="Texture2D" uid="uid://t6s02tqf1odo" path="res://art/enemies/ladybug/ground moving.png" id="1_5nhpo"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_b57c8"]
 [ext_resource type="Texture2D" uid="uid://bmd2gcp0g0u53" path="res://art/enemies/ladybug/flying attack.png" id="2_d0n1a"]
+[ext_resource type="PackedScene" uid="uid://dssy2exuqcb4a" path="res://scenes/enemies/ladybug/ballofgust.tscn" id="2_dytxr"]
 [ext_resource type="Texture2D" uid="uid://myfyny1fu7up" path="res://art/enemies/ladybug/ground idle.png" id="2_qsdln"]
 [ext_resource type="Texture2D" uid="uid://dkkm4tsyfcobq" path="res://art/enemies/ladybug/flying attack right.png" id="3_nnhly"]
 [ext_resource type="Texture2D" uid="uid://cp2r6uuju8w0k" path="res://art/enemies/ladybug/flying back.png" id="4_7hmcu"]
@@ -1096,6 +1097,7 @@ size = Vector3(0.792236, 0.728394, 0.841461)
 collision_layer = 512
 collision_mask = 514
 script = ExtResource("1_4v5jg")
+ballofgust_scene = ExtResource("2_dytxr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.293945, 0.00485229)
@@ -1143,6 +1145,7 @@ pixel_size = 0.002
 billboard = 1
 sprite_frames = SubResource("SpriteFrames_udug2")
 animation = &"ground idle right"
+frame = 3
 
 [node name="attack_timer" type="Timer" parent="."]
 wait_time = 2.0

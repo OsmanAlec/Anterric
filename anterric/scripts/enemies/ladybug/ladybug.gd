@@ -1,25 +1,30 @@
 # Extends the CharacterBody3D class to create a custom 3D character with physics-based movement.
 extends CharacterBody3D
 
+signal died  # Signal to notify when an enemy dies
+
 # Constants for movement speed and the group name for ladybugs.
 const SPEED: float = 5.0
 const LADYBUG_GROUP: String = "Ladybugs"
 
 # Exported variables to configure ladybug behavior in the Godot editor.
-@export var detection_radius: float = 4.0  # Radius within which the ladybug detects the player.
-@export var stopping_distance: float = 3.0  # Distance at which the ladybug stops moving toward the player.
-@export var flying_height: float = 0.4  # Height at which the ladybug flies.
-@export var ascent_speed: float = 0.5  # Speed at which the ladybug ascends to flying height.
-@export var formation_spacing: float = 2.5  # Spacing between ladybugs in formation.
-@export var formation_lag: float = 0.2  # Smoothing factor for formation movement (higher = smoother).
-@export var avoidance_weight: float = 0.8  # Strength of avoidance behavior between ladybugs.
-@export var avoidance_radius: float = 1.2  # Distance at which ladybugs start avoiding each other.
-@export var max_acceleration: float = 10.0  # Maximum change in velocity per second.
 @export var ballofgust_scene: PackedScene  # Scene for the projectile (Ball of Gust).
+@export var drop_item: invitem2
+
+var detection_radius: float = 4.0  # Radius within which the ladybug detects the player.
+var stopping_distance: float = 3.0  # Distance at which the ladybug stops moving toward the player.
+var flying_height: float = 0.4  # Height at which the ladybug flies.
+var ascent_speed: float = 0.5  # Speed at which the ladybug ascends to flying height.
+var formation_spacing: float = 2.5  # Spacing between ladybugs in formation.
+var formation_lag: float = 0.2  # Smoothing factor for formation movement (higher = smoother).
+var avoidance_weight: float = 0.8  # Strength of avoidance behavior between ladybugs.
+var avoidance_radius: float = 1.2  # Distance at which ladybugs start avoiding each other.
+var max_acceleration: float = 10.0  # Maximum change in velocity per second.
 
 # References to nodes and variables for animation and state management.
 @onready var anim_tree = get_node("AnimationTree")  # AnimationTree for controlling animations.
 @onready var marker = $ProjectileSpawn  # Marker node for spawning projectiles.
+@onready var player = get_tree().get_first_node_in_group("Player")  # Get the player node.
 
 # State variables for flying, attacking, and formation behavior.
 var isFlying: bool = false  # Whether the ladybug is flying.
@@ -49,7 +54,6 @@ func update_formation_index() -> void:
 
 # Called every physics frame to handle movement and behavior.
 func _physics_process(delta: float) -> void:
-	var player = get_tree().get_first_node_in_group("Player")  # Get the player node.
 	if not player:  # If there's no player, stop moving.
 		velocity = Vector3.ZERO
 		return
@@ -215,10 +219,7 @@ func shoot_ball_of_gust(player) -> void:
 		projectile.set_direction(player.global_position)  # Set its direction toward the player.
 	
 
-signal died  # Signal to notify when an enemy dies
-
 func die():
-	print("Enemy died!")
 	died.emit()  # Notify the Enemies node
 	queue_free()  # Remove the enemy from the scene
 
@@ -229,7 +230,12 @@ func _on_health_health_depleted() -> void:
 	
 	
 	died.emit()  # Notify the parent node
-	print("enemiy dead")
+	
+	# a 1/4 chance to get ladybird wings
+	if randi_range(1, 4) > 0:
+		print("here")
+		PlayerData.collect(drop_item)
+		
 	
 	for bug in ladybugs:
 		if is_instance_valid(bug):

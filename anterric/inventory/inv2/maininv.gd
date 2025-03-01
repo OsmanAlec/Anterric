@@ -8,7 +8,9 @@ signal update
 @export var slots : Array[InvSlot]
 
 func insert(item: invitem2):
+	print("trying to insert", item)
 	var itemslots = slots.filter(func(slot): return slot.item == item)
+	print(itemslots)
 	if !itemslots.is_empty():
 		itemslots[0].amount += 1
 	else:
@@ -17,3 +19,10 @@ func insert(item: invitem2):
 			emptyslots[0].item = item
 			emptyslots[0].amount = 1
 	update.emit()
+	print("now we have this:", slots)
+	
+func find_slot_by_item_name(target_name: String) -> InvSlot:
+	for slot in slots:
+		if slot.item and slot.item.name == target_name:
+			return slot
+	return null  # Not found

@@ -1,3 +1,3 @@
-maininv
-Resource
 invitem2
+Resource
+maininv

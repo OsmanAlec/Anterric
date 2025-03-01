@@ -53,7 +53,7 @@ func reached_goal() -> void:
 	if quest_status == QuestStatus.started:
 		#update quest status
 		quest_status = QuestStatus.reached_goal
-		QuestControl.active_quests.remove_at(active_quests.find(self))
+		QuestControl.active_quests.erase(self)
 		QuestControl.completed_quests.append(self)
 		QuestControl.draw_quests()
 		
@@ -66,7 +66,7 @@ func finish_quest() -> void:
 	if quest_status == QuestStatus.reached_goal:
 		#update quest status
 		quest_status = QuestStatus.finished
-		QuestControl.completed_quests.remove_at(completed_quests.find(self))
+		QuestControl.completed_quests.erase(self)
 		QuestControl.draw_quests()
 		#reward player
 		upon_completion()

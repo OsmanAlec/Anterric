@@ -17,9 +17,7 @@ var lastDir: Vector3
 var canMove: bool = true
 
 @onready var sfx_walk = $AudioStreamPlayer3D
-@onready var anim_tree = get_node("AnimationTree")
-@export var inv:  maininv
- 
+@onready var anim_tree = get_node("AnimationTree") 
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
@@ -141,9 +139,5 @@ func apply_stun(duration: float) -> void:
 	await get_tree().create_timer(duration).timeout         
 	canMove = true
 
-func collect(item):
-	inv.insert(item)
-	
-func _on_update():
-	print("received update?")
+
 	
