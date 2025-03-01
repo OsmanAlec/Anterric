@@ -1,5 +1,8 @@
-Timer
+StaticBody3D
+NinePatchRect
+CanvasLayer
 MeshInstance3D
+Timer
 AnimationPlayer
 AudioStreamPlayer3D
 GridMap
@@ -10,5 +13,3 @@ ShaderGlobalsOverride
 CanvasModulate
 Health
 CollisionShape3D
-HurtBox
-HitBox

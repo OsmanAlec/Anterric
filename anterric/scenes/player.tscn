@@ -20,7 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="17_3aef1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
-size = Vector3(0.61618, 0.694092, 0.310915)
+size = Vector3(0.701164, 0.694092, 0.470307)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnjmw"]
 atlas = ExtResource("5_ibfqy")
@@ -915,7 +915,7 @@ inv = ExtResource("2_wuwti")
 script = ExtResource("2_kqand")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000106812, 0.347534, 0.151872)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0160026, 0.347534, 0.137422)
 shape = SubResource("BoxShape3D_ot60s")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]

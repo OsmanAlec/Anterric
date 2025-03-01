@@ -49,20 +49,25 @@ func _show_text_box():
 	# Instance a new text box scene
 	text_box_scene = preload("res://scenes/UI/textbox.tscn").instantiate()
 	text_box = text_box_scene.get_node("%Textbox")
-
+	
 	# Add it to the scene tree
 	get_tree().root.add_child(text_box_scene)
 
 	# Adjust position based on speaker (RQUEEN is the response from the queen)
 	if dialog_lines[current_line].begins_with("RQUEEN"):
-		text_box_scene.global_position = player.global_position
+		text_box_scene.position = player.get_node("Camera3D").unproject_position(player.global_position)
+		text_box.get_node("Player").visible = true
+		text_box.get_node("Regular").visible = false
 		text_box.displayText(dialog_lines[current_line].replace("RQUEEN ", ""))
 	else:
-		text_box_scene.global_position = text_box_position
+		text_box_scene.position = player.get_node("Camera3D").unproject_position(text_box_position)
+		text_box.get_node("Player").visible = false
+		text_box.get_node("Regular").visible = true
 		text_box.displayText(dialog_lines[current_line])
 
 	# Offset the text box slightly upwards
-	text_box_scene.global_position.y += 0.5
+	text_box_scene.position.y -= 60
+
 	
 	return
 
