@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://xv1xg13wk422"]
+[gd_scene load_steps=7 format=3 uid="uid://xv1xg13wk422"]
 
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/coin.gd" id="1_dg67i"]
 [ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://art/objects/inventoryItems/1Coin.png" id="2_0pgte"]
+[ext_resource type="Script" path="res://inventory/items/item_pickup.gd" id="3_oy11v"]
+[ext_resource type="Resource" uid="uid://cb4xtsn2xci88" path="res://inventory/inv2/1coin.tres" id="4_afl1n"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v0spy"]
 animations = [{
@@ -13,11 +16,28 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_y7cfr"]
+
 [node name="Coin" type="Node3D"]
+script = ExtResource("1_dg67i")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.298748, 0)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
 pixel_size = 0.002
 sprite_frames = SubResource("SpriteFrames_v0spy")
 animation = &"coin"
+
+[node name="item_pickup" type="Area3D" parent="."]
+collision_layer = 261
+collision_mask = 261
+script = ExtResource("3_oy11v")
+item = ExtResource("4_afl1n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="item_pickup"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_y7cfr")
+
+[connection signal="area_entered" from="item_pickup" to="item_pickup" method="_on_area_entered"]
+[connection signal="body_entered" from="item_pickup" to="item_pickup" method="_on_body_entered"]
+[connection signal="item_pickedup" from="item_pickup" to="." method="_on_item_pickup_item_pickedup"]

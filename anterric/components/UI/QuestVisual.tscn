@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgvg7wb8kp5ak"]
+
+[ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="1_ayuc0"]
+
+[node name="QuestVisual" type="VBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+offset_right = 200.0
+offset_bottom = 200.0
+theme_override_constants/separation = 7
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.596838, 1, 0.842908, 1)
+theme_override_fonts/normal_font = ExtResource("1_ayuc0")
+theme_override_font_sizes/normal_font_size = 12
+text = "Longggggg Title"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Description" type="RichTextLabel" parent="."]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_ayuc0")
+theme_override_font_sizes/normal_font_size = 8
+text = "Lorem ipsum"
+fit_content = true
+scroll_active = false

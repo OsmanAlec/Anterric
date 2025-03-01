@@ -144,3 +144,6 @@ func apply_stun(duration: float) -> void:
 func collect(item):
 	inv.insert(item)
 	
+func _on_update():
+	print("received update?")
+	

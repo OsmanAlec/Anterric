@@ -1,8 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://bnbalt7o36vu1"]
 
 [ext_resource type="Script" path="res://scripts/worker_ant.gd" id="1_xwrtr"]
-[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="2_1501b"]
+[ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="2_1501b"]
 [ext_resource type="Texture2D" uid="uid://brf0jfi8od276" path="res://art/characters/npcs/workerant.png" id="2_aohpl"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wstq"]
 atlas = ExtResource("2_aohpl")

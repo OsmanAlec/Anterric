@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://scenes/UI/tbpositioning.gd" id="1_d1ttt"]
 [ext_resource type="Script" path="res://scripts/UI/textbox.gd" id="1_d02aa"]
 [ext_resource type="Texture2D" uid="uid://dpo36lorlh1qv" path="res://art/UI/textbox.png" id="1_jux8l"]
-[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="4_qd6mo"]
+[ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="4_qd6mo"]
 [ext_resource type="Texture2D" uid="uid://duo8q48sgxglk" path="res://art/UI/queentextbox.png" id="4_s4kc6"]
+
 
 [node name="GUI" type="Control"]
 layout_mode = 3

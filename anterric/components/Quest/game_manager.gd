@@ -1,7 +1,7 @@
 extends Node3D
 
 
-var coin = 49
+var coin = PlayerData.coins
 var xp = 1000
 
 @onready var quest_list: Quest
@@ -11,3 +11,4 @@ var xp = 1000
 
 func _process(delta: float) -> void:
 	$CanvasLayer/Coins.text = str(coin)
+	

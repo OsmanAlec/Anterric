@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://components/Quest/Quest.gd" id="1_n6ekb"]
 
-[node name="SearchQuest" type="Node3D"]
+[node name="Quest" type="Node3D"]
 script = ExtResource("1_n6ekb")

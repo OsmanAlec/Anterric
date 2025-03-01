@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://txoympwk61ot"]
+[gd_scene load_steps=58 format=4 uid="uid://txoympwk61ot"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]
@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
 [ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
 [ext_resource type="PackedScene" uid="uid://dr7ggnptmv048" path="res://scenes/dungeonrooms/branch_door.tscn" id="24_xr322"]
+[ext_resource type="PackedScene" uid="uid://cxcxqtbwen86e" path="res://scenes/dungeonrooms/components/pot.tscn" id="26_e0066"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yluk7"]
 size = Vector3(13.4885, 1, 12.2496)
@@ -374,7 +375,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_prnt8")
 
 [node name="bomb" parent="." instance=ExtResource("21_53axm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.103693, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0653014, -1.26721)
+
+[node name="pot" parent="." instance=ExtResource("26_e0066")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.575746, -0.0259991, -0.400766)
 
 [connection signal="body_entered" from="RoomTrigger" to="." method="_on_room_trigger_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

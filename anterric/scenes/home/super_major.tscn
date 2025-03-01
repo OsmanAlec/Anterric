@@ -2,8 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/super_major.gd" id="1_y8uag"]
 [ext_resource type="Script" path="res://scripts/util/dialog_manager.gd" id="2_ik3q1"]
-[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/mitochondria.ttf" id="2_urtpl"]
+[ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="2_urtpl"]
 [ext_resource type="Texture2D" uid="uid://lpnl8kq2itxa" path="res://art/characters/npcs/supermajor.png" id="3_1o5y1"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fo15f"]
 atlas = ExtResource("3_1o5y1")

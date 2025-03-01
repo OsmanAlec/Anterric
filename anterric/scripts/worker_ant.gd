@@ -53,6 +53,5 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn) -> void:
 	if cn != char_name:
 		return
-	QuestControl.get_node("Collect50coins")
 	$AnimatedSprite3D.play("idle")
 	QuestControl.get_node("Retrieve5Wings").start_quest()
