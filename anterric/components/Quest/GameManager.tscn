@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
-[ext_resource type="FontFile" uid="uid://cbclwdapxhy4i" path="res://components/UI/mitochondria.ttf" id="2_amfqk"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_amfqk"]
 [ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="4_g6m0d"]
 [ext_resource type="AudioStream" uid="uid://uflq5ltbpbs4" path="res://sfx/dash.wav" id="5_ex8hs"]
 

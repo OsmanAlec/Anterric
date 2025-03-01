@@ -1,12 +1,9 @@
-extends Node3D
+extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	MusicManagerSingleton.stop_background()
 	MusicManagerSingleton.play_anthill_music()
-
-
+	
 func _exit_tree():
 	MusicManagerSingleton.stop_anthill_music()
 	MusicManagerSingleton.background_music.play()

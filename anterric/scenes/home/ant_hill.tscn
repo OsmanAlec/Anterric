@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cuclulbu3jsps"]
+[gd_scene load_steps=16 format=3 uid="uid://cuclulbu3jsps"]
 
 [ext_resource type="Texture2D" uid="uid://cmwh1wssu7w1d" path="res://art/objects/homeassets/foreground.png" id="1_0qqg2"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_3g8p3"]
 [ext_resource type="Texture2D" uid="uid://vi0laicg7mkt" path="res://art/objects/homeassets/foregroundpillar.png" id="1_obrax"]
+[ext_resource type="Script" path="res://scenes/home/ant_hill.gd" id="1_oypwd"]
 [ext_resource type="PackedScene" uid="uid://dlhwgagal4mgl" path="res://scenes/home/alchemist_ant.tscn" id="1_yq6h1"]
 [ext_resource type="PackedScene" uid="uid://bnbalt7o36vu1" path="res://scenes/home/workerant.tscn" id="3_1avkl"]
 [ext_resource type="PackedScene" uid="uid://gchytlw2aytx" path="res://scenes/home/super_major.tscn" id="5_wqnrr"]
@@ -39,6 +40,7 @@ size = Vector2(2.512, 1.295)
 size = Vector3(2.37061, 1, 1)
 
 [node name="AntHill" type="Node3D"]
+script = ExtResource("1_oypwd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.416201, 0.909272, 0, -0.909272, -0.416201, 0, 0, 0)
