@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://uup5ae5i1lpm"]
+[gd_scene load_steps=6 format=3 uid="uid://een2pvscpdds"]
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
