@@ -124,6 +124,6 @@ func _on_poison_timer_timeout():
 func increase_health(amount: int) -> void:
 	var new_health = clamp(health + amount, 0, max_health)
 	var diff = new_health - health
-	health = new_health
-	if diff != 0:
-		emit_signal("health_changed", diff)	
+	if diff > 0:
+		health = new_health
+		emit_signal("health_changed", diff)

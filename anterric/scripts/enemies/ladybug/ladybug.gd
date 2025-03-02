@@ -224,28 +224,35 @@ func die():
 	died.emit()  # Notify the Enemies node
 	queue_free()  # Remove the enemy from the scene
 
-# Called when the ladybug's health is depleted.
 func _on_health_health_depleted() -> void:
 	remove_from_group(LADYBUG_GROUP)  # Remove from the ladybug group.
 	var ladybugs = get_tree().get_nodes_in_group(LADYBUG_GROUP)  # Get remaining ladybugs.
-
-	died.emit()  # Notify the parent node
-
-	# Instance the heart scene
-	var heart_instance = HEART_SCENE.instantiate()
-	heart_instance.global_position = global_position
-
-	# Add the heart to the current scene or a specific parent node
-	get_tree().current_scene.add_child(heart_instance)
-
-	# Update formation indices for remaining ladybugs
+	died.emit()  # Notify that this ladybug died.
+	
+	# 70% chance to spawn a heart.
+	if randf() < 0.7:
+		var heart_instance = HEART_SCENE.instantiate()
+		heart_instance.global_position = global_position
+		
+		# Check if the heart instance has the set_heart_type function.
+		if heart_instance.has_method("set_heart_type"):
+			# 50/50 chance for full or half heart.
+			if randf() < 0.5:
+				heart_instance.set_heart_type("full")
+			else:
+				heart_instance.set_heart_type("half")
+		else:
+			push_error("The heart instance does not have the set_heart_type() method. " +
+					   "Ensure that the heart scene’s root node has the correct script attached.")
+		
+		get_tree().current_scene.add_child(heart_instance)
+	
+	# Update formation indices for remaining ladybugs.
 	for bug in ladybugs:
 		if is_instance_valid(bug):
 			bug.update_formation_index()
-
-	queue_free()  # Remove this ladybug from the scene.
-
 	
+	queue_free()  # Remove this ladybug from the scene.
 	
 func set_projectile_scene(scene: PackedScene):
 	ballofgust_scene = scene

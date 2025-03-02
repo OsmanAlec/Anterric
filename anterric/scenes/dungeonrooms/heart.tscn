@@ -13,7 +13,7 @@ billboard = 1
 texture = ExtResource("2_q7j3p")
 
 [node name="Area3D" type="Area3D" parent="."]
-collision_layer = 261
+collision_layer = 260
 collision_mask = 261
 script = ExtResource("2_1x7ao")
 
