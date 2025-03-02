@@ -36,7 +36,7 @@ reached_goal_text = "Return to Erric"
 [node name="Collect50coins" type="Node3D" parent="."]
 script = ExtResource("3_5bf6q")
 quest_name = "Money talks"
-quest_description = "Collect 50 coins"
+quest_description = "Collect 50 coins for the weird drone"
 reached_goal_text = "Return to the mysterious wizard"
 
 [node name="Retrieve5Wings" type="Node3D" parent="."]
@@ -55,7 +55,7 @@ reached_goal_text = "Return to Garvan"
 script = ExtResource("4_x8cn1")
 quest_name = "Feed the army"
 quest_description = "Gather 10 leaves and 5 nectar"
-reached_goal_text = "Return to"
+reached_goal_text = "Return to Manfred"
 
 [node name="TwigsGrass" type="Node3D" parent="."]
 script = ExtResource("6_wta36")
