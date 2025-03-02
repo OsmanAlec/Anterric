@@ -127,6 +127,7 @@ script = ExtResource("2_uogy0")
 max_health = 4
 
 [node name="HitBox" type="Area3D" parent="."]
+collision_layer = 2
 collision_mask = 0
 script = ExtResource("3_djqg0")
 
@@ -136,7 +137,6 @@ shape = SubResource("BoxShape3D_5vc0a")
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
-collision_mask = 2
 script = ExtResource("4_ojram")
 health = NodePath("../Health")
 
