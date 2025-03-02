@@ -18,12 +18,16 @@ func _ready() -> void:
 
 func update_max_health(value):
 	# Create and add TextureRect nodes to represent the player's max health.
+	for child in get_children():
+		child.queue_free()
+		print(child)
 	for i in value / 2:
 		add_child(TextureRect.new()) 
 		var heart = get_child(i) 
 		heart.texture = heart_full  
 		heart.set_expand_mode(5) 
 		heart.custom_minimum_size = Vector2(40, 40)
+		update_health(value)
 	return
 
 func update_health(value):
