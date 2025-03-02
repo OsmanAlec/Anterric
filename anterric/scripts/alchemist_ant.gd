@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var interaction_area: Area3D = $InteractionArea
-@onready var InteractionLabel: Label3D = $Label3D
+@onready var InteractionLabel: Label3D = $InteractionLabel
 
 const char_name: String = "Garvan"
 var canInteract = false

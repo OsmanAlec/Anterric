@@ -8,5 +8,5 @@ var xp = 1000
 
 
 func _process(delta: float) -> void:
-	$CanvasLayer/Coins.text = str(PlayerData.coins)
+	$Coins/Coins.text = str(PlayerData.coins)
 	

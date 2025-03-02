@@ -113,7 +113,7 @@ shape = SubResource("BoxShape3D_wuq2f")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractionArea"]
 shape = SubResource("BoxShape3D_mfupm")
 
-[node name="Label3D" type="Label3D" parent="."]
+[node name="InteractionLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 billboard = 1
 text = "Press T or Joystick Up to Talk"
