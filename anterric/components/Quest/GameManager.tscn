@@ -18,7 +18,6 @@ transform = Transform2D(1, 0, 0, 1, 10, 0)
 offset_top = 80.0
 offset_right = 221.0
 offset_bottom = 103.0
-text = "Press T or Joystick Up to Talk"
 
 [node name="QuestContainer" type="GridContainer" parent="QuestBox"]
 custom_minimum_size = Vector2(200, 200)
