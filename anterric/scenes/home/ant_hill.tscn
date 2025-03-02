@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cuclulbu3jsps"]
+[gd_scene load_steps=46 format=3 uid="uid://cuclulbu3jsps"]
 
 [ext_resource type="Texture2D" uid="uid://cmwh1wssu7w1d" path="res://art/objects/homeassets/foreground.png" id="1_0qqg2"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_3g8p3"]
@@ -6,19 +6,37 @@
 [ext_resource type="Script" path="res://scenes/home/ant_hill.gd" id="1_oypwd"]
 [ext_resource type="PackedScene" uid="uid://dlhwgagal4mgl" path="res://scenes/home/alchemist_ant.tscn" id="1_yq6h1"]
 [ext_resource type="PackedScene" uid="uid://bnbalt7o36vu1" path="res://scenes/home/workerant.tscn" id="3_1avkl"]
-[ext_resource type="PackedScene" uid="uid://cxcxqtbwen86e" path="res://scenes/dungeonrooms/components/pot.tscn" id="4_8eoar"]
 [ext_resource type="PackedScene" uid="uid://gchytlw2aytx" path="res://scenes/home/super_major.tscn" id="5_wqnrr"]
 [ext_resource type="Script" path="res://scenes/home/area_3d.gd" id="6_hiurc"]
 [ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://anthillgridmap.tres" id="6_kdh5m"]
+[ext_resource type="Texture2D" uid="uid://baonpcohokl0b" path="res://art/objects/homeassets/armyforeground_0001.png" id="8_nbm62"]
+[ext_resource type="Texture2D" uid="uid://b6pupjdrgen7e" path="res://art/objects/homeassets/armyforeground_0002.png" id="9_phkds"]
+[ext_resource type="Texture2D" uid="uid://bi1vpyhgevhtl" path="res://art/objects/homeassets/potionforeground_0001.png" id="10_a3dsh"]
+[ext_resource type="Texture2D" uid="uid://dw2wfgtginge0" path="res://art/objects/homeassets/armyforeground_0003.png" id="10_ubm05"]
+[ext_resource type="Texture2D" uid="uid://dxlnw8e82asim" path="res://art/objects/homeassets/armyforeground_0004.png" id="11_rxihp"]
+[ext_resource type="Texture2D" uid="uid://dyeb26isnuf6e" path="res://art/objects/homeassets/potionforeground_0002.png" id="11_xqhf8"]
+[ext_resource type="Texture2D" uid="uid://d03gb6ec1acfr" path="res://art/objects/homeassets/potionforeground_0003.png" id="12_a43kn"]
+[ext_resource type="Texture2D" uid="uid://famacjyuduts" path="res://art/objects/homeassets/tunnelbackground.png" id="12_u2p3j"]
+[ext_resource type="Texture2D" uid="uid://cbdf217x5v120" path="res://art/objects/homeassets/justbackground.png" id="12_v2o08"]
+[ext_resource type="Texture2D" uid="uid://cuk1djl1r8yp" path="res://art/objects/homeassets/potionforeground_0004.png" id="13_g40j6"]
 
 [sub_resource type="Environment" id="Environment_bhis6"]
 background_mode = 1
+background_color = Color(0.192157, 0.141176, 0.0941176, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
+fog_density = 1.0
+fog_height = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdjt0"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("1_0qqg2")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mtmvp"]
@@ -37,72 +55,243 @@ albedo_texture = ExtResource("1_obrax")
 material = SubResource("StandardMaterial3D_rxytt")
 size = Vector2(2.512, 1.295)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlgyk"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("10_a3dsh")
+
+[sub_resource type="QuadMesh" id="QuadMesh_4ocit"]
+material = SubResource("StandardMaterial3D_mlgyk")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_soxdt"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("11_xqhf8")
+
+[sub_resource type="QuadMesh" id="QuadMesh_686ab"]
+material = SubResource("StandardMaterial3D_soxdt")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p2gcs"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("12_a43kn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wn68t"]
+material = SubResource("StandardMaterial3D_p2gcs")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwr6f"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("13_g40j6")
+
+[sub_resource type="QuadMesh" id="QuadMesh_i03f2"]
+material = SubResource("StandardMaterial3D_jwr6f")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_237v4"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("9_phkds")
+
+[sub_resource type="QuadMesh" id="QuadMesh_eyqh5"]
+material = SubResource("StandardMaterial3D_237v4")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mw3ir"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("10_ubm05")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vq6yg"]
+material = SubResource("StandardMaterial3D_mw3ir")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fevdi"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("11_rxihp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_v5lnt"]
+material = SubResource("StandardMaterial3D_fevdi")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ppiu"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("12_u2p3j")
+
+[sub_resource type="QuadMesh" id="QuadMesh_5m4qe"]
+material = SubResource("StandardMaterial3D_4ppiu")
+size = Vector2(1.295, 2.51)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncr3f"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("12_v2o08")
+
+[sub_resource type="QuadMesh" id="QuadMesh_540pv"]
+material = SubResource("StandardMaterial3D_ncr3f")
+size = Vector2(2.51, 1.295)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wix6u"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+disable_fog = true
+albedo_texture = ExtResource("8_nbm62")
+
+[sub_resource type="QuadMesh" id="QuadMesh_qtygc"]
+material = SubResource("StandardMaterial3D_wix6u")
+size = Vector2(2.51, 1.295)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_u47ai"]
 
 [node name="AntHill" type="Node3D"]
 script = ExtResource("1_oypwd")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.416201, 0.909272, 0, -0.909272, -0.416201, 0, 0, 0)
+[node name="environment" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="environment"]
+transform = Transform3D(1, 0, 0, 0, -0.416201, 0.909273, 0, -0.909273, -0.416201, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="environment"]
 environment = SubResource("Environment_bhis6")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 2.95443, 0.520945, 0, -0.520945, 2.95443, -0.603513, 5.322, 0.528885)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, -0.535284, 4.92088, -0.357157)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 2.95443, 0.520945, 0, -0.520945, 2.95443, 6.91278, 5.322, 0.528885)
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, 6.98101, 4.92088, -0.357157)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 2.95443, 0.520945, 0, -0.520945, 2.95443, -8.1131, 5.322, 0.528885)
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, -8.04487, 4.92088, -0.357157)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3, 4.52988e-07, -1.3995e-14, -4.46106e-07, -2.95443, 0.520945, 7.86604e-08, 0.520945, 2.95443, -0.603513, 1.35284, 1.30199)
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, -15.5258, 4.92088, -0.357157)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3, 4.52988e-07, -1.3995e-14, -4.46106e-07, -2.95443, 0.520945, 7.86604e-08, 0.520945, 2.95443, 6.91278, 1.35284, 1.30199)
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 0.0990325, 1.67182, 1.45464)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3, 4.52988e-07, -1.3995e-14, -4.46106e-07, -2.95443, 0.520945, 7.86604e-08, 0.520945, 2.95443, -8.1131, 1.35284, 1.30199)
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 7.61533, 1.67182, 1.45464)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
 
-[node name="Foreground" type="MeshInstance3D" parent="."]
-transform = Transform3D(-3, 4.52988e-07, -8.39698e-14, -4.46106e-07, -2.95443, 0.520945, 7.86603e-08, 0.520945, 2.95443, -2.7036, 2.55342, 0.928619)
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -7.41055, 1.67182, 1.45464)
+layers = 2
+mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -14.8915, 1.67182, 1.45464)
+layers = 2
+mesh = SubResource("QuadMesh_mtmvp")
+skeleton = NodePath("../..")
+
+[node name="Foreground" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 4.52988e-07, -1.0675e-13, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -2.7036, 2.8724, 0.720619)
 mesh = SubResource("QuadMesh_gici6")
+skeleton = NodePath("../..")
 
-[node name="Foreground2" type="MeshInstance3D" parent="."]
-transform = Transform3D(3, 0, 0, 0, 2.95443, 0.520945, 0, -0.520945, 2.95443, 1.33537, 2.60304, 0.895883)
+[node name="Foreground2" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, 1.33537, 2.92202, 0.687883)
 mesh = SubResource("QuadMesh_gici6")
+skeleton = NodePath("../..")
 
-[node name="pot" parent="." instance=ExtResource("4_8eoar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.87652, 1.94957, -1.55034)
+[node name="Potionbackground" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, -5.7766, 2.87331, -2.45772)
+mesh = SubResource("QuadMesh_4ocit")
+skeleton = NodePath("../..")
 
-[node name="pot2" parent="." instance=ExtResource("4_8eoar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97916, 1.94957, -1.55034)
+[node name="PotionBg1" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -9.30426, 3.12057, -1.59789)
+mesh = SubResource("QuadMesh_686ab")
+skeleton = NodePath("../..")
 
-[node name="pot3" parent="." instance=ExtResource("4_8eoar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.9183, 1.94957, -1.55034)
+[node name="PotionBg2" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -9.46792, 3.14885, -0.841835)
+mesh = SubResource("QuadMesh_wn68t")
+skeleton = NodePath("../..")
 
-[node name="pot4" parent="." instance=ExtResource("4_8eoar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6627, 1.94957, -1.55034)
+[node name="PotionBg3" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, -8.64563, 3.15323, 0.196949)
+mesh = SubResource("QuadMesh_i03f2")
+skeleton = NodePath("../..")
 
-[node name="pot5" parent="." instance=ExtResource("4_8eoar")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43907, 1.94957, -1.55034)
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 6.70769, 2.67033, -1.59186)
+mesh = SubResource("QuadMesh_eyqh5")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 6.58159, 2.96206, -0.819567)
+mesh = SubResource("QuadMesh_vq6yg")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(2, 0, 0, 0, 1.73205, 1, 0, -1, 1.73205, 6.54762, 3.04681, 0.0802386)
+mesh = SubResource("QuadMesh_v5lnt")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, -1.30822, 3.63161, -2.93046)
+mesh = SubResource("QuadMesh_5m4qe")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 2.62268e-07, 0, -2.27131e-07, -2.59808, 1.5, 1.31134e-07, 1.5, 2.59808, -13.0281, 2.84872, -2.50289)
+mesh = SubResource("QuadMesh_540pv")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(3, 0, 0, 0, 2.59808, 1.5, 0, -1.5, 2.59808, 3.70824, 3.50628, -2.72041)
+mesh = SubResource("QuadMesh_qtygc")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="environment"]
+transform = Transform3D(-3, 2.62268e-07, 0, -2.27131e-07, -2.59808, 1.5, 1.31134e-07, 1.5, 2.59808, 11.2142, 3.506, -2.72)
+mesh = SubResource("QuadMesh_540pv")
 
 [node name="Player" parent="." instance=ExtResource("1_3g8p3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02698, -0.645475)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771262, 2.02698, -0.707927)
 collision_layer = 5
 collision_mask = 5
 
@@ -116,13 +305,13 @@ damage = 10
 damage = 10
 
 [node name="Garvan" parent="." instance=ExtResource("1_yq6h1")]
-transform = Transform3D(0.999841, 0, 0.0178189, 0, 1, 0, -0.0178189, 0, 0.999841, -6.07248, 2.34783, 0.118564)
+transform = Transform3D(0.999841, 0, 0.0178189, 0, 1, 0, -0.0178189, 0, 0.999841, -5.5085, 2.20524, -0.45716)
 
 [node name="Erric" parent="." instance=ExtResource("3_1avkl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416313, 2.27869, -1.35374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.68575, 2.27869, -0.0907998)
 
 [node name="Manfred" parent="." instance=ExtResource("5_wqnrr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17362, 2.62543, -1.18294)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3268, 2.53981, -0.383126)
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998984, 0.0450666, 0, -0.0450666, 0.998984, -0.695855, 2.49419, -2.71936)
