@@ -11,6 +11,7 @@ const char_name = "Manfred"
 	QuestControl.get_node("LeafNectar"),
 	QuestControl.get_node("TwigsGrass"),
 	QuestControl.get_node("WeaponsandArmor"),
+	QuestControl.get_node("Slay The Queen Bee")
 ]
 
 const prologue: Array[String] = [

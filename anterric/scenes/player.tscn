@@ -884,7 +884,7 @@ graph_offset = Vector2(-27.4962, 0)
 size = Vector3(0.517242, 0.709961, 0.413059)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wl5v0"]
-size = Vector3(0.6, 0.619446, 0.703076)
+size = Vector3(0.6, 1.14583, 0.703076)
 
 [sub_resource type="Gradient" id="Gradient_swtm1"]
 colors = PackedColorArray(0, 0, 0, 1, 0.129412, 0.129412, 0.129412, 1)
@@ -973,7 +973,7 @@ script = ExtResource("12_e4s7a")
 damage = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitLeft"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329399, 0.546844, 0.106603)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.329399, 0.635871, 0.106603)
 shape = SubResource("BoxShape3D_wl5v0")
 
 [node name="HitRight" type="Area3D" parent="."]
@@ -984,7 +984,7 @@ script = ExtResource("12_e4s7a")
 damage = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitRight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.546844, 0.102263)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.329303, 0.62909, 0.102263)
 shape = SubResource("BoxShape3D_wl5v0")
 
 [node name="Shadow" type="Decal" parent="."]

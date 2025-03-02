@@ -12,7 +12,8 @@ const char_name = "Erric"
 @onready var quests: Array[Quest] = [
 	QuestControl.get_node("Grass"),
 	QuestControl.get_node("Gather5Lime"),
-	QuestControl.get_node("WorkerFood")
+	QuestControl.get_node("WorkerFood"),
+	QuestControl.get_node("Slay The Queen Bee")
 ]
 
 const prologue: Array[String] = [

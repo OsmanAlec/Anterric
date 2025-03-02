@@ -5,7 +5,7 @@ var canProgress = false
 func _ready():
 	MusicManagerSingleton.stop_background()
 	MusicManagerSingleton.play_anthill_music()
-	if !QuestControl.completed_quests.is_empty():
+	if !QuestControl.completed_quests.is_empty() and PlayerData.current_stage != 3:
 		canProgress = true
 
 func _process(delta: float) -> void:

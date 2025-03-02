@@ -32,7 +32,6 @@ func get_coin() -> int:
 	return coins
 	
 func collect(item):
-	print("Collecting item coin")
 	await inventory.insert(item)
 	QuestControl.check_quests()
 

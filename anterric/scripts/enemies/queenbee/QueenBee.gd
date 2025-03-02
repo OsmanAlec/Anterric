@@ -110,6 +110,10 @@ func _on_sting_timer_timeout() -> void:
 
 
 func _on_health_health_depleted() -> void:
+	
+	var quest = QuestControl.get_node("Slay The Queen Bee")
+	quest.quest_status = quest.QuestStatus.reached_goal
+	
 	queue_free()
 
 

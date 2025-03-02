@@ -9,7 +9,8 @@ var canInteract = false
 @onready var quests: Array[Quest] = [
 	QuestControl.get_node("Collect50coins"),
 	QuestControl.get_node("Retrieve5Wings"),
-	QuestControl.get_node("BeeStings")
+	QuestControl.get_node("BeeStings"),
+	QuestControl.get_node("Slay The Queen Bee")
 ]
 
 const prologue: Array[String] = [

@@ -9,17 +9,19 @@ class_name enemies_spawner
 @onready var spawn_points := get_children()  # Get all spawn markers
 @onready var num_enemies = randi_range(min_enemies, max_enemies)
 
-func spawn_enemies():
-	print("Spawning", num_enemies, "enemies!")
+func _ready() -> void:
+	#If the player is at the first stage, remove ladybugs
+	if PlayerData.current_stage == 0:
+		enemy_scenes.pop_front()
 
+func spawn_enemies():
 	var enemies_container = get_node(enemies_parent)
 	var available_spawns = spawn_points.duplicate()
 
 	var projectile_scene: PackedScene = load("res://scenes/enemies/ladybug/ballofgust.tscn")
-
+	
 	for i in range(num_enemies):
 		if available_spawns.is_empty():
-			print("No spawn points found!")
 			return
 
 		var spawn_location = available_spawns.pick_random()
@@ -31,13 +33,13 @@ func spawn_enemies():
 		if enemy.has_method("set_projectile_scene"):  
 			enemy.set_projectile_scene(projectile_scene)
 		
-		# ✅ Set initial position above spawn
+		# Set initial position above spawn
 		var start_position = spawn_location.global_transform.origin + Vector3(0, 10, 0)
 		enemy.global_transform.origin = start_position
 
 		enemies_container.add_child(enemy)
 
-		# ✅ Tween animations
+		# Tween animations
 		var tween = get_tree().create_tween()
 		tween.parallel().tween_property(enemy, "global_transform:origin", spawn_location.global_transform.origin, 0.5).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 		tween.parallel().tween_property(enemy, "scale", Vector3(1, 1, 1), 0.5).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
