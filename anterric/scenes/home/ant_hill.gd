@@ -12,6 +12,7 @@ func _process(delta: float) -> void:
 	if canProgress:
 		if QuestControl.completed_quests.is_empty():
 			PlayerData.current_stage += 1
+			canProgress = false
 	
 func _exit_tree():
 	MusicManagerSingleton.stop_anthill_music()

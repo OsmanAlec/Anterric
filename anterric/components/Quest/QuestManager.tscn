@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://bokc5in53nais"]
+[gd_scene load_steps=11 format=3 uid="uid://bokc5in53nais"]
 
 [ext_resource type="Script" path="res://components/Quest/QuestManager.gd" id="1_oalig"]
 [ext_resource type="Script" path="res://components/Quest/grasstuftsquest.gd" id="2_fgqc3"]
 [ext_resource type="Script" path="res://components/Quest/retrieve_5_wings.gd" id="2_smoog"]
 [ext_resource type="Script" path="res://components/Quest/collect_50_coins.gd" id="3_5bf6q"]
+[ext_resource type="Script" path="res://components/Quest/worker_food.gd" id="4_ar8pi"]
 [ext_resource type="Script" path="res://components/Quest/leaf_nectar.gd" id="4_x8cn1"]
 [ext_resource type="Script" path="res://components/Quest/twingsandbranches.gd" id="6_wta36"]
+[ext_resource type="Script" path="res://components/Quest/bee_stings.gd" id="7_7hq5p"]
+[ext_resource type="Script" path="res://components/Quest/gather_5_lime.gd" id="8_0we4y"]
+[ext_resource type="Script" path="res://components/Quest/weaponsand_armor.gd" id="10_tcbsr"]
 
 [node name="QuestManager" type="Node3D"]
 script = ExtResource("1_oalig")
@@ -16,17 +20,23 @@ quest_name = "Grassy business"
 quest_description = "Collect 20 tufts of grass"
 reached_goal_text = "Return to Erric"
 
+[node name="Gather5Lime" type="Node3D" parent="."]
+script = ExtResource("8_0we4y")
+quest_name = "The walls are breaking"
+quest_description = "Gather 5 limes from killing ticks"
+reached_goal_text = "Return to Erric"
+
+[node name="WorkerFood" type="Node3D" parent="."]
+script = ExtResource("4_ar8pi")
+quest_name = "Starving working class"
+quest_description = "Gather more leaves and nectar"
+reached_goal_text = "Return to Erric"
+
 [node name="Collect50coins" type="Node3D" parent="."]
 script = ExtResource("3_5bf6q")
 quest_name = "Money talks"
 quest_description = "Collect 50 coins"
 reached_goal_text = "Return to the mysterious wizard"
-
-[node name="LeafNectar" type="Node3D" parent="."]
-script = ExtResource("4_x8cn1")
-quest_name = "Leaf nectar"
-quest_description = "Gather 50/50 nectar/leaves"
-reached_goal_text = "Return to"
 
 [node name="Retrieve5Wings" type="Node3D" parent="."]
 script = ExtResource("2_smoog")
@@ -34,5 +44,26 @@ quest_name = "7 points"
 quest_description = "Retrieve 5 lady bug wings"
 reached_goal_text = "Return to the mysterious fella"
 
+[node name="BeeStings" type="Node3D" parent="."]
+script = ExtResource("7_7hq5p")
+quest_name = "Ouch it Stings!"
+quest_description = "Collect 20 bee stingers"
+reached_goal_text = "Return to Garvan"
+
+[node name="LeafNectar" type="Node3D" parent="."]
+script = ExtResource("4_x8cn1")
+quest_name = "Feed the army"
+quest_description = "Gather 10 leaves and 5 nectar"
+reached_goal_text = "Return to"
+
 [node name="TwigsGrass" type="Node3D" parent="."]
 script = ExtResource("6_wta36")
+quest_name = "Shelter the Army"
+quest_description = "Gather at least 20 twigs and 10 tufts of grass"
+reached_goal_text = "Return to Manfred"
+
+[node name="WeaponsandArmor" type="Node3D" parent="."]
+script = ExtResource("10_tcbsr")
+quest_name = "Gear up"
+quest_description = "Gather ladybird wings and bee stingers"
+reached_goal_text = "Return to Manfred"

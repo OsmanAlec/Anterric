@@ -28,8 +28,8 @@ func _physics_process(delta):
 			else:
 				get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no" + str(room_num) + ".tscn")
 		else:
-			if QuestControl.active_quests.is_empty():
-				get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no5.tscn")
+			if !QuestControl.active_quests.is_empty():
+				get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no" + str(room_num) + ".tscn")
 			else:
 				get_tree().change_scene_to_file("res://scenes/home/ant_hill.tscn")
 				

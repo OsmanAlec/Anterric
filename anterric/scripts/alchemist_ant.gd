@@ -8,7 +8,8 @@ var canInteract = false
 
 @onready var quests: Array[Quest] = [
 	QuestControl.get_node("Collect50coins"),
-	QuestControl.get_node("Retrieve5Wings")
+	QuestControl.get_node("Retrieve5Wings"),
+	QuestControl.get_node("BeeStings")
 ]
 
 const prologue: Array[String] = [
@@ -119,6 +120,5 @@ func _on_finished_talking(cn):
 	
 	if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 		quests[PlayerData.current_stage].finish_quest()
-		PlayerData.current_stage += 1
 	elif quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[PlayerData.current_stage].start_quest()

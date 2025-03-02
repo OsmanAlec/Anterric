@@ -9,6 +9,8 @@ const char_name = "Manfred"
 
 @onready var quests: Array[Quest] = [
 	QuestControl.get_node("LeafNectar"),
+	QuestControl.get_node("TwigsGrass"),
+	QuestControl.get_node("WeaponsandArmor"),
 ]
 
 const prologue: Array[String] = [
@@ -25,58 +27,55 @@ const prologue: Array[String] = [
 ]
 
 const prologue_questComplete: Array[String] = [
-	"heyy hey heyyy",
-	"RQUEEN here I got you the coins!",
-	"thanks... I'll take ALL of them",
-	"RQUEEN What!?"
+	"RQUEEN Here is the nectar and leaves",
+	"Thank you your Majesty.",
+	"...",
+	"RQUEEN ...",
+	"...",
+	"...",
 ]
 
 const level1: Array[String] = [
-	"heyYyYy",
-	"RQUEEN Now what do you want?",
-	"you need lady bird wings",
-	"RQUEEN Do YOU need them?",
-	"no, you do... trust me."
+	"RQUEEN Do we need anything else?",
+	"Oh yes your Majesty",
+	"We need upgrades to the barracks",
+	"Twigs and grass.",
+	"RQUEEN How much?",
+	"As much as you can carry. The more, the better.",
+	"RQUEEN I’ll bring it."
 ]
 
 const level1_questComplete: Array[String] = [
-	"good job",
-	"...",
-	"RQUEEN you scammed me again!",
-	"no, I did not",
-	"it's dangerous to go alone",
-	"take this"
+	"The barracks are ready.",
+	"RQUEEN More soldiers mean a stronger army.",
+	"A stronger army means victory.",
+	"RQUEEN And victory is what we need.",
+	"Many thanks, my Queen"
 ]
 
 const level2: Array[String] = [
-	"RQUEEN So what's your name?",
-	"bee stingers",
-	"RQUEEN Bee stingers? that's strange",
-	"bring me bee stingers",
-	"RQUEEN I'll call you Garvan",
-	"ok . . ."
+	"We need armor",
+	"RQUEEN Yes we do, what kind?",
+	"Bee stingers and ladybird wings",
+	"RQUEEN I'll take care of it, Manfred"
 ]
 
 const level2_questComplete: Array[String] = [
-	"i'll upgrade your sword",
-	"RQUEEN Wow thanks, Garvan!",
-	"Garvan",
-	"gaaarrrvaaannnnn"
+	"The army thanks you",
+	"RQUEEN Thank you for the hearts!",
+	"Anytime, your Majesty"
 ]
 
 const queenbeeboss: Array[String] = [
-	"it's time",
-	"RQUEEN For what, Garvan?",
-	"it's time, you're ready",
-	"to get rid of the bee queen",
-	"RQUEEN Yes buddy, I am ready!!!"
+	"The army stands ready, your Majesty",
+	"RQUEEN Then let's strike!",
+	"Yes, your majesty"
 ]
 
 const queenbeeboss_questComplete: Array[String] = [
-	"good job!!!",
-	"RQUEEN Thank you, Garvan!",
-	"garvan needs to work with chemicals",
-	"you're not ready for the termites...",
+	"The battle is won",
+	"The colony is safe for just a while",
+	"RQUEEN We'll hit the termites next"
 ]
 
 # A dictionary to keep track of the dialogues dynamically according to the stage the player is at
@@ -127,6 +126,5 @@ func _on_finished_talking(cn) -> void:
 	
 	if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 		quests[PlayerData.current_stage].finish_quest()
-		PlayerData.current_stage += 1
 	elif quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[PlayerData.current_stage].start_quest()

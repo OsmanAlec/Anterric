@@ -54,7 +54,7 @@ func player_movement(delta: float):
 			state = "Dashing"
 			velocity = velocity.move_toward(direction * DASH_SPEED, delta * ACCELERATION)
 			anim_tree.get("parameters/playback").travel("Dashing")
-			anim_tree.set("parameters/Dashing/BlendSpace1D/blend_position", lastDir.x)
+			anim_tree.set("parameters/Dashing/blend_position", direction.x)
 		else:
 			state = "Walking"
 			velocity = velocity.move_toward(direction * SPEED, delta * ACCELERATION)
@@ -87,8 +87,6 @@ func _physics_process(delta: float):
 	player_movement(delta)
 	move_and_slide()
 	
-	
-
 # Start attack sequence
 func start_attack():
 	currentAttack = true
@@ -101,19 +99,14 @@ func start_attack():
 		$HitRight/CollisionShape3D.disabled = false
 	$attack_timer.start()
 	
-
-
 func _on_dash_timer_timeout() -> void:
 	dashing = false
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
 		
-
 func _on_dash_again_timer_timeout() -> void:
 	canDash = true
 	
-
-
 # Reset attack state after attack animation ends
 func _on_animation_tree_animation_started(anim_name: StringName) -> void:
 	if "Attack" not in anim_name:
@@ -127,8 +120,7 @@ func _on_attack_timer_timeout() -> void:
 	currentAttack = false
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
-		
-
+	
 # Handle player death
 func _on_health_health_depleted() -> void:
 	get_tree().change_scene_to_file("res://scenes/UI/gameover.tscn")
@@ -137,6 +129,3 @@ func apply_stun(duration: float) -> void:
 	canMove = false
 	await get_tree().create_timer(duration).timeout         
 	canMove = true
-
-
-	

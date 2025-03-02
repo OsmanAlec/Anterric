@@ -7,8 +7,8 @@ func is_satisfied()-> bool:
 	and PlayerData.inventory.find_slot_by_item_name("grass_tuft") != null:
 		if PlayerData.inventory.find_slot_by_item_name("twig").amount >= 20 \
 		and PlayerData.inventory.find_slot_by_item_name("grass_tuft").amount >= 10:
-			PlayerData.inventory.find_slot_by_item_name("twig").amount -= 20
-			PlayerData.inventory.find_slot_by_item_name("grass_tuft").amount -= 10
+			PlayerData.inventory.find_slot_by_item_name("twig").amount = 0
+			PlayerData.inventory.find_slot_by_item_name("grass_tuft").amount = 0
 			return true
 	return false
 
