@@ -44,12 +44,47 @@ const level1_questComplete: Array[String] = [
 	"take this"
 ]
 
+const level2: Array[String] = [
+	"RQUEEN So what's your name?",
+	"bee stingers",
+	"RQUEEN Bee stingers? that's strange",
+	"bring me bee stingers",
+	"RQUEEN I'll call you Garvan",
+	"ok . . ."
+]
+
+const level2_questComplete: Array[String] = [
+	"i'll upgrade your sword",
+	"RQUEEN Wow thanks, Garvan!",
+	"Garvan",
+	"gaaarrrvaaannnnn"
+]
+
+const queenbeeboss: Array[String] = [
+	"it's time",
+	"RQUEEN For what, Garvan?",
+	"it's time, you're ready",
+	"to get rid of the bee queen",
+	"RQUEEN Yes buddy, I am ready."
+]
+
+const queenbeeboss_questComplete: Array[String] = [
+	"good job!!!",
+	"RQUEEN Thank you, Garvan!",
+	"garvan needs to work with chemicals",
+	"you're not ready for the termites...",
+]
+
 # A dictionary to keep track of the dialogues dynamically according to the stage the player is at
 var dialogs: Dictionary = {
 	"prologue": prologue,
 	"prologue_questComplete": prologue_questComplete,
 	"level1": level1,
-	"level1_questComplete": level1_questComplete
+	"level1_questComplete": level1_questComplete,
+	"level2": level2,
+	"level2_questComplete": level2_questComplete,
+	"queenbeeboss": queenbeeboss,
+	"queenbeeboss_questComplete": queenbeeboss_questComplete,
 }
 
 
@@ -63,7 +98,7 @@ func _unhandled_key_input(event):
 		var key: String = PlayerData.Stage[PlayerData.current_stage]
 		if canInteract:
 			InteractionLabel.hide()
-			if quests[0].quest_status == Quest.QuestStatus.reached_goal:
+			if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 				key += "_questComplete"
 			DialogManager.start_dialog(global_position, dialogs[key], char_name)
 			

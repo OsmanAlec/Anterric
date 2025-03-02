@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="invitem2" load_steps=3 format=3 uid="uid://cincv16rib0d1"]
+
+[ext_resource type="Script" path="res://inventory/inv2/invitem2.gd" id="1_mw1f3"]
+[ext_resource type="Texture2D" uid="uid://cdvxnr8ubqn16" path="res://art/objects/inventoryItems/twig.png" id="2_s0txp"]
+
+[resource]
+script = ExtResource("1_mw1f3")
+name = "twig"
+texture = ExtResource("2_s0txp")

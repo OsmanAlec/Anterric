@@ -31,7 +31,6 @@ func _ready() -> void:
 	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.4).set_ease(Tween.EASE_OUT)
 	
 	
-
 	# Handles player movement logic
 func player_movement(delta: float):
 	# Determine movement direction

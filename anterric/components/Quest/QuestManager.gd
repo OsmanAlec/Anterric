@@ -7,6 +7,9 @@ extends Node3D
 var active_quests: Array[Quest]
 var completed_quests: Array[Quest]
 	
+func check_quests():
+	for quest in active_quests:
+		quest.check_status()
 
 func draw_quests():
 	for child in QuestContainer.get_children():
@@ -17,7 +20,6 @@ func draw_quests():
 		quest_format.get_node("Title").text = quest.quest_name
 		quest_format.get_node("Description").text = quest.quest_description
 		QuestContainer.add_child(quest_format)
-		print("redrawing quests")
 		GameManager.get_node("QuestBox").visible = true
 	
 	for quest in completed_quests:

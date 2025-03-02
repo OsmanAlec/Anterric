@@ -1,8 +1,40 @@
-[gd_resource type="Resource" script_class="maininv" load_steps=3 format=3 uid="uid://bgh6fdxvj5o02"]
+[gd_resource type="Resource" script_class="maininv" load_steps=11 format=3 uid="uid://bgh6fdxvj5o02"]
 
 [ext_resource type="Script" path="res://inventory/inv2/maininv.gd" id="2_bavf3"]
 [ext_resource type="Script" path="res://inventory/inv2/inv_slot_2.gd" id="2_hxasg"]
 
+[sub_resource type="Resource" id="Resource_uo5h5"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_4fomd"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_qt3lm"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_kda2p"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_v2sou"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_svxbn"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_x7umx"]
+script = ExtResource("2_hxasg")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_mir08"]
+script = ExtResource("2_hxasg")
+amount = 0
+
 [resource]
 script = ExtResource("2_bavf3")
-slots = Array[ExtResource("2_hxasg")]([null, null, null, null, null, null, null, null])
+slots = Array[ExtResource("2_hxasg")]([SubResource("Resource_uo5h5"), SubResource("Resource_4fomd"), SubResource("Resource_qt3lm"), SubResource("Resource_kda2p"), SubResource("Resource_v2sou"), SubResource("Resource_svxbn"), SubResource("Resource_x7umx"), SubResource("Resource_mir08")])

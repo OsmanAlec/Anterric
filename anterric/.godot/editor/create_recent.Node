@@ -1,4 +1,7 @@
+Label
+Sprite3D
 Quest
+Node3D
 VBoxContainer
 BoxContainer
 MarginContainer
@@ -10,6 +13,3 @@ StaticBody3D
 NinePatchRect
 CanvasLayer
 AudioStreamPlayer
-Timer
-MeshInstance3D
-Timer

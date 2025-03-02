@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://dwg2pseo63sk2"]
+[gd_scene load_steps=53 format=4 uid="uid://dwg2pseo63sk2"]
 
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_aua2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_sp2eo"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="2_07lrf"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_oboct"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/RoomTrigger.gd" id="2_v7y44"]
+[ext_resource type="PackedScene" uid="uid://b8ewdnilwfnln" path="res://scenes/dungeonrooms/components/leaves.tscn" id="2_xore6"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/room_manager.gd" id="3_byqma"]
+[ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="3_vtrdf"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemy_spawner.gd" id="4_p1v84"]
+[ext_resource type="PackedScene" uid="uid://cxcxqtbwen86e" path="res://scenes/dungeonrooms/components/pot.tscn" id="4_qugaf"]
 [ext_resource type="PackedScene" uid="uid://dim7cy7dlks87" path="res://scenes/enemies/tick.tscn" id="6_jgdir"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="7_ab5m0"]
 [ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="7_pknoq"]
@@ -163,6 +166,51 @@ size = Vector2(0.43, 0.255)
 [node name="RoomNo4" type="Node3D"]
 script = ExtResource("1_sp2eo")
 enemy_spawner = NodePath("Enemy_spawner")
+
+[node name="leaves" parent="." instance=ExtResource("2_xore6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07368, -4.76837e-07, 0.934105)
+
+[node name="leaves2" parent="." instance=ExtResource("2_xore6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28959, -4.76837e-07, -0.75773)
+
+[node name="leaves3" parent="." instance=ExtResource("2_xore6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.91112, -4.76837e-07, -5.29551)
+
+[node name="leaves4" parent="." instance=ExtResource("2_xore6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01112, -4.76837e-07, -7.69551)
+
+[node name="leaves5" parent="." instance=ExtResource("2_xore6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.20711, -4.76837e-07, -6.71208)
+
+[node name="twigs" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00372, 0, 0)
+
+[node name="twigs2" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.57553, 0, -0.585721)
+
+[node name="twigs3" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.46554, 0, -8.18198)
+
+[node name="twigs4" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.18773, 0, -9.22404)
+
+[node name="twigs5" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62355, 0, -1.81065)
+
+[node name="twigs6" parent="." instance=ExtResource("3_vtrdf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.62355, 0, 2.18935)
+
+[node name="pot" parent="." instance=ExtResource("4_qugaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.66916, 0, -0.712435)
+
+[node name="pot2" parent="." instance=ExtResource("4_qugaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.45424, 0, -4.91226)
+
+[node name="pot3" parent="." instance=ExtResource("4_qugaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.78054, 0, -4.91226)
+
+[node name="pot4" parent="." instance=ExtResource("4_qugaf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.21099, 0, -4.91226)
 
 [node name="RoomTrigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.727374, 0, 3.81612)

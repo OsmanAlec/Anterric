@@ -233,7 +233,6 @@ func _on_health_health_depleted() -> void:
 	
 	# a 1/4 chance to get ladybird wings
 	if randi_range(1, 4) > 0:
-		print("here")
 		PlayerData.collect(drop_item)
 		
 	

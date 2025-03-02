@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp00sy3vongwu"]
+[gd_scene load_steps=10 format=3 uid="uid://dp00sy3vongwu"]
 
 [ext_resource type="Texture2D" uid="uid://bunx6u6sugqe1" path="res://art/objects/dungeonAssets/twigs.png" id="1_6lidy"]
+[ext_resource type="Script" path="res://scripts/dungeonrooms/components/twigs.gd" id="1_tba7b"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="2_kdvan"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pcp2r"]
@@ -43,6 +44,7 @@ animations = [{
 size = Vector3(0.488815, 0.683655, 0.718262)
 
 [node name="twigs" type="Node3D"]
+script = ExtResource("1_tba7b")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -59,3 +61,5 @@ script = ExtResource("2_kdvan")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02314, 0.338652, 0.00268555)
 shape = SubResource("BoxShape3D_qm7ar")
+
+[connection signal="broken" from="BreakBox" to="." method="_on_break_box_broken"]

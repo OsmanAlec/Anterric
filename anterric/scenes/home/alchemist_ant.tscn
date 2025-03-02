@@ -61,7 +61,7 @@ shape = SubResource("BoxShape3D_yeof2")
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 billboard = 1
-text = "Press T(alk)"
+text = "Press T or Joystick Up to Talk"
 font = ExtResource("3_mdnq1")
 font_size = 17
 

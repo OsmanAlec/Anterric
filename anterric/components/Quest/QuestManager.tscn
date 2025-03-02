@@ -1,24 +1,34 @@
-[gd_scene load_steps=5 format=3 uid="uid://bokc5in53nais"]
+[gd_scene load_steps=6 format=3 uid="uid://bokc5in53nais"]
 
 [ext_resource type="Script" path="res://components/Quest/QuestManager.gd" id="1_oalig"]
+[ext_resource type="Script" path="res://components/Quest/grasstuftsquest.gd" id="2_fgqc3"]
 [ext_resource type="Script" path="res://components/Quest/retrieve_5_wings.gd" id="2_smoog"]
 [ext_resource type="Script" path="res://components/Quest/collect_50_coins.gd" id="3_5bf6q"]
-[ext_resource type="Script" path="res://components/Quest/Quest.gd" id="4_uujvl"]
+[ext_resource type="Script" path="res://components/Quest/leaf_nectar.gd" id="4_x8cn1"]
 
 [node name="QuestManager" type="Node3D"]
 script = ExtResource("1_oalig")
 
-[node name="Retrieve5Wings" type="Node3D" parent="."]
-script = ExtResource("2_smoog")
-quest_name = "7 dots"
-quest_description = "Retrieve 5 lady bug wings"
+[node name="Grass" type="Node3D" parent="." groups=["prologue"]]
+script = ExtResource("2_fgqc3")
+quest_name = "Grassy business"
+quest_description = "Collect 20 tufts of grass"
 reached_goal_text = "Return to Erric"
 
-[node name="Collect50coins" type="Node3D" parent="."]
+[node name="Collect50coins" type="Node3D" parent="." groups=["prologue"]]
 script = ExtResource("3_5bf6q")
 quest_name = "Money talks"
 quest_description = "Collect 50 coins"
 reached_goal_text = "Return to the mysterious wizard"
 
-[node name="Quest" type="Node3D" parent="."]
-script = ExtResource("4_uujvl")
+[node name="LeafNectar" type="Node3D" parent="." groups=["prologue"]]
+script = ExtResource("4_x8cn1")
+quest_name = "Leaf nectar"
+quest_description = "Gather 50/50 nectar/leaves"
+reached_goal_text = "Return to"
+
+[node name="Retrieve5Wings" type="Node3D" parent="."]
+script = ExtResource("2_smoog")
+quest_name = "7 points"
+quest_description = "Retrieve 5 lady bug wings"
+reached_goal_text = "Return to the mysterious fella"

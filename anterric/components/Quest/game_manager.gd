@@ -1,7 +1,6 @@
 extends Node3D
 
 
-var coin = PlayerData.coins
 var xp = 1000
 
 @onready var sfx_hit = $Hitsound
@@ -9,5 +8,5 @@ var xp = 1000
 
 
 func _process(delta: float) -> void:
-	$CanvasLayer/Coins.text = str(coin)
+	$CanvasLayer/Coins.text = str(PlayerData.coins)
 	

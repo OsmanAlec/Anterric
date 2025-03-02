@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="3_8q2t2"]
 [ext_resource type="Texture2D" uid="uid://4sbw8qqp0iak" path="res://art/objects/dungeonAssets/bg2.png" id="4_4o7dv"]
 [ext_resource type="PackedScene" uid="uid://c8leysd8nl2tm" path="res://scenes/enemies/ladybug/ladybug.tscn" id="4_imkif"]
+[ext_resource type="PackedScene" uid="uid://b8ewdnilwfnln" path="res://scenes/dungeonrooms/components/leaves.tscn" id="4_pli5d"]
 [ext_resource type="PackedScene" uid="uid://3wrwr6mib1xr" path="res://scenes/dungeonrooms/components/grass.tscn" id="5_7j8lv"]
 [ext_resource type="Texture2D" uid="uid://csededbek4fuo" path="res://art/objects/dungeonAssets/bg3.png" id="5_nlsd8"]
 [ext_resource type="Texture2D" uid="uid://k7rfkqfreqrn" path="res://art/objects/dungeonAssets/bg4.png" id="6_ek6x4"]
@@ -23,7 +24,6 @@
 [ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="14_w0aqb"]
 [ext_resource type="Texture2D" uid="uid://wfxfw1a02q1v" path="res://art/objects/dungeonAssets/hanging grass_0001.png" id="18_kgo1s"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/door.gd" id="18_m1w6w"]
-[ext_resource type="PackedScene" uid="uid://mtj27p3ikcv2" path="res://inventory/items/bomb.tscn" id="21_53axm"]
 [ext_resource type="PackedScene" uid="uid://dr7ggnptmv048" path="res://scenes/dungeonrooms/branch_door.tscn" id="24_xr322"]
 [ext_resource type="PackedScene" uid="uid://cxcxqtbwen86e" path="res://scenes/dungeonrooms/components/pot.tscn" id="26_e0066"]
 
@@ -187,6 +187,30 @@ size = Vector3(2.14545, 1.37598, 1)
 script = ExtResource("1_twj2x")
 enemy_spawner = NodePath("Enemy_spawner")
 
+[node name="grass" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+
+[node name="pot" parent="." instance=ExtResource("26_e0066")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83671, -0.0259991, -1.23392)
+
+[node name="grass2" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93685, 0, 0.00176114)
+
+[node name="grass3" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.23611, 0, -0.500054)
+
+[node name="leaves" parent="." instance=ExtResource("4_pli5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.78458, 0, -2.45232)
+
+[node name="leaves2" parent="." instance=ExtResource("4_pli5d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43283, 0, -0.964056)
+
+[node name="grass4" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.89431, 0, -1.46328)
+
+[node name="grass5" parent="." instance=ExtResource("5_7j8lv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.80906, 0, -1.02639)
+
 [node name="RoomTrigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.616147, 0, 0.985204)
 collision_layer = 256
@@ -345,12 +369,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.624, 0, 0.832)
 collision_layer = 260
 collision_mask = 261
 
-[node name="grass" parent="." instance=ExtResource("5_7j8lv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
-
-[node name="grass2" parent="." instance=ExtResource("5_7j8lv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94243, 0, -0.796066)
-
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998984, 0.0450666, 0, -0.0450666, 0.998984, 2.18606, 0.349808, -5.14034)
 collision_layer = 4
@@ -373,12 +391,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.603498, 0.0142958)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="door/door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
 shape = SubResource("BoxShape3D_prnt8")
-
-[node name="bomb" parent="." instance=ExtResource("21_53axm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0653014, -1.26721)
-
-[node name="pot" parent="." instance=ExtResource("26_e0066")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.575746, -0.0259991, -0.400766)
 
 [connection signal="body_entered" from="RoomTrigger" to="." method="_on_room_trigger_body_entered"]
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

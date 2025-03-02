@@ -16,10 +16,6 @@ enum QuestStatus{
 #quest status
 @export var quest_status: QuestStatus = QuestStatus.available
 
-#reward settings
-@export_group("Reward Settings")
-@export var reward_amount: int #might be redundant
-
 var inventory = PlayerData.inventory
 
 func _ready():
@@ -33,7 +29,6 @@ func start_quest() -> void:
 		#update quest status
 		quest_status = QuestStatus.started
 		QuestControl.active_quests.append(self)
-		print("making a new quest with title", self.quest_name)
 		QuestControl.draw_quests()
 
 func _on_inventory_updated():

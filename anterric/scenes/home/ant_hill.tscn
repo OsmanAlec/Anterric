@@ -101,9 +101,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6627, 1.94957, -1.55034)
 [node name="pot5" parent="." instance=ExtResource("4_8eoar")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.43907, 1.94957, -1.55034)
 
-[node name="AlchemistAnt" parent="." instance=ExtResource("1_yq6h1")]
-transform = Transform3D(0.999841, 0, 0.0178189, 0, 1, 0, -0.0178189, 0, 0.999841, -6.07248, 2.34783, 0.118564)
-
 [node name="Player" parent="." instance=ExtResource("1_3g8p3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02698, -0.645475)
 collision_layer = 5
@@ -118,10 +115,13 @@ damage = 10
 [node name="HitRight" parent="Player" index="13"]
 damage = 10
 
-[node name="WorkerAnt" parent="." instance=ExtResource("3_1avkl")]
+[node name="Garvan" parent="." instance=ExtResource("1_yq6h1")]
+transform = Transform3D(0.999841, 0, 0.0178189, 0, 1, 0, -0.0178189, 0, 0.999841, -6.07248, 2.34783, 0.118564)
+
+[node name="Erric" parent="." instance=ExtResource("3_1avkl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.416313, 2.27869, -1.35374)
 
-[node name="SuperMajor" parent="." instance=ExtResource("5_wqnrr")]
+[node name="Manfred" parent="." instance=ExtResource("5_wqnrr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.17362, 2.62543, -1.18294)
 
 [node name="Area3D" type="Area3D" parent="."]

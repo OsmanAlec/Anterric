@@ -5,6 +5,7 @@ extends CharacterBody3D
 @export var speed: float = 2.0
 @export var attack_range: float = 0.5
 @export var detection_range: float = 1.7
+@export var drop_item: invitem2
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 
@@ -50,11 +51,8 @@ func attack():
 signal died  # Signal to notify when an enemy dies
 
 func die():
-	print("Enemy died!")
 	died.emit()  # Notify the Enemies node
 	queue_free()  # Remove the enemy from the scene
-
-
 
 func _on_attack_cooldown_timeout() -> void:
 	canAttack = true
@@ -62,7 +60,7 @@ func _on_attack_cooldown_timeout() -> void:
 func _on_health_health_depleted() -> void:
 	
 	died.emit()  # Notify the parent node
-	print("enemiy dead")
+	PlayerData.collect(drop_item)
 	queue_free()
 
 func _on_animations_animation_finished() -> void:

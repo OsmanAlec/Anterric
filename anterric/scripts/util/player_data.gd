@@ -7,7 +7,7 @@ const Stage: Array[String] = [
 	"queenbeeboss",
 ]
 
-var max_health: int = 20
+var max_health: int = 6 : set = set_maxhp
 var current_health: int = max_health
 var applied_poison: int = 0
 var coins: int = 0 : set = set_coin, get = get_coin
@@ -16,18 +16,29 @@ var inventory: maininv = load("res://inventory/inv2/playerinv.tres")
 
 var current_stage: int = 0 #index for Stage
 
+func _process(delta: float) -> void:
+	if player != null:
+		return
+	player = get_tree().get_first_node_in_group("Player")
+
 func change_health (value: int)-> void:
 	current_health = value
-
 	
 func set_coin(value: int):
-	print(value)
 	coins = value
-	GameManager.coin = coins
+	QuestControl.check_quests()
 	
 func get_coin() -> int:
 	return coins
 	
 func collect(item):
-	inventory.insert(item)
+	print("Collecting item coin")
+	await inventory.insert(item)
+	QuestControl.check_quests()
+
+func set_maxhp(value: int):
+	player.get_node("Health").max_health = value
+	max_health = value
+	player.get_node("HUD").get_node("Hearts").update_max_health(value)
+	current_health = value
 	

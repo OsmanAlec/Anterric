@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://components/UI/quest_visual.gd" id="1_jjlle"]
 
 [node name="QuestVisual" type="VBoxContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(100, 50)
 offset_right = 200.0
 offset_bottom = 200.0
 theme_override_constants/separation = 1

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="invitem2" load_steps=3 format=3 uid="uid://bk438nkwqcrij"]
+
+[ext_resource type="Script" path="res://inventory/inv2/invitem2.gd" id="1_fabbo"]
+[ext_resource type="Texture2D" uid="uid://dknxwqq4a6ftv" path="res://art/objects/inventoryItems/tuftofgrass.png" id="2_4qnm7"]
+
+[resource]
+script = ExtResource("1_fabbo")
+name = "grass_tuft"
+texture = ExtResource("2_4qnm7")

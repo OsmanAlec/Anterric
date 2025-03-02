@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cs454s5ckx4k7"]
+
+[ext_resource type="Texture2D" uid="uid://dknxwqq4a6ftv" path="res://art/objects/inventoryItems/tuftofgrass.png" id="1_5x3wh"]
+[ext_resource type="Script" path="res://inventory/items/grass_tuft.gd" id="1_127mr"]
+[ext_resource type="Script" path="res://inventory/items/item_pickup.gd" id="2_qpyhq"]
+[ext_resource type="Resource" uid="uid://bk438nkwqcrij" path="res://inventory/items/grass_tuft.tres" id="4_e7b78"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pa48j"]
+
+[node name="grass_tuft" type="Node3D"]
+script = ExtResource("1_127mr")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("1_5x3wh")
+
+[node name="item_pickup" type="Area3D" parent="."]
+collision_layer = 261
+collision_mask = 261
+script = ExtResource("2_qpyhq")
+item = ExtResource("4_e7b78")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="item_pickup"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00445171, -0.00445558, 0)
+shape = SubResource("BoxShape3D_pa48j")
+
+[connection signal="area_entered" from="item_pickup" to="item_pickup" method="_on_area_entered"]
+[connection signal="body_entered" from="item_pickup" to="item_pickup" method="_on_body_entered"]
+[connection signal="item_pickedup" from="item_pickup" to="." method="_on_item_pickup_item_pickedup"]

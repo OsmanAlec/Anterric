@@ -2,6 +2,7 @@ extends Control
 
 
 func _on_play_pressed() -> void:
+	GameManager.get_node("Coins").visible = true
 	get_tree().change_scene_to_file("res://scenes/home/ant_hill.tscn")
 
 

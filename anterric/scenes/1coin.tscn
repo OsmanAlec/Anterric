@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://xv1xg13wk422"]
+[gd_scene load_steps=6 format=3 uid="uid://csx4yjwe62833"]
 
 [ext_resource type="Script" path="res://scripts/dungeonrooms/components/coin.gd" id="1_dg67i"]
 [ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://art/objects/inventoryItems/1Coin.png" id="2_0pgte"]
@@ -17,7 +17,7 @@ animations = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y7cfr"]
 
-[node name="Coin" type="Node3D"]
+[node name="1Coin" type="Node3D"]
 script = ExtResource("1_dg67i")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]

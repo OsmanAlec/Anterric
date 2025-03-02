@@ -1,5 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://3wrwr6mib1xr"]
+[gd_scene load_steps=11 format=3 uid="uid://3wrwr6mib1xr"]
 
+[ext_resource type="Script" path="res://scenes/dungeonrooms/components/grass.gd" id="1_0nh8g"]
 [ext_resource type="Texture2D" uid="uid://cvs8hcyfkuhlu" path="res://art/objects/dungeonAssets/grass.png" id="2_aierq"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="4_35apo"]
 
@@ -50,6 +51,7 @@ animations = [{
 size = Vector3(0.548218, 1.23523, 0.664063)
 
 [node name="grass" type="Node3D"]
+script = ExtResource("1_0nh8g")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -66,3 +68,5 @@ script = ExtResource("4_35apo")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0.000549316, 0.617754, 0)
 shape = SubResource("BoxShape3D_m2vum")
+
+[connection signal="broken" from="BreakBox" to="." method="_on_break_box_broken"]

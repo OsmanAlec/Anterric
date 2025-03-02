@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="invitem2" load_steps=3 format=3 uid="uid://1yng7qnulkao"]
+
+[ext_resource type="Script" path="res://inventory/inv2/invitem2.gd" id="1_g7yew"]
+[ext_resource type="Texture2D" uid="uid://bv8opftji5jy6" path="res://art/objects/inventoryItems/lime.png" id="2_u526c"]
+
+[resource]
+script = ExtResource("1_g7yew")
+name = "lime"
+texture = ExtResource("2_u526c")

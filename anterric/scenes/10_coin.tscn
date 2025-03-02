@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjso4gdm7q086"]
+
+[ext_resource type="Script" path="res://10_coin.gd" id="1_alkte"]
+[ext_resource type="Texture2D" uid="uid://diqboa2pg0wto" path="res://art/objects/inventoryItems/1Coin.png" id="2_leawd"]
+[ext_resource type="Script" path="res://scripts/coin_pickup.gd" id="3_tiux7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_00lik"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_leawd")
+}],
+"loop": false,
+"name": &"coin",
+"speed": 12.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g6b0c"]
+
+[node name="10Coin" type="Node3D"]
+script = ExtResource("1_alkte")
+
+[node name="Animations" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0)
+pixel_size = 0.002
+sprite_frames = SubResource("SpriteFrames_00lik")
+animation = &"coin"
+
+[node name="coin_pickup" type="Area3D" parent="."]
+collision_layer = 261
+collision_mask = 261
+script = ExtResource("3_tiux7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="coin_pickup"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_g6b0c")
+
+[connection signal="area_entered" from="coin_pickup" to="coin_pickup" method="_on_area_entered"]
+[connection signal="body_entered" from="coin_pickup" to="coin_pickup" method="_on_body_entered"]
+[connection signal="coin_pickedup" from="coin_pickup" to="." method="_on_coin_pickup_coin_pickedup"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="invitem2" load_steps=3 format=3 uid="uid://b6nn2tcn4cddi"]
+
+[ext_resource type="Script" path="res://inventory/inv2/invitem2.gd" id="1_0y7y4"]
+[ext_resource type="Texture2D" uid="uid://cgq73rdt71h6r" path="res://art/objects/inventoryItems/beestinger.png" id="2_fthr6"]
+
+[resource]
+script = ExtResource("1_0y7y4")
+name = "bee_stinger"
+texture = ExtResource("2_fthr6")

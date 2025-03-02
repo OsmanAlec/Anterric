@@ -1,6 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://ckdmoytquc0qd"]
+[gd_scene load_steps=23 format=3 uid="uid://ckdmoytquc0qd"]
 
 [ext_resource type="Script" path="res://scenes/enemies/workerbee.gd" id="1_nvx3a"]
+[ext_resource type="Resource" uid="uid://b6nn2tcn4cddi" path="res://inventory/items/beestinger.tres" id="2_4ogo0"]
+[ext_resource type="Resource" uid="uid://bvk710ub4op0g" path="res://inventory/items/nectar.tres" id="2_t2pl4"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_uogy0"]
 [ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="3_djqg0"]
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="4_ojram"]
@@ -93,6 +95,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_5vc0a"]
+size = Vector3(0.791626, 0.583435, 0.732422)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_2t0b8"]
 size = Vector3(0.488449, 0.51593, 0.682373)
 
@@ -101,6 +106,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.323304, 0)
 collision_layer = 512
 collision_mask = 514
 script = ExtResource("1_nvx3a")
+drop_item1 = ExtResource("2_t2pl4")
+drop_item2 = ExtResource("2_4ogo0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 visible = false
@@ -124,9 +131,8 @@ collision_mask = 0
 script = ExtResource("3_djqg0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00441742, 0.0909729, 0.000854492)
-shape = SubResource("BoxShape3D_2t0b8")
-disabled = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00540577, 0.0813599, -0.0343018)
+shape = SubResource("BoxShape3D_5vc0a")
 
 [node name="HurtBox" type="Area3D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
@@ -135,8 +141,9 @@ script = ExtResource("4_ojram")
 health = NodePath("../Health")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HurtBox"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.195583, 0.0909729, 0.000854492)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00441742, 0.0909729, 0.000854492)
 shape = SubResource("BoxShape3D_2t0b8")
+disabled = true
 
 [node name="attack_cooldown" type="Timer" parent="."]
 one_shot = true
