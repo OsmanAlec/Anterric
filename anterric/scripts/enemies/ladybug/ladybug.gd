@@ -7,6 +7,9 @@ signal died  # Signal to notify when an enemy dies
 const SPEED: float = 5.0
 const LADYBUG_GROUP: String = "Ladybugs"
 
+const HEART_SCENE = preload("res://scenes/dungeonrooms/heart.tscn")
+
+
 # Exported variables to configure ladybug behavior in the Godot editor.
 @export var ballofgust_scene: PackedScene  # Scene for the projectile (Ball of Gust).
 @export var drop_item: invitem2
@@ -231,10 +234,20 @@ func _on_health_health_depleted() -> void:
 	
 	died.emit()  # Notify the parent node
 	
-	# a 1/4 chance to get ladybird wings
-	if randi_range(1, 4) > 0:
-		PlayerData.collect(drop_item)
+	PlayerData.collect(drop_item)
+	
+	# 70% chance to spawn a heart.
+	if randf() < 0.7:
+		var heart_instance = HEART_SCENE.instantiate()
+		heart_instance.global_position = global_position
 		
+		# 50/50 chance for full or half heart.
+		if randf() < 0.5:
+			heart_instance.set_heart_type("full")
+		else:
+			heart_instance.set_heart_type("half")
+		
+		get_tree().current_scene.add_child(heart_instance)
 	
 	for bug in ladybugs:
 		if is_instance_valid(bug):

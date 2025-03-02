@@ -9,7 +9,7 @@ const Stage: Array[String] = [
 
 var completed_quests : int = 0
 var max_health: int = 6 : set = set_maxhp
-var current_health: int = max_health
+var current_health: int = max_health : set = set_hp
 var applied_poison: int = 0
 var coins: int = 0 : set = set_coin, get = get_coin
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
@@ -40,5 +40,13 @@ func set_maxhp(value: int):
 	player.get_node("Health").max_health = value
 	max_health = value
 	player.get_node("HUD").get_node("Hearts").update_max_health(value)
+	current_health = value
+	
+func set_hp(value: int):
+	if !player:
+		return
+	player.get_node("Health").health = value
+	current_health = clamp(value, 0, max_health)
+	player.get_node("HUD").get_node("Hearts").update_health(value)
 	current_health = value
 	

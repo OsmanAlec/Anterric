@@ -11,6 +11,8 @@ extends CharacterBody3D
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 
+const HEART_SCENE = preload("res://scenes/dungeonrooms/heart.tscn")
+
 var canAttack = true
 var isAttacking = false
 
@@ -64,6 +66,18 @@ func _on_health_health_depleted() -> void:
 	died.emit()  # Notify the parent node
 	PlayerData.collect(drop_item1)
 	PlayerData.collect(drop_item2)
+	# 50% chance to spawn a heart.
+	if randf() < 0.5:
+		var heart_instance = HEART_SCENE.instantiate()
+		heart_instance.global_position = global_position
+		
+		# 20/80 chance for full/half heart.
+		if randf() < 0.2:
+			heart_instance.set_heart_type("full")
+		else:
+			heart_instance.set_heart_type("half")
+		
+		get_tree().current_scene.add_child(heart_instance)
 	queue_free()
 
 
