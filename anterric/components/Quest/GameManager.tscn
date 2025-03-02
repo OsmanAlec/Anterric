@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://uup5ae5i1lpm"]
+[gd_scene load_steps=6 format=3 uid="uid://een2pvscpdds"]
 
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="1_goibj"]
 [ext_resource type="Script" path="res://components/Quest/game_manager.gd" id="1_ylaw4"]
@@ -18,7 +18,6 @@ transform = Transform2D(1, 0, 0, 1, 10, 0)
 offset_top = 80.0
 offset_right = 221.0
 offset_bottom = 103.0
-text = "Press T or Joystick Up to Talk"
 
 [node name="QuestContainer" type="GridContainer" parent="QuestBox"]
 custom_minimum_size = Vector2(200, 200)
