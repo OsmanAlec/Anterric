@@ -23,3 +23,5 @@ res://anthillgridmap.tres
 res://scenes/home/ant_hill.tscn
 res://scenes/dungeonrooms/room_no5.tscn
 res://scripts/MusicManager.gd
+res://super_major.gd
+res://scripts/player.gd

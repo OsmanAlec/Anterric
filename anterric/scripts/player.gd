@@ -6,6 +6,10 @@ const SPEED = 3 * RATE
 const ACCELERATION = 30 * RATE
 const DASH_SPEED = 6 * RATE
 
+# Footstep variables
+const FOOTSTEP_DELAY = 0.4
+var footstep_timer = 0.0
+
 # State variables
 var dashing = false
 var canDash = true
@@ -18,6 +22,7 @@ var canMove: bool = true
 
 @onready var sfx_walk = $AudioStreamPlayer3D
 @onready var anim_tree = get_node("AnimationTree") 
+@onready var footstep_player = $FootstepPlayer
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
@@ -36,8 +41,19 @@ func player_movement(delta: float):
 	# Determine movement direction
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = Vector3(input_dir.x, 0, input_dir.y)
+	var is_moving = velocity.length() > 0
 	
 	direction = direction.normalized()
+	
+	# Handle footstep sounds
+	if is_moving:
+		footstep_timer -= delta
+		if footstep_timer <= 0:
+			play_footstep()
+			footstep_timer = FOOTSTEP_DELAY
+		else:
+			footstep_timer = 0 #resets 
+	
 	# Handle dashing
 	if Input.is_action_just_pressed("dash") and canDash:
 		dashing = true
@@ -129,3 +145,9 @@ func apply_stun(duration: float) -> void:
 	canMove = false
 	await get_tree().create_timer(duration).timeout         
 	canMove = true
+
+
+#play foostep
+func play_footstep():
+	if footstep_player and not footstep_player.playing:
+		footstep_player.play()
