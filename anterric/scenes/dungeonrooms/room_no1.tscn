@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=4 uid="uid://txoympwk61ot"]
+[gd_scene load_steps=58 format=4 uid="uid://pwbjvx0daflj"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_twj2x"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="2_cnocm"]

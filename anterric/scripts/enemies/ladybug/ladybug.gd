@@ -10,6 +10,7 @@ const LADYBUG_GROUP: String = "Ladybugs"
 # Exported variables to configure ladybug behavior in the Godot editor.
 @export var ballofgust_scene: PackedScene  # Scene for the projectile (Ball of Gust).
 @export var drop_item: invitem2
+const HEART_SCENE = preload("res://scenes/dungeonrooms/heart.tscn")
 
 var detection_radius: float = 4.0  # Radius within which the ladybug detects the player.
 var stopping_distance: float = 3.0  # Distance at which the ladybug stops moving toward the player.
@@ -227,19 +228,23 @@ func die():
 func _on_health_health_depleted() -> void:
 	remove_from_group(LADYBUG_GROUP)  # Remove from the ladybug group.
 	var ladybugs = get_tree().get_nodes_in_group(LADYBUG_GROUP)  # Get remaining ladybugs.
-	
-	
+
 	died.emit()  # Notify the parent node
-	
-	# a 1/4 chance to get ladybird wings
-	if randi_range(1, 4) > 0:
-		PlayerData.collect(drop_item)
-		
-	
+
+	# Instance the heart scene
+	var heart_instance = HEART_SCENE.instantiate()
+	heart_instance.global_position = global_position
+
+	# Add the heart to the current scene or a specific parent node
+	get_tree().current_scene.add_child(heart_instance)
+
+	# Update formation indices for remaining ladybugs
 	for bug in ladybugs:
 		if is_instance_valid(bug):
-			bug.update_formation_index()  # Update their formation indices.
+			bug.update_formation_index()
+
 	queue_free()  # Remove this ladybug from the scene.
+
 	
 	
 func set_projectile_scene(scene: PackedScene):
