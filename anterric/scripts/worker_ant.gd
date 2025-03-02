@@ -121,6 +121,9 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn) -> void:
 	if cn != char_name:
 		return
+		
+	$AnimatedSprite3D.play("idle")
+
 	var key: String = PlayerData.Stage[PlayerData.current_stage]
 	
 	if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:

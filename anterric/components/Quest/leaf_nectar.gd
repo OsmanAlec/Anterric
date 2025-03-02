@@ -1,4 +1,4 @@
-"""Collect 10 tufts of Grass"""
+"""Collect 10 leaf and 5 nectar"""
 
 extends Quest
 
@@ -7,6 +7,8 @@ func is_satisfied()-> bool:
 	and PlayerData.inventory.find_slot_by_item_name("leaf") != null:
 		if PlayerData.inventory.find_slot_by_item_name("leaf").amount >= 10 \
 		and PlayerData.inventory.find_slot_by_item_name("nectar").amount >= 5:
+			PlayerData.inventory.find_slot_by_item_name("leaf").amount -= 10
+			PlayerData.inventory.find_slot_by_item_name("nectar").amount -= 5
 			return true
 	return false
 
