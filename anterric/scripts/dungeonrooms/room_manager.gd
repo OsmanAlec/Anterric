@@ -11,8 +11,6 @@ func _on_body_exited(body: PhysicsBody3D) -> void:
 	
 
 func _physics_process(delta):
-	
-	
 	if entered == true:
 		var current_num: int = int(str(get_tree().get_current_scene().get_name())[-1])
 		
