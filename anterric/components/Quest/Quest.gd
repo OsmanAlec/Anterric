@@ -50,6 +50,7 @@ func reached_goal() -> void:
 		quest_status = QuestStatus.reached_goal
 		QuestControl.active_quests.erase(self)
 		QuestControl.completed_quests.append(self)
+		PlayerData.completed_quests += 1
 		QuestControl.draw_quests()
 		
 

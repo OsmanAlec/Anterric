@@ -7,6 +7,7 @@ const Stage: Array[String] = [
 	"queenbeeboss",
 ]
 
+var completed_quests : int = 0
 var max_health: int = 6 : set = set_maxhp
 var current_health: int = max_health
 var applied_poison: int = 0
