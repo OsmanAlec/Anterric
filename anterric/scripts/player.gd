@@ -11,6 +11,7 @@ const FOOTSTEP_DELAY = 0.4
 var footstep_timer = 0.0
 
 # State variables
+var is_moving = velocity.length() > 0  # Check if player is moving
 var dashing = false
 var canDash = true
 var currentAttack = false
@@ -55,7 +56,7 @@ func player_movement(delta: float):
 			footstep_timer = 0 #resets 
 	
 	# Handle dashing
-	if Input.is_action_just_pressed("dash") and canDash:
+	if Input.is_action_just_pressed("dash") and canDash and is_moving:
 		dashing = true
 		canDash = false
 		$dash_timer.start()

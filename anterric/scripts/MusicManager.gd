@@ -6,7 +6,7 @@ extends Node
 @export var boss_music: AudioStreamPlayer
 var tween: Tween
 
-# creates and configures background music player
+# creates and configures the music players
 func _ready():
 	# Create the background music player
 	background_music = AudioStreamPlayer.new()

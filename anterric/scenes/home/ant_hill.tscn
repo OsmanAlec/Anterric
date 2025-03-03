@@ -26,17 +26,17 @@ background_color = Color(0.192157, 0.141176, 0.0941176, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
 fog_enabled = true
+fog_mode = 1
 fog_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
-fog_height = 2.5
-fog_height_density = 0.8
-fog_depth_curve = 0.554785
-fog_depth_end = 898.9
+fog_density = 1.0
+fog_height = 1.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xdjt0"]
 transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("1_0qqg2")
 
 [sub_resource type="QuadMesh" id="QuadMesh_mtmvp"]
@@ -48,6 +48,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("1_obrax")
 
 [sub_resource type="QuadMesh" id="QuadMesh_gici6"]
@@ -59,6 +60,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("10_a3dsh")
 
 [sub_resource type="QuadMesh" id="QuadMesh_4ocit"]
@@ -70,6 +72,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("11_xqhf8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_686ab"]
@@ -81,6 +84,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("12_a43kn")
 
 [sub_resource type="QuadMesh" id="QuadMesh_wn68t"]
@@ -92,6 +96,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("13_g40j6")
 
 [sub_resource type="QuadMesh" id="QuadMesh_i03f2"]
@@ -103,6 +108,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("9_phkds")
 
 [sub_resource type="QuadMesh" id="QuadMesh_eyqh5"]
@@ -158,6 +164,7 @@ transparency = 2
 alpha_scissor_threshold = 0.5
 alpha_antialiasing_mode = 0
 shading_mode = 0
+disable_fog = true
 albedo_texture = ExtResource("8_nbm62")
 
 [sub_resource type="QuadMesh" id="QuadMesh_qtygc"]
