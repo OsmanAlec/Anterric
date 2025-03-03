@@ -39,6 +39,7 @@ import/blender/enabled=false
 [global_group]
 
 Player="A group containing the player node"
+prologue="prologue quests"
 
 [input]
 

@@ -9,7 +9,7 @@ extends CharacterBody3D
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 
-const HEART_SCENE = preload("res://scenes/dungeonrooms/heart.tscn")
+var HEART_SCENE = load("res://scenes/dungeonrooms/heart.tscn")
 
 
 var canAttack = true

@@ -7,7 +7,7 @@ signal died  # Signal to notify when an enemy dies
 const SPEED: float = 5.0
 const LADYBUG_GROUP: String = "Ladybugs"
 
-const HEART_SCENE = preload("res://scenes/dungeonrooms/heart.tscn")
+var HEART_SCENE = load("res://scenes/dungeonrooms/heart.tscn")
 
 
 # Exported variables to configure ladybug behavior in the Godot editor.

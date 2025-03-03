@@ -124,7 +124,6 @@ func _on_finished_talking(cn) -> void:
 	if cn != char_name:
 		return
 		
-	PlayerData.max_health += 2
 	$AnimatedSprite3D.play("idle")
 
 	var key: String = PlayerData.Stage[PlayerData.current_stage]

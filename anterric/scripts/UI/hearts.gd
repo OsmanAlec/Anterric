@@ -20,14 +20,16 @@ func update_max_health(value):
 	# Create and add TextureRect nodes to represent the player's max health.
 	for child in get_children():
 		child.queue_free()
-		print(child)
 	for i in value / 2:
 		add_child(TextureRect.new()) 
-		var heart = get_child(i) 
+		var heart: TextureRect = get_child(i) 
 		heart.texture = heart_full  
 		heart.set_expand_mode(5) 
 		heart.custom_minimum_size = Vector2(40, 40)
-		update_health(value)
+		active_heart = heart
+	#for some reason need to wait, the canvas does not draw fast enough
+	await get_tree().create_timer(0.5).timeout 
+	update_health(value)
 	return
 
 func update_health(value):
@@ -51,9 +53,7 @@ func _on_poisoned(value: bool):
 	if value:
 		self.modulate = Color(0, 1, 0, 0.8)
 	else:
-		self.modulate = Color(1, 1, 1, 1)
-		
-		
+		self.modulate = Color(1, 1, 1, 1)		
 		
 
 func _heart_beat():

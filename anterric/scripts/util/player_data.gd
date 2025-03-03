@@ -45,11 +45,10 @@ func set_maxhp(value: int):
 func set_hp(value: int):
 	if !player:
 		return
-	player.get_node("Health").health = value
 	current_health = clamp(value, 0, max_health)
-	print(current_health)
+	player.get_node("Health").health = current_health
 	player.get_node("HUD").get_node("Hearts").update_health(value)
-	current_health = value
+
 	
 
 	
