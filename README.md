@@ -1,141 +1,126 @@
-# Project Title
+# Anterric
 
-Name: Paul Colclough
-Student Number: C23361081
-Class Group: 
-Github: Coakly
+## Team Members
 
+**Name:** Paul Colclough  
+**Student Number:** C23361081  
+**Class Group:**  
+**GitHub:** Coakly  
 
-Name: Osman
-Student Number: C23739895
-Class Group: C
-Github: https://github.com/OsmanAlec
+**Name:** Osman  
+**Student Number:** C23739895  
+**Class Group:** C  
+**GitHub:** [OsmanAlec](https://github.com/OsmanAlec)  
 
+**Name:** Oskar Sadowski  
+**Student Number:** C23341983  
+**Class Group:** D  
+**GitHub:** [OzilooG](https://github.com/OzilooG)  
 
-Name: Oskar Sadowski
-Student Number: C23341983
-Class Group: D
-Github: https://github.com/OzilooG
+**Name:** Harshit Panchal  
+**Student Number:** C23419542  
+**Class Group:** C  
+**GitHub:** [Artemis-Coder17](https://github.com/Artemis-Coder17)  
 
+**Name:**  
+**Student Number:**  
+**Class Group:**  
+**GitHub:**  
 
-Name: Harshit Panchal
-Student Number: C23419542
-Class Group: C
-Github: https://github.com/Artemis-Coder17
+---
 
+## What I am most proud of in the assignment
 
-Name:
-Student Number: 
-Class Group:
-Github: 
+**Harshit:** I really enjoyed working on making smart enemy formations and designing how enemies follow the player and shoot projectiles.  
+**Paul:** I really enjoyed composing the score and making the Player Sprite as well as its animations.  
+**Oskar:**  
+**Shane:**  
+**Osman:**  
 
+---
 
-# What I am most proud of in the assignment
-Harshit: I really enjoyed working on the making smart enemy formations and working on how enemies follow the player and shoot projectile.
-Paul: I really enjoyed composing the score and making the Player Sprite as well as its animations.  
-Oskar:
-Shane:
-Osman:
+## What I learned
 
-# What I learned
-Harshit:
-Paul:
-Oskar:
-Shane:
-Osman:
+**Harshit:**  
+**Paul:**  
+**Oskar:**  
+**Shane:**  
+**Osman:**  
 
-# Video
+---
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-# Screenshots
-
-# Description of the project
-
-# Instructions for use
-
-# How it works:
-
-# List of classes/assets in the project
-
-| Class/asset | Source |
-|-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
-
-# References
-* Item 1
-* Item 2
-
-# Proposal submitted earlier can go here (if there is one):
-
-## Below is how to use Markdown. You can delete this:
-
-## This is how to markdown text:
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
+## Video
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
-This is a table:
+---
 
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
+## Screenshots
+
+(Insert screenshots here)
+
+---
+
+## Description of the Project
+
+**Anterric** is an action-adventure Metroidvania with exploration and resource-gathering RPG mechanics, set in a rich 3D world with 2D characters similar to *Paper Mario*. Players take on the role of a newly crowned ant queen leading the fight against mind-controlled insects while uncovering a dark mystery beneath the soil.  
+
+### Key Features:
+- **Gripping Storyline:** The player uncovers a termite-controlled conspiracy manipulating the insect world.
+- **Handcrafted Art & Sound:** Unique in-house designed assets and an original soundtrack.
+- **Strategic Combat:** AI-controlled enemy formations encourage dynamic and tactical battles.
+- **Progressive Abilities:** The queen evolves, gaining new skills and buffs as she levels up.
+- **Immersive Small World:** The game embraces the "A Small World" theme with an intricately designed microcosm of insect life.
+
+---
+
+## Instructions for Use
+
+1. **Install Godot 4** (required to run the game).
+2. **Download the project** from this GitHub repository.
+3. **Open the project** in Godot 4.
+4. **Run the game** by clicking the play button.
+
+(Additional instructions on controls, mechanics, and UI can be added here.)
+
+---
+
+## How It Works
+
+### Core Gameplay Loops
+
+- **Combat Loop:** Melee-based combat with sword swings, dodges, and rolls. Smart AI formations create strategic battles.
+- **Exploration & Discovery:** Navigate an underground world filled with diverse enemies and hidden lore.
+- **Resource Gathering & Crafting:** Collect food and resources to upgrade your colony and improve your abilities.
+- **Quest & Progression Loop:** Engage in main quests to defeat stronger enemies and uncover the termite conspiracy.
+
+---
+
+## List of Classes/Assets in the Project
+
+| Class/Asset | Source |
+|------------|--------|
+| `Player.gd` | Self-written |
+| `EnemyAI.gd` | Self-written |
+| `MainMenu.tscn` | Self-designed |
+| `QueenBee.gd` | Self-written |
+| `CombatSystem.gd` | Self-written |
+| `Soundtrack` | Composed in-house |
+
+---
+
+## References
+
+- Inspired by *Hollow Knight*, *Ori and the Blind Forest*, *Dead Cells*, and *Cult of the Lamb*.
+- Game developed in **Godot 4** using **GDScript**.
+- **Pixelorama** was used for sprite and animation design.
+- Original soundtrack composed specifically for the game.
+
+---
+
+## Proposal Submitted Earlier
+
+(Attach or link to the original proposal here.)
+
+---
+
