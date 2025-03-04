@@ -7,7 +7,7 @@ func is_satisfied()-> bool:
 	#Simple if statement since thers no error handling !?
 	if PlayerData.inventory.find_slot_by_item_name("ladybird_wings") != null:
 		if PlayerData.inventory.find_slot_by_item_name("ladybird_wings").amount >= 5:
-			PlayerData.inventory.find_slot_by_item_name("ladybird_wings").amount -= 5
+			#PlayerData.inventory.find_slot_by_item_name("ladybird_wings").amount -= 5 BUG FIX
 			return true
 	return false
 

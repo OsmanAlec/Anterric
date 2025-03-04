@@ -29,3 +29,5 @@ res://scripts/UI/hearts.gd
 res://scenes/UI/options_menu.tscn
 res://inventory/inv2/inventoryUI.tscn
 res://scenes/dungeonrooms/components/grass.tscn
+res://components/Quest/grasstuftsquest.gd
+res://components/Quest/retrieve_5_wings.gd
