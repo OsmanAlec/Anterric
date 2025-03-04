@@ -209,25 +209,25 @@ mesh = SubResource("QuadMesh_mtmvp")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="environment"]
-transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 0.0990325, 1.67182, 1.45464)
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 0.0990325, 1.39029, 1.60372)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="environment"]
-transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 7.61533, 1.67182, 1.45464)
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, 7.61533, 1.39574, 1.52017)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D6" type="MeshInstance3D" parent="environment"]
-transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -7.41055, 1.67182, 1.45464)
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -7.41055, 1.3558, 1.64585)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
 skeleton = NodePath("../..")
 
 [node name="MeshInstance3D8" type="MeshInstance3D" parent="environment"]
-transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -14.8915, 1.67182, 1.45464)
+transform = Transform3D(-3, 4.52988e-07, -2.02215e-14, -3.92299e-07, -2.59808, 1.5, 2.26494e-07, 1.5, 2.59808, -14.8915, 1.31025, 1.5691)
 layers = 2
 mesh = SubResource("QuadMesh_mtmvp")
 skeleton = NodePath("../..")

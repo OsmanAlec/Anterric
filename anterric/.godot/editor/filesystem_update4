@@ -25,3 +25,6 @@ res://components/Quest/SearchQuest.gd
 res://components/Quest/slay_the_queen.gd
 res://components/Quest/twingsandbranches.gd
 res://components/Quest/bee_stings.gd
+res://components/Quest/QuestManager.tscn
+res://scenes/dungeonrooms/heart.gd
+res://scenes/dungeonrooms/heart.tscn
