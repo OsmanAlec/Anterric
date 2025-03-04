@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0v65de38hwls"]
+[gd_scene load_steps=4 format=3 uid="uid://dvhg7hidwyp35"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/heart.gd" id="1_w3mx7"]
 [ext_resource type="Texture2D" uid="uid://dqijevxmg7nhq" path="res://art/UI/heart_1.png" id="2_q7j3p"]
