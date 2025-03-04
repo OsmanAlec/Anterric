@@ -15,3 +15,13 @@ res://scenes/dungeonrooms/components/grass.tscn
 res://components/Quest/GameManager.tscn
 res://scenes/home/super_major.tscn
 res://scripts/MusicManager.gd
+res://scripts/player.gd
+res://components/Quest/collect_50_coins.gd
+res://components/Quest/game_manager.gd
+res://components/Quest/grasstuftsquest.gd
+res://scripts/UI/hearts.gd
+res://components/Quest/retrieve_5_wings.gd
+res://components/Quest/SearchQuest.gd
+res://components/Quest/slay_the_queen.gd
+res://components/Quest/twingsandbranches.gd
+res://components/Quest/bee_stings.gd

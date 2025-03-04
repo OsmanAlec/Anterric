@@ -120,6 +120,7 @@ func start_attack():
 	else:
 		$HitRight/CollisionShape3D.disabled = false
 	$attack_timer.start()
+	swing_sfx.volume_db = 18
 	swing_sfx.play()
 	
 func _on_dash_timer_timeout() -> void:

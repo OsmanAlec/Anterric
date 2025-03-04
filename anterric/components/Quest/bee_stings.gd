@@ -5,7 +5,7 @@ func is_satisfied()-> bool:
 
 	if PlayerData.inventory.find_slot_by_item_name("bee_stinger") != null:
 		if PlayerData.inventory.find_slot_by_item_name("bee_stinger").amount >= 20:
-			PlayerData.inventory.find_slot_by_item_name("bee_stinger").amount -= 20
+			#BUGFIX#PlayerData.inventory.find_slot_by_item_name("bee_stinger").amount -= 20
 			return true
 	return false
 
