@@ -24,10 +24,15 @@ var canMove: bool = true
 @onready var sfx_walk = $AudioStreamPlayer3D
 @onready var anim_tree = get_node("AnimationTree") 
 @onready var footstep_player = $FootstepPlayer
+@export var swing_sfx: AudioStreamPlayer
 
 func _ready() -> void:
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
+	
+	swing_sfx = AudioStreamPlayer.new()
+	swing_sfx.stream = preload("res://sfx/SwingSFX.mp3")
+	add_child(swing_sfx)
 	
 	var tween = get_tree().create_tween()
 	# Start with the player invisible and tiny
@@ -115,6 +120,7 @@ func start_attack():
 	else:
 		$HitRight/CollisionShape3D.disabled = false
 	$attack_timer.start()
+	swing_sfx.play()
 	
 func _on_dash_timer_timeout() -> void:
 	dashing = false
