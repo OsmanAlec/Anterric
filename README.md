@@ -1,6 +1,6 @@
-# Anterric
+# 🐜 Anterric
 
-## Team Members
+## 👥 Team Members
 
 **Name:** Paul Colclough  
 **Student Number:** C23361081  
@@ -29,7 +29,7 @@
 
 ---
 
-## What I am most proud of in the assignment
+## 🎯 What I am most proud of in the assignment
 
 **Harshit:** I really enjoyed working on making smart enemy formations and designing how enemies follow the player and shoot projectiles.  
 **Paul:** I really enjoyed composing the score and making the Player Sprite as well as its animations.  
@@ -39,7 +39,7 @@
 
 ---
 
-## What I learned
+## 📚 What I learned
 
 **Harshit:**  
 **Paul:**  
@@ -49,56 +49,56 @@
 
 ---
 
-## Video
+## 🎥 Video
 
 [![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
 
 ---
 
-## Screenshots
+## 🖼️ Screenshots
 
 (Insert screenshots here)
 
 ---
 
-## Description of the Project
+## 🕹️ Description of the Project
 
 **Anterric** is an action-adventure Metroidvania with exploration and resource-gathering RPG mechanics, set in a rich 3D world with 2D characters similar to *Paper Mario*. Players take on the role of a newly crowned ant queen leading the fight against mind-controlled insects while uncovering a dark mystery beneath the soil.  
 
-### Key Features:
-- **Gripping Storyline:** The player uncovers a termite-controlled conspiracy manipulating the insect world.
-- **Handcrafted Art & Sound:** Unique in-house designed assets and an original soundtrack.
-- **Strategic Combat:** AI-controlled enemy formations encourage dynamic and tactical battles.
-- **Progressive Abilities:** The queen evolves, gaining new skills and buffs as she levels up.
-- **Immersive Small World:** The game embraces the "A Small World" theme with an intricately designed microcosm of insect life.
+### ✨ Key Features:
+- **📖 Gripping Storyline:** The player uncovers a termite-controlled conspiracy manipulating the insect world.
+- **🎨 Handcrafted Art & Sound:** Unique in-house designed assets and an original soundtrack.
+- **⚔️ Strategic Combat:** AI-controlled enemy formations encourage dynamic and tactical battles.
+- **🦾 Progressive Abilities:** The queen evolves, gaining new skills and buffs as she levels up.
+- **🌎 Immersive Small World:** The game embraces the "A Small World" theme with an intricately designed microcosm of insect life.
 
 ---
 
-## Instructions for Use
+## 🛠️ Instructions for Use
 
-1. **Install Godot 4** (required to run the game).
-2. **Download the project** from this GitHub repository.
-3. **Open the project** in Godot 4.
-4. **Run the game** by clicking the play button.
+1. **📥 Install Godot 4** (required to run the game).
+2. **⬇️ Download the project** from this GitHub repository.
+3. **📂 Open the project** in Godot 4.
+4. **▶️ Run the game** by clicking the play button.
 
 (Additional instructions on controls, mechanics, and UI can be added here.)
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
-### Core Gameplay Loops
+### 🔄 Core Gameplay Loops
 
-- **Combat Loop:** Melee-based combat with sword swings, dodges, and rolls. Smart AI formations create strategic battles.
-- **Exploration & Discovery:** Navigate an underground world filled with diverse enemies and hidden lore.
-- **Resource Gathering & Crafting:** Collect food and resources to upgrade your colony and improve your abilities.
-- **Quest & Progression Loop:** Engage in main quests to defeat stronger enemies and uncover the termite conspiracy.
+- **⚔️ Combat Loop:** Melee-based combat with sword swings, dodges, and rolls. Smart AI formations create strategic battles.
+- **🌍 Exploration & Discovery:** Navigate an underground world filled with diverse enemies and hidden lore.
+- **⛏️ Resource Gathering & Crafting:** Collect food and resources to upgrade your colony and improve your abilities.
+- **📜 Quest & Progression Loop:** Engage in main quests to defeat stronger enemies and uncover the termite conspiracy.
 
 ---
 
-## List of Classes/Assets in the Project
+## 📂 List of Classes/Assets in the Project
 
-| Class/Asset | Source |
+| 📌 Class/Asset | 🏷️ Source |
 |------------|--------|
 | `Player.gd` | Self-written |
 | `EnemyAI.gd` | Self-written |
@@ -109,7 +109,7 @@
 
 ---
 
-## References
+## 📚 References
 
 - Inspired by *Hollow Knight*, *Ori and the Blind Forest*, *Dead Cells*, and *Cult of the Lamb*.
 - Game developed in **Godot 4** using **GDScript**.
@@ -118,7 +118,7 @@
 
 ---
 
-## Proposal Submitted Earlier
+## 📜 Proposal Submitted Earlier
 
 (Attach or link to the original proposal here.)
 
