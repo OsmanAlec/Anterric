@@ -51,7 +51,7 @@
 
 ## 🎥 Video
 
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
+[![YouTube](http://img.youtube.com/vi/3apfXssr-tU/0.jpg)](https://youtu.be/3apfXssr-tU?si=Sc0sk-DV5GN5_fk1)
 
 ---
 
