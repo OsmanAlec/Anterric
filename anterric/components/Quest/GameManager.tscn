@@ -47,6 +47,8 @@ texture = ExtResource("1_goibj")
 
 [node name="Hitsound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_g6m0d")
+bus = &"sfx"
 
 [node name="Dash" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_ex8hs")
+bus = &"sfx"

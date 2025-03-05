@@ -1,10 +1,10 @@
-Label
+VBoxContainer
 HSlider
+Label
 AudioStreamPlayer3D
 Sprite3D
 Quest
 Node3D
-VBoxContainer
 BoxContainer
 MarginContainer
 RichTextLabel

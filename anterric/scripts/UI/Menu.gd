@@ -1,8 +1,9 @@
 extends Control
 
+var is_open = false
+
 func _ready() -> void:
 	GameManager.get_node("Coins").visible = false
-
 
 func _on_play_pressed() -> void:
 	GameManager.get_node("Coins").visible = true

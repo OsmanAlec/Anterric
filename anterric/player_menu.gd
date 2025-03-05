@@ -2,8 +2,8 @@ extends Control
 
 var is_open = false
 
-func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/UI/menu.tscn")
+func _ready():
+	close()
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("o"):

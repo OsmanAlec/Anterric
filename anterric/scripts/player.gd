@@ -32,6 +32,7 @@ func _ready() -> void:
 	
 	swing_sfx = AudioStreamPlayer.new()
 	swing_sfx.stream = preload("res://sfx/SwingSFX.mp3")
+	swing_sfx.bus = "sfx"
 	add_child(swing_sfx)
 	
 	var tween = get_tree().create_tween()
