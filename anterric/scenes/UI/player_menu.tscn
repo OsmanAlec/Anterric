@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://x3kcj8fy3fgj"]
+
+[ext_resource type="Script" path="res://player_menu.gd" id="1_lr6tb"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_n7xn4"]
+[ext_resource type="Script" path="res://scripts/UI/menu_volume_slider.gd" id="3_uv6ip"]
+[ext_resource type="Script" path="res://scenes/UI/sfx_volume_slider.gd" id="4_f632h"]
+
+[node name="player_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lr6tb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 192.0
+offset_right = 456.0
+offset_bottom = 312.0
+
+[node name="SFX" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n7xn4")
+text = "SFX"
+
+[node name="SFX_slider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("4_f632h")
+bus_name = "sfx"
+
+[node name="Music" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_n7xn4")
+text = "Music"
+
+[node name="music" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("3_uv6ip")
+bus_name = "music"

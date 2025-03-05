@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkuygf7645ud4"]
 
 [ext_resource type="Script" path="res://scripts/UI/Menu.gd" id="1_w6e8p"]
-[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="2_vso7r"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_h1kw6"]
 
 [node name="Menu2" type="Control"]
 layout_mode = 3
@@ -12,31 +12,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w6e8p")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 639.0
-offset_bottom = 101.0
+offset_left = 263.0
+offset_top = 34.0
+offset_right = 375.0
+offset_bottom = 58.0
+theme_override_fonts/font = ExtResource("2_h1kw6")
+text = "Anterric"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="Play" type="Button" parent="."]
 layout_mode = 2
-
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_left = 1.0
+offset_top = 77.0
+offset_right = 640.0
+offset_bottom = 108.0
+theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Play"
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Options" type="Button" parent="."]
 layout_mode = 2
+offset_left = 1.0
+offset_top = 108.0
+offset_right = 640.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Options"
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="."]
 layout_mode = 2
+offset_left = 1.0
+offset_top = 139.0
+offset_right = 640.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Quit"
 
-[node name="menu_music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_vso7r")
-autoplay = true
-bus = &"menu_music"
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
