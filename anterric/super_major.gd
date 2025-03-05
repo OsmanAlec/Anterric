@@ -97,8 +97,8 @@ func _ready() -> void:
 	$AnimatedSprite3D.play("idle")
 
 	
-func _unhandled_key_input(event):
-	if event.is_action_pressed("advance_dialog"):
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("advance_dialog"):
 		var key: String = PlayerData.Stage[PlayerData.current_stage]
 		if canInteract:
 			$AnimatedSprite3D.play("talking")

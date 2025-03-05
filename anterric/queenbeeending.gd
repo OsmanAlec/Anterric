@@ -1,0 +1,25 @@
+extends AnimatedSprite3D
+
+
+const lines: Array[String] = [
+	"Ouch that hurt!",
+	"RQUEEN I bet it did >:(",
+	"Little Queen Ant, listen now,",
+	"The termites were making me do this",
+	"They told us they'll fix the tree",
+	"and that you are the one destroying it!",
+	"RQUEEN But they're obviously eating the treee!",
+	"They got into my head.",
+	"Please Queen Ant, save us!",
+	"Save us before the tree collapses!",
+	"RQUEEN I will do my best, you may now rest."
+]
+
+
+func _ready()-> void:
+	self.play("idle")
+	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("advance_dialog"):
+		$"../Label3D".visible = false
+		DialogManager.start_dialog(global_position, lines, "QueenBee")

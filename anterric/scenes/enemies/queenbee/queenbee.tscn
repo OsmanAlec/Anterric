@@ -1,9 +1,10 @@
-[gd_scene load_steps=53 format=3 uid="uid://b0cnxefxej1jl"]
+[gd_scene load_steps=54 format=3 uid="uid://b0cnxefxej1jl"]
 
 [ext_resource type="Script" path="res://scripts/enemies/queenbee/QueenBee.gd" id="1_hl85j"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_4vayg"]
 [ext_resource type="Texture2D" uid="uid://dki8pjvntf2ji" path="res://art/enemies/queen_bee/diagonal flying.png" id="2_d1scn"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kllia"]
+[ext_resource type="PackedScene" uid="uid://kvteuqq2w5t1" path="res://scenes/fadeout.tscn" id="2_mo2rj"]
 [ext_resource type="Texture2D" uid="uid://ddkcxm1vmn2fm" path="res://art/enemies/queen_bee/diagonal sting.png" id="3_p1t1f"]
 [ext_resource type="Texture2D" uid="uid://b8yxqtxafybot" path="res://art/enemies/queen_bee/diagonal stomp.png" id="4_mtmch"]
 [ext_resource type="Texture2D" uid="uid://de7pblx8nm17b" path="res://art/enemies/queen_bee/diagonal takeoff.png" id="5_3a77u"]
@@ -431,6 +432,9 @@ collision_layer = 0
 collision_mask = 0
 script = ExtResource("1_hl85j")
 
+[node name="Control" parent="." instance=ExtResource("2_mo2rj")]
+visible = false
+
 [node name="HealthBar" type="ProgressBar" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
@@ -526,3 +530,5 @@ disabled = true
 [connection signal="timeout" from="StingTimer" to="." method="_on_sting_timer_timeout"]
 [connection signal="timeout" from="StompTimer" to="." method="_on_stomp_timer_timeout"]
 [connection signal="body_entered" from="StunArea" to="." method="_on_stun_area_body_entered"]
+
+[editable path="Control"]

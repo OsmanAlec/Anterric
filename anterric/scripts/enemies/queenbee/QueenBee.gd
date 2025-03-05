@@ -114,7 +114,11 @@ func _on_health_health_depleted() -> void:
 	var quest = QuestControl.get_node("Slay The Queen Bee")
 	quest.quest_status = quest.QuestStatus.reached_goal
 	
-	queue_free()
+	$Control.visible = true
+	$Control/AnimationPlayer.current_animation = "fade_out"
+	await get_tree().create_timer(1.0).timeout
+	
+	get_tree().change_scene_to_file("res://scenes/dungeonrooms/ending_cutcene.tscn")
 
 
 func _on_health_health_changed(diff: int) -> void:

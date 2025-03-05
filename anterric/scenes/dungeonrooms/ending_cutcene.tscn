@@ -1,0 +1,94 @@
+[gd_scene load_steps=13 format=3 uid="uid://deypsrv1nvgmg"]
+
+[ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="1_7wrrc"]
+[ext_resource type="Script" path="res://scenes/dungeonrooms/ending_cutcene.gd" id="1_edfeg"]
+[ext_resource type="PackedScene" uid="uid://kvteuqq2w5t1" path="res://scenes/fadeout.tscn" id="2_dpdrc"]
+[ext_resource type="Texture2D" uid="uid://bgkw0bh8yiuof" path="res://art/enemies/queen_bee/idlefixed.png" id="2_scjap"]
+[ext_resource type="Script" path="res://queenbeeending.gd" id="3_lgall"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="4_y8n17"]
+
+[sub_resource type="Sky" id="Sky_u3eeo"]
+
+[sub_resource type="Environment" id="Environment_8akcx"]
+background_mode = 1
+sky = SubResource("Sky_u3eeo")
+ambient_light_source = 2
+ambient_light_color = Color(0.764948, 1, 0.742479, 1)
+ambient_light_energy = 8.76
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gcgf"]
+atlas = ExtResource("2_scjap")
+region = Rect2(0, 0, 6400, 6400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6axsh"]
+atlas = ExtResource("2_scjap")
+region = Rect2(6400, 0, 6400, 6400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8jdf"]
+atlas = ExtResource("2_scjap")
+region = Rect2(12800, 0, 6400, 6400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ob2vs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gcgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6axsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8jdf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6axsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gcgf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 24.0
+}]
+
+[node name="Ending cutcene" type="Node3D"]
+script = ExtResource("1_edfeg")
+
+[node name="Control" parent="." instance=ExtResource("2_dpdrc")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8akcx")
+
+[node name="Player" parent="." instance=ExtResource("1_7wrrc")]
+
+[node name="Camera3D" parent="Player" index="7"]
+transform = Transform3D(1, 2.40023e-09, 7.6108e-10, -2.46613e-09, 0.872557, 0.488514, 5.08464e-10, -0.488514, 0.872557, 2, 5.0482, 5.4674)
+
+[node name="QueenBee" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.5, 2.5, 0)
+pixel_size = 0.002
+billboard = 1
+sprite_frames = SubResource("SpriteFrames_ob2vs")
+animation = &"idle"
+frame_progress = 0.396488
+speed_scale = 0.2
+script = ExtResource("3_lgall")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -0.7)
+text = "Talk..."
+font = ExtResource("4_y8n17")
+font_size = 128
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5, 0.866025, 0, -0.866025, -0.5, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
+light_energy = 16.0
+light_indirect_energy = 8.778
+light_volumetric_fog_energy = 3.444
+omni_range = 6.885
+
+[editable path="Control"]
+[editable path="Player"]
