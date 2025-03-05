@@ -1,5 +1,6 @@
-AudioStreamPlayer3D
 Label
+HSlider
+AudioStreamPlayer3D
 Sprite3D
 Quest
 Node3D
@@ -11,5 +12,3 @@ DirectionalLight3D
 GridMap
 CollisionShape3D
 StaticBody3D
-NinePatchRect
-CanvasLayer

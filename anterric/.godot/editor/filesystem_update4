@@ -28,3 +28,6 @@ res://components/Quest/bee_stings.gd
 res://components/Quest/QuestManager.tscn
 res://scenes/dungeonrooms/heart.gd
 res://scenes/dungeonrooms/heart.tscn
+res://scenes/UI/menu.tscn
+res://default_bus_layout.tres
+res://scripts/UI/Menu.gd

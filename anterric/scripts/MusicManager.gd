@@ -4,6 +4,7 @@ extends Node
 @export var background_music: AudioStreamPlayer
 @export var anthill_music: AudioStreamPlayer
 @export var boss_music: AudioStreamPlayer
+@export var menu_music: AudioStreamPlayer
 #var tween: Tween
 
 # creates and configures the music players
@@ -12,18 +13,26 @@ func _ready():
 	background_music = AudioStreamPlayer.new()
 	background_music.stream = preload("res://music/dungeonmusic8bit.wav")
 	add_child(background_music)
+	background_music.bus = "music"
 	background_music.play()
 
 	# Create the anthill music player
 	anthill_music = AudioStreamPlayer.new()
 	anthill_music.stream = preload("res://music/AntHillMusic(2).wav")
 	add_child(anthill_music)
+	anthill_music.bus = "music"
 	
 	# Create the boss music player
 	boss_music = AudioStreamPlayer.new()
 	boss_music.stream = preload("res://Music/newbossmusic.wav")
 	add_child(boss_music)
-
+	boss_music.bus = "music"
+	
+	# Create the menu music player
+	menu_music = AudioStreamPlayer.new()
+	menu_music.stream = preload("res://Music/menu_music.wav")
+	add_child(menu_music)
+	menu_music.bus = "music"
 
 func fade_out_music(music: AudioStreamPlayer):
 	if music.playing:
