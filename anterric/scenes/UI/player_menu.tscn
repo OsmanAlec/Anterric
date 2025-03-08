@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://x3kcj8fy3fgj"]
+[gd_scene load_steps=5 format=3 uid="uid://da05lebleqq21"]
 
 [ext_resource type="Script" path="res://player_menu.gd" id="1_lr6tb"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_n7xn4"]

@@ -99,8 +99,8 @@ func _ready() -> void:
 	$AnimatedSprite3D.play("idle")
 
 	
-func _process(delta: float) -> void:
-	if Input.is_action_pressed("advance_dialog"):
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("advance_dialog"):
 		if canInteract:
 			$AnimatedSprite3D.play("talking")
 			var key: String = PlayerData.Stage[PlayerData.current_stage]

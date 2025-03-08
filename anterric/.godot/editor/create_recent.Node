@@ -1,3 +1,4 @@
+HSlider
 AnimationPlayer
 AnimationTree
 ColorRect
@@ -12,4 +13,3 @@ AudioStreamPlayer3D
 Label
 Sprite3D
 Quest
-Node3D

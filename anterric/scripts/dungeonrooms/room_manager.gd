@@ -14,10 +14,10 @@ func _physics_process(delta):
 	if entered == true:
 		var current_num: int = int(str(get_tree().get_current_scene().get_name())[-1])
 		
-		var room_num: int = randi_range(1,4)
+		var room_num: int = randi_range(1,3)
 		
 		while current_num == room_num:
-			room_num = randi_range(1,4)
+			room_num = randi_range(1,3)
 			
 		#if we are at a stage where we can fight the queenbeeboss,
 		#spawn boss room after 5 rooms

@@ -18,8 +18,15 @@ const lines: Array[String] = [
 
 func _ready()-> void:
 	self.play("idle")
+	DialogManager.finished_talking.connect(_on_finished_talking)
+
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("advance_dialog"):
 		$"../Label3D".visible = false
 		DialogManager.start_dialog(global_position, lines, "QueenBee")
+
+func _on_finished_talking(cn):
+	if cn != "QueenBee":
+		return
+	get_tree().quit()

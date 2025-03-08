@@ -72,8 +72,8 @@ func _show_text_box():
 	return
 
 # Handles advancing the dialog when the player presses the "advance_dialog" action
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("advance_dialog") and dialog_state and can_advance:
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("advance_dialog") and dialog_state and can_advance:
 		#Free the current text box
 		text_box_scene.queue_free()
 

@@ -19,7 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="17_3aef1"]
 [ext_resource type="AudioStream" uid="uid://cmpmttqxaxw6d" path="res://sfx/FinalSteps.wav" id="19_d1awb"]
 [ext_resource type="AudioStream" uid="uid://dte1d7l0erkjb" path="res://Music/dungeonmusic8bit.wav" id="19_uroxr"]
-[ext_resource type="PackedScene" uid="uid://x3kcj8fy3fgj" path="res://scenes/UI/player_menu.tscn" id="20_8xyi7"]
+[ext_resource type="PackedScene" uid="uid://da05lebleqq21" path="res://scenes/UI/player_menu.tscn" id="20_8xyi7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.701164, 0.694092, 0.470307)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqqmky2kn41v5"]
 
 [ext_resource type="Script" path="res://scripts/UI/options_menu.gd" id="1_s2n4i"]
-[ext_resource type="PackedScene" uid="uid://bdkb4mb7t2ae2" path="res://scenes/UI/volume_slider.tscn" id="2_yxvb2"]
-[ext_resource type="AudioStream" uid="uid://lps2o1h86kxt" path="res://Music/menu_music.wav" id="3_4um0d"]
+[ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_irpdf"]
+[ext_resource type="Script" path="res://scripts/UI/menu_volume_slider.gd" id="3_isqan"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,31 +13,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s2n4i")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 0
+[node name="Music" type="Label" parent="."]
+layout_mode = 2
+offset_top = 80.0
 offset_right = 638.0
-offset_bottom = 108.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Back"
-
-[node name="Music" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
+offset_bottom = 103.0
+theme_override_fonts/font = ExtResource("2_irpdf")
 text = "Music"
 
-[node name="Music_slider" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_yxvb2")]
+[node name="music_slider" type="HSlider" parent="."]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 640.0
+offset_bottom = 128.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("3_isqan")
+bus_name = "music"
+
+[node name="sfx" type="Label" parent="."]
+offset_top = 32.0
+offset_right = 638.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("2_irpdf")
+text = "SFX"
+
+[node name="sfx_slider2" type="HSlider" parent="."]
+offset_top = 64.0
+offset_right = 640.0
+offset_bottom = 80.0
+max_value = 1.0
+step = 0.001
+value = 1.0
+script = ExtResource("3_isqan")
+bus_name = "sfx"
+
+[node name="Back" type="Button" parent="."]
 layout_mode = 2
-bus_name = "menu_music"
+offset_top = 192.0
+offset_right = 638.0
+offset_bottom = 223.0
+text = "Back"
 
-[node name="menu_music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_4um0d")
-autoplay = true
-bus = &"menu_music"
-playback_type = 1
-
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_play_pressed"]

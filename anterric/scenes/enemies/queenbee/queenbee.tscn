@@ -469,7 +469,7 @@ shape = SubResource("BoxShape3D_sdk41")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_kllia")
-max_health = 50
+max_health = 2
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -517,7 +517,7 @@ shape = SubResource("BoxShape3D_vjldp")
 [node name="HitBox" type="Area3D" parent="."]
 collision_mask = 0
 script = ExtResource("8_natyv")
-damage = 4
+damage = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -0.125, 0, 0)
