@@ -25,3 +25,6 @@ res://scenes/UI/player_menu.tscn
 res://scenes/UI/menu.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/chromaticaberration.gdshader
+res://scripts/player.gd
+res://scripts/util/health.gd
+res://scenes/dungeonrooms/components/leaves.tscn

@@ -18,6 +18,9 @@ var currentAttack = false
 var canAttack = true
 var state: String = "Idle"
 var lastDir: Vector3
+var aberration_timer: float = 0.0 #ShaderVar
+var max_aberration: float = 0.3 #ShaderVar
+var decay_rate: float = 0.1 #ShaderVar
 # Stun Mechanism
 var canMove: bool = true
 
@@ -25,8 +28,10 @@ var canMove: bool = true
 @onready var anim_tree = get_node("AnimationTree") 
 @onready var footstep_player = $FootstepPlayer
 @export var swing_sfx: AudioStreamPlayer
+@export var chromatic_material: ShaderMaterial #ShaderVar
 
 func _ready() -> void:
+	
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
 	
@@ -155,8 +160,19 @@ func apply_stun(duration: float) -> void:
 	await get_tree().create_timer(duration).timeout         
 	canMove = true
 
-
 #play foostep
 func play_footstep():
 	if footstep_player and not footstep_player.playing:
 		footstep_player.play()
+
+#When poisoned, chromatic aberration occurs (linked from hearts)
+func _on_health_poisoned() -> void:
+	chromatic_material.set_shader_parameter("aberration", max_aberration)#possible error causer, "aberration_strength may need to be tied to shader properly"
+	aberration_timer = 1.0 # Effect lasts for 1 second
+
+func _process(delta):
+	#gradually reduce effect over time
+	if aberration_timer > 0:
+		aberration_timer -= delta
+		var current_strength = lerp(max_aberration, 0.0, 1.0 - aberration_timer)
+		chromatic_material.set_shader_parameter("aberration", current_strength)

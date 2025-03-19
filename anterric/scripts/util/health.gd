@@ -89,7 +89,6 @@ func get_health():
 	return health
 	
 
-
 func apply_poison(damage: int):
 	"""Position can stack up 4 times,
 	but never more than 4. Update how much poison

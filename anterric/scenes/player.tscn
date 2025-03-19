@@ -908,8 +908,8 @@ height = 0.001
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mdpsx"]
 shader = ExtResource("21_endfn")
-shader_parameter/aberration = 0.5
-shader_parameter/strength = 0.053
+shader_parameter/aberration = 0.0
+shader_parameter/strength = 0.1
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_2rwgt")
@@ -1024,14 +1024,15 @@ bus = &"sfx"
 
 [node name="player_menu" parent="." instance=ExtResource("20_8xyi7")]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="ShaderLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ChromaticAberration" type="ColorRect" parent="ShaderLayer"]
 material = SubResource("ShaderMaterial_mdpsx")
 offset_right = 640.0
 offset_bottom = 360.0
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
+[connection signal="poisoned" from="Health" to="." method="_on_health_poisoned"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
 [connection signal="animation_player_changed" from="AnimationTree" to="." method="_on_animation_tree_animation_player_changed"]
 [connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_tree_animation_started"]
