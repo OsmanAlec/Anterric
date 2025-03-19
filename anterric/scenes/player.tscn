@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=118 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://cmpmttqxaxw6d" path="res://sfx/FinalSteps.wav" id="19_d1awb"]
 [ext_resource type="AudioStream" uid="uid://dte1d7l0erkjb" path="res://Music/dungeonmusic8bit.wav" id="19_uroxr"]
 [ext_resource type="PackedScene" uid="uid://da05lebleqq21" path="res://scenes/UI/player_menu.tscn" id="20_8xyi7"]
+[ext_resource type="Shader" path="res://scenes/chromaticaberration.gdshader" id="21_endfn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ot60s"]
 size = Vector3(0.701164, 0.694092, 0.470307)
@@ -905,6 +906,11 @@ fill = 1
 [sub_resource type="CylinderMesh" id="CylinderMesh_ymga0"]
 height = 0.001
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mdpsx"]
+shader = ExtResource("21_endfn")
+shader_parameter/aberration = 0.5
+shader_parameter/strength = 0.053
+
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_2rwgt")
 
@@ -1017,6 +1023,13 @@ volume_db = -18.0
 bus = &"sfx"
 
 [node name="player_menu" parent="." instance=ExtResource("20_8xyi7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_mdpsx")
+offset_right = 640.0
+offset_bottom = 360.0
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]

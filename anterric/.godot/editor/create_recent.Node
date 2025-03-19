@@ -1,8 +1,8 @@
+ColorRect
+CanvasLayer
 HSlider
 AnimationPlayer
 AnimationTree
-ColorRect
-CanvasLayer
 OmniLight3D
 DirectionalLight3D
 SpotLight3D
@@ -12,4 +12,3 @@ AnimatedSprite3D
 AudioStreamPlayer3D
 Label
 Sprite3D
-Quest

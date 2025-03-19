@@ -33,6 +33,7 @@ script = ExtResource("3_isqan")
 bus_name = "music"
 
 [node name="sfx" type="Label" parent="."]
+layout_mode = 0
 offset_top = 32.0
 offset_right = 638.0
 offset_bottom = 55.0
@@ -40,6 +41,7 @@ theme_override_fonts/font = ExtResource("2_irpdf")
 text = "SFX"
 
 [node name="sfx_slider2" type="HSlider" parent="."]
+layout_mode = 0
 offset_top = 64.0
 offset_right = 640.0
 offset_bottom = 80.0
