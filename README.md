@@ -4,7 +4,7 @@
 
 **Name:** Paul Colclough  
 **Student Number:** C23361081  
-**Class Group:**  
+**Class Group:** E  
 **GitHub:** [Coakly](https://github.com/Coakly)
 
 **Name:** Osman  
