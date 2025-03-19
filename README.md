@@ -5,7 +5,7 @@
 **Name:** Paul Colclough  
 **Student Number:** C23361081  
 **Class Group:**  
-**GitHub:** Coakly  
+**GitHub:** [Coakly](https://github.com/Coakly)
 
 **Name:** Osman  
 **Student Number:** C23739895  
@@ -32,7 +32,7 @@
 ## 🎯 What I am most proud of in the assignment
 
 **Harshit:** I really enjoyed working on making smart enemy formations and designing how enemies follow the player and shoot projectiles.  
-**Paul:** I really enjoyed composing the score and making the Player Sprite as well as its animations.  
+**Paul:** I really enjoyed composing the score and making the Player Sprite as well as its animations. 
 **Oskar:**  
 **Shane:**  
 **Osman:**  
@@ -114,7 +114,7 @@
 - Inspired by *Hollow Knight*, *Ori and the Blind Forest*, *Dead Cells*, and *Cult of the Lamb*.
 - Game developed in **Godot 4** using **GDScript**.
 - **Pixelorama** was used for sprite and animation design.
-- Original soundtrack composed specifically for the game.
+- Original soundtrack composed specifically for the game using beepbox, a browser-based retro DAW.
 
 ---
 
