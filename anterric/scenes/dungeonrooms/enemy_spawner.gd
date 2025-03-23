@@ -11,7 +11,7 @@ class_name enemies_spawner
 
 func _ready() -> void:
 	#If the player is at the first stage, remove ladybugs
-	if PlayerData.current_stage == 0:
+	if GameManager.current_stage == 0:
 		enemy_scenes.pop_front()
 
 func spawn_enemies():

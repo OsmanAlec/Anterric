@@ -16,7 +16,7 @@ enum QuestStatus{
 #quest status
 @export var quest_status: QuestStatus = QuestStatus.available
 
-var inventory = PlayerData.inventory
+@onready var inventory = PlayerData.inventory
 
 func _ready():
 	if inventory:

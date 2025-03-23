@@ -103,9 +103,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("advance_dialog"):
 		if canInteract:
 			$AnimatedSprite3D.play("talking")
-			var key: String = PlayerData.Stage[PlayerData.current_stage]
+			var key: String = GameManager.Stage[GameManager.current_stage]
 			InteractionLabel.hide()
-			if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
+			if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 				key += "_questComplete"
 			DialogManager.start_dialog(global_position, dialogs[key], char_name)
 	
@@ -126,9 +126,9 @@ func _on_finished_talking(cn) -> void:
 		
 	$AnimatedSprite3D.play("idle")
 
-	var key: String = PlayerData.Stage[PlayerData.current_stage]
+	var key: String = GameManager.Stage[GameManager.current_stage]
 	
-	if quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.reached_goal:
-		quests[PlayerData.current_stage].finish_quest()
-	elif quests[PlayerData.current_stage].quest_status == Quest.QuestStatus.available:
-		quests[PlayerData.current_stage].start_quest()
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.reached_goal:
+		quests[GameManager.current_stage].finish_quest()
+	elif quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
+		quests[GameManager.current_stage].start_quest()

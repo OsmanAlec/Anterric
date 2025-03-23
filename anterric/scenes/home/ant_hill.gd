@@ -3,6 +3,7 @@ extends Node
 var canProgress = false
 
 func _ready():
+	PlayerData.current_health = PlayerData.max_health
 	MusicManagerSingleton.stop_background()
 	MusicManagerSingleton.play_anthill_music()
 	if PlayerData.completed_quests == 3:
@@ -11,7 +12,7 @@ func _ready():
 func _process(delta: float) -> void:
 	if canProgress:
 		if QuestControl.completed_quests.is_empty():
-			PlayerData.current_stage += 1
+			GameManager.current_stage += 1
 			PlayerData.completed_quests = 0
 			canProgress = false
 	

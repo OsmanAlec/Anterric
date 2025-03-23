@@ -27,6 +27,8 @@ var canMove: bool = true
 @export var swing_sfx: AudioStreamPlayer
 
 func _ready() -> void:
+	PlayerData.player = self
+	PlayerData.HUD.visible = true
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
 	
@@ -41,7 +43,6 @@ func _ready() -> void:
 	
 	# Smoothly scale up the player and move them into position
 	tween.tween_property(self, "scale", Vector3(1, 1, 1), 0.4).set_ease(Tween.EASE_OUT)
-	
 	
 	# Handles player movement logic
 func player_movement(delta: float):
@@ -105,6 +106,8 @@ func _physics_process(delta: float):
 	if Input.is_action_just_pressed("primary_attack"):
 		if canAttack and state != "Dashing":
 			start_attack()
+
+
 	
 	# Process movement after animation has played
 	player_movement(delta)

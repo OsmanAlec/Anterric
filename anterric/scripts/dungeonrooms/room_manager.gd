@@ -1,7 +1,7 @@
 extends Area3D
 static var counter = 0
 var entered = false 
-var stage:String = PlayerData.Stage[PlayerData.current_stage]
+var stage:String = GameManager.Stage[GameManager.current_stage]
 
 func _on_body_entered(body: PhysicsBody3D) -> void:
 	entered = true

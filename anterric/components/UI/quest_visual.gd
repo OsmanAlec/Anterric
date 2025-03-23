@@ -1,17 +1,10 @@
-extends VBoxContainer
-
-var is_open = false
+extends Control
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("quest"):
-		if is_open:
-			close()
+		await get_tree().create_timer(0.1).timeout
+		if visible:
+			visible = false
 		else:
-			open()
+			visible = true
 			
-func open():
-	visible = true
-	is_open = true
-func close():
-	visible = false
-	is_open = false

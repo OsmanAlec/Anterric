@@ -9,7 +9,6 @@ signal update
 
 func insert(item: invitem2):
 	var itemslots = slots.filter(func(slot): return slot.item == item)
-	print(itemslots)
 	if !itemslots.is_empty():
 		itemslots[0].amount += 1
 	else:

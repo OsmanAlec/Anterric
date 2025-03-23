@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var health_increase: int = 1  # Default healing value.
+var health_increase: int = 1  # Default healing value.
 var heart_type: String = "full"       # Default heart type.
 
 # Sets the heart type and assigns the corresponding healing value and texture.
@@ -17,6 +17,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
 		# Check if player is already at max health before applying healing
 		if PlayerData.current_health < PlayerData.max_health:
-			PlayerData.current_health = min(PlayerData.current_health + health_increase, PlayerData.max_health)
+			body.get_node("Health").health += health_increase
 			await get_tree().create_timer(0.2).timeout
 			queue_free()  # Remove the heart after pickup.

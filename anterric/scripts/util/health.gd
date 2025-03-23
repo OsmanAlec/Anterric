@@ -1,7 +1,6 @@
 class_name Health
 extends Node
 
-
 signal max_health_changed(diff:int)
 signal health_changed(diff: int)
 signal poisoned
@@ -10,24 +9,24 @@ signal health_depleted
  # Maximum Health 
 @export var max_health: int : set = set_max_health, get = get_max_health
 @export var immortality: bool = false : set = set_immortality, get = get_immortality # When player respawns enemy cannot hit for few secs
-
+@export var isPlayer : bool = false
 var immortality_timer: Timer = null
-var poison: Array[int] = []
-var last_poison_index: int = 0 # index to keep track of poison timing
-var current_poison_index: int = 0 #index to keep adding poison to the bounded buffer
 
 @onready var health: int = max_health : set = set_health, get = get_health
 @onready var poison_timer: Timer = Timer.new()
 
+var is_poisoned: bool = false
+var poison_sum: int = 0
+
 func _ready() -> void:
-	poison.resize(4)
-	poison.fill(0) #initialise poison to 0
 	poison_timer.wait_time = 2.0
 	poison_timer.connect("timeout", Callable(self, "_on_poison_timer_timeout"))
+	poison_timer.one_shot = true
 	add_child(poison_timer)
-	if get_parent().is_in_group("Player"):
+	if isPlayer:
 		max_health = PlayerData.max_health
 		health = PlayerData.current_health
+		PlayerManager.get_node("HUD/Hearts").update_health(PlayerData.current_health)
 
 func set_max_health(value: int):
 	var clamped_value = 1 if value <= 0 else value
@@ -36,7 +35,8 @@ func set_max_health(value: int):
 		var difference = clamped_value - max_health
 		max_health = value
 		max_health_changed.emit(difference)
-		
+		if isPlayer:
+			PlayerData._on_max_health_changed(value)
 		if health > max_health:
 			health = max_health
 		
@@ -81,44 +81,35 @@ func set_health(value: int):
 		var difference = clamped_value - health
 		health = value
 		health_changed.emit(difference)
+		if isPlayer:
+			PlayerData._on_health_changed(difference)
 		if health <= 0:
 			health_depleted.emit()
 			
 
 func get_health():
 	return health
-	
-
 
 func apply_poison(damage: int):
 	"""Position can stack up 4 times,
 	but never more than 4. Update how much poison
 	damage is caused in total"""
-	if poison[current_poison_index] == 0:
-		print("added poison")
-		poison[current_poison_index] = damage
-		current_poison_index = (current_poison_index + 1) % 4
-		print("starting")
-		if poison_timer.time_left == 0:
-			poison_timer.start()
-	else:
-		return
+	if poison_sum + damage <= 4:
+		poison_sum += damage
+	elif poison_sum != 0:
+		poison_sum = 4
+	
+	poison_timer.start()
+		
+	if isPlayer:
+		poison_sum = 1
+		PlayerManager.get_node("HUD/Hearts").draw_poison(PlayerData.current_health)
+		
+
+	return
 
 func _on_poison_timer_timeout():
-	
-	if poison.max() == 0:
-		poison_timer.stop()
-		poisoned.emit(false)
-		return
-	var total_damage: int = 0
-	for dmg in poison:
-		total_damage += dmg
-	if total_damage:
-		health -= total_damage / 2
-		poisoned.emit(true)
-	if poison[last_poison_index] != 0:
-		poison[last_poison_index] = 0
-		last_poison_index = (last_poison_index + 1) % 4
-		
-	
-	
+	health -= poison_sum
+	poison_sum = 0
+	if isPlayer:
+		PlayerManager.get_node("HUD/Hearts").update_health(PlayerData.current_health)

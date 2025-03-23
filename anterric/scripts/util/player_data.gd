@@ -1,54 +1,30 @@
 extends Node
 
-const Stage: Array[String] = [
-	"prologue",
-	"level1",
-	"level2",
-	"queenbeeboss",
-]
+@onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
+@onready var max_health: int = 6
+@onready var current_health: int = max_health
+@onready var heart_hud = PlayerManager.get_node("HUD/Hearts")
+@onready var HUD = PlayerManager.get_node("HUD")
 
 var completed_quests : int = 0
-var max_health: int = 6 : set = set_maxhp
-var current_health: int = max_health
-var applied_poison: int = 0
-var coins: int = 0 : set = set_coin, get = get_coin
-@onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
+var coins: int = 0 : set = set_coin
 var inventory: maininv = load("res://inventory/inv2/playerinv.tres")
-
-var current_stage: int = 0 #index for Stage
-
-func _process(delta: float) -> void:
-	if player != null:
-		return
-	player = get_tree().get_first_node_in_group("Player")
-
-func change_health (value: int)-> void:
-	current_health = value
 	
 func set_coin(value: int):
 	coins = value
+	HUD.get_node("Coin/Coins").text = str(coins)
 	QuestControl.check_quests()
-	
-func get_coin() -> int:
-	return coins
 	
 func collect(item):
 	await inventory.insert(item)
 	QuestControl.check_quests()
 
-func set_maxhp(value: int):
-	player.get_node("Health").max_health = value
-	max_health = value
-	player.get_node("HUD").get_node("Hearts").update_max_health(value)
-	current_health = value
-	
-func set_hp(value: int):
-	if !player:
+func _on_health_changed(diff: int) -> void:
+	if current_health == current_health + diff:
 		return
-	current_health = clamp(value, 0, max_health)
-	player.get_node("Health").health = current_health
-	player.get_node("HUD").get_node("Hearts").update_health(value)
-
+	current_health += diff
+	heart_hud.update_health(current_health)
 	
-
-	
+func _on_max_health_changed(value: int) -> void:
+	max_health = value
+	heart_hud.update_max_health(max_health)

@@ -9,5 +9,5 @@ func is_satisfied()-> bool:
 	return false
 
 func upon_completion():
-	PlayerData.max_health += 2
+	PlayerData.player.get_node("Health").max_health += 2
 	PlayerData.inventory.find_slot_by_item_name("grass_tuft").amount -= 5
