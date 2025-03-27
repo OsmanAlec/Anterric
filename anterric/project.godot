@@ -18,17 +18,18 @@ config/icon="res://art/anterriclogo.png"
 [autoload]
 
 DialogManager="*res://scripts/util/dialog_manager.gd"
+PlayerData="*res://scripts/util/player_data.gd"
 AudioPlayer="*res://scenes/audio_player.tscn"
 GameManager="*res://components/Quest/GameManager.tscn"
 QuestControl="*res://components/Quest/QuestManager.tscn"
 MusicManagerSingleton="*res://scripts/MusicManager.gd"
 PlayerManager="*res://scenes/utilities/player_manager.tscn"
-PlayerData="*res://scripts/util/player_data.gd"
 
 [display]
 
 window/size/viewport_width=640
 window/size/viewport_height=360
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/directional_shadow/soft_shadow_filter_quality=1
 window/positional_shadow/soft_shadow_filter_quality=1

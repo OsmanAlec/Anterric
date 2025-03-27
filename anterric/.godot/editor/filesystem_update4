@@ -27,3 +27,11 @@ res://scenes/UI/player_menu.tscn
 res://scenes/UI/menu.tscn
 res://scripts/enemies/workerbee.tscn
 res://scenes/dungeonrooms/components/leaves.tscn
+res://scenes/utilities/player_manager.tscn
+res://scenes/utilities/player_manager.gd
+res://scenes/enemies/tick.tscn
+res://scripts/util/health.gd
+res://scripts/UI/hearts.gd
+res://inventory/items/item_pickup.gd
+res://scripts/player.gd
+res://scripts/enemies/tick.gd
