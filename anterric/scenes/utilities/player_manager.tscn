@@ -1,13 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8ucqag7804hc"]
+[gd_scene load_steps=10 format=3 uid="uid://c8ucqag7804hc"]
 
 [ext_resource type="Script" path="res://components/UI/quest_visual.gd" id="1_kaids"]
+[ext_resource type="Script" path="res://scenes/utilities/player_manager.gd" id="1_prj6x"]
 [ext_resource type="Script" path="res://scripts/UI/hearts.gd" id="2_ql4sd"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="3_5anc4"]
 [ext_resource type="PackedScene" uid="uid://cgbetvcslu26" path="res://inventory/inv2/inventoryUI.tscn" id="3_o2nk8"]
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="4_exd1d"]
 [ext_resource type="PackedScene" uid="uid://da05lebleqq21" path="res://scenes/UI/player_menu.tscn" id="4_s4587"]
+[ext_resource type="Shader" path="res://vfx/ChromaticAberration.gdshader" id="8_b6tw6"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6a048"]
+shader = ExtResource("8_b6tw6")
+shader_parameter/aberration = 1.5
+shader_parameter/strength = 0.0
 
 [node name="PlayerManager" type="Node3D"]
+script = ExtResource("1_prj6x")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 visible = false
@@ -74,5 +82,12 @@ texture = ExtResource("4_exd1d")
 [node name="InventoryUi" parent="." instance=ExtResource("3_o2nk8")]
 
 [node name="player_menu" parent="." instance=ExtResource("4_s4587")]
+
+[node name="Shaders" type="CanvasLayer" parent="."]
+
+[node name="ChromaticAberrationRect" type="ColorRect" parent="Shaders"]
+material = SubResource("ShaderMaterial_6a048")
+offset_right = 640.0
+offset_bottom = 360.0
 
 [connection signal="timeout" from="HUD/heart_beat" to="HUD/Hearts" method="_on_heart_beat_timeout"]

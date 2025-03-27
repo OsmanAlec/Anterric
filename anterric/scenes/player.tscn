@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=3 uid="uid://b1bfg04b8ycqf"]
+[gd_scene load_steps=113 format=3 uid="uid://b1bfg04b8ycqf"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_2rwgt"]
 [ext_resource type="Script" path="res://scripts/util/health.gd" id="2_kqand"]
@@ -15,7 +15,6 @@
 [ext_resource type="Script" path="res://scripts/util/hurtbox.gd" id="11_tf5i0"]
 [ext_resource type="Script" path="res://scripts/util/hitbox.gd" id="12_e4s7a"]
 [ext_resource type="AudioStream" uid="uid://dr37rkhnc0nw5" path="res://sfx/hit.wav" id="17_3aef1"]
-[ext_resource type="Shader" path="res://vfx/ChromaticAberration.gdshader" id="18_5pfhp"]
 [ext_resource type="AudioStream" uid="uid://cmpmttqxaxw6d" path="res://sfx/FinalSteps.wav" id="19_d1awb"]
 [ext_resource type="AudioStream" uid="uid://dte1d7l0erkjb" path="res://Music/dungeonmusic8bit.wav" id="19_uroxr"]
 
@@ -903,11 +902,6 @@ fill = 1
 [sub_resource type="CylinderMesh" id="CylinderMesh_ymga0"]
 height = 0.001
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_cuup8"]
-shader = ExtResource("18_5pfhp")
-shader_parameter/aberration = 1.5
-shader_parameter/strength = 0.05
-
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_2rwgt")
 
@@ -1015,13 +1009,6 @@ stream = ExtResource("19_uroxr")
 stream = ExtResource("19_d1awb")
 volume_db = -18.0
 bus = &"sfx"
-
-[node name="Shaders" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="Shaders"]
-material = SubResource("ShaderMaterial_cuup8")
-offset_right = 640.0
-offset_bottom = 360.0
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
 [connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_tree_animation_finished"]
