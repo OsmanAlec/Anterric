@@ -91,15 +91,13 @@ func get_health():
 	return health
 
 func apply_poison(damage: int):
-	emit_signal("poisoned")
-	"""Poison can stack up 4 times,
+	"""Position can stack up 4 times,
 	but never more than 4. Update how much poison
 	damage is caused in total"""
 	if poison_sum + damage <= 4:
 		poison_sum += damage
 	elif poison_sum != 0:
 		poison_sum = 4
-		
 	
 	poison_timer.start()
 		
