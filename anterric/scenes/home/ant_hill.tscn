@@ -295,13 +295,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.771262, 2.00168, -0.707927
 collision_layer = 5
 collision_mask = 5
 
-[node name="Camera3D" parent="Player" index="7"]
+[node name="Camera3D" parent="Player" index="5"]
 transform = Transform3D(1, 1.69812e-09, 1.85922e-09, -2.42667e-09, 0.846992, 0.531605, -6.7202e-10, -0.531605, 0.846992, 5.68247e-08, 2.01197, 2.75906)
 
-[node name="HitLeft" parent="Player" index="12"]
+[node name="HitLeft" parent="Player" index="10"]
 damage = 10
 
-[node name="HitRight" parent="Player" index="13"]
+[node name="HitRight" parent="Player" index="11"]
 damage = 10
 
 [node name="Garvan" parent="." instance=ExtResource("1_yq6h1")]

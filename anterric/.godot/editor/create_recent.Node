@@ -1,10 +1,10 @@
+ColorRect
+CanvasLayer
 Control
 Container
-CanvasLayer
 HSlider
 AnimationPlayer
 AnimationTree
-ColorRect
 OmniLight3D
 DirectionalLight3D
 SpotLight3D
