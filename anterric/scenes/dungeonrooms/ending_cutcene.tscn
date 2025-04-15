@@ -61,7 +61,7 @@ environment = SubResource("Environment_8akcx")
 
 [node name="Player" parent="." instance=ExtResource("1_7wrrc")]
 
-[node name="Camera3D" parent="Player" index="7"]
+[node name="Camera3D" parent="Player" index="5"]
 transform = Transform3D(1, 2.40023e-09, 7.6108e-10, -2.46613e-09, 0.872557, 0.488514, 5.08464e-10, -0.488514, 0.872557, 2, 5.0482, 5.4674)
 
 [node name="QueenBee" type="AnimatedSprite3D" parent="."]

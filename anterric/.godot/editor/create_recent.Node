@@ -1,3 +1,7 @@
+CharacterBody3D
+Label3D
+Label
+GridMap
 ColorRect
 CanvasLayer
 Control
@@ -9,6 +13,3 @@ OmniLight3D
 DirectionalLight3D
 SpotLight3D
 WorldEnvironment
-Label3D
-AnimatedSprite3D
-AudioStreamPlayer3D
