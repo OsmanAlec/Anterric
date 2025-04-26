@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://da05lebleqq21"]
+[gd_scene load_steps=4 format=3 uid="uid://da05lebleqq21"]
 
 [ext_resource type="Script" path="res://player_menu.gd" id="1_lr6tb"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_n7xn4"]
-[ext_resource type="Script" path="res://scripts/UI/menu_volume_slider.gd" id="3_uv6ip"]
-[ext_resource type="Script" path="res://scenes/UI/sfx_volume_slider.gd" id="4_f632h"]
+[ext_resource type="PackedScene" uid="uid://dqqmky2kn41v5" path="res://scenes/UI/options_menu.tscn" id="4_uenma"]
 
 [node name="player_menu" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,35 +14,63 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lr6tb")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_left = 64.0
-offset_top = 192.0
-offset_right = 456.0
-offset_bottom = 312.0
+[node name="Main" type="CenterContainer" parent="."]
+process_mode = 3
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 108.0
+grow_vertical = 2
 
-[node name="SFX" type="Label" parent="VBoxContainer"]
+[node name="BG" type="ColorRect" parent="Main"]
+z_index = -1
+custom_minimum_size = Vector2(200, 360)
+layout_mode = 2
+mouse_filter = 2
+color = Color(0.584314, 0.721569, 0.592157, 1)
+
+[node name="Pick" type="VBoxContainer" parent="Main"]
+process_mode = 3
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Resume" type="Button" parent="Main/Pick"]
+unique_name_in_owner = true
+process_mode = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_n7xn4")
-text = "SFX"
+text = "Resume"
 
-[node name="SFX_slider" type="HSlider" parent="VBoxContainer"]
-layout_mode = 2
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("4_f632h")
-bus_name = "sfx"
-
-[node name="Music" type="Label" parent="VBoxContainer"]
+[node name="Options" type="Button" parent="Main/Pick"]
+process_mode = 3
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_n7xn4")
-text = "Music"
+text = "Options"
 
-[node name="music" type="HSlider" parent="VBoxContainer"]
+[node name="Quit" type="Button" parent="Main/Pick"]
+process_mode = 3
 layout_mode = 2
-max_value = 1.0
-step = 0.001
-value = 1.0
-script = ExtResource("3_uv6ip")
-bus_name = "music"
+theme_override_fonts/font = ExtResource("2_n7xn4")
+text = "Quit
+"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("4_uenma")]
+visible = false
+layout_mode = 1
+
+[node name="BG" type="ColorRect" parent="."]
+z_index = -2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.168627, 0.168627, 0.168627, 0.466667)
+
+[connection signal="pressed" from="Main/Pick/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Main/Pick/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Main/Pick/Quit" to="." method="_on_quit_pressed"]
+[connection signal="back_pressed" from="OptionsMenu" to="." method="_on_options_menu_back_pressed"]

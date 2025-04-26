@@ -1,53 +1,74 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkuygf7645ud4"]
+[gd_scene load_steps=5 format=3 uid="uid://dkuygf7645ud4"]
 
 [ext_resource type="Script" path="res://scripts/UI/Menu.gd" id="1_w6e8p"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_h1kw6"]
+[ext_resource type="Texture2D" uid="uid://cf8qajjnfibv7" path="res://art/titlescreen.png" id="2_sbcls"]
+[ext_resource type="PackedScene" uid="uid://dqqmky2kn41v5" path="res://scenes/UI/options_menu.tscn" id="5_qwswe"]
 
-[node name="Menu2" type="Control"]
+[node name="Menu" type="Control"]
+top_level = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_w6e8p")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 263.0
-offset_top = 34.0
-offset_right = 375.0
-offset_bottom = 58.0
-theme_override_fonts/font = ExtResource("2_h1kw6")
-text = "Anterric"
+[node name="SplashScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
 
-[node name="Play" type="Button" parent="."]
-layout_mode = 2
-offset_left = 1.0
-offset_top = 77.0
+[node name="TextureRect" type="TextureRect" parent="SplashScreen"]
+layout_mode = 1
+offset_left = 120.0
+offset_right = 1400.0
+offset_bottom = 640.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sbcls")
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="SplashScreen"]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 0
+offset_top = 200.0
 offset_right = 640.0
-offset_bottom = 108.0
+offset_bottom = 304.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SplashScreen/CenterContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="SplashScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../Options")
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Play"
 
-[node name="Options" type="Button" parent="."]
+[node name="Options" type="Button" parent="SplashScreen/CenterContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = 1.0
-offset_top = 108.0
-offset_right = 640.0
-offset_bottom = 139.0
+focus_neighbor_top = NodePath("../Play")
+focus_neighbor_bottom = NodePath("../Quit")
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Options"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Quit" type="Button" parent="SplashScreen/CenterContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = 1.0
-offset_top = 139.0
-offset_right = 640.0
-offset_bottom = 170.0
+focus_neighbor_top = NodePath("../Options")
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("2_h1kw6")
 text = "Quit"
 
-[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[node name="OptionsMenu" parent="." instance=ExtResource("5_qwswe")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="SplashScreen/CenterContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="SplashScreen/CenterContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="SplashScreen/CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="back_pressed" from="OptionsMenu" to="." method="_on_options_menu_back_pressed"]
