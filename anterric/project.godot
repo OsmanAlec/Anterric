@@ -120,6 +120,7 @@ o={
 3d_physics/layer_1="gridmap"
 3d_physics/layer_2="Enemy"
 3d_physics/layer_3="teleporter"
+3d_physics/layer_4="Anthillblockdoor"
 3d_physics/layer_9="playerdetectionforspawning"
 3d_physics/layer_10="enemiesxgridmap"
 

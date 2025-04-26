@@ -1,7 +1,11 @@
 extends CharacterBody3D
 
+
+
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var InteractionLabel: Label3D = $InteractionLabel
+@export var door : Node3D  # Reference to the door
+
 
 
 var canInteract = false
@@ -100,6 +104,8 @@ func _ready() -> void:
 
 	
 func _input(event: InputEvent) -> void:
+	
+	
 	if event.is_action_pressed("advance_dialog"):
 		if canInteract:
 			$AnimatedSprite3D.play("talking")
@@ -108,11 +114,14 @@ func _input(event: InputEvent) -> void:
 			if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 				key += "_questComplete"
 			DialogManager.start_dialog(global_position, dialogs[key], char_name)
+		
 	
 func _on_interaction_area_body_entered(body: Node3D) -> void:
 	if body.is_in_group("Player"):
 		InteractionLabel.show()
 		canInteract = true
+	
+	
 
 func _on_interaction_area_body_exited(body: Node3D) -> void:
 	if body.is_in_group("Player"):
@@ -121,6 +130,8 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 
 
 func _on_finished_talking(cn) -> void:
+	
+	door.open()
 	if cn != char_name:
 		return
 		

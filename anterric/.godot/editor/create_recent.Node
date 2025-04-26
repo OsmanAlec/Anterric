@@ -1,6 +1,8 @@
+CollisionShape3D
+Area3D
+Label
 CharacterBody3D
 Label3D
-Label
 GridMap
 ColorRect
 CanvasLayer
@@ -11,5 +13,3 @@ AnimationPlayer
 AnimationTree
 OmniLight3D
 DirectionalLight3D
-SpotLight3D
-WorldEnvironment
