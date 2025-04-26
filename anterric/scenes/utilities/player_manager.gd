@@ -32,3 +32,4 @@ func apply_poison_effect():
 	chromatic_material.set_shader_parameter("Aberration", 0)
 	chromatic_material.set_shader_parameter("Strength", 0)
 	poisoned = false
+	

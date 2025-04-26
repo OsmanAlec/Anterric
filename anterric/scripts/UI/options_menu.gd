@@ -1,20 +1,12 @@
 extends Control
 
-var is_open = false
+signal back_pressed
+
+@onready var default_button = get_node("Options/Main/Back")
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/UI/menu.tscn")
+	back_pressed.emit()
 
-func _physics_process(delta):
-	if Input.is_action_just_pressed("o"):
-		if is_open:
-			close()
-		else:
-			open()
-			
-func open():
-	visible = true
-	is_open = true
-func close():
-	visible = false
-	is_open = false
+
+func _on_options_tab_changed(tab: int) -> void:
+	default_button = get_node("Options").get_child(tab).get_node("Back")

@@ -8,6 +8,5 @@ func _ready()-> void:
 	$Control/AnimationPlayer.current_animation = "fade_in"
 	await get_tree().create_timer(1.0).timeout
 	$Player.lastDir.x = 1
-	GameManager.get_node("Coins").visible = false
-	$Player.get_node("HUD").visible = false
 	$Player.canMove = false
+	PlayerData.HUD.visible = false

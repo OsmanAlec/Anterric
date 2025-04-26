@@ -4,59 +4,173 @@
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="2_irpdf"]
 [ext_resource type="Script" path="res://scripts/UI/menu_volume_slider.gd" id="3_isqan"]
 
-[node name="Menu" type="Control"]
+[node name="OptionsMenu" type="Control"]
+process_mode = 3
+custom_minimum_size = Vector2(640, 360)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_s2n4i")
 
-[node name="Music" type="Label" parent="."]
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.584314, 0.721569, 0.592157, 1)
+
+[node name="Options" type="TabContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+tab_alignment = 1
+current_tab = 0
+
+[node name="Main" type="VBoxContainer" parent="Options"]
 layout_mode = 2
-offset_top = 80.0
-offset_right = 638.0
-offset_bottom = 103.0
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_tab_index = 0
+
+[node name="Save" type="Button" parent="Options/Main"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Save Game"
+
+[node name="Load" type="Button" parent="Options/Main"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Load Game"
+
+[node name="Back" type="Button" parent="Options/Main"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+text = "Back"
+
+[node name="Audio" type="VBoxContainer" parent="Options"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_tab_index = 1
+
+[node name="MarginContainer" type="VBoxContainer" parent="Options/Audio"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="Music" type="Label" parent="Options/Audio/MarginContainer"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_irpdf")
 text = "Music"
 
-[node name="music_slider" type="HSlider" parent="."]
-layout_mode = 0
-offset_top = 112.0
-offset_right = 640.0
-offset_bottom = 128.0
+[node name="music_slider" type="HSlider" parent="Options/Audio/MarginContainer"]
+process_mode = 3
+layout_mode = 2
 max_value = 1.0
-step = 0.001
+step = 0.1
 value = 1.0
 script = ExtResource("3_isqan")
 bus_name = "music"
 
-[node name="sfx" type="Label" parent="."]
-layout_mode = 0
-offset_top = 32.0
-offset_right = 638.0
-offset_bottom = 55.0
+[node name="MarginContainer2" type="VBoxContainer" parent="Options/Audio"]
+layout_mode = 2
+
+[node name="sfx" type="Label" parent="Options/Audio/MarginContainer2"]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_irpdf")
 text = "SFX"
 
-[node name="sfx_slider2" type="HSlider" parent="."]
-layout_mode = 0
-offset_top = 64.0
-offset_right = 640.0
-offset_bottom = 80.0
+[node name="sfx_slider2" type="HSlider" parent="Options/Audio/MarginContainer2"]
+process_mode = 3
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
 max_value = 1.0
-step = 0.001
+step = 0.1
 value = 1.0
 script = ExtResource("3_isqan")
 bus_name = "sfx"
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="Button" parent="Options/Audio"]
+process_mode = 3
 layout_mode = 2
-offset_top = 192.0
-offset_right = 638.0
-offset_bottom = 223.0
+theme_override_fonts/font = ExtResource("2_irpdf")
 text = "Back"
 
-[connection signal="pressed" from="Back" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[node name="Graphics" type="VBoxContainer" parent="Options"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_tab_index = 2
+
+[node name="VSYNC" type="CheckButton" parent="Options/Graphics"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "VSYNC"
+
+[node name="Particles" type="CheckButton" parent="Options/Graphics"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Particles"
+
+[node name="Fog" type="CheckButton" parent="Options/Graphics"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Fog"
+
+[node name="Back" type="Button" parent="Options/Graphics"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+text = "Back"
+
+[node name="Input" type="VBoxContainer" parent="Options"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+metadata/_tab_index = 3
+
+[node name="Keyboard" type="Button" parent="Options/Input"]
+clip_contents = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Change Keyboard Layout"
+
+[node name="Controller" type="Button" parent="Options/Input"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+disabled = true
+text = "Change Controller Layout"
+
+[node name="Back" type="Button" parent="Options/Input"]
+process_mode = 3
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_irpdf")
+text = "Back"
+
+[connection signal="tab_changed" from="Options" to="." method="_on_options_tab_changed"]
+[connection signal="pressed" from="Options/Main/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Audio/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Graphics/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Options/Input/Back" to="." method="_on_back_pressed"]

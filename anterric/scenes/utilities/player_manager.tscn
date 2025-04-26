@@ -27,6 +27,7 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_kaids")
 
 [node name="Label" type="Label" parent="HUD/QuestBox"]
@@ -52,6 +53,7 @@ wait_time = 2.0
 
 [node name="Hearts" type="GridContainer" parent="HUD"]
 size_flags_horizontal = 3
+mouse_filter = 2
 theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 2
 columns = 5
@@ -63,6 +65,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="Coins" type="Label" parent="HUD/Coin"]
 layout_mode = 2
@@ -80,10 +83,13 @@ scale = Vector2(0.214063, 0.21875)
 texture = ExtResource("4_exd1d")
 
 [node name="InventoryUi" parent="." instance=ExtResource("3_o2nk8")]
+visible = false
+mouse_filter = 2
 
 [node name="player_menu" parent="." instance=ExtResource("4_s4587")]
 
 [node name="Shaders" type="CanvasLayer" parent="."]
+layer = 0
 
 [node name="ChromaticAberrationRect" type="ColorRect" parent="Shaders"]
 material = SubResource("ShaderMaterial_6a048")
