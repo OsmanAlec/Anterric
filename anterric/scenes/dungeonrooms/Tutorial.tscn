@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://bof84momwlsck"]
+=======
+[gd_scene load_steps=9 format=3 uid="uid://bof84momwlsck"]
+>>>>>>> 041aadbf4659ea2c660c74a94a8e2133b8232dad
 
 [ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://anthillgridmap.tres" id="1_t0gih"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_a5xdb"]
@@ -11,6 +15,17 @@
 [ext_resource type="Script" path="res://scenes/dungeonrooms/tut_tele.gd" id="6_e56gq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2rj10"]
+
+[sub_resource type="Environment" id="Environment_qaw86"]
+background_mode = 1
+background_color = Color(0.192157, 0.141176, 0.0941176, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
+fog_density = 1.0
+fog_height = 1.0
 
 [node name="Tutorial" type="Node3D"]
 
@@ -128,6 +143,9 @@ metadata/_editor_floor_ = Vector3(0, -2, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 1.41561e-07, 0, -1.41561e-07, 2, -0.345847, 0.0325487, -0.721502)
 shape = SubResource("BoxShape3D_2rj10")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qaw86")
 
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
