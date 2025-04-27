@@ -1,7 +1,7 @@
 [gd_scene load_steps=54 format=4 uid="uid://bo72fqjykm7m4"]
 
 [ext_resource type="Script" path="res://scenes/dungeonrooms/enemies.gd" id="1_fj6qh"]
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_jsb75"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://scenes/dungeonrooms/components/roomsgridmap.tres" id="1_jsb75"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/RoomTrigger.gd" id="1_q8e65"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/room.gd" id="1_vgfeo"]
 [ext_resource type="PackedScene" uid="uid://b8ewdnilwfnln" path="res://scenes/dungeonrooms/components/leaves.tscn" id="2_2re3c"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dhykqmaxccg8v" path="res://art/objects/dungeonAssets/leaf3.png" id="19_e50ck"]
 [ext_resource type="Texture2D" uid="uid://b0ktwg35prrws" path="res://art/objects/dungeonAssets/leaf1.png" id="20_o031m"]
 [ext_resource type="Texture2D" uid="uid://cailkqgrtlkvu" path="res://art/objects/dungeonAssets/leaf2.png" id="21_qxlmp"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_26qbi"]
 size = Vector3(24, 5, 15.0621)

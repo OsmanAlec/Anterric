@@ -10,10 +10,6 @@ func _ready()->void:
 	default_button.grab_focus()
 
 func _on_play_pressed() -> void:
-<<<<<<< HEAD
-	PlayerData.HUD.visible = true
-=======
->>>>>>> 041aadbf4659ea2c660c74a94a8e2133b8232dad
 	get_tree().change_scene_to_file("res://scenes/dungeonrooms/Tutorial.tscn")
 
 func _on_options_pressed() -> void:

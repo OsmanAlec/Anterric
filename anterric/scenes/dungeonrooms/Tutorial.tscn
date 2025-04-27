@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://bof84momwlsck"]
-=======
-[gd_scene load_steps=9 format=3 uid="uid://bof84momwlsck"]
->>>>>>> 041aadbf4659ea2c660c74a94a8e2133b8232dad
 
-[ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://anthillgridmap.tres" id="1_t0gih"]
+[ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://scenes/dungeonrooms/components/anthillgridmap.tres" id="1_t0gih"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_a5xdb"]
 [ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="3_3ugaf"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="3_u2naf"]
@@ -13,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://357rryrxs0og" path="res://art/UI/gamepad0004.png" id="5_ahu1w"]
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="5_qlk14"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/tut_tele.gd" id="6_e56gq"]
+
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2rj10"]
 

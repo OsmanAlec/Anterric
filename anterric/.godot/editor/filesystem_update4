@@ -1,45 +1,10 @@
-<<<<<<< HEAD
-res://scenes/enemies/queenbee/queenbee.tscn
-=======
 res://scenes/UI/menu.tscn
->>>>>>> 041aadbf4659ea2c660c74a94a8e2133b8232dad
 res://scripts/util/player_data.gd
 res://components/Quest/QuestManager.gd
 res://scripts/MusicManager.gd
 res://inventory/inv2/playerinv.tres
 res://vfx/ChromaticAberration.gdshader
 res://scenes/chromaticaberration.gdshader
-res://scripts/UI/Menu.gd
-res://scenes/UI/player_menu.tscn
-res://scenes/player.tscn
-res://scenes/utilities/player_manager.tscn
-res://scenes/dungeonrooms/Tutorial.tscn
-res://scripts/worker_ant.gd
-res://anthillgridmap.tres
-<<<<<<< HEAD
-res://scenes/chromaticaberration.gdshader
-res://scenes/dungeonrooms/components/leaves.tscn
-res://scripts/enemies/workerbee.tscn
-res://inventory/items/item.tscn
-res://scenes/dungeonrooms/room_no1.tscn
-res://scenes/dungeonrooms/components/pot.tscn
-res://scenes/1coin.tscn
-res://scenes/home/alchemist_ant.tscn
-res://scenes/home/workerant.tscn
-res://scenes/home/super_major.tscn
-res://scenes/utilities/player_manager.tscn
-res://scenes/dungeonrooms/Tutorial.tscn
-res://components/Quest/Quest.tscn
-res://components/UI/QuestVisual.tscn
-res://components/Quest/QuestManager.tscn
-res://scenes/player.tscn
-res://scenes/dungeonrooms/room_no5.tscn
-res://scenes/dungeonrooms/ending_cutcene.tscn
-res://scenes/UI/menu.tscn
-res://credits.tscn
-res://components/Quest/bee_stings.gd
-res://components/Quest/gather_5_lime.gd
 res://scenes/enemies/workerbee.gd
-=======
-res://scenes/home/ant_hill.tscn
->>>>>>> 041aadbf4659ea2c660c74a94a8e2133b8232dad
+res://scripts/UI/Menu.gd
+res://scenes/dungeonrooms/Tutorial.tscn

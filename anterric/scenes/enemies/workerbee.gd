@@ -72,8 +72,7 @@ func _on_health_health_depleted() -> void:
 			var pickup = pickup_scene.instantiate() as Node3D
 			pickup.resource = drop_item1
 			pickup.global_position = global_position
-			get_tree().current_scene.add_child(pickup)
-		
+			get_tree().current_scene.add_child(pickup)	
 		else:
 			var pickup = pickup_scene.instantiate() as Node3D
 			pickup.resource = drop_item2

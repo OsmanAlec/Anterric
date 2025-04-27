@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=4 uid="uid://dpj5lwxglxbks"]
 
-[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://roomsgridmap.tres" id="1_6wpnj"]
+[ext_resource type="MeshLibrary" uid="uid://g7llljk035ev" path="res://scenes/dungeonrooms/components/roomsgridmap.tres" id="1_6wpnj"]
 [ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="1_7hcd7"]
 [ext_resource type="PackedScene" uid="uid://b0cnxefxej1jl" path="res://scenes/enemies/queenbee/queenbee.tscn" id="1_e1v6h"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_vom0q"]
