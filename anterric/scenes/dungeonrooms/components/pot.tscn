@@ -64,6 +64,7 @@ animation = &"break"
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_0g6rm")
+dropped_item_will_follow = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00655556, 0.403669, -0.00262451)

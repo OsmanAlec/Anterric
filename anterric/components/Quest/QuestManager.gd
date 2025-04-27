@@ -2,7 +2,7 @@ class_name QuestManager
 extends Node3D
 
 #ui elements for quest info to show on screen
-@onready var QuestContainer: GridContainer = PlayerManager.get_node("HUD/QuestBox/QuestContainer")
+@onready var QuestContainer: GridContainer = PlayerManager.get_node("HUD/QuestBox/Control/QuestContainer")
 @onready var QuestBox: Control = PlayerManager.get_node("HUD/QuestBox")
 
 var active_quests: Array[Quest]

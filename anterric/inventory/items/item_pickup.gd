@@ -4,7 +4,7 @@ signal item_pickedup
 
 var speed = 0.25
 
-@export var item: invitem2
+var item: invitem2
 @onready var player = get_tree().get_first_node_in_group("Player")
 
 

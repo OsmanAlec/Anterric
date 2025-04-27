@@ -11,6 +11,7 @@ extends CharacterBody3D
 
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 
+var pickup_scene: PackedScene = preload("res://inventory/items/item.tscn")
 var HEART_SCENE = load("res://scenes/dungeonrooms/heart.tscn")
 
 var canAttack = true
@@ -64,8 +65,20 @@ func _on_attack_cooldown_timeout() -> void:
 
 func _on_health_health_depleted() -> void:
 	died.emit()  # Notify the parent node
-	PlayerData.collect(drop_item1)
-	PlayerData.collect(drop_item2)
+	
+	if randf() < 0.9:
+		#40% chance to spawn nectar
+		if randf() < 0.4:
+			var pickup = pickup_scene.instantiate() as Node3D
+			pickup.resource = drop_item1
+			pickup.global_position = global_position
+			get_tree().current_scene.add_child(pickup)
+		
+		else:
+			var pickup = pickup_scene.instantiate() as Node3D
+			pickup.resource = drop_item2
+			pickup.global_position = global_position
+			get_tree().current_scene.add_child(pickup)
 	# 50% chance to spawn a heart.
 	if randf() < 0.5:
 		var heart_instance = HEART_SCENE.instantiate()

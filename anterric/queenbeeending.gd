@@ -29,4 +29,6 @@ func _process(delta: float) -> void:
 func _on_finished_talking(cn):
 	if cn != "QueenBee":
 		return
+	var quest = QuestControl.get_node("Slay The Queen Bee")
+	quest.quest_status = quest.QuestStatus.finished
 	get_tree().quit()

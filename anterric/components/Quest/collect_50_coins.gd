@@ -3,7 +3,6 @@
 extends Quest
 
 func is_satisfied()-> bool:
-	print(PlayerData.coins)
 	return PlayerData.coins >= 20 
 
 func upon_completion():

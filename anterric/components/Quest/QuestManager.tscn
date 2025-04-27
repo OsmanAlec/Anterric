@@ -71,3 +71,6 @@ reached_goal_text = "Return to Manfred"
 
 [node name="Slay The Queen Bee" type="Node3D" parent="."]
 script = ExtResource("11_g26oc")
+quest_name = "Slay The Queen Bee"
+quest_description = "Just Survive"
+reached_goal_text = "Talk to the Queen Bee"

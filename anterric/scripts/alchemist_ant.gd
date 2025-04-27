@@ -4,6 +4,7 @@ extends CharacterBody3D
 @onready var InteractionLabel: Label3D = $InteractionLabel
 
 const char_name: String = "Garvan"
+var quest_available: bool = true
 var canInteract = false
 
 @onready var quests: Array[Quest] = [
@@ -94,9 +95,11 @@ func _ready() -> void:
 	InteractionLabel.hide()
 	$AnimatedSprite3D.play("idle")
 	DialogManager.finished_talking.connect(_on_finished_talking)
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
+		$TalkToMe.visible = true
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("advance_dialog"):
+	if event.is_action_pressed("advance_dialog") and quests[GameManager.current_stage].quest_status != Quest.QuestStatus.finished:
 		var key: String = GameManager.Stage[GameManager.current_stage]
 		if canInteract:
 			InteractionLabel.hide()
@@ -117,9 +120,9 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 func _on_finished_talking(cn):
 	if cn != char_name:
 		return
-	var key: String = GameManager.Stage[GameManager.current_stage]
 	
 	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.reached_goal:
 		quests[GameManager.current_stage].finish_quest()
 	elif quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[GameManager.current_stage].start_quest()
+		$TalkToMe.visible = false

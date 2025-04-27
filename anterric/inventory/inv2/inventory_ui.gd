@@ -16,7 +16,7 @@ func update_slots():
 
 	
 func _physics_process(delta):
-	if Input.is_action_just_pressed("i"):
+	if Input.is_action_just_pressed("inventory"):
 		if is_open:
 			close()
 		else:

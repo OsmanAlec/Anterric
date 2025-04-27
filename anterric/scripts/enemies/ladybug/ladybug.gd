@@ -8,6 +8,7 @@ const SPEED: float = 5.0
 const LADYBUG_GROUP: String = "Ladybugs"
 
 var HEART_SCENE = load("res://scenes/dungeonrooms/heart.tscn")
+var pickup_scene: PackedScene = preload("res://inventory/items/item.tscn")
 
 
 # Exported variables to configure ladybug behavior in the Godot editor.
@@ -234,7 +235,10 @@ func _on_health_health_depleted() -> void:
 	
 	died.emit()  # Notify the parent node
 	
-	PlayerData.collect(drop_item)
+	var pickup = pickup_scene.instantiate() as Node3D
+	pickup.resource = drop_item
+	pickup.global_position = global_position
+	get_tree().current_scene.add_child(pickup)
 	
 	# 70% chance to spawn a heart.
 	if randf() < 0.7:

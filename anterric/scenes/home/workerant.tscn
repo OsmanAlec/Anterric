@@ -116,7 +116,15 @@ shape = SubResource("BoxShape3D_mfupm")
 [node name="InteractionLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 billboard = 1
-text = "Press T or Joystick Up to Talk"
+text = "Press T or△ to Talk"
+font = ExtResource("2_1501b")
+font_size = 17
+
+[node name="TalkToMe" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+visible = false
+billboard = 1
+text = "!"
 font = ExtResource("2_1501b")
 font_size = 17
 

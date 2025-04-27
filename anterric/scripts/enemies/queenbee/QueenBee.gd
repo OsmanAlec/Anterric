@@ -49,13 +49,11 @@ func stomp_ground():
 
 	tween.tween_property(self, "global_position", Vector3(position.x, ground, position.z), 0.7).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	await get_tree().create_timer(1.5).timeout
-	print("finished warning")
 
 	anim_player.current_animation = "stomp"  # Play the stomp animation
 
 	# Check for players already inside the StunArea
 	if (player in stun_area.get_overlapping_bodies()) and !player.dashing:
-		print("stunned")
 		player.apply_stun(1.0)
 
 

@@ -29,9 +29,13 @@ var canMove: bool = true
 func _ready() -> void:
 	PlayerData.player = self
 	PlayerData.HUD.visible = true
+	
 	$HitLeft/CollisionShape3D.disabled = true
 	$HitRight/CollisionShape3D.disabled = true
-	
+	$HitRight.damage = PlayerData.damage
+	$HitLeft.damage = PlayerData.damage
+
+		
 	swing_sfx = AudioStreamPlayer.new()
 	swing_sfx.stream = preload("res://sfx/SwingSFX.mp3")
 	swing_sfx.bus = "sfx"

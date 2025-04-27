@@ -95,10 +95,12 @@ func _ready() -> void:
 	InteractionLabel.hide()
 	DialogManager.finished_talking.connect(_on_finished_talking)
 	$AnimatedSprite3D.play("idle")
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
+		$TalkToMe.visible = true
 
 	
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("advance_dialog"):
+	if event.is_action_pressed("advance_dialog") and quests[GameManager.current_stage].quest_status != Quest.QuestStatus.finished:
 		var key: String = GameManager.Stage[GameManager.current_stage]
 		if canInteract:
 			$AnimatedSprite3D.play("talking")
@@ -129,3 +131,4 @@ func _on_finished_talking(cn) -> void:
 		quests[GameManager.current_stage].finish_quest()
 	elif quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[GameManager.current_stage].start_quest()
+		$TalkToMe.visible = false

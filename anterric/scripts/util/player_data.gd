@@ -3,6 +3,7 @@ extends Node
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 @onready var max_health: int = 6
 @onready var current_health: int = max_health
+@onready var damage: int = 2
 @onready var heart_hud = PlayerManager.get_node("HUD/Hearts")
 @onready var HUD = PlayerManager.get_node("HUD")
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://b8ewdnilwfnln"]
 
-[ext_resource type="Script" path="res://scripts/dungeonrooms/components/leaves.gd" id="1_7tcym"]
 [ext_resource type="Texture2D" uid="uid://rg5tcvecqvvc" path="res://art/objects/dungeonAssets/leaves.png" id="1_cqplp"]
 [ext_resource type="Script" path="res://scripts/dungeonrooms/components/breakbox.gd" id="2_t3d5h"]
+[ext_resource type="Resource" uid="uid://bcwihdsiop65s" path="res://inventory/items/leaf.tres" id="4_fuggx"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rxnmr"]
 atlas = ExtResource("1_cqplp")
@@ -51,7 +51,6 @@ animations = [{
 size = Vector3(0.471411, 0.5, 0.5)
 
 [node name="leaves" type="Node3D"]
-script = ExtResource("1_7tcym")
 
 [node name="Animations" type="AnimatedSprite3D" parent="."]
 unique_name_in_owner = true
@@ -64,6 +63,7 @@ animation = &"break"
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_t3d5h")
+resource = ExtResource("4_fuggx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BreakBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000571921, 0.25, -0.0028531)

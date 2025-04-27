@@ -4,13 +4,12 @@ extends CharacterBody3D
 
 @onready var interaction_area: Area3D = $InteractionArea
 @onready var InteractionLabel: Label3D = $InteractionLabel
-@export var door : Node3D  # Reference to the door
 
 
 
-var canInteract = false
-var talking = false
-const char_name = "Erric"
+var canInteract: bool = false
+var talking: bool = false
+const char_name: String = "Erric"
 
 
 @onready var quests: Array[Quest] = [
@@ -101,12 +100,12 @@ func _ready() -> void:
 	InteractionLabel.hide()
 	DialogManager.finished_talking.connect(_on_finished_talking)
 	$AnimatedSprite3D.play("idle")
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
+		$TalkToMe.visible = true
 
 	
 func _input(event: InputEvent) -> void:
-	
-	
-	if event.is_action_pressed("advance_dialog"):
+	if event.is_action_pressed("advance_dialog") and quests[GameManager.current_stage].quest_status != Quest.QuestStatus.finished:
 		if canInteract:
 			$AnimatedSprite3D.play("talking")
 			var key: String = GameManager.Stage[GameManager.current_stage]
@@ -131,7 +130,6 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 
 func _on_finished_talking(cn) -> void:
 	
-	door.open()
 	if cn != char_name:
 		return
 		
@@ -143,3 +141,4 @@ func _on_finished_talking(cn) -> void:
 		quests[GameManager.current_stage].finish_quest()
 	elif quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[GameManager.current_stage].start_quest()
+		$TalkToMe.visible = false

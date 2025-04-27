@@ -30,6 +30,7 @@ func start_quest() -> void:
 		quest_status = QuestStatus.started
 		QuestControl.active_quests.append(self)
 		QuestControl.draw_quests()
+		QuestControl.check_quests()
 
 func _on_inventory_updated():
 	check_status()  # Recheck quest status when inventory updates

@@ -9,6 +9,7 @@ extends Node
 
 # creates and configures the music players
 func _ready():
+	ProcessMode.PROCESS_MODE_ALWAYS
 	# Create the background music player
 	background_music = AudioStreamPlayer.new()
 	background_music.stream = preload("res://music/dungeonmusic8bit.wav")

@@ -4,11 +4,9 @@ extends Area3D
 var entered = false 
 
 func _on_body_entered(body: PhysicsBody3D) -> void:
-	print("entered")
 	entered = true
 	
 func _on_body_exited(body: PhysicsBody3D) -> void:
-	print("exited")
 	entered = false 
 	
 

@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bof84momwlsck"]
+[gd_scene load_steps=11 format=3 uid="uid://bof84momwlsck"]
 
 [ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://anthillgridmap.tres" id="1_t0gih"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_a5xdb"]
 [ext_resource type="PackedScene" uid="uid://ckdmoytquc0qd" path="res://scripts/enemies/workerbee.tscn" id="3_3ugaf"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="3_u2naf"]
+[ext_resource type="Texture2D" uid="uid://cnk8qww3qf0o5" path="res://art/UI/dpadtop.png" id="4_aihy3"]
+[ext_resource type="Texture2D" uid="uid://b843iabl5fonb" path="res://art/UI/gamepad0003.png" id="4_njd5s"]
+[ext_resource type="Texture2D" uid="uid://357rryrxs0og" path="res://art/UI/gamepad0004.png" id="5_ahu1w"]
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="5_qlk14"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/tut_tele.gd" id="6_e56gq"]
 
@@ -28,23 +31,80 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -1.83909, 1.12889, 0.0530386)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83909, 1.12889, 0.0530386)
+billboard = 1
 text = "Use WASD to move OR Left Joystick"
 font = ExtResource("3_u2naf")
 
+[node name="Gamepaddown" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25216, 1, -2)
+pixel_size = 0.005
+billboard = 1
+texture = ExtResource("4_njd5s")
+
 [node name="Label3D2" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -1.83909, 1.12889, -2.67174)
-text = "Use Spacebar to dash OR Button A"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12431, 1.12889, -2.67174)
+billboard = 1
+text = "Use Spacebar to Dash"
+font = ExtResource("3_u2naf")
+
+[node name="Label3D8" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00934, 1, -2)
+billboard = 1
+text = "On Controller"
 font = ExtResource("3_u2naf")
 
 [node name="Label3D3" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -3.22036, 1.12889, -7.58351)
-text = "F OR LeftMouseClick to attack"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22036, 1.12889, -7.58351)
+billboard = 1
+text = "LeftMouseClick OR F to attack"
 font = ExtResource("3_u2naf")
 
 [node name="Label3D4" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 2.08961, 1.12889, -7.58351)
-text = "On controller X to attack"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.71203, 1, -8.15003)
+billboard = 1
+text = "On controller 
+"
+font = ExtResource("3_u2naf")
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07291, 1, -8.15003)
+pixel_size = 0.005
+billboard = 1
+texture = ExtResource("5_ahu1w")
+
+[node name="Label3D5" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59384, 1.58278, -14.647)
+billboard = 1
+text = "To open inventory press I
+"
+font = ExtResource("3_u2naf")
+
+[node name="Label3D7" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.15114, 1, -13.9655)
+billboard = 1
+text = "On controller"
+font = ExtResource("3_u2naf")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38872, 1, -13.9655)
+pixel_size = 0.005
+billboard = 1
+texture = ExtResource("4_aihy3")
+
+[node name="Label3D6" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02752, 1.12889, -16.7641)
+billboard = 1
+text = "Throughout the game you will need to
+find neccessary objects to destroy  for 
+quest completion "
+font = ExtResource("3_u2naf")
+
+[node name="Label3D9" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.713324, 1.60199, -10.9746)
+billboard = 1
+text = "If the fight is too overwhelming,
+Press Esc or Options to pause"
 font = ExtResource("3_u2naf")
 
 [node name="workerbee" parent="." instance=ExtResource("3_3ugaf")]
@@ -57,22 +117,8 @@ drop_item2 = null
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 9.50648e-07)
 shadow_enabled = true
 
-[node name="Label3D5" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 1.59384, 1.12889, -14.0179)
-text = "To open inventory press I
-On controller Options(btn)"
-font = ExtResource("3_u2naf")
-
 [node name="twigs2" parent="." instance=ExtResource("5_qlk14")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45477, 0.489768, -16.3041)
-
-[node name="Label3D6" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -3.02752, 1.12889, -16.7641)
-text = "Throughout the levels you will 
-find objects to destroy that
-drop items neccessary for 
-quest completion "
-font = ExtResource("3_u2naf")
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998984, 0.0450666, 0, -0.0450666, 0.998984, -0.695855, 1.49667, -17.5058)

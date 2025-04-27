@@ -6,10 +6,12 @@ extends Node
 @onready var default_button = get_node("SplashScreen/CenterContainer/VBoxContainer/Play")
 
 func _ready()->void:
+	PlayerData.HUD.visible = false
 	default_button.grab_focus()
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/home/ant_hill.tscn")
+	PlayerData.HUD.visible = true
+	get_tree().change_scene_to_file("res://scenes/dungeonrooms/Tutorial.tscn")
 
 func _on_options_pressed() -> void:
 	OptionsMenuScene.visible = true

@@ -9,7 +9,6 @@ func is_satisfied()-> bool:
 	return false
 
 func upon_completion():
-	PlayerData.player.get_node("HitLeft").damage += 2
-	PlayerData.player.get_node("HitRight").damage += 2
+	PlayerData.damage += 1
 	PlayerData.inventory.find_slot_by_item_name("bee_stinger").amount -= 20
 	

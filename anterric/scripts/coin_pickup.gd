@@ -9,7 +9,6 @@ var speed = 0.25
 
 func _on_body_entered(body: Node3D) -> void:
 	if player == body:
-		print("heeyyyyy")
 		coin_pickedup.emit()
 
 func _process(delta: float) -> void:

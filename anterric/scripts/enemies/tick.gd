@@ -10,6 +10,7 @@ extends CharacterBody3D
 @onready var player: CharacterBody3D = get_tree().get_first_node_in_group("Player")
 
 var HEART_SCENE = load("res://scenes/dungeonrooms/heart.tscn")
+var pickup_scene: PackedScene = preload("res://inventory/items/item.tscn")
 
 
 var canAttack = true
@@ -63,7 +64,13 @@ func _on_attack_cooldown_timeout() -> void:
 func _on_health_health_depleted() -> void:
 	
 	died.emit()  # Notify the parent node
-	PlayerData.collect(drop_item)
+	
+	#70% chance to drop lime
+	if randf() < 0.7:
+		var pickup = pickup_scene.instantiate() as Node3D
+		pickup.resource = drop_item
+		pickup.global_position = global_position
+		get_tree().current_scene.add_child(pickup)
 	
 	# 10% chance to spawn a heart.
 	if randf() < 0.1:

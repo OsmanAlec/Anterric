@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8ucqag7804hc"]
+[gd_scene load_steps=11 format=3 uid="uid://c8ucqag7804hc"]
 
 [ext_resource type="Script" path="res://components/UI/quest_visual.gd" id="1_kaids"]
 [ext_resource type="Script" path="res://scenes/utilities/player_manager.gd" id="1_prj6x"]
 [ext_resource type="Script" path="res://scripts/UI/hearts.gd" id="2_ql4sd"]
 [ext_resource type="FontFile" uid="uid://dfcur1am0jjb4" path="res://components/UI/mitochondria.ttf" id="3_5anc4"]
+[ext_resource type="Texture2D" uid="uid://cury4ocfh7mh5" path="res://art/UI/dpadleft.png" id="3_dixx6"]
 [ext_resource type="PackedScene" uid="uid://cgbetvcslu26" path="res://inventory/inv2/inventoryUI.tscn" id="3_o2nk8"]
 [ext_resource type="Texture2D" uid="uid://chrrtlvica5v6" path="res://art/objects/inventoryItems/10Coin.png" id="4_exd1d"]
 [ext_resource type="PackedScene" uid="uid://da05lebleqq21" path="res://scenes/UI/player_menu.tscn" id="4_s4587"]
@@ -18,34 +19,51 @@ shader_parameter/strength = 0.0
 script = ExtResource("1_prj6x")
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
-[node name="QuestBox" type="Control" parent="HUD"]
+[node name="QuestBox" type="VBoxContainer" parent="HUD"]
 visible = false
-layout_mode = 3
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
+offset_top = -113.5
+offset_right = 200.0
+offset_bottom = 113.5
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kaids")
 
-[node name="Label" type="Label" parent="HUD/QuestBox"]
-layout_mode = 0
-offset_top = 80.0
-offset_right = 221.0
-offset_bottom = 103.0
+[node name="ToolTip" type="HBoxContainer" parent="HUD/QuestBox"]
+layout_mode = 2
 
-[node name="QuestContainer" type="GridContainer" parent="HUD/QuestBox"]
+[node name="TextureRect" type="TextureRect" parent="HUD/QuestBox/ToolTip"]
+layout_mode = 2
+texture = ExtResource("3_dixx6")
+expand_mode = 2
+
+[node name="Label" type="Label" parent="HUD/QuestBox/ToolTip"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_5anc4")
+theme_override_font_sizes/font_size = 12
+text = "Press Q to hide"
+
+[node name="Control" type="Control" parent="HUD/QuestBox"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="HUD/QuestBox/Control"]
 custom_minimum_size = Vector2(200, 200)
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -100.0
+layout_mode = 2
 offset_right = 200.0
-offset_bottom = 100.0
-grow_vertical = 2
+offset_bottom = 200.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.443137, 0.443137, 0.443137, 0.282353)
+
+[node name="QuestContainer" type="GridContainer" parent="HUD/QuestBox/Control"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+offset_left = 5.0
+offset_right = 205.0
+offset_bottom = 200.0
 theme_override_constants/v_separation = 1
 
 [node name="heart_beat" type="Timer" parent="HUD"]
@@ -87,6 +105,7 @@ visible = false
 mouse_filter = 2
 
 [node name="player_menu" parent="." instance=ExtResource("4_s4587")]
+visible = false
 
 [node name="Shaders" type="CanvasLayer" parent="."]
 layer = 0
