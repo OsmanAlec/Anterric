@@ -24,13 +24,13 @@ reached_goal_text = "Return to Erric"
 [node name="Gather5Lime" type="Node3D" parent="."]
 script = ExtResource("8_0we4y")
 quest_name = "The walls are breaking"
-quest_description = "Gather 5 limes from killing ticks"
+quest_description = "Gather 5 limes from ticks"
 reached_goal_text = "Return to Erric"
 
 [node name="WorkerFood" type="Node3D" parent="."]
 script = ExtResource("4_ar8pi")
 quest_name = "Starving working class"
-quest_description = "Gather more 5 leaves and 10 nectar"
+quest_description = "Gather 5 leaves and 10 nectar"
 reached_goal_text = "Return to Erric"
 
 [node name="Collect50coins" type="Node3D" parent="."]
@@ -42,7 +42,7 @@ reached_goal_text = "Return to the mysterious wizard"
 [node name="Retrieve5Wings" type="Node3D" parent="."]
 script = ExtResource("2_smoog")
 quest_name = "7 points"
-quest_description = "Retrieve 2 lady bug wings"
+quest_description = "Retrieve 2 ladybird wings"
 reached_goal_text = "Return to the mysterious fella"
 
 [node name="BeeStings" type="Node3D" parent="."]

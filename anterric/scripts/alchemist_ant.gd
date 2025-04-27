@@ -96,9 +96,16 @@ func _ready() -> void:
 	$AnimatedSprite3D.play("idle")
 	DialogManager.finished_talking.connect(_on_finished_talking)
 	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
-		$TalkToMe.visible = true
+		$TalkToMe.show()
+		$TalkToMe.modulate = Color(1, 1, 1, 1)
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.reached_goal:
+		$TalkToMe.show()
+		$TalkToMe.modulate = Color(1, 0, 0, 1)
 
 func _input(event: InputEvent) -> void:
+	if $TalkToMe.visible and quests[GameManager.current_stage].quest_status == Quest.QuestStatus.finished:
+		$TalkToMe.hide()
+		
 	if event.is_action_pressed("advance_dialog") and quests[GameManager.current_stage].quest_status != Quest.QuestStatus.finished:
 		var key: String = GameManager.Stage[GameManager.current_stage]
 		if canInteract:
@@ -125,4 +132,9 @@ func _on_finished_talking(cn):
 		quests[GameManager.current_stage].finish_quest()
 	elif quests[GameManager.current_stage].quest_status == Quest.QuestStatus.available:
 		quests[GameManager.current_stage].start_quest()
-		$TalkToMe.visible = false
+		$TalkToMe.hide()
+		
+	if quests[GameManager.current_stage].quest_status == Quest.QuestStatus.started:
+		$TalkToMe.hide()
+		
+	

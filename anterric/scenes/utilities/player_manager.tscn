@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8ucqag7804hc"]
+[gd_scene load_steps=12 format=3 uid="uid://c8ucqag7804hc"]
 
 [ext_resource type="Script" path="res://components/UI/quest_visual.gd" id="1_kaids"]
 [ext_resource type="Script" path="res://scenes/utilities/player_manager.gd" id="1_prj6x"]
@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://da05lebleqq21" path="res://scenes/UI/player_menu.tscn" id="4_s4587"]
 [ext_resource type="Shader" path="res://vfx/ChromaticAberration.gdshader" id="8_b6tw6"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghs44"]
+bg_color = Color(0.28485, 0.28485, 0.28485, 0.643137)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6a048"]
 shader = ExtResource("8_b6tw6")
 shader_parameter/aberration = 1.5
@@ -20,7 +23,7 @@ script = ExtResource("1_prj6x")
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="QuestBox" type="VBoxContainer" parent="HUD"]
+[node name="QuestBox" type="PanelContainer" parent="HUD"]
 visible = false
 anchors_preset = 4
 anchor_top = 0.5
@@ -29,42 +32,40 @@ offset_top = -113.5
 offset_right = 200.0
 offset_bottom = 113.5
 grow_vertical = 2
-mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ghs44")
 script = ExtResource("1_kaids")
 
-[node name="ToolTip" type="HBoxContainer" parent="HUD/QuestBox"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/QuestBox"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HUD/QuestBox/ToolTip"]
+[node name="ToolTip" type="HBoxContainer" parent="HUD/QuestBox/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="HUD/QuestBox/VBoxContainer/ToolTip"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 3
 texture = ExtResource("3_dixx6")
-expand_mode = 2
+expand_mode = 1
+stretch_mode = 4
 
-[node name="Label" type="Label" parent="HUD/QuestBox/ToolTip"]
+[node name="Label" type="Label" parent="HUD/QuestBox/VBoxContainer/ToolTip"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_5anc4")
 theme_override_font_sizes/font_size = 12
 text = "Press Q to hide"
 
-[node name="Control" type="Control" parent="HUD/QuestBox"]
+[node name="Control" type="Control" parent="HUD/QuestBox/VBoxContainer"]
 layout_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="HUD/QuestBox/Control"]
+[node name="QuestContainer" type="VBoxContainer" parent="HUD/QuestBox/VBoxContainer/Control"]
 custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
+layout_mode = 1
 offset_right = 200.0
 offset_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0.443137, 0.443137, 0.443137, 0.282353)
-
-[node name="QuestContainer" type="GridContainer" parent="HUD/QuestBox/Control"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-offset_left = 5.0
-offset_right = 205.0
-offset_bottom = 200.0
-theme_override_constants/v_separation = 1
+alignment = 1
 
 [node name="heart_beat" type="Timer" parent="HUD"]
 wait_time = 2.0
@@ -100,12 +101,9 @@ position = Vector2(584.125, 16)
 scale = Vector2(0.214063, 0.21875)
 texture = ExtResource("4_exd1d")
 
-[node name="InventoryUi" parent="." instance=ExtResource("3_o2nk8")]
+[node name="InventoryUi" parent="HUD" instance=ExtResource("3_o2nk8")]
 visible = false
 mouse_filter = 2
-
-[node name="player_menu" parent="." instance=ExtResource("4_s4587")]
-visible = false
 
 [node name="Shaders" type="CanvasLayer" parent="."]
 layer = 0
@@ -114,5 +112,7 @@ layer = 0
 material = SubResource("ShaderMaterial_6a048")
 offset_right = 640.0
 offset_bottom = 360.0
+
+[node name="player_menu" parent="." instance=ExtResource("4_s4587")]
 
 [connection signal="timeout" from="HUD/heart_beat" to="HUD/Hearts" method="_on_heart_beat_timeout"]

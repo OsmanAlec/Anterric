@@ -5,8 +5,9 @@
 
 [node name="QuestVisual" type="VBoxContainer"]
 custom_minimum_size = Vector2(100, 50)
-offset_right = 200.0
-offset_bottom = 200.0
+offset_left = 24.0
+offset_right = 176.0
+offset_bottom = 50.0
 theme_override_constants/separation = 1
 script = ExtResource("1_jjlle")
 
@@ -18,7 +19,6 @@ theme_override_font_sizes/normal_font_size = 12
 text = "Longggggg Title"
 fit_content = true
 scroll_active = false
-autowrap_mode = 0
 
 [node name="Description" type="RichTextLabel" parent="."]
 layout_mode = 2

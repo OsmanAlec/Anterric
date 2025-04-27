@@ -1,0 +1,279 @@
+[gd_scene load_steps=38 format=3 uid="uid://ddljg2nkc3ybt"]
+
+[ext_resource type="Script" path="res://scenes/enemies/termite_end.gd" id="1_8jiwl"]
+[ext_resource type="Texture2D" uid="uid://cs7jcdmrfhnd4" path="res://art/cutscene/termiteend/termiteendingcutscene_0017.png" id="1_l2405"]
+[ext_resource type="Texture2D" uid="uid://b2wy5kjctex3o" path="res://art/cutscene/termiteend/termiteendingcutscene_0018.png" id="2_rf2os"]
+[ext_resource type="Texture2D" uid="uid://bgh623mqwmtn3" path="res://art/cutscene/termiteend/termiteendingcutscene_0019.png" id="3_ei6v3"]
+[ext_resource type="Texture2D" uid="uid://dxv8rnyurnm28" path="res://art/cutscene/termiteend/termiteendingcutscene_0001.png" id="4_65bqa"]
+[ext_resource type="Texture2D" uid="uid://cuenliw788tgd" path="res://art/cutscene/termiteend/termiteendingcutscene_0002.png" id="5_xnksw"]
+[ext_resource type="Texture2D" uid="uid://ur2qpf4044u7" path="res://art/cutscene/termiteend/termiteendingcutscene_0003.png" id="6_81v4n"]
+[ext_resource type="Texture2D" uid="uid://dhxunrqxa04tr" path="res://art/cutscene/termiteend/termiteendingcutscene_0004.png" id="7_8whpk"]
+[ext_resource type="Texture2D" uid="uid://dwjic8sd15hdi" path="res://art/cutscene/termiteend/termiteendingcutscene_0005.png" id="8_jjgls"]
+[ext_resource type="Texture2D" uid="uid://dhcm03b85fig7" path="res://art/cutscene/termiteend/termiteendingcutscene_0006.png" id="9_b7eoo"]
+[ext_resource type="Texture2D" uid="uid://cyccoq7w3voj2" path="res://art/cutscene/termiteend/termiteendingcutscene_0007.png" id="10_mp6mx"]
+[ext_resource type="Texture2D" uid="uid://cljjrlj5yu2yi" path="res://art/cutscene/termiteend/termiteendingcutscene_0008.png" id="11_8xeub"]
+[ext_resource type="Texture2D" uid="uid://cb1afhcysk2tm" path="res://art/cutscene/termiteend/termiteendingcutscene_0009.png" id="12_oh31q"]
+[ext_resource type="Texture2D" uid="uid://b57g7skmrcwsl" path="res://art/cutscene/termiteend/termiteendingcutscene_0010.png" id="13_nal8g"]
+[ext_resource type="Texture2D" uid="uid://y4y2i6dxr8ct" path="res://art/cutscene/termiteend/termiteendingcutscene_0011.png" id="14_mdpje"]
+[ext_resource type="Texture2D" uid="uid://d1w0ld8vn15a4" path="res://art/cutscene/termiteend/termiteendingcutscene_0012.png" id="15_vgbpi"]
+[ext_resource type="Texture2D" uid="uid://b377vriefig54" path="res://art/cutscene/termiteend/termiteendingcutscene_0013.png" id="16_tqmue"]
+[ext_resource type="Texture2D" uid="uid://cjyughkeonoaf" path="res://art/cutscene/termiteend/termiteendingcutscene_0014.png" id="17_my0m6"]
+[ext_resource type="Texture2D" uid="uid://ci3gyw4era5pg" path="res://art/cutscene/termiteend/termiteendingcutscene_0015.png" id="18_0tlfe"]
+[ext_resource type="Texture2D" uid="uid://c6o15b65xkmml" path="res://art/cutscene/termiteend/termiteendingcutscene_0016.png" id="19_37bke"]
+[ext_resource type="AudioStream" uid="uid://0q2vs58nncaa" path="res://sfx/fire starting.mp3" id="21_x0bg1"]
+[ext_resource type="PackedScene" uid="uid://kvteuqq2w5t1" path="res://scenes/fadeout.tscn" id="22_mh58h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r73ve"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_l2405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rf2os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ei6v3")
+}],
+"loop": true,
+"name": &"burn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_65bqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xnksw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_81v4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8whpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jjgls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b7eoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mp6mx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8xeub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oh31q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nal8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mdpje")
+}],
+"loop": true,
+"name": &"glisten",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_vgbpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_tqmue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_my0m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_0tlfe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_37bke")
+}],
+"loop": true,
+"name": &"start_fire",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_vl5rn"]
+resource_name = "endingcutscene"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"glisten", &"start_fire"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333, 0.166667, 0.2, 0.233333, 0.266667, 0.3, 0.333333, 0.433333, 0.466667, 0.5, 0.533333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 0, 1, 2, 3, 4]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_start_fire"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_4x6d6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"start_fire"]
+}
+
+[sub_resource type="Animation" id="Animation_jjagd"]
+resource_name = "burning"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"burn"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ywkhj"]
+_data = {
+"RESET": SubResource("Animation_4x6d6"),
+"burning": SubResource("Animation_jjagd"),
+"endingcutscene": SubResource("Animation_vl5rn")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_28sfm"]
+animation = &"burning"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_8cpqk"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_6jsgh"]
+nodes/Animation/node = SubResource("AnimationNodeAnimation_28sfm")
+nodes/Animation/position = Vector2(140, 100)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_8cpqk")
+nodes/TimeScale/position = Vector2(400, 80)
+nodes/output/position = Vector2(620, 100)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_j0fds"]
+animation = &"endingcutscene"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_5rmln"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_gi3wa"]
+graph_offset = Vector2(-270.983, 29.1466)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_j0fds")
+nodes/Animation/position = Vector2(-140, 120)
+nodes/TimeScale/node = SubResource("AnimationNodeTimeScale_5rmln")
+nodes/TimeScale/position = Vector2(100, 120)
+node_connections = [&"TimeScale", 0, &"Animation", &"output", 0, &"TimeScale"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1ct3k"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_1nj1t"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0ii6j"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_3y34l"]
+states/BlendTree/node = SubResource("AnimationNodeBlendTree_gi3wa")
+states/BlendTree/position = Vector2(416, 100)
+"states/BlendTree 2/node" = SubResource("AnimationNodeBlendTree_6jsgh")
+"states/BlendTree 2/position" = Vector2(659, 100)
+transitions = ["Start", "BlendTree", SubResource("AnimationNodeStateMachineTransition_1ct3k"), "BlendTree", "BlendTree 2", SubResource("AnimationNodeStateMachineTransition_1nj1t"), "BlendTree 2", "End", SubResource("AnimationNodeStateMachineTransition_0ii6j")]
+
+[node name="TermiteEnd" type="Node2D"]
+script = ExtResource("1_8jiwl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(326, 177)
+scale = Vector2(0.34, 0.34)
+sprite_frames = SubResource("SpriteFrames_r73ve")
+animation = &"start_fire"
+speed_scale = 0.2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ywkhj")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_3y34l")
+anim_player = NodePath("../AnimationPlayer")
+parameters/BlendTree/TimeScale/scale = 0.3
+"parameters/BlendTree 2/TimeScale/scale" = 0.3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("21_x0bg1")
+volume_db = 5.244
+bus = &"sfx"
+
+[node name="Control" parent="." instance=ExtResource("22_mh58h")]
+
+[editable path="Control"]

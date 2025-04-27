@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bof84momwlsck"]
+[gd_scene load_steps=12 format=3 uid="uid://bof84momwlsck"]
 
 [ext_resource type="MeshLibrary" uid="uid://mo7ushqnqdhn" path="res://scenes/dungeonrooms/components/anthillgridmap.tres" id="1_t0gih"]
 [ext_resource type="PackedScene" uid="uid://b1bfg04b8ycqf" path="res://scenes/player.tscn" id="2_a5xdb"]
@@ -10,12 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://dp00sy3vongwu" path="res://scenes/dungeonrooms/components/twigs.tscn" id="5_qlk14"]
 [ext_resource type="Script" path="res://scenes/dungeonrooms/tut_tele.gd" id="6_e56gq"]
 
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_2rj10"]
 
 [sub_resource type="Environment" id="Environment_qaw86"]
 background_mode = 1
-background_color = Color(0.192157, 0.141176, 0.0941176, 1)
+background_color = Color(0.383561, 0.294987, 0.213411, 1)
 ambient_light_source = 2
 ambient_light_color = Color(0.192157, 0.141176, 0.0941176, 1)
 fog_enabled = true

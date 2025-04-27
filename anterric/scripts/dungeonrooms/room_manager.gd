@@ -1,5 +1,4 @@
 extends Area3D
-static var counter = 0
 var entered = false 
 var stage:String = GameManager.Stage[GameManager.current_stage]
 
@@ -22,8 +21,8 @@ func _physics_process(delta):
 		#if we are at a stage where we can fight the queenbeeboss,
 		#spawn boss room after 5 rooms
 		if stage == "queenbeeboss":
-			counter = counter + 1 
-			if counter >= 5:
+			PlayerData.completed_stages += 1
+			if PlayerData.completed_stages >= 5:
 				get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no5.tscn")
 			else:
 				get_tree().change_scene_to_file("res://scenes/dungeonrooms/room_no" + str(room_num) + ".tscn")

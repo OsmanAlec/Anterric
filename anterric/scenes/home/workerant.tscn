@@ -126,7 +126,7 @@ visible = false
 billboard = 1
 text = "!"
 font = ExtResource("2_1501b")
-font_size = 17
+font_size = 40
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]

@@ -2,7 +2,7 @@ class_name QuestManager
 extends Node3D
 
 #ui elements for quest info to show on screen
-@onready var QuestContainer: GridContainer = PlayerManager.get_node("HUD/QuestBox/Control/QuestContainer")
+@onready var QuestContainer: VBoxContainer = PlayerManager.get_node("HUD/QuestBox/VBoxContainer/Control/QuestContainer")
 @onready var QuestBox: Control = PlayerManager.get_node("HUD/QuestBox")
 
 var active_quests: Array[Quest]
@@ -11,6 +11,15 @@ var completed_quests: Array[Quest]
 func check_quests():
 	for quest in active_quests:
 		quest.check_status()
+
+func reset_quests():
+	for quest in completed_quests:
+		quest.quest_status = Quest.QuestStatus.started
+		active_quests.append(quest)
+
+	
+	completed_quests.clear()
+	draw_quests()
 
 func draw_quests():
 	for child in QuestContainer.get_children():

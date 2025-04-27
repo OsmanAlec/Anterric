@@ -37,10 +37,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_irpdf")
 tab_alignment = 1
-current_tab = 2
+current_tab = 0
 
 [node name="Main" type="VBoxContainer" parent="Options"]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
@@ -114,6 +113,7 @@ theme_override_fonts/font = ExtResource("2_irpdf")
 text = "Back"
 
 [node name="Graphics" type="VBoxContainer" parent="Options"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1

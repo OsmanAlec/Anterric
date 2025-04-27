@@ -23,3 +23,10 @@ func find_slot_by_item_name(target_name: String) -> InvSlot:
 		if slot.item and slot.item.name == target_name:
 			return slot
 	return null  # Not found
+	
+func reset_inv () -> void:
+	for slot in slots:
+		slot.item = null
+	
+	
+	

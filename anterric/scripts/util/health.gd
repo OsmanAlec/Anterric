@@ -99,19 +99,20 @@ func apply_poison(damage: int):
 		poison_sum += damage
 	elif poison_sum != 0:
 		poison_sum = 4
-		
 	
-	poison_timer.start()
+	if !is_poisoned:
+		poison_timer.start()
 		
 	if isPlayer:
 		poison_sum = 1
 		PlayerManager.get_node("HUD/Hearts").draw_poison(PlayerData.current_health)
 		
-
+	is_poisoned = true
 	return
 
 func _on_poison_timer_timeout():
 	health -= poison_sum
 	poison_sum = 0
+	is_poisoned = false
 	if isPlayer:
 		PlayerManager.get_node("HUD/Hearts").update_health(PlayerData.current_health)

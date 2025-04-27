@@ -1,6 +1,6 @@
-extends VBoxContainer
+extends Container
 
-@onready var ToolTip = get_node("ToolTip")
+@onready var ToolTip : HBoxContainer = get_node("VBoxContainer/ToolTip")
 
 func _physics_process(delta):
 	if Input.is_action_just_pressed("quest"):

@@ -10,6 +10,7 @@ extends Node
 var completed_quests : int = 0
 var coins: int = 0 : set = set_coin
 var inventory: maininv = load("res://inventory/inv2/playerinv.tres")
+var completed_stages: int = 0
 	
 func set_coin(value: int):
 	coins = value

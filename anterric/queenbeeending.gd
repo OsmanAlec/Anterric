@@ -15,6 +15,7 @@ const lines: Array[String] = [
 	"RQUEEN I will do my best, you may now rest."
 ]
 
+var can_talk : bool = true
 
 func _ready()-> void:
 	self.play("idle")
@@ -22,13 +23,16 @@ func _ready()-> void:
 
 	
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("advance_dialog"):
+	if Input.is_action_just_pressed("advance_dialog") and can_talk:
 		$"../Label3D".visible = false
 		DialogManager.start_dialog(global_position, lines, "QueenBee")
 
 func _on_finished_talking(cn):
 	if cn != "QueenBee":
 		return
+	can_talk = false
 	var quest = QuestControl.get_node("Slay The Queen Bee")
 	quest.quest_status = quest.QuestStatus.finished
-	get_tree().quit()
+	$"../Control/AnimationPlayer".current_animation = "fade_out"
+	await get_tree().create_timer(1.0).timeout
+	get_tree().change_scene_to_file("res://scenes/enemies/termite_end.tscn")

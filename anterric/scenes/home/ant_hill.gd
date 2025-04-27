@@ -18,8 +18,11 @@ func _process(delta: float) -> void:
 			GameManager.current_stage += 1
 			PlayerData.completed_quests = 0
 			get_node("Garvan/TalkToMe").visible = true
+			get_node("Garvan/TalkToMe").modulate = Color(1, 1, 1, 1)
 			get_node("Manfred/TalkToMe").visible = true
+			get_node("Manfred/TalkToMe").modulate = Color(1, 1, 1, 1)
 			get_node("Erric/TalkToMe").visible = true
+			get_node("Erric/TalkToMe").modulate = Color(1, 1, 1, 1)
 			canProgress = false
 	if !QuestControl.active_quests.is_empty() and !open_door:
 		door.open()

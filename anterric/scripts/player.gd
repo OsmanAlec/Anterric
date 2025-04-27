@@ -155,6 +155,7 @@ func _on_attack_timer_timeout() -> void:
 	
 # Handle player death
 func _on_health_health_depleted() -> void:
+	PlayerData.completed_stages = 0
 	get_tree().change_scene_to_file("res://scenes/UI/gameover.tscn")
 
 func apply_stun(duration: float) -> void:

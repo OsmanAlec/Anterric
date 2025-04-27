@@ -66,9 +66,10 @@ func _on_attack_cooldown_timeout() -> void:
 func _on_health_health_depleted() -> void:
 	died.emit()  # Notify the parent node
 	
+	#90% change to drop loot
 	if randf() < 0.9:
-		#40% chance to spawn nectar
-		if randf() < 0.4:
+		#50% chance to spawn nectar
+		if randf() < 0.5:
 			var pickup = pickup_scene.instantiate() as Node3D
 			pickup.resource = drop_item1
 			pickup.global_position = global_position
